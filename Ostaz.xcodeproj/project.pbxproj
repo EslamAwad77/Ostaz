@@ -1,0 +1,624 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A8173525284E68300008CF8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8173524284E68300008CF8E /* AppDelegate.swift */; };
+		A8173527284E68300008CF8E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8173526284E68300008CF8E /* SceneDelegate.swift */; };
+		A8173529284E68300008CF8E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8173528284E68300008CF8E /* ViewController.swift */; };
+		A817352C284E68300008CF8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A817352A284E68300008CF8E /* Main.storyboard */; };
+		A817352F284E68300008CF8E /* Ostaz.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A817352D284E68300008CF8E /* Ostaz.xcdatamodeld */; };
+		A8173531284E68320008CF8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8173530284E68320008CF8E /* Assets.xcassets */; };
+		A8173534284E68320008CF8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8173532284E68320008CF8E /* LaunchScreen.storyboard */; };
+		A817353F284E68320008CF8E /* OstazTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817353E284E68320008CF8E /* OstazTests.swift */; };
+		A8173549284E68330008CF8E /* OstazUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8173548284E68330008CF8E /* OstazUITests.swift */; };
+		A817354B284E68330008CF8E /* OstazUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817354A284E68330008CF8E /* OstazUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A817353B284E68320008CF8E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A8173519284E68300008CF8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A8173520284E68300008CF8E;
+			remoteInfo = Ostaz;
+		};
+		A8173545284E68330008CF8E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A8173519284E68300008CF8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A8173520284E68300008CF8E;
+			remoteInfo = Ostaz;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A8173521284E68300008CF8E /* Ostaz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ostaz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8173524284E68300008CF8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A8173526284E68300008CF8E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A8173528284E68300008CF8E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A817352B284E68300008CF8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A817352E284E68300008CF8E /* Ostaz.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ostaz.xcdatamodel; sourceTree = "<group>"; };
+		A8173530284E68320008CF8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A8173533284E68320008CF8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A8173535284E68320008CF8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A817353A284E68320008CF8E /* OstazTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OstazTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A817353E284E68320008CF8E /* OstazTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OstazTests.swift; sourceTree = "<group>"; };
+		A8173544284E68330008CF8E /* OstazUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OstazUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8173548284E68330008CF8E /* OstazUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OstazUITests.swift; sourceTree = "<group>"; };
+		A817354A284E68330008CF8E /* OstazUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OstazUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A817351E284E68300008CF8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8173537284E68320008CF8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8173541284E68330008CF8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A8173518284E68300008CF8E = {
+			isa = PBXGroup;
+			children = (
+				A8173523284E68300008CF8E /* Ostaz */,
+				A817353D284E68320008CF8E /* OstazTests */,
+				A8173547284E68330008CF8E /* OstazUITests */,
+				A8173522284E68300008CF8E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A8173522284E68300008CF8E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A8173521284E68300008CF8E /* Ostaz.app */,
+				A817353A284E68320008CF8E /* OstazTests.xctest */,
+				A8173544284E68330008CF8E /* OstazUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A8173523284E68300008CF8E /* Ostaz */ = {
+			isa = PBXGroup;
+			children = (
+				A8173524284E68300008CF8E /* AppDelegate.swift */,
+				A8173526284E68300008CF8E /* SceneDelegate.swift */,
+				A8173528284E68300008CF8E /* ViewController.swift */,
+				A817352A284E68300008CF8E /* Main.storyboard */,
+				A8173530284E68320008CF8E /* Assets.xcassets */,
+				A8173532284E68320008CF8E /* LaunchScreen.storyboard */,
+				A8173535284E68320008CF8E /* Info.plist */,
+				A817352D284E68300008CF8E /* Ostaz.xcdatamodeld */,
+			);
+			path = Ostaz;
+			sourceTree = "<group>";
+		};
+		A817353D284E68320008CF8E /* OstazTests */ = {
+			isa = PBXGroup;
+			children = (
+				A817353E284E68320008CF8E /* OstazTests.swift */,
+			);
+			path = OstazTests;
+			sourceTree = "<group>";
+		};
+		A8173547284E68330008CF8E /* OstazUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A8173548284E68330008CF8E /* OstazUITests.swift */,
+				A817354A284E68330008CF8E /* OstazUITestsLaunchTests.swift */,
+			);
+			path = OstazUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A8173520284E68300008CF8E /* Ostaz */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A817354E284E68330008CF8E /* Build configuration list for PBXNativeTarget "Ostaz" */;
+			buildPhases = (
+				A817351D284E68300008CF8E /* Sources */,
+				A817351E284E68300008CF8E /* Frameworks */,
+				A817351F284E68300008CF8E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Ostaz;
+			productName = Ostaz;
+			productReference = A8173521284E68300008CF8E /* Ostaz.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A8173539284E68320008CF8E /* OstazTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8173551284E68330008CF8E /* Build configuration list for PBXNativeTarget "OstazTests" */;
+			buildPhases = (
+				A8173536284E68320008CF8E /* Sources */,
+				A8173537284E68320008CF8E /* Frameworks */,
+				A8173538284E68320008CF8E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A817353C284E68320008CF8E /* PBXTargetDependency */,
+			);
+			name = OstazTests;
+			productName = OstazTests;
+			productReference = A817353A284E68320008CF8E /* OstazTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A8173543284E68330008CF8E /* OstazUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8173554284E68330008CF8E /* Build configuration list for PBXNativeTarget "OstazUITests" */;
+			buildPhases = (
+				A8173540284E68330008CF8E /* Sources */,
+				A8173541284E68330008CF8E /* Frameworks */,
+				A8173542284E68330008CF8E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A8173546284E68330008CF8E /* PBXTargetDependency */,
+			);
+			name = OstazUITests;
+			productName = OstazUITests;
+			productReference = A8173544284E68330008CF8E /* OstazUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A8173519284E68300008CF8E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					A8173520284E68300008CF8E = {
+						CreatedOnToolsVersion = 13.4;
+					};
+					A8173539284E68320008CF8E = {
+						CreatedOnToolsVersion = 13.4;
+						TestTargetID = A8173520284E68300008CF8E;
+					};
+					A8173543284E68330008CF8E = {
+						CreatedOnToolsVersion = 13.4;
+						TestTargetID = A8173520284E68300008CF8E;
+					};
+				};
+			};
+			buildConfigurationList = A817351C284E68300008CF8E /* Build configuration list for PBXProject "Ostaz" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A8173518284E68300008CF8E;
+			productRefGroup = A8173522284E68300008CF8E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A8173520284E68300008CF8E /* Ostaz */,
+				A8173539284E68320008CF8E /* OstazTests */,
+				A8173543284E68330008CF8E /* OstazUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A817351F284E68300008CF8E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8173534284E68320008CF8E /* LaunchScreen.storyboard in Resources */,
+				A8173531284E68320008CF8E /* Assets.xcassets in Resources */,
+				A817352C284E68300008CF8E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8173538284E68320008CF8E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8173542284E68330008CF8E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A817351D284E68300008CF8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8173529284E68300008CF8E /* ViewController.swift in Sources */,
+				A8173525284E68300008CF8E /* AppDelegate.swift in Sources */,
+				A8173527284E68300008CF8E /* SceneDelegate.swift in Sources */,
+				A817352F284E68300008CF8E /* Ostaz.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8173536284E68320008CF8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A817353F284E68320008CF8E /* OstazTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8173540284E68330008CF8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A817354B284E68330008CF8E /* OstazUITestsLaunchTests.swift in Sources */,
+				A8173549284E68330008CF8E /* OstazUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A817353C284E68320008CF8E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A8173520284E68300008CF8E /* Ostaz */;
+			targetProxy = A817353B284E68320008CF8E /* PBXContainerItemProxy */;
+		};
+		A8173546284E68330008CF8E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A8173520284E68300008CF8E /* Ostaz */;
+			targetProxy = A8173545284E68330008CF8E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A817352A284E68300008CF8E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A817352B284E68300008CF8E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A8173532284E68320008CF8E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A8173533284E68320008CF8E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A817354C284E68330008CF8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A817354D284E68330008CF8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A817354F284E68330008CF8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 92UAYACNLJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Ostaz/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = eslam.Ostaz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A8173550284E68330008CF8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 92UAYACNLJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Ostaz/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = eslam.Ostaz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A8173552284E68330008CF8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 92UAYACNLJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = eslam.OstazTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ostaz.app/Ostaz";
+			};
+			name = Debug;
+		};
+		A8173553284E68330008CF8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 92UAYACNLJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = eslam.OstazTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ostaz.app/Ostaz";
+			};
+			name = Release;
+		};
+		A8173555284E68330008CF8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 92UAYACNLJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = eslam.OstazUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Ostaz;
+			};
+			name = Debug;
+		};
+		A8173556284E68330008CF8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 92UAYACNLJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = eslam.OstazUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Ostaz;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A817351C284E68300008CF8E /* Build configuration list for PBXProject "Ostaz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A817354C284E68330008CF8E /* Debug */,
+				A817354D284E68330008CF8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A817354E284E68330008CF8E /* Build configuration list for PBXNativeTarget "Ostaz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A817354F284E68330008CF8E /* Debug */,
+				A8173550284E68330008CF8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A8173551284E68330008CF8E /* Build configuration list for PBXNativeTarget "OstazTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8173552284E68330008CF8E /* Debug */,
+				A8173553284E68330008CF8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A8173554284E68330008CF8E /* Build configuration list for PBXNativeTarget "OstazUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8173555284E68330008CF8E /* Debug */,
+				A8173556284E68330008CF8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A817352D284E68300008CF8E /* Ostaz.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A817352E284E68300008CF8E /* Ostaz.xcdatamodel */,
+			);
+			currentVersion = A817352E284E68300008CF8E /* Ostaz.xcdatamodel */;
+			path = Ostaz.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A8173519284E68300008CF8E /* Project object */;
+}
