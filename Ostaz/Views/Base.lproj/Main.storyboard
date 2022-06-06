@@ -74,10 +74,10 @@
             </objects>
             <point key="canvasLocation" x="60.869565217391312" y="93.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="m8B-UE-mAE">
             <objects>
-                <viewController id="THr-LZ-ujd" sceneMemberID="viewController">
+                <viewController id="THr-LZ-ujd" customClass="RegisterViewController" customModule="Ostaz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qCf-4O-IH3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
