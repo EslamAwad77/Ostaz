@@ -16,10 +16,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="iWI-ZO-R8h">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchScreenPage" translatesAutoresizingMaskIntoConstraints="NO" id="iWI-ZO-R8h">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="hn9-UW-Lqr">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoPic" translatesAutoresizingMaskIntoConstraints="NO" id="hn9-UW-Lqr">
                                 <rect key="frame" x="107" y="398" width="200" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="9tN-uF-rs0"/>
@@ -45,8 +45,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="launchScreen" width="1284" height="2775"/>
-        <image name="logo" width="1084" height="441"/>
+        <image name="launchScreenPage" width="428" height="925"/>
+        <image name="logoPic" width="361.5" height="147"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

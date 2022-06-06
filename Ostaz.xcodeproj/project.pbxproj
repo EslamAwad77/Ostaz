@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		A8173525284E68300008CF8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8173524284E68300008CF8E /* AppDelegate.swift */; };
 		A8173527284E68300008CF8E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8173526284E68300008CF8E /* SceneDelegate.swift */; };
-		A8173529284E68300008CF8E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8173528284E68300008CF8E /* ViewController.swift */; };
+		A8173529284E68300008CF8E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8173528284E68300008CF8E /* LoginViewController.swift */; };
 		A817352C284E68300008CF8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A817352A284E68300008CF8E /* Main.storyboard */; };
 		A817352F284E68300008CF8E /* Ostaz.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A817352D284E68300008CF8E /* Ostaz.xcdatamodeld */; };
 		A8173531284E68320008CF8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8173530284E68320008CF8E /* Assets.xcassets */; };
@@ -17,6 +17,7 @@
 		A817353F284E68320008CF8E /* OstazTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817353E284E68320008CF8E /* OstazTests.swift */; };
 		A8173549284E68330008CF8E /* OstazUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8173548284E68330008CF8E /* OstazUITests.swift */; };
 		A817354B284E68330008CF8E /* OstazUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817354A284E68330008CF8E /* OstazUITestsLaunchTests.swift */; };
+		A817355B284E7D170008CF8E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817355A284E7D170008CF8E /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +41,7 @@
 		A8173521284E68300008CF8E /* Ostaz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ostaz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8173524284E68300008CF8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8173526284E68300008CF8E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A8173528284E68300008CF8E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A8173528284E68300008CF8E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A817352B284E68300008CF8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A817352E284E68300008CF8E /* Ostaz.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ostaz.xcdatamodel; sourceTree = "<group>"; };
 		A8173530284E68320008CF8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +52,7 @@
 		A8173544284E68330008CF8E /* OstazUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OstazUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8173548284E68330008CF8E /* OstazUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OstazUITests.swift; sourceTree = "<group>"; };
 		A817354A284E68330008CF8E /* OstazUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OstazUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A817355A284E7D170008CF8E /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,7 +142,8 @@
 		A8173558284E68520008CF8E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				A8173528284E68300008CF8E /* ViewController.swift */,
+				A8173528284E68300008CF8E /* LoginViewController.swift */,
+				A817355A284E7D170008CF8E /* RegisterViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -285,7 +288,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8173529284E68300008CF8E /* ViewController.swift in Sources */,
+				A8173529284E68300008CF8E /* LoginViewController.swift in Sources */,
+				A817355B284E7D170008CF8E /* RegisterViewController.swift in Sources */,
 				A8173525284E68300008CF8E /* AppDelegate.swift in Sources */,
 				A8173527284E68300008CF8E /* SceneDelegate.swift in Sources */,
 				A817352F284E68300008CF8E /* Ostaz.xcdatamodeld in Sources */,
