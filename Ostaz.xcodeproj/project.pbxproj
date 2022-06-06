@@ -103,10 +103,9 @@
 			children = (
 				A8173524284E68300008CF8E /* AppDelegate.swift */,
 				A8173526284E68300008CF8E /* SceneDelegate.swift */,
-				A8173528284E68300008CF8E /* ViewController.swift */,
-				A817352A284E68300008CF8E /* Main.storyboard */,
-				A8173530284E68320008CF8E /* Assets.xcassets */,
-				A8173532284E68320008CF8E /* LaunchScreen.storyboard */,
+				A8173557284E684A0008CF8E /* Views */,
+				A8173558284E68520008CF8E /* Controllers */,
+				A8173559284E686B0008CF8E /* Assets & Launch */,
 				A8173535284E68320008CF8E /* Info.plist */,
 				A817352D284E68300008CF8E /* Ostaz.xcdatamodeld */,
 			);
@@ -128,6 +127,31 @@
 				A817354A284E68330008CF8E /* OstazUITestsLaunchTests.swift */,
 			);
 			path = OstazUITests;
+			sourceTree = "<group>";
+		};
+		A8173557284E684A0008CF8E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A817352A284E68300008CF8E /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A8173558284E68520008CF8E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A8173528284E68300008CF8E /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A8173559284E686B0008CF8E /* Assets & Launch */ = {
+			isa = PBXGroup;
+			children = (
+				A8173530284E68320008CF8E /* Assets.xcassets */,
+				A8173532284E68320008CF8E /* LaunchScreen.storyboard */,
+			);
+			path = "Assets & Launch";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
