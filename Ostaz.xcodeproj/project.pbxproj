@@ -18,6 +18,8 @@
 		A8173549284E68330008CF8E /* OstazUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8173548284E68330008CF8E /* OstazUITests.swift */; };
 		A817354B284E68330008CF8E /* OstazUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817354A284E68330008CF8E /* OstazUITestsLaunchTests.swift */; };
 		A817355B284E7D170008CF8E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817355A284E7D170008CF8E /* RegisterViewController.swift */; };
+		A8954B08284F4D6600493142 /* ExstensionsAndViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8954B07284F4D6600493142 /* ExstensionsAndViews.swift */; };
+		A8B33C18284F85F30025BE8A /* FailureAccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B33C17284F85F30025BE8A /* FailureAccessViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		A8173548284E68330008CF8E /* OstazUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OstazUITests.swift; sourceTree = "<group>"; };
 		A817354A284E68330008CF8E /* OstazUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OstazUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A817355A284E7D170008CF8E /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		A8954B07284F4D6600493142 /* ExstensionsAndViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExstensionsAndViews.swift; sourceTree = "<group>"; };
+		A8B33C17284F85F30025BE8A /* FailureAccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailureAccessViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,7 @@
 				A8173559284E686B0008CF8E /* Assets & Launch */,
 				A8173535284E68320008CF8E /* Info.plist */,
 				A817352D284E68300008CF8E /* Ostaz.xcdatamodeld */,
+				A8954B09284F4D6B00493142 /* Exstensions */,
 			);
 			path = Ostaz;
 			sourceTree = "<group>";
@@ -144,6 +149,7 @@
 			children = (
 				A8173528284E68300008CF8E /* LoginViewController.swift */,
 				A817355A284E7D170008CF8E /* RegisterViewController.swift */,
+				A8B33C17284F85F30025BE8A /* FailureAccessViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -155,6 +161,14 @@
 				A8173532284E68320008CF8E /* LaunchScreen.storyboard */,
 			);
 			path = "Assets & Launch";
+			sourceTree = "<group>";
+		};
+		A8954B09284F4D6B00493142 /* Exstensions */ = {
+			isa = PBXGroup;
+			children = (
+				A8954B07284F4D6600493142 /* ExstensionsAndViews.swift */,
+			);
+			path = Exstensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,10 +302,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8B33C18284F85F30025BE8A /* FailureAccessViewController.swift in Sources */,
 				A8173529284E68300008CF8E /* LoginViewController.swift in Sources */,
 				A817355B284E7D170008CF8E /* RegisterViewController.swift in Sources */,
 				A8173525284E68300008CF8E /* AppDelegate.swift in Sources */,
 				A8173527284E68300008CF8E /* SceneDelegate.swift in Sources */,
+				A8954B08284F4D6600493142 /* ExstensionsAndViews.swift in Sources */,
 				A817352F284E68300008CF8E /* Ostaz.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
