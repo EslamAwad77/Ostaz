@@ -642,7 +642,6 @@ until you register</string>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tny-rj-HTw" userLabel="3 rd View">
                                         <rect key="frame" x="0.0" y="142" width="414" height="171"/>
@@ -706,7 +705,6 @@ until you register</string>
                                                 </state>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="gI2-uF-g8N" secondAttribute="bottom" constant="20" id="63A-yZ-vtj"/>
                                             <constraint firstItem="gI2-uF-g8N" firstAttribute="top" secondItem="SRY-zf-yFp" secondAttribute="top" constant="-1" id="6EN-sb-gDh"/>
@@ -739,7 +737,7 @@ until you register</string>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstItem="cA0-iX-e70" firstAttribute="top" secondItem="pL3-tt-Uh5" secondAttribute="bottom" constant="2" id="5hG-RO-W7f"/>
                                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="cA0-iX-e70" secondAttribute="trailing" id="EUS-OS-pOp"/>
@@ -764,7 +762,7 @@ until you register</string>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstItem="HIY-eD-pCf" firstAttribute="leading" secondItem="4q3-9W-7hc" secondAttribute="leading" constant="42.5" id="3wu-9D-SRs"/>
                                                             <constraint firstAttribute="bottom" secondItem="kna-6W-9n8" secondAttribute="bottom" id="DlX-O3-4aQ"/>
@@ -790,7 +788,7 @@ until you register</string>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstItem="O5V-u9-PaY" firstAttribute="leading" secondItem="tlZ-lI-zk8" secondAttribute="leading" id="2TQ-Bj-kaX"/>
                                                             <constraint firstItem="O5V-u9-PaY" firstAttribute="top" secondItem="B6i-jI-0Zj" secondAttribute="bottom" constant="2" id="Nuj-Q6-2uV"/>
@@ -807,7 +805,6 @@ until you register</string>
                                                 </constraints>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="x9m-7B-hOK" firstAttribute="top" secondItem="If4-vu-7SE" secondAttribute="topMargin" id="35k-dn-Jnx"/>
                                             <constraint firstItem="x9m-7B-hOK" firstAttribute="leading" secondItem="If4-vu-7SE" secondAttribute="leading" constant="20" id="6sq-jb-KYX"/>
@@ -837,7 +834,7 @@ until you register</string>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstItem="krh-dY-xTM" firstAttribute="top" secondItem="ojC-jG-AFa" secondAttribute="bottom" constant="2" id="DRp-AL-wTc"/>
                                                             <constraint firstAttribute="bottom" secondItem="krh-dY-xTM" secondAttribute="bottom" id="JMi-w9-VKq"/>
@@ -861,7 +858,7 @@ until you register</string>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstItem="1P9-9f-6MI" firstAttribute="leading" secondItem="N2K-iI-hF5" secondAttribute="leading" id="Ls8-IH-ljb"/>
                                                             <constraint firstItem="1P9-9f-6MI" firstAttribute="top" secondItem="aYR-FV-p3q" secondAttribute="bottom" constant="2" id="Ryp-Ce-vxF"/>
@@ -886,7 +883,7 @@ until you register</string>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstItem="fO3-05-J6o" firstAttribute="top" secondItem="TfS-T0-erf" secondAttribute="bottom" constant="2" id="3pW-Ms-dqS"/>
                                                             <constraint firstItem="TfS-T0-erf" firstAttribute="leading" secondItem="7Z2-wO-TVS" secondAttribute="leading" constant="25" id="BRz-Cg-r6L"/>
@@ -904,7 +901,6 @@ until you register</string>
                                                 </constraints>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="dzy-eX-pb9" firstAttribute="bottom" secondItem="aet-M6-kcP" secondAttribute="bottomMargin" id="KVr-JH-nh3"/>
                                             <constraint firstItem="dzy-eX-pb9" firstAttribute="top" secondItem="aet-M6-kcP" secondAttribute="topMargin" id="YFC-Qr-U9j"/>
@@ -922,7 +918,6 @@ until you register</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="dYg-fB-j2W" firstAttribute="top" secondItem="Qh2-ga-WpU" secondAttribute="top" constant="15" id="4nn-9q-uCK"/>
                                             <constraint firstItem="dYg-fB-j2W" firstAttribute="leading" secondItem="Qh2-ga-WpU" secondAttribute="leading" constant="15" id="5JW-eq-hLO"/>
@@ -968,7 +963,7 @@ until you register</string>
                                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </toolbar>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -1028,9 +1023,6 @@ until you register</string>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemCyanColor">
-            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

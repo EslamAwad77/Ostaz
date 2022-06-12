@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4093203DA77B663DEECE6F75 /* Pods_OstazTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8969C4E8AAC1ED7B41A50729 /* Pods_OstazTests.framework */; };
+		924C71154C8BF85913072234 /* Pods_Ostaz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2662B4B43FA68DCB481E170C /* Pods_Ostaz.framework */; };
+		9947218739307DEDC367C631 /* Pods_Ostaz_OstazUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 768B8B4D1E5AF5D70E2FA545 /* Pods_Ostaz_OstazUITests.framework */; };
 		A8173525284E68300008CF8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8173524284E68300008CF8E /* AppDelegate.swift */; };
 		A8173527284E68300008CF8E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8173526284E68300008CF8E /* SceneDelegate.swift */; };
 		A8173529284E68300008CF8E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8173528284E68300008CF8E /* LoginViewController.swift */; };
@@ -42,6 +45,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04A961C387F5FE05530BA173 /* Pods-OstazTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OstazTests.release.xcconfig"; path = "Target Support Files/Pods-OstazTests/Pods-OstazTests.release.xcconfig"; sourceTree = "<group>"; };
+		2662B4B43FA68DCB481E170C /* Pods_Ostaz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ostaz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5105CFB83A03B8B2DDC7E5D3 /* Pods-OstazTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OstazTests.debug.xcconfig"; path = "Target Support Files/Pods-OstazTests/Pods-OstazTests.debug.xcconfig"; sourceTree = "<group>"; };
+		768B8B4D1E5AF5D70E2FA545 /* Pods_Ostaz_OstazUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ostaz_OstazUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C2CB43151644BE8B5BF2FE2 /* Pods-Ostaz-OstazUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ostaz-OstazUITests.debug.xcconfig"; path = "Target Support Files/Pods-Ostaz-OstazUITests/Pods-Ostaz-OstazUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8969C4E8AAC1ED7B41A50729 /* Pods_OstazTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OstazTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9157A2E03C1536D7F265321D /* Pods-Ostaz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ostaz.release.xcconfig"; path = "Target Support Files/Pods-Ostaz/Pods-Ostaz.release.xcconfig"; sourceTree = "<group>"; };
 		A8173521284E68300008CF8E /* Ostaz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ostaz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8173524284E68300008CF8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8173526284E68300008CF8E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +71,8 @@
 		A8954B07284F4D6600493142 /* ExstensionsAndViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExstensionsAndViews.swift; sourceTree = "<group>"; };
 		A8B33C17284F85F30025BE8A /* FailureAccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailureAccessViewController.swift; sourceTree = "<group>"; };
 		A8B33C19284F91900025BE8A /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		AF56F268C1243AC2F59B4D84 /* Pods-Ostaz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ostaz.debug.xcconfig"; path = "Target Support Files/Pods-Ostaz/Pods-Ostaz.debug.xcconfig"; sourceTree = "<group>"; };
+		DB66CA99EA88BE48D1F9CB93 /* Pods-Ostaz-OstazUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ostaz-OstazUITests.release.xcconfig"; path = "Target Support Files/Pods-Ostaz-OstazUITests/Pods-Ostaz-OstazUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				924C71154C8BF85913072234 /* Pods_Ostaz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4093203DA77B663DEECE6F75 /* Pods_OstazTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,12 +96,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9947218739307DEDC367C631 /* Pods_Ostaz_OstazUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34A2C432CE7C788033ACB236 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2662B4B43FA68DCB481E170C /* Pods_Ostaz.framework */,
+				768B8B4D1E5AF5D70E2FA545 /* Pods_Ostaz_OstazUITests.framework */,
+				8969C4E8AAC1ED7B41A50729 /* Pods_OstazTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A8173518284E68300008CF8E = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +120,8 @@
 				A817353D284E68320008CF8E /* OstazTests */,
 				A8173547284E68330008CF8E /* OstazUITests */,
 				A8173522284E68300008CF8E /* Products */,
+				C85D77CDE44C3C1FFD3EF048 /* Pods */,
+				34A2C432CE7C788033ACB236 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -177,6 +204,20 @@
 			path = Exstensions;
 			sourceTree = "<group>";
 		};
+		C85D77CDE44C3C1FFD3EF048 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AF56F268C1243AC2F59B4D84 /* Pods-Ostaz.debug.xcconfig */,
+				9157A2E03C1536D7F265321D /* Pods-Ostaz.release.xcconfig */,
+				7C2CB43151644BE8B5BF2FE2 /* Pods-Ostaz-OstazUITests.debug.xcconfig */,
+				DB66CA99EA88BE48D1F9CB93 /* Pods-Ostaz-OstazUITests.release.xcconfig */,
+				5105CFB83A03B8B2DDC7E5D3 /* Pods-OstazTests.debug.xcconfig */,
+				04A961C387F5FE05530BA173 /* Pods-OstazTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -184,9 +225,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A817354E284E68330008CF8E /* Build configuration list for PBXNativeTarget "Ostaz" */;
 			buildPhases = (
+				3BD63D342FC9B9D7E9EBD5C8 /* [CP] Check Pods Manifest.lock */,
 				A817351D284E68300008CF8E /* Sources */,
 				A817351E284E68300008CF8E /* Frameworks */,
 				A817351F284E68300008CF8E /* Resources */,
+				594603FF617F62E0545F0F3C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -201,6 +244,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A8173551284E68330008CF8E /* Build configuration list for PBXNativeTarget "OstazTests" */;
 			buildPhases = (
+				237AEA15870403FDEB16D26B /* [CP] Check Pods Manifest.lock */,
 				A8173536284E68320008CF8E /* Sources */,
 				A8173537284E68320008CF8E /* Frameworks */,
 				A8173538284E68320008CF8E /* Resources */,
@@ -219,9 +263,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A8173554284E68330008CF8E /* Build configuration list for PBXNativeTarget "OstazUITests" */;
 			buildPhases = (
+				E7B06DB138793EFFBE26C22E /* [CP] Check Pods Manifest.lock */,
 				A8173540284E68330008CF8E /* Sources */,
 				A8173541284E68330008CF8E /* Frameworks */,
 				A8173542284E68330008CF8E /* Resources */,
+				25274F5DD533F59B2D219815 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -302,6 +348,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		237AEA15870403FDEB16D26B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OstazTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		25274F5DD533F59B2D219815 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ostaz-OstazUITests/Pods-Ostaz-OstazUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ostaz-OstazUITests/Pods-Ostaz-OstazUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ostaz-OstazUITests/Pods-Ostaz-OstazUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3BD63D342FC9B9D7E9EBD5C8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Ostaz-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		594603FF617F62E0545F0F3C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ostaz/Pods-Ostaz-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ostaz/Pods-Ostaz-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ostaz/Pods-Ostaz-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7B06DB138793EFFBE26C22E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Ostaz-OstazUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A817351D284E68300008CF8E /* Sources */ = {
@@ -488,6 +637,7 @@
 		};
 		A817354F284E68330008CF8E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF56F268C1243AC2F59B4D84 /* Pods-Ostaz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -516,6 +666,7 @@
 		};
 		A8173550284E68330008CF8E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9157A2E03C1536D7F265321D /* Pods-Ostaz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -544,6 +695,7 @@
 		};
 		A8173552284E68330008CF8E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5105CFB83A03B8B2DDC7E5D3 /* Pods-OstazTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -564,6 +716,7 @@
 		};
 		A8173553284E68330008CF8E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04A961C387F5FE05530BA173 /* Pods-OstazTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -584,6 +737,7 @@
 		};
 		A8173555284E68330008CF8E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C2CB43151644BE8B5BF2FE2 /* Pods-Ostaz-OstazUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -602,6 +756,7 @@
 		};
 		A8173556284E68330008CF8E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB66CA99EA88BE48D1F9CB93 /* Pods-Ostaz-OstazUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
