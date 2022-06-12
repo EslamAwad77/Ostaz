@@ -21,9 +21,13 @@
 		A8173549284E68330008CF8E /* OstazUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8173548284E68330008CF8E /* OstazUITests.swift */; };
 		A817354B284E68330008CF8E /* OstazUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817354A284E68330008CF8E /* OstazUITestsLaunchTests.swift */; };
 		A817355B284E7D170008CF8E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817355A284E7D170008CF8E /* RegisterViewController.swift */; };
+		A839205B2855CF5A00CD2126 /* CollectionViewSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = A839205A2855CF5A00CD2126 /* CollectionViewSlide.swift */; };
+		A839205D2855D7BE00CD2126 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A839205C2855D7BE00CD2126 /* HomeCollectionViewCell.swift */; };
 		A84D15EB28521F55004E1995 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84D15EA28521F55004E1995 /* HomeViewController.swift */; };
+		A857EC1C2855FE900095AA01 /* TeacherProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A857EC1B2855FE900095AA01 /* TeacherProfileViewController.swift */; };
+		A857EC1E285613450095AA01 /* SignupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A857EC1D285613450095AA01 /* SignupView.xib */; };
+		A857EC20285616F50095AA01 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A857EC1F285616F50095AA01 /* SignupView.swift */; };
 		A8954B08284F4D6600493142 /* ExstensionsAndViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8954B07284F4D6600493142 /* ExstensionsAndViews.swift */; };
-		A8B33C18284F85F30025BE8A /* FailureAccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B33C17284F85F30025BE8A /* FailureAccessViewController.swift */; };
 		A8B33C1A284F91900025BE8A /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B33C19284F91900025BE8A /* LocationViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -67,9 +71,13 @@
 		A8173548284E68330008CF8E /* OstazUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OstazUITests.swift; sourceTree = "<group>"; };
 		A817354A284E68330008CF8E /* OstazUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OstazUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A817355A284E7D170008CF8E /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		A839205A2855CF5A00CD2126 /* CollectionViewSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewSlide.swift; sourceTree = "<group>"; };
+		A839205C2855D7BE00CD2126 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		A84D15EA28521F55004E1995 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A857EC1B2855FE900095AA01 /* TeacherProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherProfileViewController.swift; sourceTree = "<group>"; };
+		A857EC1D285613450095AA01 /* SignupView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignupView.xib; sourceTree = "<group>"; };
+		A857EC1F285616F50095AA01 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		A8954B07284F4D6600493142 /* ExstensionsAndViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExstensionsAndViews.swift; sourceTree = "<group>"; };
-		A8B33C17284F85F30025BE8A /* FailureAccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailureAccessViewController.swift; sourceTree = "<group>"; };
 		A8B33C19284F91900025BE8A /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		AF56F268C1243AC2F59B4D84 /* Pods-Ostaz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ostaz.debug.xcconfig"; path = "Target Support Files/Pods-Ostaz/Pods-Ostaz.debug.xcconfig"; sourceTree = "<group>"; };
 		DB66CA99EA88BE48D1F9CB93 /* Pods-Ostaz-OstazUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ostaz-OstazUITests.release.xcconfig"; path = "Target Support Files/Pods-Ostaz-OstazUITests/Pods-Ostaz-OstazUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -140,6 +148,7 @@
 			children = (
 				A8173524284E68300008CF8E /* AppDelegate.swift */,
 				A8173526284E68300008CF8E /* SceneDelegate.swift */,
+				A83920592855CF1900CD2126 /* Models */,
 				A8173557284E684A0008CF8E /* Views */,
 				A8173558284E68520008CF8E /* Controllers */,
 				A8173559284E686B0008CF8E /* Assets & Launch */,
@@ -170,6 +179,7 @@
 		A8173557284E684A0008CF8E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A857EC2128561B5E0095AA01 /* Nib Views */,
 				A817352A284E68300008CF8E /* Main.storyboard */,
 			);
 			path = Views;
@@ -180,9 +190,10 @@
 			children = (
 				A8173528284E68300008CF8E /* LoginViewController.swift */,
 				A817355A284E7D170008CF8E /* RegisterViewController.swift */,
-				A8B33C17284F85F30025BE8A /* FailureAccessViewController.swift */,
 				A8B33C19284F91900025BE8A /* LocationViewController.swift */,
 				A84D15EA28521F55004E1995 /* HomeViewController.swift */,
+				A839205C2855D7BE00CD2126 /* HomeCollectionViewCell.swift */,
+				A857EC1B2855FE900095AA01 /* TeacherProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -194,6 +205,31 @@
 				A8173532284E68320008CF8E /* LaunchScreen.storyboard */,
 			);
 			path = "Assets & Launch";
+			sourceTree = "<group>";
+		};
+		A83920592855CF1900CD2126 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A839205A2855CF5A00CD2126 /* CollectionViewSlide.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A857EC2128561B5E0095AA01 /* Nib Views */ = {
+			isa = PBXGroup;
+			children = (
+				A857EC2228561BA70095AA01 /* Signup */,
+			);
+			path = "Nib Views";
+			sourceTree = "<group>";
+		};
+		A857EC2228561BA70095AA01 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				A857EC1D285613450095AA01 /* SignupView.xib */,
+				A857EC1F285616F50095AA01 /* SignupView.swift */,
+			);
+			path = Signup;
 			sourceTree = "<group>";
 		};
 		A8954B09284F4D6B00493142 /* Exstensions */ = {
@@ -214,7 +250,6 @@
 				5105CFB83A03B8B2DDC7E5D3 /* Pods-OstazTests.debug.xcconfig */,
 				04A961C387F5FE05530BA173 /* Pods-OstazTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -327,6 +362,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A857EC1E285613450095AA01 /* SignupView.xib in Resources */,
 				A8173534284E68320008CF8E /* LaunchScreen.storyboard in Resources */,
 				A8173531284E68320008CF8E /* Assets.xcassets in Resources */,
 				A817352C284E68300008CF8E /* Main.storyboard in Resources */,
@@ -457,11 +493,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8B33C18284F85F30025BE8A /* FailureAccessViewController.swift in Sources */,
 				A8173529284E68300008CF8E /* LoginViewController.swift in Sources */,
+				A839205B2855CF5A00CD2126 /* CollectionViewSlide.swift in Sources */,
 				A817355B284E7D170008CF8E /* RegisterViewController.swift in Sources */,
 				A8173525284E68300008CF8E /* AppDelegate.swift in Sources */,
+				A857EC20285616F50095AA01 /* SignupView.swift in Sources */,
+				A857EC1C2855FE900095AA01 /* TeacherProfileViewController.swift in Sources */,
 				A8173527284E68300008CF8E /* SceneDelegate.swift in Sources */,
+				A839205D2855D7BE00CD2126 /* HomeCollectionViewCell.swift in Sources */,
 				A84D15EB28521F55004E1995 /* HomeViewController.swift in Sources */,
 				A8954B08284F4D6600493142 /* ExstensionsAndViews.swift in Sources */,
 				A817352F284E68300008CF8E /* Ostaz.xcdatamodeld in Sources */,
