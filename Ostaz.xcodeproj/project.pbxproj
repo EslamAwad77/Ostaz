@@ -29,6 +29,7 @@
 		A857EC20285616F50095AA01 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A857EC1F285616F50095AA01 /* SignupView.swift */; };
 		A8954B08284F4D6600493142 /* ExstensionsAndViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8954B07284F4D6600493142 /* ExstensionsAndViews.swift */; };
 		A8B33C1A284F91900025BE8A /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B33C19284F91900025BE8A /* LocationViewController.swift */; };
+		A8DC659A28577590008879B4 /* EditPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC659928577590008879B4 /* EditPasswordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		A857EC1F285616F50095AA01 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		A8954B07284F4D6600493142 /* ExstensionsAndViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExstensionsAndViews.swift; sourceTree = "<group>"; };
 		A8B33C19284F91900025BE8A /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		A8DC659928577590008879B4 /* EditPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPasswordViewController.swift; sourceTree = "<group>"; };
 		AF56F268C1243AC2F59B4D84 /* Pods-Ostaz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ostaz.debug.xcconfig"; path = "Target Support Files/Pods-Ostaz/Pods-Ostaz.debug.xcconfig"; sourceTree = "<group>"; };
 		DB66CA99EA88BE48D1F9CB93 /* Pods-Ostaz-OstazUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ostaz-OstazUITests.release.xcconfig"; path = "Target Support Files/Pods-Ostaz-OstazUITests/Pods-Ostaz-OstazUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -194,6 +196,7 @@
 				A84D15EA28521F55004E1995 /* HomeViewController.swift */,
 				A839205C2855D7BE00CD2126 /* HomeCollectionViewCell.swift */,
 				A857EC1B2855FE900095AA01 /* TeacherProfileViewController.swift */,
+				A8DC659928577590008879B4 /* EditPasswordViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -493,6 +496,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8DC659A28577590008879B4 /* EditPasswordViewController.swift in Sources */,
 				A8173529284E68300008CF8E /* LoginViewController.swift in Sources */,
 				A839205B2855CF5A00CD2126 /* CollectionViewSlide.swift in Sources */,
 				A817355B284E7D170008CF8E /* RegisterViewController.swift in Sources */,

@@ -14,21 +14,21 @@ class SignupView: UIView {
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblDesc: UILabel!
     
-    var titlePage: String? {
-        didSet{
-            self.lblTitle.text = titlePage
-        }
-    }
-    var descPage: String? {
-        didSet {
-            self.lblDesc.text = descPage
-        }
-    }
+//    var titlePage: String? {
+//        didSet{
+//            self.lblTitle.text = titlePage
+//        }
+//    }
+//    var descPage: String? {
+//        didSet {
+//            self.lblDesc.text = descPage
+//        }
+//    }
     
     @IBAction func resgisterClicked(_ sender: Any) {
-        //        let vc = UIStoryboard(name:"Main", bundle: nil).instantiateViewController(identifier: "") as!
-        //        self.navigationController?.pushViewController(vc, animated: true)
-        print("register")
+//        let vc = UIStoryboard(name:"Main", bundle: nil).instantiateViewController(identifier: "RegisterVC") as! RegisterViewController
+//        self.navigationController?.pushViewController(vc, animated: true)
+        //print("register")
     }
     
     
