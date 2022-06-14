@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "AccountBarButton.png",
+      "filename" : "homeIcons.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "AccountBarButton@2x.png",
+      "filename" : "homeIcons@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "AccountBarButton@3x.png",
+      "filename" : "homeIcons@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -11,7 +11,8 @@ import DropDown
 class LocationViewController: UIViewController{
     
     //-------------------Variables------------------------
-    let dropDown = DropDown()
+    let cityDropDown = DropDown()
+    let areaDropDown = DropDown()
     let cityValues: [String] = ["alex", "mans"]
     let areaValues: [String] = ["alex library", "samia elgamal"]
     
@@ -24,11 +25,11 @@ class LocationViewController: UIViewController{
     //-------------------Actions--------------------------
     
     @IBAction func btnSelectCity(_ sender: UIButton) {
-        dropDown.show()
+        cityDropDown.show()
     }
     
     @IBAction func btnSelectArea(_ sender: UIButton) {
-        dropDown.show()
+        areaDropDown.show()
     }
     
     @IBAction func btnConfirmLocation(_ sender: UIButton) {
@@ -45,23 +46,23 @@ class LocationViewController: UIViewController{
     //-------------------functions------------------------
     func setUpUI(){
         
-        if lblCity.isEnabled {
-            dropDown.anchorView = viewCity
-            dropDown.dataSource = cityValues
-        }
-        
-        if lblArea.isEnabled{
-            dropDown.anchorView = viewArea
-            dropDown.dataSource = areaValues
-        }
-        
-        dropDown.bottomOffset = CGPoint(x: 0, y:(dropDown.anchorView?.plainView.bounds.height)!)
-        dropDown.topOffset = CGPoint(x: 0, y:-(dropDown.anchorView?.plainView.bounds.height)!)
-        dropDown.direction = .any
-        dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+        cityDropDown.anchorView = viewCity
+        cityDropDown.dataSource = cityValues
+        areaDropDown.anchorView = viewArea
+        areaDropDown.dataSource = areaValues
+        cityDropDown.bottomOffset = CGPoint(x: 0, y:(cityDropDown.anchorView?.plainView.bounds.height)!)
+        cityDropDown.topOffset = CGPoint(x: 0, y:-(cityDropDown.anchorView?.plainView.bounds.height)!)
+        areaDropDown.bottomOffset = CGPoint(x: 0, y:(areaDropDown.anchorView?.plainView.bounds.height)!)
+        areaDropDown.topOffset = CGPoint(x: 0, y:-(areaDropDown.anchorView?.plainView.bounds.height)!)
+        cityDropDown.direction = .any
+        areaDropDown.direction = .any
+        cityDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
             print("Selected item: \(item) at index: \(index)")
-            self.lblCity.text = cityValues[index]  // put the itemSelected in the lbl.txt
-            self.lblArea.text = areaValues[index] // error he put the next area from self
+            self.lblCity.text = cityValues[index]
+        }
+        areaDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+            print("Selected item: \(item) at index: \(index)")
+            self.lblArea.text = areaValues[index]
         }
     }
 }

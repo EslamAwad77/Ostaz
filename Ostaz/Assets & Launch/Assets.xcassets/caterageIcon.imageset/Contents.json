@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "CategoriesBarButton.png",
+      "filename" : "caterageIcon.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "CategoriesBarButton@2x.png",
+      "filename" : "caterageIcon@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "CategoriesBarButton@3x.png",
+      "filename" : "caterageIcon@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

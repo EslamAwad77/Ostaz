@@ -21,6 +21,8 @@
 		A8173549284E68330008CF8E /* OstazUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8173548284E68330008CF8E /* OstazUITests.swift */; };
 		A817354B284E68330008CF8E /* OstazUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817354A284E68330008CF8E /* OstazUITestsLaunchTests.swift */; };
 		A817355B284E7D170008CF8E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817355A284E7D170008CF8E /* RegisterViewController.swift */; };
+		A8174D252858CFA700121A62 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8174D242858CFA700121A62 /* Auth.storyboard */; };
+		A8174D272858D23E00121A62 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8174D262858D23E00121A62 /* Home.storyboard */; };
 		A839205B2855CF5A00CD2126 /* CollectionViewSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = A839205A2855CF5A00CD2126 /* CollectionViewSlide.swift */; };
 		A839205D2855D7BE00CD2126 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A839205C2855D7BE00CD2126 /* HomeCollectionViewCell.swift */; };
 		A84D15EB28521F55004E1995 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84D15EA28521F55004E1995 /* HomeViewController.swift */; };
@@ -29,6 +31,15 @@
 		A857EC20285616F50095AA01 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A857EC1F285616F50095AA01 /* SignupView.swift */; };
 		A8954B08284F4D6600493142 /* ExstensionsAndViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8954B07284F4D6600493142 /* ExstensionsAndViews.swift */; };
 		A89CD13F28587832009D049D /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89CD13E28587832009D049D /* MoreViewController.swift */; };
+		A89CD14128588A99009D049D /* AcountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89CD14028588A99009D049D /* AcountViewController.swift */; };
+		A89CD14428588CF6009D049D /* AcountTeacherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89CD14328588CF6009D049D /* AcountTeacherView.swift */; };
+		A89CD14628588D15009D049D /* AccountTeacher.xib in Resources */ = {isa = PBXBuildFile; fileRef = A89CD14528588D15009D049D /* AccountTeacher.xib */; };
+		A89CD14828589B52009D049D /* WishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89CD14728589B52009D049D /* WishListViewController.swift */; };
+		A89CD14B28589C99009D049D /* WishListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89CD14928589C99009D049D /* WishListCell.swift */; };
+		A89CD14C28589C99009D049D /* WishListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A89CD14A28589C99009D049D /* WishListCell.xib */; };
+		A89CD14F2858A52E009D049D /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89CD14E2858A52E009D049D /* CategoriesViewController.swift */; };
+		A89CD1512858B05F009D049D /* WishListItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89CD1502858B05F009D049D /* WishListItems.swift */; };
+		A89CD1532858BACB009D049D /* SportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89CD1522858BACB009D049D /* SportsViewController.swift */; };
 		A8B33C1A284F91900025BE8A /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B33C19284F91900025BE8A /* LocationViewController.swift */; };
 		A8DC659A28577590008879B4 /* EditPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC659928577590008879B4 /* EditPasswordViewController.swift */; };
 /* End PBXBuildFile section */
@@ -73,6 +84,8 @@
 		A8173548284E68330008CF8E /* OstazUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OstazUITests.swift; sourceTree = "<group>"; };
 		A817354A284E68330008CF8E /* OstazUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OstazUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A817355A284E7D170008CF8E /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		A8174D242858CFA700121A62 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		A8174D262858D23E00121A62 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		A839205A2855CF5A00CD2126 /* CollectionViewSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewSlide.swift; sourceTree = "<group>"; };
 		A839205C2855D7BE00CD2126 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		A84D15EA28521F55004E1995 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +94,15 @@
 		A857EC1F285616F50095AA01 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		A8954B07284F4D6600493142 /* ExstensionsAndViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExstensionsAndViews.swift; sourceTree = "<group>"; };
 		A89CD13E28587832009D049D /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		A89CD14028588A99009D049D /* AcountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcountViewController.swift; sourceTree = "<group>"; };
+		A89CD14328588CF6009D049D /* AcountTeacherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcountTeacherView.swift; sourceTree = "<group>"; };
+		A89CD14528588D15009D049D /* AccountTeacher.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountTeacher.xib; sourceTree = "<group>"; };
+		A89CD14728589B52009D049D /* WishListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListViewController.swift; sourceTree = "<group>"; };
+		A89CD14928589C99009D049D /* WishListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListCell.swift; sourceTree = "<group>"; };
+		A89CD14A28589C99009D049D /* WishListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WishListCell.xib; sourceTree = "<group>"; };
+		A89CD14E2858A52E009D049D /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
+		A89CD1502858B05F009D049D /* WishListItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListItems.swift; sourceTree = "<group>"; };
+		A89CD1522858BACB009D049D /* SportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsViewController.swift; sourceTree = "<group>"; };
 		A8B33C19284F91900025BE8A /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		A8DC659928577590008879B4 /* EditPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPasswordViewController.swift; sourceTree = "<group>"; };
 		AF56F268C1243AC2F59B4D84 /* Pods-Ostaz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ostaz.debug.xcconfig"; path = "Target Support Files/Pods-Ostaz/Pods-Ostaz.debug.xcconfig"; sourceTree = "<group>"; };
@@ -185,6 +207,8 @@
 			children = (
 				A857EC2128561B5E0095AA01 /* Nib Views */,
 				A817352A284E68300008CF8E /* Main.storyboard */,
+				A8174D242858CFA700121A62 /* Auth.storyboard */,
+				A8174D262858D23E00121A62 /* Home.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -200,6 +224,10 @@
 				A857EC1B2855FE900095AA01 /* TeacherProfileViewController.swift */,
 				A8DC659928577590008879B4 /* EditPasswordViewController.swift */,
 				A89CD13E28587832009D049D /* MoreViewController.swift */,
+				A89CD14028588A99009D049D /* AcountViewController.swift */,
+				A89CD14728589B52009D049D /* WishListViewController.swift */,
+				A89CD14E2858A52E009D049D /* CategoriesViewController.swift */,
+				A89CD1522858BACB009D049D /* SportsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -217,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				A839205A2855CF5A00CD2126 /* CollectionViewSlide.swift */,
+				A89CD1502858B05F009D049D /* WishListItems.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -224,6 +253,8 @@
 		A857EC2128561B5E0095AA01 /* Nib Views */ = {
 			isa = PBXGroup;
 			children = (
+				A89CD14D28589CAA009D049D /* WishList */,
+				A89CD14228588C93009D049D /* AcountTeacher */,
 				A857EC2228561BA70095AA01 /* Signup */,
 			);
 			path = "Nib Views";
@@ -244,6 +275,24 @@
 				A8954B07284F4D6600493142 /* ExstensionsAndViews.swift */,
 			);
 			path = Exstensions;
+			sourceTree = "<group>";
+		};
+		A89CD14228588C93009D049D /* AcountTeacher */ = {
+			isa = PBXGroup;
+			children = (
+				A89CD14328588CF6009D049D /* AcountTeacherView.swift */,
+				A89CD14528588D15009D049D /* AccountTeacher.xib */,
+			);
+			path = AcountTeacher;
+			sourceTree = "<group>";
+		};
+		A89CD14D28589CAA009D049D /* WishList */ = {
+			isa = PBXGroup;
+			children = (
+				A89CD14928589C99009D049D /* WishListCell.swift */,
+				A89CD14A28589C99009D049D /* WishListCell.xib */,
+			);
+			path = WishList;
 			sourceTree = "<group>";
 		};
 		C85D77CDE44C3C1FFD3EF048 /* Pods */ = {
@@ -368,9 +417,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8174D252858CFA700121A62 /* Auth.storyboard in Resources */,
 				A857EC1E285613450095AA01 /* SignupView.xib in Resources */,
 				A8173534284E68320008CF8E /* LaunchScreen.storyboard in Resources */,
 				A8173531284E68320008CF8E /* Assets.xcassets in Resources */,
+				A8174D272858D23E00121A62 /* Home.storyboard in Resources */,
+				A89CD14628588D15009D049D /* AccountTeacher.xib in Resources */,
+				A89CD14C28589C99009D049D /* WishListCell.xib in Resources */,
 				A817352C284E68300008CF8E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -499,19 +552,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A89CD14F2858A52E009D049D /* CategoriesViewController.swift in Sources */,
 				A8DC659A28577590008879B4 /* EditPasswordViewController.swift in Sources */,
 				A8173529284E68300008CF8E /* LoginViewController.swift in Sources */,
+				A89CD1512858B05F009D049D /* WishListItems.swift in Sources */,
 				A839205B2855CF5A00CD2126 /* CollectionViewSlide.swift in Sources */,
+				A89CD14828589B52009D049D /* WishListViewController.swift in Sources */,
+				A89CD14428588CF6009D049D /* AcountTeacherView.swift in Sources */,
 				A817355B284E7D170008CF8E /* RegisterViewController.swift in Sources */,
 				A8173525284E68300008CF8E /* AppDelegate.swift in Sources */,
 				A857EC20285616F50095AA01 /* SignupView.swift in Sources */,
 				A857EC1C2855FE900095AA01 /* TeacherProfileViewController.swift in Sources */,
 				A89CD13F28587832009D049D /* MoreViewController.swift in Sources */,
+				A89CD1532858BACB009D049D /* SportsViewController.swift in Sources */,
+				A89CD14B28589C99009D049D /* WishListCell.swift in Sources */,
 				A8173527284E68300008CF8E /* SceneDelegate.swift in Sources */,
 				A839205D2855D7BE00CD2126 /* HomeCollectionViewCell.swift in Sources */,
 				A84D15EB28521F55004E1995 /* HomeViewController.swift in Sources */,
 				A8954B08284F4D6600493142 /* ExstensionsAndViews.swift in Sources */,
 				A817352F284E68300008CF8E /* Ostaz.xcdatamodeld in Sources */,
+				A89CD14128588A99009D049D /* AcountViewController.swift in Sources */,
 				A8B33C1A284F91900025BE8A /* LocationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
