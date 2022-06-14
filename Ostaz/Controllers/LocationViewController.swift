@@ -45,12 +45,16 @@ class LocationViewController: UIViewController{
     //-------------------functions------------------------
     func setUpUI(){
         
+        if lblCity.isEnabled {
+            dropDown.anchorView = viewCity
+            dropDown.dataSource = cityValues
+        }
         
+        if lblArea.isEnabled{
+            dropDown.anchorView = viewArea
+            dropDown.dataSource = areaValues
+        }
         
-        dropDown.anchorView = viewCity
-        dropDown.dataSource = cityValues
-        dropDown.anchorView = viewArea
-        dropDown.dataSource = areaValues
         dropDown.bottomOffset = CGPoint(x: 0, y:(dropDown.anchorView?.plainView.bounds.height)!)
         dropDown.topOffset = CGPoint(x: 0, y:-(dropDown.anchorView?.plainView.bounds.height)!)
         dropDown.direction = .any
