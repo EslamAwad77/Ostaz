@@ -8,8 +8,9 @@
 import UIKit
 
 class RegisterViewController: UIViewController {
-
+    
     //-------------------IBOutlet------------------------
+    @IBOutlet weak var viewContentPassword: UIView!
     
     @IBOutlet weak var txtFieldPhoneNumber: UITextField!
     @IBOutlet weak var txtFieldRegisterUserName: UITextField!
@@ -31,7 +32,16 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        viewContentPassword.addBorder(.top, color: UIColor.lightGray, thickness: 1)
+        viewContentPassword.addBorder(.bottom, color: UIColor.lightGray, thickness: 1)
+        viewContentPassword.addBorder(.left, color: UIColor.lightGray, thickness: 1)
+        viewContentPassword.addBorder(.right, color: UIColor.lightGray, thickness: 1)
+        
     }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        self.viewContentPassword.round(self.viewContentPassword.frame.size.width/5)
+//    }
 }
+

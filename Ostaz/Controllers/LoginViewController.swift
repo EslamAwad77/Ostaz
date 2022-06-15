@@ -11,6 +11,7 @@ class LoginViewController: UIViewController {
     
     //-------------------IBOutlet------------------------
     
+    @IBOutlet weak var viewPassword: UIView!
     @IBOutlet weak var txtFieldLoginUserName: UITextField!
     @IBOutlet weak var txtFieldLoginPassword: UITextField!
     
@@ -29,9 +30,17 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        self.viewPassword.addBorder(.top, color: UIColor.lightGray, thickness: 1)
+        self.viewPassword.addBorder(.bottom, color: UIColor.lightGray, thickness: 1)
+        self.viewPassword.addBorder(.left, color: UIColor.lightGray, thickness: 1)
+        self.viewPassword.addBorder(.right, color: UIColor.lightGray, thickness: 1)
+        
     }
-
-
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        self.viewPassword.round(self.viewPassword.frame.size.width/5)
+//    }
 }
+
 
