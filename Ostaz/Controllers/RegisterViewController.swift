@@ -10,8 +10,9 @@ import UIKit
 class RegisterViewController: UIViewController {
     
     //-------------------IBOutlet------------------------
+   
     @IBOutlet weak var viewContentPassword: UIView!
-    
+    @IBOutlet weak var viewConfirmPassword: UIView!
     @IBOutlet weak var txtFieldPhoneNumber: UITextField!
     @IBOutlet weak var txtFieldRegisterUserName: UITextField!
     @IBOutlet weak var txtFieldRegisterPassword: UITextField!
@@ -32,10 +33,14 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewContentPassword.addBorder(.top, color: UIColor.lightGray, thickness: 1)
-        viewContentPassword.addBorder(.bottom, color: UIColor.lightGray, thickness: 1)
-        viewContentPassword.addBorder(.left, color: UIColor.lightGray, thickness: 1)
-        viewContentPassword.addBorder(.right, color: UIColor.lightGray, thickness: 1)
+        viewContentPassword.addBorder(.top, color: UIColor.systemGray5, thickness: 1)
+        viewContentPassword.addBorder(.bottom, color: UIColor.systemGray5, thickness: 1)
+        viewContentPassword.addBorder(.left, color: UIColor.systemGray5, thickness: 1)
+        viewContentPassword.addBorder(.right, color: UIColor.systemGray5, thickness: 1)
+        viewConfirmPassword.addBorder(.top, color: UIColor.systemGray5, thickness: 1)
+        viewConfirmPassword.addBorder(.bottom, color: UIColor.systemGray5, thickness: 1)
+        viewConfirmPassword.addBorder(.left, color: UIColor.systemGray5, thickness: 1)
+        viewConfirmPassword.addBorder(.right, color: UIColor.systemGray5, thickness: 1)
         
     }
     
