@@ -9,10 +9,8 @@ import Foundation
 import UIKit
 
 struct CollectionViewSlide {
-    
     let teacherName: String
     let teacherJob: String
     let descriptionImage: UIImage
     let teacherImage: UIImage
-    
 }

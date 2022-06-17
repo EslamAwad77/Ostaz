@@ -8,10 +8,8 @@
 import UIKit
 
 struct WishListItems{
-    
     var descriptionImg: UIImage
     var teacherImg: UIImage
     var teacherName: String
     var teacherJob: String
-    
 }

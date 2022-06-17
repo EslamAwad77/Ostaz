@@ -46,7 +46,7 @@ class SignupView: UIView {
         Bundle.main.loadNibNamed("SignupView", owner: self, options: nil)
         addSubview(contentView)
         contentView.frame = self.bounds
-        contentView.autoresizingMask  = [.flexibleHeight,.flexibleWidth]
+        contentView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
     }
 
 }

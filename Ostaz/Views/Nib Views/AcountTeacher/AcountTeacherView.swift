@@ -36,9 +36,9 @@ class AcountTeacherView: UIView{
     }
     
     private func commonInit(){
-        Bundle.main.loadNibNamed("SignupView", owner: self, options: nil)
+        Bundle.main.loadNibNamed("AcountTeacherView", owner: self, options: nil)
         addSubview(contentView)
         contentView.frame = self.bounds
-        contentView.autoresizingMask  = [.flexibleHeight,.flexibleWidth]
+        contentView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
     }
 }

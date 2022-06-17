@@ -30,10 +30,10 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.viewPassword.addBorder(.top, color: UIColor.lightGray, thickness: 1)
-        self.viewPassword.addBorder(.bottom, color: UIColor.lightGray, thickness: 1)
-        self.viewPassword.addBorder(.left, color: UIColor.lightGray, thickness: 1)
-        self.viewPassword.addBorder(.right, color: UIColor.lightGray, thickness: 1)
+        self.viewPassword.addBorder(.top, color: UIColor.systemGray5, thickness: 1)
+        self.viewPassword.addBorder(.bottom, color: UIColor.systemGray5, thickness: 1)
+        self.viewPassword.addBorder(.left, color: UIColor.systemGray5, thickness: 1)
+        self.viewPassword.addBorder(.right, color: UIColor.systemGray5, thickness: 1)
         
     }
     

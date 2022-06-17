@@ -11,8 +11,11 @@ class EditPasswordViewController: UIViewController {
     
     //-------------------IBOutlet------------------------
     
+    @IBOutlet weak var viewCurrentPassword: UIView!
+    @IBOutlet weak var viewNewPassword: UIView!
+    @IBOutlet weak var viewConfirmNewPass: UIView!
+    @IBOutlet weak var txtFieldCurrentPassword: UITextField!
     @IBOutlet weak var txtFieldNewPassword: UITextField!
-    @IBOutlet weak var txtFieldConfirmPassword: UITextField!
     @IBOutlet weak var txtFieldConfirmNewPassword: UITextField!
     
     //-------------------Actions------------------------
@@ -23,9 +26,6 @@ class EditPasswordViewController: UIViewController {
     @IBAction func btnShowPassword(_ sender: UIButton) {
     }
     
-    @IBAction func btnConfirm(_ sender: UIButton) {
-    }
-    
     @IBAction func btnConfirmNewPassword(_ sender: UIButton) {
     }
     
@@ -33,6 +33,18 @@ class EditPasswordViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.viewCurrentPassword.addBorder(.top, color: UIColor.systemGray5, thickness: 1)
+        self.viewCurrentPassword.addBorder(.bottom, color: UIColor.systemGray5, thickness: 1)
+        self.viewCurrentPassword.addBorder(.left, color: UIColor.systemGray5, thickness: 1)
+        self.viewCurrentPassword.addBorder(.right, color: UIColor.systemGray5, thickness: 1)
+        self.viewNewPassword.addBorder(.top, color: UIColor.systemGray5, thickness: 1)
+        self.viewNewPassword.addBorder(.bottom, color: UIColor.systemGray5, thickness: 1)
+        self.viewNewPassword.addBorder(.left, color: UIColor.systemGray5, thickness: 1)
+        self.viewNewPassword.addBorder(.right, color: UIColor.systemGray5, thickness: 1)
+        self.viewConfirmNewPass.addBorder(.top, color: UIColor.systemGray5, thickness: 1)
+        self.viewConfirmNewPass.addBorder(.bottom, color: UIColor.systemGray5, thickness: 1)
+        self.viewConfirmNewPass.addBorder(.left, color: UIColor.systemGray5, thickness: 1)
+        self.viewConfirmNewPass.addBorder(.right, color: UIColor.systemGray5, thickness: 1)
         
     }
 }

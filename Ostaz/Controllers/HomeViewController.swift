@@ -10,6 +10,7 @@ import UIKit
 class HomeViewController: UIViewController {
 
     //-------------------IBOutlet------------------------
+    @IBOutlet weak var viewSearchWithFilter: UIView!
     
     @IBOutlet weak var collectionViewHome: UICollectionView!
     
@@ -21,12 +22,16 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpUI()
+        self.setUpUI()
     }
     
     //-------------------Functions------------------------
     
     func setUpUI(){
+        self.viewSearchWithFilter.addBorder(.top, color: UIColor.systemGray5, thickness: 1)
+        self.viewSearchWithFilter.addBorder(.bottom, color: UIColor.systemGray5, thickness: 1)
+        self.viewSearchWithFilter.addBorder(.left, color: UIColor.systemGray5, thickness: 1)
+        self.viewSearchWithFilter.addBorder(.right, color: UIColor.systemGray5, thickness: 1)
         collectionViewHome.delegate = self
         collectionViewHome.dataSource = self
         slides = [

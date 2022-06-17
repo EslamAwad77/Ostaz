@@ -9,9 +9,13 @@ import UIKit
 
 class CategoriesViewController: UIViewController {
 
+    @IBOutlet weak var viewSearch: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.viewSearch.addBorder(.top, color: UIColor.systemGray5, thickness: 1)
+        self.viewSearch.addBorder(.bottom, color: UIColor.systemGray5, thickness: 1)
+        self.viewSearch.addBorder(.left, color: UIColor.systemGray5, thickness: 1)
+        self.viewSearch.addBorder(.right, color: UIColor.systemGray5, thickness: 1)
     }
 }

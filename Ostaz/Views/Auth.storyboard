@@ -64,14 +64,14 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="394" height="58"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="    Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WfV-GA-UBh">
-                                                                <rect key="frame" x="0.0" y="0.0" width="369" height="58"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="359" height="58"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                             </textField>
                                                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7RD-hO-UnJ" userLabel="eye">
-                                                                <rect key="frame" x="369" y="0.0" width="25" height="58"/>
+                                                                <rect key="frame" x="359" y="0.0" width="35" height="58"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                                <state key="normal" image="EyeLogo"/>
+                                                                <state key="normal" title="  " image="EyeLogo"/>
                                                                 <connections>
                                                                     <action selector="btnShowPassword:" destination="nyE-QO-GYq" eventType="touchUpInside" id="B5i-BN-QJW"/>
                                                                 </connections>
@@ -295,7 +295,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="394" height="56"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LdN-fb-FPU" userLabel="Password">
-                                                                <rect key="frame" x="0.0" y="0.0" width="369" height="56"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="359" height="56"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -305,9 +305,9 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </textField>
                                                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iCw-ly-mIv" userLabel="Show Password">
-                                                                <rect key="frame" x="369" y="0.0" width="25" height="56"/>
+                                                                <rect key="frame" x="359" y="0.0" width="35" height="56"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                                <state key="normal" image="EyeLogo"/>
+                                                                <state key="normal" title="  " image="EyeLogo"/>
                                                                 <connections>
                                                                     <action selector="btnShowPassword:" destination="bsF-ox-mRz" eventType="touchUpInside" id="hKu-OT-M8M"/>
                                                                 </connections>
@@ -331,7 +331,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="394" height="56"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Confirm Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Myi-Ah-048" userLabel="Password">
-                                                                <rect key="frame" x="0.0" y="0.0" width="369" height="56"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="359" height="56"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -341,9 +341,9 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </textField>
                                                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqo-OV-r5w" userLabel="Show Password">
-                                                                <rect key="frame" x="369" y="0.0" width="25" height="56"/>
+                                                                <rect key="frame" x="359" y="0.0" width="35" height="56"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                                <state key="normal" image="EyeLogo"/>
+                                                                <state key="normal" title="  " image="EyeLogo"/>
                                                                 <connections>
                                                                     <action selector="btnShowPassword:" destination="bsF-ox-mRz" eventType="touchUpInside" id="byh-bl-vgx"/>
                                                                 </connections>

@@ -33,7 +33,7 @@
 		A89CD13F28587832009D049D /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89CD13E28587832009D049D /* MoreViewController.swift */; };
 		A89CD14128588A99009D049D /* AcountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89CD14028588A99009D049D /* AcountViewController.swift */; };
 		A89CD14428588CF6009D049D /* AcountTeacherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89CD14328588CF6009D049D /* AcountTeacherView.swift */; };
-		A89CD14628588D15009D049D /* AccountTeacher.xib in Resources */ = {isa = PBXBuildFile; fileRef = A89CD14528588D15009D049D /* AccountTeacher.xib */; };
+		A89CD14628588D15009D049D /* AccountTeacherView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A89CD14528588D15009D049D /* AccountTeacherView.xib */; };
 		A89CD14828589B52009D049D /* WishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89CD14728589B52009D049D /* WishListViewController.swift */; };
 		A89CD14B28589C99009D049D /* WishListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89CD14928589C99009D049D /* WishListCell.swift */; };
 		A89CD14C28589C99009D049D /* WishListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A89CD14A28589C99009D049D /* WishListCell.xib */; };
@@ -96,7 +96,7 @@
 		A89CD13E28587832009D049D /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		A89CD14028588A99009D049D /* AcountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcountViewController.swift; sourceTree = "<group>"; };
 		A89CD14328588CF6009D049D /* AcountTeacherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcountTeacherView.swift; sourceTree = "<group>"; };
-		A89CD14528588D15009D049D /* AccountTeacher.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountTeacher.xib; sourceTree = "<group>"; };
+		A89CD14528588D15009D049D /* AccountTeacherView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountTeacherView.xib; sourceTree = "<group>"; };
 		A89CD14728589B52009D049D /* WishListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListViewController.swift; sourceTree = "<group>"; };
 		A89CD14928589C99009D049D /* WishListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListCell.swift; sourceTree = "<group>"; };
 		A89CD14A28589C99009D049D /* WishListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WishListCell.xib; sourceTree = "<group>"; };
@@ -263,8 +263,8 @@
 		A857EC2228561BA70095AA01 /* Signup */ = {
 			isa = PBXGroup;
 			children = (
-				A857EC1D285613450095AA01 /* SignupView.xib */,
 				A857EC1F285616F50095AA01 /* SignupView.swift */,
+				A857EC1D285613450095AA01 /* SignupView.xib */,
 			);
 			path = Signup;
 			sourceTree = "<group>";
@@ -281,7 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				A89CD14328588CF6009D049D /* AcountTeacherView.swift */,
-				A89CD14528588D15009D049D /* AccountTeacher.xib */,
+				A89CD14528588D15009D049D /* AccountTeacherView.xib */,
 			);
 			path = AcountTeacher;
 			sourceTree = "<group>";
@@ -422,7 +422,7 @@
 				A8173534284E68320008CF8E /* LaunchScreen.storyboard in Resources */,
 				A8173531284E68320008CF8E /* Assets.xcassets in Resources */,
 				A8174D272858D23E00121A62 /* Home.storyboard in Resources */,
-				A89CD14628588D15009D049D /* AccountTeacher.xib in Resources */,
+				A89CD14628588D15009D049D /* AccountTeacherView.xib in Resources */,
 				A89CD14C28589C99009D049D /* WishListCell.xib in Resources */,
 				A817352C284E68300008CF8E /* Main.storyboard in Resources */,
 			);
@@ -755,7 +755,7 @@
 				INFOPLIST_FILE = Ostaz/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Home;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -784,7 +784,7 @@
 				INFOPLIST_FILE = Ostaz/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Home;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
