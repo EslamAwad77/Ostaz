@@ -1029,7 +1029,7 @@
                                                     <constraint firstItem="zM8-xL-Lf8" firstAttribute="leading" secondItem="3i6-2Q-AeX" secondAttribute="leading" constant="67" id="ybM-s5-ce9"/>
                                                 </constraints>
                                             </view>
-                                            <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="39N-9X-FxB" customClass="AcountTeacherView" customModule="Ostaz" customModuleProvider="target">
+                                            <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="39N-9X-FxB" customClass="AccountTeacherView" customModule="Ostaz" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>

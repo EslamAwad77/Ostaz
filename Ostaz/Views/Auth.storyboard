@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nyE-QO-GYq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bsF-ox-mRz">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -12,7 +12,7 @@
         <!--Login View Controller-->
         <scene sceneID="Lyt-cR-PLI">
             <objects>
-                <viewController id="nyE-QO-GYq" customClass="LoginViewController" customModule="Ostaz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="nyE-QO-GYq" customClass="LoginViewController" customModule="Ostaz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KYG-n3-JGT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -97,7 +97,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="22" id="x9x-3T-wOm"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Froget Password ?">
                                                     <color key="titleColor" name="ButtonColor"/>
@@ -215,7 +215,7 @@
         <!--Register View Controller-->
         <scene sceneID="M8O-I2-cqZ">
             <objects>
-                <viewController id="bsF-ox-mRz" customClass="RegisterViewController" customModule="Ostaz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterViewController" id="bsF-ox-mRz" customClass="RegisterViewController" customModule="Ostaz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aCD-hZ-hQh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -229,7 +229,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="iH4-iy-hh4">
                                                 <rect key="frame" x="5" y="40" width="404" height="50"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BIe-uA-GG4" userLabel="Arrow Button">
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BIe-uA-GG4" userLabel="Arrow Button">
                                                         <rect key="frame" x="0.0" y="0.0" width="134.5" height="50"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -261,7 +261,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Account" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3YA-0E-BAy">
-                                                <rect key="frame" x="20" y="399" width="384" height="20"/>
+                                                <rect key="frame" x="31" y="399" width="373" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="EBT-hF-5yx"/>
                                                 </constraints>
@@ -398,7 +398,7 @@
                                             <constraint firstItem="iH4-iy-hh4" firstAttribute="top" secondItem="81I-jN-lXX" secondAttribute="top" constant="40" id="4te-9l-wZT"/>
                                             <constraint firstItem="iH4-iy-hh4" firstAttribute="leading" secondItem="81I-jN-lXX" secondAttribute="leading" constant="5" id="7aI-4T-X7w"/>
                                             <constraint firstAttribute="trailing" secondItem="5NB-CE-d9X" secondAttribute="trailing" constant="17" id="8Ru-Cw-M6j"/>
-                                            <constraint firstItem="3YA-0E-BAy" firstAttribute="leading" secondItem="81I-jN-lXX" secondAttribute="leading" constant="20" id="Dbz-l6-agj"/>
+                                            <constraint firstItem="3YA-0E-BAy" firstAttribute="leading" secondItem="81I-jN-lXX" secondAttribute="leading" constant="31" id="Dbz-l6-agj"/>
                                             <constraint firstItem="ruj-OE-vi1" firstAttribute="top" secondItem="3YA-0E-BAy" secondAttribute="bottom" constant="22" id="F4y-8X-SI2"/>
                                             <constraint firstItem="5NB-CE-d9X" firstAttribute="top" secondItem="nyX-Ew-1Zf" secondAttribute="bottom" constant="57" id="MdI-N4-qOB"/>
                                             <constraint firstItem="tdD-D7-0CO" firstAttribute="leading" secondItem="81I-jN-lXX" secondAttribute="leading" constant="17" id="SJI-l3-VQM"/>

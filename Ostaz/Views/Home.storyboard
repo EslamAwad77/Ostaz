@@ -341,7 +341,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="227" id="0iR-Gw-8GM"/>
                                                 </constraints>
-                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="x57-qb-Lr0">
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="x57-qb-Lr0">
                                                     <size key="itemSize" width="312" height="208"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>

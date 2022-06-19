@@ -11,7 +11,7 @@ class AcountViewController: UIViewController {
 
     //-------------------IBOutlet------------------------
     
-    @IBOutlet weak var acountTeacherView: AcountTeacherView!
+    @IBOutlet weak var acountTeacherView: AccountTeacherView!
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var lblPhoneNumber: UILabel!
     
