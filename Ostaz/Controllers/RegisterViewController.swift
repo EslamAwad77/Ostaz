@@ -33,20 +33,8 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewContentPassword.addBorder(.top, color: UIColor.systemGray5, thickness: 1)
-        viewContentPassword.addBorder(.bottom, color: UIColor.systemGray5, thickness: 1)
-        viewContentPassword.addBorder(.left, color: UIColor.systemGray5, thickness: 1)
-        viewContentPassword.addBorder(.right, color: UIColor.systemGray5, thickness: 1)
-        viewConfirmPassword.addBorder(.top, color: UIColor.systemGray5, thickness: 1)
-        viewConfirmPassword.addBorder(.bottom, color: UIColor.systemGray5, thickness: 1)
-        viewConfirmPassword.addBorder(.left, color: UIColor.systemGray5, thickness: 1)
-        viewConfirmPassword.addBorder(.right, color: UIColor.systemGray5, thickness: 1)
-        
+        self.viewContentPassword.addborder(10)
+        self.viewConfirmPassword.addborder(10)
     }
-    
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        self.viewContentPassword.round(self.viewContentPassword.frame.size.width/5)
-//    }
 }
 

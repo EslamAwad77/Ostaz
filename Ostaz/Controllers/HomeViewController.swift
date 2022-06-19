@@ -28,10 +28,7 @@ class HomeViewController: UIViewController {
     //-------------------Functions------------------------
     
     func setUpUI(){
-        self.viewSearchWithFilter.addBorder(.top, color: UIColor.systemGray5, thickness: 1)
-        self.viewSearchWithFilter.addBorder(.bottom, color: UIColor.systemGray5, thickness: 1)
-        self.viewSearchWithFilter.addBorder(.left, color: UIColor.systemGray5, thickness: 1)
-        self.viewSearchWithFilter.addBorder(.right, color: UIColor.systemGray5, thickness: 1)
+        self.viewSearchWithFilter.addborder(10)
         collectionViewHome.delegate = self
         collectionViewHome.dataSource = self
         slides = [

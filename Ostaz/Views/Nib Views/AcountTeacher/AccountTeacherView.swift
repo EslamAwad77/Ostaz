@@ -1,7 +1,7 @@
 
 import UIKit
 
-class AcountTeacherView: UIView{
+class AccountTeacherView: UIView{
     
     //-------------------IBOutlet------------------------
     
