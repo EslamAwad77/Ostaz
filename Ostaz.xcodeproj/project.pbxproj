@@ -29,6 +29,7 @@
 		A857EC1C2855FE900095AA01 /* TeacherProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A857EC1B2855FE900095AA01 /* TeacherProfileViewController.swift */; };
 		A857EC1E285613450095AA01 /* SignupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A857EC1D285613450095AA01 /* SignupView.xib */; };
 		A857EC20285616F50095AA01 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A857EC1F285616F50095AA01 /* SignupView.swift */; };
+		A85DFAE3285FB3C700CEF27B /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85DFAE2285FB3C700CEF27B /* CategoriesCollectionViewCell.swift */; };
 		A8954B08284F4D6600493142 /* ExstensionsAndViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8954B07284F4D6600493142 /* ExstensionsAndViews.swift */; };
 		A89CD13F28587832009D049D /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89CD13E28587832009D049D /* MoreViewController.swift */; };
 		A89CD14128588A99009D049D /* AcountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89CD14028588A99009D049D /* AcountViewController.swift */; };
@@ -92,6 +93,7 @@
 		A857EC1B2855FE900095AA01 /* TeacherProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherProfileViewController.swift; sourceTree = "<group>"; };
 		A857EC1D285613450095AA01 /* SignupView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignupView.xib; sourceTree = "<group>"; };
 		A857EC1F285616F50095AA01 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		A85DFAE2285FB3C700CEF27B /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		A8954B07284F4D6600493142 /* ExstensionsAndViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExstensionsAndViews.swift; sourceTree = "<group>"; };
 		A89CD13E28587832009D049D /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		A89CD14028588A99009D049D /* AcountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcountViewController.swift; sourceTree = "<group>"; };
@@ -216,18 +218,9 @@
 		A8173558284E68520008CF8E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				A8173528284E68300008CF8E /* LoginViewController.swift */,
-				A817355A284E7D170008CF8E /* RegisterViewController.swift */,
-				A8B33C19284F91900025BE8A /* LocationViewController.swift */,
-				A84D15EA28521F55004E1995 /* HomeViewController.swift */,
-				A839205C2855D7BE00CD2126 /* HomeCollectionViewCell.swift */,
-				A857EC1B2855FE900095AA01 /* TeacherProfileViewController.swift */,
-				A8DC659928577590008879B4 /* EditPasswordViewController.swift */,
-				A89CD13E28587832009D049D /* MoreViewController.swift */,
-				A89CD14028588A99009D049D /* AcountViewController.swift */,
-				A89CD14728589B52009D049D /* WishListViewController.swift */,
-				A89CD14E2858A52E009D049D /* CategoriesViewController.swift */,
-				A89CD1522858BACB009D049D /* SportsViewController.swift */,
+				A85DFAE6285FB40200CEF27B /* Main */,
+				A85DFAE5285FB3F800CEF27B /* Auth */,
+				A85DFAE4285FB3D500CEF27B /* Home */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -267,6 +260,40 @@
 				A857EC1D285613450095AA01 /* SignupView.xib */,
 			);
 			path = Signup;
+			sourceTree = "<group>";
+		};
+		A85DFAE4285FB3D500CEF27B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A84D15EA28521F55004E1995 /* HomeViewController.swift */,
+				A839205C2855D7BE00CD2126 /* HomeCollectionViewCell.swift */,
+				A89CD14728589B52009D049D /* WishListViewController.swift */,
+				A89CD14E2858A52E009D049D /* CategoriesViewController.swift */,
+				A85DFAE2285FB3C700CEF27B /* CategoriesCollectionViewCell.swift */,
+				A89CD13E28587832009D049D /* MoreViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A85DFAE5285FB3F800CEF27B /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				A8173528284E68300008CF8E /* LoginViewController.swift */,
+				A817355A284E7D170008CF8E /* RegisterViewController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		A85DFAE6285FB40200CEF27B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				A8B33C19284F91900025BE8A /* LocationViewController.swift */,
+				A857EC1B2855FE900095AA01 /* TeacherProfileViewController.swift */,
+				A8DC659928577590008879B4 /* EditPasswordViewController.swift */,
+				A89CD14028588A99009D049D /* AcountViewController.swift */,
+				A89CD1522858BACB009D049D /* SportsViewController.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		A8954B09284F4D6B00493142 /* Exstensions */ = {
@@ -560,6 +587,7 @@
 				A89CD14828589B52009D049D /* WishListViewController.swift in Sources */,
 				A89CD14428588CF6009D049D /* AccountTeacherView.swift in Sources */,
 				A817355B284E7D170008CF8E /* RegisterViewController.swift in Sources */,
+				A85DFAE3285FB3C700CEF27B /* CategoriesCollectionViewCell.swift in Sources */,
 				A8173525284E68300008CF8E /* AppDelegate.swift in Sources */,
 				A857EC20285616F50095AA01 /* SignupView.swift in Sources */,
 				A857EC1C2855FE900095AA01 /* TeacherProfileViewController.swift in Sources */,
