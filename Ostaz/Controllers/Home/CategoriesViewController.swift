@@ -57,7 +57,8 @@ class CategoriesViewController: UIViewController {
 
 //-------------------Exstensions------------------------
 
-extension CategoriesViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension CategoriesViewController: UICollectionViewDelegate, UICollectionViewDataSource{
+//, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return categoriesSlides.count
     }
@@ -72,7 +73,7 @@ extension CategoriesViewController: UICollectionViewDelegate, UICollectionViewDa
        // let vc = UIStoryboard(name:"Main", bundle: nil).instantiateViewController(identifier: "") as!
     }
 
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
-    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+//    }
 }

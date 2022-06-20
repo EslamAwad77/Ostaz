@@ -57,10 +57,10 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2vB-q1-EIM" userLabel="search View with Filter">
-                                                <rect key="frame" x="10" y="81" width="394" height="56"/>
+                                                <rect key="frame" x="17" y="81" width="380" height="56"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sA5-Vq-sny">
-                                                        <rect key="frame" x="0.0" y="0.0" width="394" height="56"/>
+                                                        <rect key="frame" x="18" y="0.0" width="362" height="56"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gug-Bf-Nky" userLabel="search Mark">
                                                                 <rect key="frame" x="0.0" y="0.0" width="28" height="56"/>
@@ -68,8 +68,8 @@
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" title="  " image="searchMark"/>
                                                             </button>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="       Search" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lv2-jt-JO0" userLabel="search">
-                                                                <rect key="frame" x="28" y="0.0" width="315" height="56"/>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Search" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lv2-jt-JO0" userLabel="search">
+                                                                <rect key="frame" x="28" y="0.0" width="283" height="56"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -79,7 +79,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </textField>
                                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJI-Os-jLy" userLabel="filter Mark">
-                                                                <rect key="frame" x="343" y="0.0" width="51" height="56"/>
+                                                                <rect key="frame" x="311" y="0.0" width="51" height="56"/>
                                                                 <color key="tintColor" name="ButtonColor"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" title="  " image="FilterButton"/>
@@ -89,7 +89,7 @@
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstItem="sA5-Vq-sny" firstAttribute="leading" secondItem="2vB-q1-EIM" secondAttribute="leading" id="68k-UY-ob6"/>
+                                                    <constraint firstItem="sA5-Vq-sny" firstAttribute="leading" secondItem="2vB-q1-EIM" secondAttribute="leading" constant="18" id="68k-UY-ob6"/>
                                                     <constraint firstAttribute="bottom" secondItem="sA5-Vq-sny" secondAttribute="bottom" id="8kr-Bi-z2B"/>
                                                     <constraint firstItem="sA5-Vq-sny" firstAttribute="top" secondItem="2vB-q1-EIM" secondAttribute="top" id="CAs-04-V6N"/>
                                                     <constraint firstAttribute="height" constant="56" id="N4U-pz-PEj"/>
@@ -435,7 +435,7 @@
                                             <constraint firstItem="BDm-Rv-cTy" firstAttribute="top" secondItem="2vB-q1-EIM" secondAttribute="bottom" constant="10" id="MXv-Vb-sDd"/>
                                             <constraint firstItem="2xY-8N-tq1" firstAttribute="leading" secondItem="BRJ-Qb-Jcm" secondAttribute="leading" constant="10" id="NDV-H8-lwc"/>
                                             <constraint firstAttribute="trailing" secondItem="04c-7U-aa2" secondAttribute="trailing" constant="10" id="NRH-Xz-cWd"/>
-                                            <constraint firstAttribute="trailing" secondItem="2vB-q1-EIM" secondAttribute="trailing" constant="10" id="Qtr-mF-vVi"/>
+                                            <constraint firstAttribute="trailing" secondItem="2vB-q1-EIM" secondAttribute="trailing" constant="17" id="Qtr-mF-vVi"/>
                                             <constraint firstItem="2vB-q1-EIM" firstAttribute="top" secondItem="g3b-W0-jBy" secondAttribute="bottom" constant="8" id="SPU-Hj-6oG"/>
                                             <constraint firstItem="g3b-W0-jBy" firstAttribute="leading" secondItem="BRJ-Qb-Jcm" secondAttribute="leading" id="U5q-fK-lzi"/>
                                             <constraint firstItem="WjE-0g-LaH" firstAttribute="top" secondItem="gxF-M5-BDG" secondAttribute="bottom" constant="8" id="cVX-R8-cjP"/>
@@ -446,7 +446,7 @@
                                             <constraint firstItem="gxF-M5-BDG" firstAttribute="leading" secondItem="BRJ-Qb-Jcm" secondAttribute="leading" constant="5" id="j3R-Yn-uBX"/>
                                             <constraint firstItem="04c-7U-aa2" firstAttribute="top" secondItem="fFt-oH-2cM" secondAttribute="bottom" constant="20" id="kMx-e1-HqV"/>
                                             <constraint firstAttribute="trailing" secondItem="g3b-W0-jBy" secondAttribute="trailing" id="km0-bg-hOf"/>
-                                            <constraint firstItem="2vB-q1-EIM" firstAttribute="leading" secondItem="BRJ-Qb-Jcm" secondAttribute="leading" constant="10" id="lrm-6W-cc8"/>
+                                            <constraint firstItem="2vB-q1-EIM" firstAttribute="leading" secondItem="BRJ-Qb-Jcm" secondAttribute="leading" constant="17" id="lrm-6W-cc8"/>
                                             <constraint firstAttribute="trailing" secondItem="fFt-oH-2cM" secondAttribute="trailing" constant="10" id="neG-gg-7EN"/>
                                             <constraint firstAttribute="trailing" secondItem="2xY-8N-tq1" secondAttribute="trailing" constant="10" id="r2V-Bi-5b7"/>
                                             <constraint firstItem="WjE-0g-LaH" firstAttribute="leading" secondItem="BRJ-Qb-Jcm" secondAttribute="leading" constant="10" id="vof-aj-esh"/>
@@ -503,7 +503,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="gGq-sn-S8Q"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                 <color key="textColor" name="ButtonColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -734,7 +734,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="34" id="wYY-yV-zEu"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                 <color key="textColor" name="ButtonColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -1451,25 +1451,25 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="6uC-hm-saD"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                 <color key="textColor" name="ButtonColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FaO-Ap-d17" userLabel="search View">
-                                                <rect key="frame" x="10" y="103" width="394" height="56"/>
+                                                <rect key="frame" x="17" y="103" width="380" height="56"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pCo-Ke-1xD">
-                                                        <rect key="frame" x="0.0" y="0.0" width="394" height="56"/>
+                                                        <rect key="frame" x="18" y="0.0" width="362" height="56"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XMq-nI-WLJ" userLabel="search Mark">
-                                                                <rect key="frame" x="0.0" y="0.0" width="28" height="56"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XMq-nI-WLJ" userLabel="search Mark">
+                                                                <rect key="frame" x="0.0" y="0.0" width="18" height="56"/>
                                                                 <color key="tintColor" name="ButtonColor"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                                <state key="normal" title="  " image="searchMark"/>
+                                                                <state key="normal" image="searchMark"/>
                                                             </button>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="       Search" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JXQ-ll-QgD" userLabel="search">
-                                                                <rect key="frame" x="28" y="0.0" width="366" height="56"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Search" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JXQ-ll-QgD" userLabel="search">
+                                                                <rect key="frame" x="18" y="0.0" width="344" height="56"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
@@ -1482,7 +1482,7 @@
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstItem="pCo-Ke-1xD" firstAttribute="leading" secondItem="FaO-Ap-d17" secondAttribute="leading" id="7G1-9P-lGS"/>
+                                                    <constraint firstItem="pCo-Ke-1xD" firstAttribute="leading" secondItem="FaO-Ap-d17" secondAttribute="leading" constant="18" id="7G1-9P-lGS"/>
                                                     <constraint firstAttribute="trailing" secondItem="pCo-Ke-1xD" secondAttribute="trailing" id="9P7-Bf-wJ9"/>
                                                     <constraint firstAttribute="height" constant="56" id="Cr5-Ae-qzu"/>
                                                     <constraint firstItem="pCo-Ke-1xD" firstAttribute="top" secondItem="FaO-Ap-d17" secondAttribute="top" id="g8C-f4-Brb"/>
@@ -1559,11 +1559,11 @@
                                             <constraint firstItem="FaO-Ap-d17" firstAttribute="top" secondItem="efU-VZ-Deb" secondAttribute="bottom" constant="30" id="3nF-tp-4CN"/>
                                             <constraint firstAttribute="trailing" secondItem="5gW-ge-OMo" secondAttribute="trailing" constant="16" id="Dpv-6i-ZW1"/>
                                             <constraint firstItem="5gW-ge-OMo" firstAttribute="leading" secondItem="Vqn-WF-XEH" secondAttribute="leading" constant="16" id="E3y-w1-ffy"/>
-                                            <constraint firstItem="FaO-Ap-d17" firstAttribute="leading" secondItem="Vqn-WF-XEH" secondAttribute="leading" constant="10" id="EzE-3k-xcL"/>
+                                            <constraint firstItem="FaO-Ap-d17" firstAttribute="leading" secondItem="Vqn-WF-XEH" secondAttribute="leading" constant="17" id="EzE-3k-xcL"/>
                                             <constraint firstItem="efU-VZ-Deb" firstAttribute="leading" secondItem="Vqn-WF-XEH" secondAttribute="leading" id="PBh-dT-bFr"/>
                                             <constraint firstAttribute="trailing" secondItem="efU-VZ-Deb" secondAttribute="trailing" id="Ref-d6-F5O"/>
                                             <constraint firstItem="5gW-ge-OMo" firstAttribute="top" secondItem="FaO-Ap-d17" secondAttribute="bottom" constant="24" id="Rmv-Zs-mvq"/>
-                                            <constraint firstAttribute="trailing" secondItem="FaO-Ap-d17" secondAttribute="trailing" constant="10" id="U6i-lH-sBi"/>
+                                            <constraint firstAttribute="trailing" secondItem="FaO-Ap-d17" secondAttribute="trailing" constant="17" id="U6i-lH-sBi"/>
                                             <constraint firstItem="efU-VZ-Deb" firstAttribute="top" secondItem="Vqn-WF-XEH" secondAttribute="top" constant="48" id="WDE-48-8Gc"/>
                                             <constraint firstAttribute="height" constant="950" id="nW8-7E-0JR"/>
                                         </constraints>
