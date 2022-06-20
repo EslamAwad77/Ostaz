@@ -8,9 +8,10 @@
 import Foundation
 import UIKit
 
-struct CollectionViewSlide {
+struct CollectionViewHomeSlide {
     let teacherName: String
     let teacherJob: String
     let descriptionImage: UIImage
     let teacherImage: UIImage
+ 
 }

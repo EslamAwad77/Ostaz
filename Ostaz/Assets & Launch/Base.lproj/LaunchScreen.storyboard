@@ -19,11 +19,11 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchScreenPage" translatesAutoresizingMaskIntoConstraints="NO" id="iWI-ZO-R8h">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoPic" translatesAutoresizingMaskIntoConstraints="NO" id="hn9-UW-Lqr">
-                                <rect key="frame" x="107" y="398" width="200" height="100"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="hn9-UW-Lqr">
+                                <rect key="frame" x="97" y="378" width="220" height="140"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="9tN-uF-rs0"/>
-                                    <constraint firstAttribute="width" constant="200" id="JSY-Ng-DEW"/>
+                                    <constraint firstAttribute="height" constant="140" id="9tN-uF-rs0"/>
+                                    <constraint firstAttribute="width" constant="220" id="JSY-Ng-DEW"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -46,7 +46,7 @@
     </scenes>
     <resources>
         <image name="launchScreenPage" width="428" height="925"/>
-        <image name="logoPic" width="361.5" height="147"/>
+        <image name="logo" width="444.5" height="354"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

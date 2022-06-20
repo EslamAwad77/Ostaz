@@ -9,7 +9,9 @@ import UIKit
 
 class CategoriesCollectionViewCell: UICollectionViewCell {
     //-------------------IBOutlet------------------------
+    @IBOutlet weak var imgViewCategory: UIImageView!
     
+    @IBOutlet weak var lblDescription: UILabel!
     
     
     //-------------------Variables------------------------
@@ -18,11 +20,10 @@ class CategoriesCollectionViewCell: UICollectionViewCell {
     
     //-------------------Functions------------------------
     
-//    func setUp(_ slide: CollectionViewSlide){
-//
-//        slideImgViewDescription.image = slide.descriptionImage
-//        slideImgViewTeacher.image = slide.teacherImage
-//        lblTeacherName.text = slide.teacherName
-//        lblTeacherJob.text = slide.teacherJob
-//    }
+    func setupUI(_ categoriesSlide: CollectionViewCategorySlide){
+
+        imgViewCategory.image = categoriesSlide.categoryImage
+        lblDescription.text = categoriesSlide.categoryName
+        
+    }
 }

@@ -16,7 +16,7 @@ class HomeViewController: UIViewController {
     
     //-------------------Variables------------------------
     
-    var slides: [CollectionViewSlide] = []
+    var homeSlides: [CollectionViewHomeSlide] = []
     
     //-------------------LifeCycle------------------------
     
@@ -31,10 +31,11 @@ class HomeViewController: UIViewController {
         self.viewSearchWithFilter.addborder(10)
         collectionViewHome.delegate = self
         collectionViewHome.dataSource = self
-        slides = [
-            CollectionViewSlide(teacherName: "Teacher Name", teacherJob: "Music ( Guitar)", descriptionImage: #imageLiteral(resourceName: "WishListPic1"), teacherImage: #imageLiteral(resourceName: "TeacherImage")),
-            CollectionViewSlide(teacherName: "Teacher Name", teacherJob: "Sports ( Swimming)", descriptionImage: #imageLiteral(resourceName: "WishListPic2"), teacherImage: #imageLiteral(resourceName: "TeacherImage")),
-            CollectionViewSlide(teacherName: "Teacher Name", teacherJob: "Music ( Guitar)", descriptionImage: #imageLiteral(resourceName: "WishListPic1"), teacherImage: #imageLiteral(resourceName: "TeacherImage"))
+        //collectionViewHome.collectionViewLayout = UICollectionViewFlowLayout()
+        homeSlides = [
+            CollectionViewHomeSlide(teacherName: "Teacher Name", teacherJob: "Music ( Guitar)", descriptionImage: #imageLiteral(resourceName: "WishListPic1"), teacherImage: #imageLiteral(resourceName: "TeacherImage")),
+            CollectionViewHomeSlide(teacherName: "Teacher Name", teacherJob: "Sports ( Swimming)", descriptionImage: #imageLiteral(resourceName: "WishListPic2"), teacherImage: #imageLiteral(resourceName: "TeacherImage")),
+            CollectionViewHomeSlide(teacherName: "Teacher Name", teacherJob: "Music ( Guitar)", descriptionImage: #imageLiteral(resourceName: "WishListPic1"), teacherImage: #imageLiteral(resourceName: "TeacherImage"))
         ]
     }
 }
@@ -43,18 +44,18 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return slides.count
+        return homeSlides.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.identifier, for: indexPath) as! HomeCollectionViewCell
-        cell.setUp(slides[indexPath.row])
+        cell.setup(homeSlides[indexPath.row])
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 //        let vc = UIStoryboard(name:"Main", bundle: nil).instantiateViewController(identifier: "") as!
-//        self.navigationController?.pushViewController(vc, animated: true)
+//        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

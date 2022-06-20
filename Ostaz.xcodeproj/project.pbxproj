@@ -23,7 +23,7 @@
 		A817355B284E7D170008CF8E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817355A284E7D170008CF8E /* RegisterViewController.swift */; };
 		A8174D252858CFA700121A62 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8174D242858CFA700121A62 /* Auth.storyboard */; };
 		A8174D272858D23E00121A62 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8174D262858D23E00121A62 /* Home.storyboard */; };
-		A839205B2855CF5A00CD2126 /* CollectionViewSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = A839205A2855CF5A00CD2126 /* CollectionViewSlide.swift */; };
+		A839205B2855CF5A00CD2126 /* CollectionViewHomeSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = A839205A2855CF5A00CD2126 /* CollectionViewHomeSlide.swift */; };
 		A839205D2855D7BE00CD2126 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A839205C2855D7BE00CD2126 /* HomeCollectionViewCell.swift */; };
 		A84D15EB28521F55004E1995 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84D15EA28521F55004E1995 /* HomeViewController.swift */; };
 		A857EC1C2855FE900095AA01 /* TeacherProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A857EC1B2855FE900095AA01 /* TeacherProfileViewController.swift */; };
@@ -42,6 +42,7 @@
 		A89CD1512858B05F009D049D /* WishListItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89CD1502858B05F009D049D /* WishListItems.swift */; };
 		A89CD1532858BACB009D049D /* SportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89CD1522858BACB009D049D /* SportsViewController.swift */; };
 		A8B33C1A284F91900025BE8A /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B33C19284F91900025BE8A /* LocationViewController.swift */; };
+		A8B750D0285FEEF700305575 /* CollectionViewCategorySlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B750CF285FEEF700305575 /* CollectionViewCategorySlide.swift */; };
 		A8DC659A28577590008879B4 /* EditPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC659928577590008879B4 /* EditPasswordViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -87,7 +88,7 @@
 		A817355A284E7D170008CF8E /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		A8174D242858CFA700121A62 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		A8174D262858D23E00121A62 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		A839205A2855CF5A00CD2126 /* CollectionViewSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewSlide.swift; sourceTree = "<group>"; };
+		A839205A2855CF5A00CD2126 /* CollectionViewHomeSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewHomeSlide.swift; sourceTree = "<group>"; };
 		A839205C2855D7BE00CD2126 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		A84D15EA28521F55004E1995 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A857EC1B2855FE900095AA01 /* TeacherProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherProfileViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +107,7 @@
 		A89CD1502858B05F009D049D /* WishListItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListItems.swift; sourceTree = "<group>"; };
 		A89CD1522858BACB009D049D /* SportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsViewController.swift; sourceTree = "<group>"; };
 		A8B33C19284F91900025BE8A /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		A8B750CF285FEEF700305575 /* CollectionViewCategorySlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCategorySlide.swift; sourceTree = "<group>"; };
 		A8DC659928577590008879B4 /* EditPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPasswordViewController.swift; sourceTree = "<group>"; };
 		AF56F268C1243AC2F59B4D84 /* Pods-Ostaz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ostaz.debug.xcconfig"; path = "Target Support Files/Pods-Ostaz/Pods-Ostaz.debug.xcconfig"; sourceTree = "<group>"; };
 		DB66CA99EA88BE48D1F9CB93 /* Pods-Ostaz-OstazUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ostaz-OstazUITests.release.xcconfig"; path = "Target Support Files/Pods-Ostaz-OstazUITests/Pods-Ostaz-OstazUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -237,7 +239,8 @@
 		A83920592855CF1900CD2126 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A839205A2855CF5A00CD2126 /* CollectionViewSlide.swift */,
+				A839205A2855CF5A00CD2126 /* CollectionViewHomeSlide.swift */,
+				A8B750CF285FEEF700305575 /* CollectionViewCategorySlide.swift */,
 				A89CD1502858B05F009D049D /* WishListItems.swift */,
 			);
 			path = Models;
@@ -583,7 +586,8 @@
 				A8DC659A28577590008879B4 /* EditPasswordViewController.swift in Sources */,
 				A8173529284E68300008CF8E /* LoginViewController.swift in Sources */,
 				A89CD1512858B05F009D049D /* WishListItems.swift in Sources */,
-				A839205B2855CF5A00CD2126 /* CollectionViewSlide.swift in Sources */,
+				A839205B2855CF5A00CD2126 /* CollectionViewHomeSlide.swift in Sources */,
+				A8B750D0285FEEF700305575 /* CollectionViewCategorySlide.swift in Sources */,
 				A89CD14828589B52009D049D /* WishListViewController.swift in Sources */,
 				A89CD14428588CF6009D049D /* AccountTeacherView.swift in Sources */,
 				A817355B284E7D170008CF8E /* RegisterViewController.swift in Sources */,

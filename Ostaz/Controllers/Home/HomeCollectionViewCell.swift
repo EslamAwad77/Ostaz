@@ -24,7 +24,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
     
     //-------------------Functions------------------------
     
-    func setUp(_ slide: CollectionViewSlide){
+    func setup(_ slide: CollectionViewHomeSlide){
         
         slideImgViewDescription.image = slide.descriptionImage
         slideImgViewTeacher.image = slide.teacherImage
