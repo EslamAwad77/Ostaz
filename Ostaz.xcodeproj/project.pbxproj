@@ -43,6 +43,9 @@
 		A89CD1532858BACB009D049D /* SportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89CD1522858BACB009D049D /* SportsViewController.swift */; };
 		A8B33C1A284F91900025BE8A /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B33C19284F91900025BE8A /* LocationViewController.swift */; };
 		A8B750D0285FEEF700305575 /* CollectionViewCategorySlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B750CF285FEEF700305575 /* CollectionViewCategorySlide.swift */; };
+		A8B750D22860012700305575 /* ForgetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B750D12860012700305575 /* ForgetPasswordVC.swift */; };
+		A8B750D5286006E600305575 /* ForgetPasswordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8B750D4286006E600305575 /* ForgetPasswordView.xib */; };
+		A8B750D92860081300305575 /* ForgetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B750D82860081300305575 /* ForgetPasswordView.swift */; };
 		A8DC659A28577590008879B4 /* EditPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC659928577590008879B4 /* EditPasswordViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -108,6 +111,9 @@
 		A89CD1522858BACB009D049D /* SportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsViewController.swift; sourceTree = "<group>"; };
 		A8B33C19284F91900025BE8A /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		A8B750CF285FEEF700305575 /* CollectionViewCategorySlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCategorySlide.swift; sourceTree = "<group>"; };
+		A8B750D12860012700305575 /* ForgetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordVC.swift; sourceTree = "<group>"; };
+		A8B750D4286006E600305575 /* ForgetPasswordView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgetPasswordView.xib; sourceTree = "<group>"; };
+		A8B750D82860081300305575 /* ForgetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordView.swift; sourceTree = "<group>"; };
 		A8DC659928577590008879B4 /* EditPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPasswordViewController.swift; sourceTree = "<group>"; };
 		AF56F268C1243AC2F59B4D84 /* Pods-Ostaz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ostaz.debug.xcconfig"; path = "Target Support Files/Pods-Ostaz/Pods-Ostaz.debug.xcconfig"; sourceTree = "<group>"; };
 		DB66CA99EA88BE48D1F9CB93 /* Pods-Ostaz-OstazUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ostaz-OstazUITests.release.xcconfig"; path = "Target Support Files/Pods-Ostaz-OstazUITests/Pods-Ostaz-OstazUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -249,6 +255,7 @@
 		A857EC2128561B5E0095AA01 /* Nib Views */ = {
 			isa = PBXGroup;
 			children = (
+				A8B750D3286006BB00305575 /* ForgetPasswordView */,
 				A89CD14D28589CAA009D049D /* WishList */,
 				A89CD14228588C93009D049D /* AcountTeacher */,
 				A857EC2228561BA70095AA01 /* Signup */,
@@ -283,6 +290,8 @@
 			children = (
 				A8173528284E68300008CF8E /* LoginViewController.swift */,
 				A817355A284E7D170008CF8E /* RegisterViewController.swift */,
+				A8DC659928577590008879B4 /* EditPasswordViewController.swift */,
+				A8B750D12860012700305575 /* ForgetPasswordVC.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -292,7 +301,6 @@
 			children = (
 				A8B33C19284F91900025BE8A /* LocationViewController.swift */,
 				A857EC1B2855FE900095AA01 /* TeacherProfileViewController.swift */,
-				A8DC659928577590008879B4 /* EditPasswordViewController.swift */,
 				A89CD14028588A99009D049D /* AcountViewController.swift */,
 				A89CD1522858BACB009D049D /* SportsViewController.swift */,
 			);
@@ -323,6 +331,15 @@
 				A89CD14A28589C99009D049D /* WishListCell.xib */,
 			);
 			path = WishList;
+			sourceTree = "<group>";
+		};
+		A8B750D3286006BB00305575 /* ForgetPasswordView */ = {
+			isa = PBXGroup;
+			children = (
+				A8B750D4286006E600305575 /* ForgetPasswordView.xib */,
+				A8B750D82860081300305575 /* ForgetPasswordView.swift */,
+			);
+			path = ForgetPasswordView;
 			sourceTree = "<group>";
 		};
 		C85D77CDE44C3C1FFD3EF048 /* Pods */ = {
@@ -451,6 +468,7 @@
 				A857EC1E285613450095AA01 /* SignupView.xib in Resources */,
 				A8173534284E68320008CF8E /* LaunchScreen.storyboard in Resources */,
 				A8173531284E68320008CF8E /* Assets.xcassets in Resources */,
+				A8B750D5286006E600305575 /* ForgetPasswordView.xib in Resources */,
 				A8174D272858D23E00121A62 /* Home.storyboard in Resources */,
 				A89CD14628588D15009D049D /* AccountTeacherView.xib in Resources */,
 				A89CD14C28589C99009D049D /* WishListCell.xib in Resources */,
@@ -586,6 +604,8 @@
 				A8DC659A28577590008879B4 /* EditPasswordViewController.swift in Sources */,
 				A8173529284E68300008CF8E /* LoginViewController.swift in Sources */,
 				A89CD1512858B05F009D049D /* WishListItems.swift in Sources */,
+				A8B750D22860012700305575 /* ForgetPasswordVC.swift in Sources */,
+				A8B750D92860081300305575 /* ForgetPasswordView.swift in Sources */,
 				A839205B2855CF5A00CD2126 /* CollectionViewHomeSlide.swift in Sources */,
 				A8B750D0285FEEF700305575 /* CollectionViewCategorySlide.swift in Sources */,
 				A89CD14828589B52009D049D /* WishListViewController.swift in Sources */,
