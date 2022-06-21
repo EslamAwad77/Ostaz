@@ -11,12 +11,14 @@ import DropDown
 class LocationViewController: UIViewController{
     
     //-------------------Variables------------------------
+   
     let cityDropDown = DropDown()
     let areaDropDown = DropDown()
     let cityValues: [String] = ["alex", "mans"]
     let areaValues: [String] = ["alex library", "samia elgamal"]
     
     //-------------------Outlet---------------------------
+   
     @IBOutlet weak var viewCity: UIView!
     @IBOutlet weak var viewArea: UIView!
     @IBOutlet weak var lblCity: UILabel!
@@ -44,8 +46,8 @@ class LocationViewController: UIViewController{
     }
     
     //-------------------functions------------------------
+    
     func setUpUI(){
-        
         cityDropDown.anchorView = viewCity
         cityDropDown.dataSource = cityValues
         areaDropDown.anchorView = viewArea

@@ -17,11 +17,34 @@ extension UIView {
     }
     
     func addborder(_ withValue: CGFloat,_ borWidth: CGFloat? = nil, color: UIColor? = nil){
-            self.layer.cornerRadius = withValue
-            self.layer.borderWidth = borWidth ?? 1
+        self.layer.cornerRadius = withValue
+        self.layer.borderWidth = borWidth ?? 1
         self.layer.borderColor = color?.cgColor ?? UIColor.systemGray5.cgColor
-        }
+    }
     
+    func loadViewFromNib(nibName: String) -> UIView? {
+        let bundle = Bundle(for: type(of: self))
+        let nib = UINib(nibName: nibName, bundle: bundle)
+        return nib.instantiate(withOwner: self, options: nil).first as? UIView
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //    func addBorder(_ edge: UIRectEdge, color: UIColor, thickness: CGFloat){
 //        let subView = UIView()
 //        subView.translatesAutoresizingMaskIntoConstraints = false
@@ -54,9 +77,9 @@ extension UIView {
 //            break
 //        }
 //    }
-    
+
 //    func round(_ cornerRaduis: CGFloat){
 //        layer.cornerRadius = cornerRaduis
 //        clipsToBounds = true
 //    }
-}
+

@@ -54,8 +54,10 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let vc = UIStoryboard(name:"Main", bundle: nil).instantiateViewController(identifier: "") as!
-//        
+        //let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        //let vc = storyBoard.instantiateViewController(withIdentifier: "SecondVC") as! SecondVC
+        //vc.modalPresentationStyle = .fullScreen
+        //self.present(vc, animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

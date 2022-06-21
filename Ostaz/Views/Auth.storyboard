@@ -754,7 +754,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="   Otp" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9P4-ik-Txe" userLabel="Otp">
-                                                <rect key="frame" x="17" y="561" width="380" height="56"/>
+                                                <rect key="frame" x="17" y="563" width="380" height="56"/>
                                                 <color key="backgroundColor" name="TxtFieldColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="56" id="fz9-Np-2t5"/>
@@ -768,7 +768,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2d5-Gu-pVn" userLabel="Send">
-                                                <rect key="frame" x="17" y="657" width="380" height="56"/>
+                                                <rect key="frame" x="17" y="659" width="380" height="56"/>
                                                 <color key="backgroundColor" name="ButtonColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="56" id="kl4-mM-lfZ"/>
@@ -787,22 +787,23 @@
                                                     <action selector="btnSend:" destination="it3-74-dl4" eventType="touchUpInside" id="4Ct-0v-V0q"/>
                                                 </connections>
                                             </button>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O1M-LG-tKc" customClass="ForgetPasswordView" customModule="Ostaz" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="538" width="414" height="358"/>
+                                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O1M-LG-tKc" customClass="PasswordCustomView" customModule="Ostaz" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="560" width="414" height="336"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="336" id="Mc9-GP-vLz"/>
+                                                </constraints>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="9P4-ik-Txe" firstAttribute="leading" secondItem="tAy-xX-csn" secondAttribute="leading" constant="17" id="4kt-Pe-eal"/>
                                             <constraint firstAttribute="trailing" secondItem="wEw-HK-FsO" secondAttribute="trailing" id="4zx-Yy-H9d"/>
-                                            <constraint firstItem="9P4-ik-Txe" firstAttribute="top" secondItem="SQ9-7V-eaA" secondAttribute="bottom" constant="23" id="57N-Mh-9EN"/>
                                             <constraint firstItem="SQ9-7V-eaA" firstAttribute="leading" secondItem="tAy-xX-csn" secondAttribute="leading" constant="25" id="5h7-Ul-LgO"/>
+                                            <constraint firstItem="9P4-ik-Txe" firstAttribute="top" secondItem="SQ9-7V-eaA" secondAttribute="bottom" constant="25" id="7aw-mI-oRI"/>
                                             <constraint firstItem="M3t-Y9-rnH" firstAttribute="leading" secondItem="tAy-xX-csn" secondAttribute="leading" constant="10" id="BA0-zF-i1v"/>
-                                            <constraint firstAttribute="bottom" secondItem="O1M-LG-tKc" secondAttribute="bottom" id="CoZ-4V-xbp"/>
+                                            <constraint firstItem="O1M-LG-tKc" firstAttribute="top" secondItem="SQ9-7V-eaA" secondAttribute="bottom" constant="22" id="Dbl-Vm-WDh"/>
                                             <constraint firstAttribute="trailing" secondItem="SQ9-7V-eaA" secondAttribute="trailing" constant="10" id="Deq-T9-oef"/>
-                                            <constraint firstItem="O1M-LG-tKc" firstAttribute="leading" secondItem="tAy-xX-csn" secondAttribute="leading" id="DlJ-NY-9bd"/>
-                                            <constraint firstItem="O1M-LG-tKc" firstAttribute="top" secondItem="tAy-xX-csn" secondAttribute="top" constant="538" id="IAH-br-20C"/>
                                             <constraint firstItem="SQ9-7V-eaA" firstAttribute="top" secondItem="bAR-r1-Neg" secondAttribute="bottom" id="LgU-QM-BJE"/>
                                             <constraint firstAttribute="trailing" secondItem="M3t-Y9-rnH" secondAttribute="trailing" constant="10" id="XGb-oC-vOU"/>
                                             <constraint firstItem="M3t-Y9-rnH" firstAttribute="top" secondItem="wEw-HK-FsO" secondAttribute="bottom" constant="35" id="Y6k-8J-Jiw"/>
@@ -812,7 +813,8 @@
                                             <constraint firstAttribute="trailing" secondItem="9P4-ik-Txe" secondAttribute="trailing" constant="17" id="ezq-Y8-t2K"/>
                                             <constraint firstAttribute="trailing" secondItem="2d5-Gu-pVn" secondAttribute="trailing" constant="17" id="fxA-Rn-TwP"/>
                                             <constraint firstAttribute="height" constant="896" id="jRo-YU-Prt"/>
-                                            <constraint firstAttribute="trailing" secondItem="O1M-LG-tKc" secondAttribute="trailing" id="m2R-Zd-oQP"/>
+                                            <constraint firstAttribute="trailing" secondItem="O1M-LG-tKc" secondAttribute="trailing" id="kLr-44-m2f"/>
+                                            <constraint firstItem="O1M-LG-tKc" firstAttribute="leading" secondItem="tAy-xX-csn" secondAttribute="leading" id="lV3-vE-dmg"/>
                                             <constraint firstItem="2d5-Gu-pVn" firstAttribute="top" secondItem="9P4-ik-Txe" secondAttribute="bottom" constant="40" id="mg4-zW-7vg"/>
                                             <constraint firstItem="2d5-Gu-pVn" firstAttribute="leading" secondItem="tAy-xX-csn" secondAttribute="leading" constant="17" id="nA0-7q-wO2"/>
                                             <constraint firstItem="bAR-r1-Neg" firstAttribute="leading" secondItem="tAy-xX-csn" secondAttribute="leading" constant="25" id="vuV-Nh-nfi"/>
@@ -841,7 +843,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="forgetPassView" destination="O1M-LG-tKc" id="NCF-JX-38I"/>
+                        <outlet property="PasswordCustomView" destination="O1M-LG-tKc" id="tkf-P6-hML"/>
                         <outlet property="txtFieldOpt" destination="9P4-ik-Txe" id="h7T-gy-n4F"/>
                     </connections>
                 </viewController>
@@ -863,7 +865,7 @@
             <color red="0.52899998426437378" green="0.27799999713897705" blue="0.94499999284744263" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="TxtColor">
-            <color red="0.41960784313725491" green="0.4392156862745098" blue="0.54117647058823526" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.41999998688697815" green="0.43900001049041748" blue="0.54100000858306885" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="TxtFieldColor">
             <color red="0.97600001096725464" green="0.97600001096725464" blue="0.97600001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

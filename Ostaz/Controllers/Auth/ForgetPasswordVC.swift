@@ -11,7 +11,8 @@ class ForgetPasswordVC: UIViewController {
     
     //-------------------Outlet---------------------------
     
-    @IBOutlet weak var forgetPassView: ForgetPasswordView!
+    @IBOutlet weak var PasswordCustomView: PasswordCustomView!
+    
     @IBOutlet weak var txtFieldOpt: UITextField!
     
     //-------------------Outlet---------------------------

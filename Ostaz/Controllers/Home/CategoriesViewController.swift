@@ -21,12 +21,11 @@ class CategoriesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.viewSearch.addborder(10)
-        // self.setupUI()
+         self.setUpUI()
     }
     
     //-------------------Functions------------------------
-
+    
     func setUpUI(){
         self.viewSearch.addborder(10)
         collectionViewCategories.delegate = self
@@ -58,22 +57,25 @@ class CategoriesViewController: UIViewController {
 //-------------------Exstensions------------------------
 
 extension CategoriesViewController: UICollectionViewDelegate, UICollectionViewDataSource{
-//, UICollectionViewDelegateFlowLayout {
+    //, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return categoriesSlides.count
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoriesCollectionViewCell.identifier, for: indexPath) as! CategoriesCollectionViewCell
         cell.setupUI(categoriesSlides[indexPath.row])
         return cell
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-       // let vc = UIStoryboard(name:"Main", bundle: nil).instantiateViewController(identifier: "") as!
+        //let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        //let vc = storyBoard.instantiateViewController(withIdentifier: "SecondVC") as! SecondVC
+        //vc.modalPresentationStyle = .fullScreen
+        //self.present(vc, animated: true)
     }
-
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
-//    }
+    
+    //func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    //  return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+    //    }
 }

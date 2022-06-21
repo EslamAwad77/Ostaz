@@ -36,7 +36,7 @@
         <!--Home-->
         <scene sceneID="hze-fa-nyn">
             <objects>
-                <viewController id="wPb-C0-Kth" customClass="HomeViewController" customModule="Ostaz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="wPb-C0-Kth" customClass="HomeViewController" customModule="Ostaz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="x2J-du-4BC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -52,7 +52,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="NJf-bi-FgY"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                 <color key="textColor" name="ButtonColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -70,7 +70,7 @@
                                                             </button>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Search" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lv2-jt-JO0" userLabel="search">
                                                                 <rect key="frame" x="28" y="0.0" width="283" height="56"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
@@ -510,11 +510,11 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X82-3V-G3i" userLabel="About Us">
                                                 <rect key="frame" x="17.5" y="194" width="379" height="60"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="tzo-73-O1U">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tzo-73-O1U">
                                                         <rect key="frame" x="0.0" y="0.0" width="379" height="60"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFJ-Zi-nN2" userLabel="About Us Button">
-                                                                <rect key="frame" x="0.0" y="0.0" width="81" height="60"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="347.5" height="60"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" title="     About Us">
@@ -555,11 +555,11 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vbX-jl-yFN" userLabel="special conditions">
                                                 <rect key="frame" x="17.5" y="270" width="379" height="60"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="LF9-hy-QBR">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LF9-hy-QBR">
                                                         <rect key="frame" x="0.0" y="0.0" width="379" height="60"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="09t-vf-dZ0" userLabel="SpecialConditions Button">
-                                                                <rect key="frame" x="0.0" y="0.0" width="144" height="60"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="347.5" height="60"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" title="     Special Conditions">
@@ -620,11 +620,11 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fIk-Pp-K3q" userLabel="Account">
                                                 <rect key="frame" x="17.5" y="118" width="379" height="60"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="fFK-oM-nfk">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fFK-oM-nfk">
                                                         <rect key="frame" x="0.0" y="0.0" width="379" height="60"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ino-Pu-0f3" userLabel="Account Button">
-                                                                <rect key="frame" x="0.0" y="0.0" width="66" height="60"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="347.5" height="60"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" title="     Acount">

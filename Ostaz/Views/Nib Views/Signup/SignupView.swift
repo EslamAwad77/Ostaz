@@ -7,6 +7,7 @@
 
 import UIKit
 
+//@IBDesignable
 class SignupView: UIView {
     
     @IBOutlet var contentView: UIView!

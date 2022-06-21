@@ -20,12 +20,24 @@ class MoreViewController: UIViewController {
     
     //-------------------Actions--------------------------
     @IBAction func GoToAccountVC(_ sender: UIButton) {
+        //let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        //let vc = storyBoard.instantiateViewController(withIdentifier: "SecondVC") as! SecondVC
+        //vc.modalPresentationStyle = .fullScreen
+        //self.present(vc, animated: true)
     }
     
     @IBAction func GoToAboutUsVC(_ sender: UIButton) {
+        //let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        //let vc = storyBoard.instantiateViewController(withIdentifier: "SecondVC") as! SecondVC
+        //vc.modalPresentationStyle = .fullScreen
+        //self.present(vc, animated: true)
     }
     
     @IBAction func GoToSpecialCondtionsVC(_ sender: UIButton) {
+        //let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        //let vc = storyBoard.instantiateViewController(withIdentifier: "SecondVC") as! SecondVC
+        //vc.modalPresentationStyle = .fullScreen
+        //self.present(vc, animated: true)
     }
     @IBAction func btnLogout(_ sender: UIButton) {
     }

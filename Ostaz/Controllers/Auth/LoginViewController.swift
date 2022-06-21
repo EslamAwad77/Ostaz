@@ -18,10 +18,18 @@ class LoginViewController: UIViewController {
     //-------------------Actions-------------------------
     
     @IBAction func btnFrogetPassword(_ sender: UIButton) {
+        //let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        //let vc = storyBoard.instantiateViewController(withIdentifier: "SecondVC") as! SecondVC
+        //vc.modalPresentationStyle = .fullScreen
+        //self.present(vc, animated: true)
     }
     @IBAction func btnLogin(_ sender: UIButton) {
     }
     @IBAction func btnGoToRegister(_ sender: UIButton) {
+        //let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        //let vc = storyBoard.instantiateViewController(withIdentifier: "SecondVC") as! SecondVC
+        //vc.modalPresentationStyle = .fullScreen
+        //self.present(vc, animated: true)
     }
     @IBAction func btnShowPassword(_ sender: UIButton) {
     }
