@@ -8,10 +8,14 @@
 
 import UIKit
 
-struct CollectionViewHomeSlide {
+struct CollectionViewHomeMostViewedSlide {
     let teacherName: String
     let teacherJob: String
     let descriptionImage: UIImage
     let teacherImage: UIImage
  
+}
+struct CollectionViewCategorySlide {
+    let categoryImage: UIImage
+    let categoryName: String
 }

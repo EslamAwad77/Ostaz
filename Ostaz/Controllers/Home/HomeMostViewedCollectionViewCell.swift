@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeCollectionViewCell: UICollectionViewCell {
+class HomeMostViewedCollectionViewCell: UICollectionViewCell {
     
     
     
@@ -20,11 +20,11 @@ class HomeCollectionViewCell: UICollectionViewCell {
     
     //-------------------Variables------------------------
     
-    static let identifier = String(describing: HomeCollectionViewCell.self)
+    static let identifier = String(describing: HomeMostViewedCollectionViewCell.self)
     
     //-------------------Functions------------------------
     
-    func setup(_ slide: CollectionViewHomeSlide){
+    func setup(_ slide: CollectionViewHomeMostViewedSlide){
         
         slideImgViewDescription.image = slide.descriptionImage
         slideImgViewTeacher.image = slide.teacherImage

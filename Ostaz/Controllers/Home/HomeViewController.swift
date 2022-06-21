@@ -12,11 +12,14 @@ class HomeViewController: UIViewController {
     //-------------------IBOutlet------------------------
     @IBOutlet weak var viewSearchWithFilter: UIView!
     
-    @IBOutlet weak var collectionViewHome: UICollectionView!
+    @IBOutlet weak var collectionViewMostViewedInHome: UICollectionView!
+    
+    @IBOutlet weak var collectionViewCategoriesInHome: UICollectionView!
     
     //-------------------Variables------------------------
     
-    var homeSlides: [CollectionViewHomeSlide] = []
+    var homeMostViewedSlides: [CollectionViewHomeMostViewedSlide] = []
+    var homecategoriesSlides: [CollectionViewCategorySlide] = []
     
     //-------------------LifeCycle------------------------
     
@@ -29,13 +32,23 @@ class HomeViewController: UIViewController {
     
     func setUpUI(){
         self.viewSearchWithFilter.addborder(10)
-        collectionViewHome.delegate = self
-        collectionViewHome.dataSource = self
+        collectionViewMostViewedInHome.delegate = self
+        collectionViewMostViewedInHome.dataSource = self
+        collectionViewCategoriesInHome.delegate = self
+        collectionViewCategoriesInHome.dataSource = self
         //collectionViewHome.collectionViewLayout = UICollectionViewFlowLayout()
-        homeSlides = [
-            CollectionViewHomeSlide(teacherName: "Teacher Name", teacherJob: "Music ( Guitar)", descriptionImage: #imageLiteral(resourceName: "WishListPic1"), teacherImage: #imageLiteral(resourceName: "TeacherImage")),
-            CollectionViewHomeSlide(teacherName: "Teacher Name", teacherJob: "Sports ( Swimming)", descriptionImage: #imageLiteral(resourceName: "WishListPic2"), teacherImage: #imageLiteral(resourceName: "TeacherImage")),
-            CollectionViewHomeSlide(teacherName: "Teacher Name", teacherJob: "Music ( Guitar)", descriptionImage: #imageLiteral(resourceName: "WishListPic1"), teacherImage: #imageLiteral(resourceName: "TeacherImage"))
+        homeMostViewedSlides = [
+            CollectionViewHomeMostViewedSlide(teacherName: "Teacher Name", teacherJob: "Music ( Guitar)", descriptionImage: #imageLiteral(resourceName: "WishListPic1"), teacherImage: #imageLiteral(resourceName: "TeacherImage")),
+            CollectionViewHomeMostViewedSlide(teacherName: "Teacher Name", teacherJob: "Sports ( Swimming)", descriptionImage: #imageLiteral(resourceName: "WishListPic2"), teacherImage: #imageLiteral(resourceName: "TeacherImage")),
+            CollectionViewHomeMostViewedSlide(teacherName: "Teacher Name", teacherJob: "Music ( Guitar)", descriptionImage: #imageLiteral(resourceName: "WishListPic1"), teacherImage: #imageLiteral(resourceName: "TeacherImage"))
+        ]
+        homecategoriesSlides = [
+            CollectionViewCategorySlide(categoryImage: #imageLiteral(resourceName: "musicIcon"), categoryName: "Music"),
+            CollectionViewCategorySlide(categoryImage: #imageLiteral(resourceName: "quranIcon"), categoryName: "Quran"),
+            CollectionViewCategorySlide(categoryImage: #imageLiteral(resourceName: "sportsIcon"), categoryName: "Sports"),
+            CollectionViewCategorySlide(categoryImage: #imageLiteral(resourceName: "ProgrammingIcon"), categoryName: "Programming"),
+            CollectionViewCategorySlide(categoryImage: #imageLiteral(resourceName: "UniversityIcon"), categoryName: "University"),
+            CollectionViewCategorySlide(categoryImage: #imageLiteral(resourceName: "schoolIcon"), categoryName: "School")
         ]
     }
 }
@@ -44,12 +57,14 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return homeSlides.count
+        
+        return homeMostViewedSlides.count
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.identifier, for: indexPath) as! HomeCollectionViewCell
-        cell.setup(homeSlides[indexPath.row])
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeMostViewedCollectionViewCell.identifier, for: indexPath) as! HomeMostViewedCollectionViewCell
+        cell.setup(homeMostViewedSlides[indexPath.row])
         return cell
     }
     
@@ -64,3 +79,4 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         return CGSize(width: collectionView.frame.width*0.6, height: collectionView.frame.height)
     }
 }
+
