@@ -94,8 +94,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         if collectionView == self.collectionViewMostViewedInHome{
             return CGSize(width: collectionView.frame.width*0.6, height: collectionView.frame.height)
         } else {
-            return CGSize(width: 115, height: 106)
-            //return CGSize(width: collectionView.frame.width*0.3, height: collectionView.frame.height*0.1)
+            return CGSize(width: collectionView.frame.width/3.5, height: 106)
         }
     }
 }

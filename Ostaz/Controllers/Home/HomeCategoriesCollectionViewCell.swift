@@ -10,10 +10,9 @@ import UIKit
 class HomeCategoriesCollectionViewCell: UICollectionViewCell {
     
     //-------------------IBOutlet------------------------
+  
     @IBOutlet weak var imgViewCategory: UIImageView!
-    
     @IBOutlet weak var lblDescription: UILabel!
-    
     
     //-------------------Variables------------------------
     

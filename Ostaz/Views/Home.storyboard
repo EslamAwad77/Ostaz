@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9sm-81-F7K">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -651,7 +652,7 @@
                                                     <constraint firstAttribute="height" constant="721" id="lRE-kp-Xvu"/>
                                                 </constraints>
                                                 <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="hjl-dw-TIi">
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="hjl-dw-TIi">
                                                         <rect key="frame" x="0.0" y="44.5" width="414" height="44"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hjl-dw-TIi" id="iEd-Cd-RGO">
@@ -766,11 +767,8 @@
                                                 </constraints>
                                             </view>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5gW-ge-OMo" userLabel="Collection View Categories">
-                                                <rect key="frame" x="16" y="165" width="382" height="759"/>
+                                                <rect key="frame" x="16" y="165" width="382" height="705"/>
                                                 <color key="backgroundColor" name="BackgroundColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="759" id="fx7-6U-wy6"/>
-                                                </constraints>
                                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fku-Mg-gcc">
                                                     <size key="itemSize" width="115" height="106"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -837,6 +835,7 @@
                                             <constraint firstAttribute="trailing" secondItem="FaO-Ap-d17" secondAttribute="trailing" constant="17" id="U6i-lH-sBi"/>
                                             <constraint firstItem="efU-VZ-Deb" firstAttribute="top" secondItem="Vqn-WF-XEH" secondAttribute="top" constant="30" id="WDE-48-8Gc"/>
                                             <constraint firstAttribute="height" constant="870" id="nW8-7E-0JR"/>
+                                            <constraint firstAttribute="bottom" secondItem="5gW-ge-OMo" secondAttribute="bottom" id="vQh-L8-yJu"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -890,7 +889,7 @@
             <color red="0.50199997425079346" green="0.51800000667572021" blue="0.58399999141693115" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="HintColor">
-            <color red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.96100002527236938" green="0.96100002527236938" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="LogoutBtnColor">
             <color red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
