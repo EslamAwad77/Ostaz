@@ -8,7 +8,7 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    
     //-------------------IBOutlet------------------------
     @IBOutlet weak var viewSearchWithFilter: UIView!
     
@@ -56,16 +56,24 @@ class HomeViewController: UIViewController {
 //-------------------Exstensions------------------------
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        return homeMostViewedSlides.count
-        
+        if collectionView == self.collectionViewMostViewedInHome{
+            return homeMostViewedSlides.count
+        }
+        return homecategoriesSlides.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeMostViewedCollectionViewCell.identifier, for: indexPath) as! HomeMostViewedCollectionViewCell
-        cell.setup(homeMostViewedSlides[indexPath.row])
-        return cell
+        if collectionView == self.collectionViewMostViewedInHome{
+            let cell1 = collectionView.dequeueReusableCell(withReuseIdentifier: HomeMostViewedCollectionViewCell.identifier, for: indexPath) as! HomeMostViewedCollectionViewCell
+            cell1.setup(homeMostViewedSlides[indexPath.row])
+            return cell1
+        } else{
+            let cell2 = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCategoriesCollectionViewCell.identifier, for: indexPath) as! HomeCategoriesCollectionViewCell
+            cell2.setupUI (homecategoriesSlides[indexPath.row])
+            return cell2
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -76,7 +84,12 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width*0.6, height: collectionView.frame.height)
+        if collectionView == self.collectionViewMostViewedInHome{
+            return CGSize(width: collectionView.frame.width*0.6, height: collectionView.frame.height)
+        } else {
+            return CGSize(width: 115, height: 106)
+            //return CGSize(width: collectionView.frame.width*0.3, height: collectionView.frame.height*0.1)
+        }
     }
 }
 
