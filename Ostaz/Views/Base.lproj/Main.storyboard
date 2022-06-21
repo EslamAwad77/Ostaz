@@ -756,7 +756,7 @@
         <!--Acount View Controller-->
         <scene sceneID="Pqj-DW-4eC">
             <objects>
-                <viewController id="S6C-bU-5is" customClass="AcountViewController" customModule="Ostaz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AcountViewController" id="S6C-bU-5is" customClass="AcountViewController" customModule="Ostaz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ckj-XE-D7u">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1105,7 +1105,7 @@
         <!--SportsViewController Scene-->
         <scene sceneID="pxN-pw-ZLR">
             <objects>
-                <viewController id="gms-yM-teh" userLabel="SportsViewController Scene" customClass="SportsViewController" customModule="Ostaz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SportsViewController" id="gms-yM-teh" userLabel="SportsViewController Scene" customClass="SportsViewController" customModule="Ostaz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" ambiguous="YES" id="QWo-Oz-JEj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1189,7 +1189,7 @@
         <!--Location View Controller-->
         <scene sceneID="fUZ-76-1ni">
             <objects>
-                <viewController id="Wme-wy-DK2" customClass="LocationViewController" customModule="Ostaz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LocationViewController" id="Wme-wy-DK2" customClass="LocationViewController" customModule="Ostaz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="63n-8t-7uD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

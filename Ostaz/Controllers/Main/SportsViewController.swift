@@ -8,6 +8,8 @@
 import UIKit
 
 class SportsViewController: UIViewController {
+    
+    //-------------------variables------------------------
 
     var sportsItems: [WishListItems] = [
         WishListItems(descriptionImg: #imageLiteral(resourceName: "WishListPic1"), teacherImg: #imageLiteral(resourceName: "TeacherImage"), teacherName: "ahmed", teacherJob: "maths"),
@@ -16,14 +18,20 @@ class SportsViewController: UIViewController {
         WishListItems(descriptionImg: #imageLiteral(resourceName: "WishListPic1"), teacherImg: #imageLiteral(resourceName: "TeacherImage"), teacherName: "nour ahmed mohamed", teacherJob: "region(maths)"),
         WishListItems(descriptionImg: #imageLiteral(resourceName: "WishListPic2"), teacherImg: #imageLiteral(resourceName: "TeacherImage"), teacherName: "nour ahmed mohamed", teacherJob: "region(maths)"),WishListItems(descriptionImg: #imageLiteral(resourceName: "WishListPic1"), teacherImg: #imageLiteral(resourceName: "TeacherImage"), teacherName: "nour ahmed mohamed", teacherJob: "region(maths)")
     ]
+    
+    //-------------------IBOutlet------------------------
+
     @IBOutlet weak var tbleViewSports: UITableView!
     
-    
+    //-------------------lifecycle------------------------
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        // Do any additional setup after loading the view.
     }
+
+    //-------------------functions------------------------
+
     func setupUI() {
         tbleViewSports.dataSource = self
         tbleViewSports.delegate = self
@@ -31,6 +39,8 @@ class SportsViewController: UIViewController {
         tbleViewSports.reloadData()
     }
 }
+
+//-------------------extension------------------------
 
 extension SportsViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
