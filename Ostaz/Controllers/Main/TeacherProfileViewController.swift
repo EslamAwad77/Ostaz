@@ -111,6 +111,16 @@ extension TeacherProfileViewController: UICollectionViewDelegate, UICollectionVi
         
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if collectionView == self.collectionViewMehtods{
+            return CGSize(width: collectionView.frame.width/2.5, height: 38)
+        } else if collectionView == self.collectionViewAreas{
+            return CGSize(width: collectionView.frame.width/2.5, height: 38)
+        } else{
+            return CGSize(width: collectionView.frame.width/2.5, height: 38)
+        }
+    }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == self.collectionViewMehtods{
             //let storyBoard = UIStoryboard(name: "Main", bundle: nil)
@@ -127,16 +137,6 @@ extension TeacherProfileViewController: UICollectionViewDelegate, UICollectionVi
             //let vc = storyBoard.instantiateViewController(withIdentifier: "SecondVC") as! SecondVC
             //vc.modalPresentationStyle = .fullScreen
             //self.present(vc, animated: true)
-        }
-    }
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if collectionView == self.collectionViewMehtods{
-            return CGSize(width: collectionView.frame.width/2.5, height: 38)
-        } else if collectionView == self.collectionViewAreas{
-            return CGSize(width: collectionView.frame.width/2.5, height: 38)
-        } else{
-            return CGSize(width: collectionView.frame.width/2.5, height: 38)
         }
     }
 }

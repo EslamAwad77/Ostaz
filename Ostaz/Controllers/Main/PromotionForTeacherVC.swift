@@ -6,11 +6,18 @@
 //
 
 import UIKit
+import DropDown
+
 
 class PromotionForTeacherVC: UIViewController {
     
     //-------------------Variables------------------------
+
     
+    let areaDropDown = DropDown()
+    let categoryDropDown = DropDown()
+    let areaValues: [String] = ["alex", "mans"]
+    let categoryValues: [String] = ["alex library", "samia elgamal"]
     var TeacherMethodSlides: [CollectionViewPromotionMethodsSlide] = []
     var TeacherAreaSlides: [CollectionViewPromotionAreasSlide] = []
     var TeachercategorySlides: [CollectionViewPromotionCategoriesSlide] = []
@@ -43,8 +50,10 @@ class PromotionForTeacherVC: UIViewController {
     @IBAction func btnAddOtherMethod(_ sender: UIButton) {
     }
     @IBAction func btnDropDownSelectArea(_ sender: UIButton) {
+        areaDropDown.show()
     }
     @IBAction func btnDropDownSelectCategory(_ sender: UIButton) {
+        categoryDropDown.show()
     }
     @IBAction func btnConfirmPromotion(_ sender: UIButton) {
     }
@@ -53,11 +62,13 @@ class PromotionForTeacherVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpUI()
+        //self.setupDropDown()
 
     }
     
     //-------------------functions------------------------
     func setUpUI(){
+        
         collectionViewTeachMethods.delegate = self
         collectionViewTeachMethods.dataSource = self
         collectionViewAddingAreas.delegate = self
@@ -84,8 +95,28 @@ class PromotionForTeacherVC: UIViewController {
             CollectionViewPromotionCategoriesSlide(categoryName: "Math"),
             CollectionViewPromotionCategoriesSlide(categoryName: "Grade 6")
         ]
+        
+        areaDropDown.anchorView = viewAreaDropDowm
+        areaDropDown.dataSource = areaValues
+        categoryDropDown.anchorView = viewCategoryDropDown
+        categoryDropDown.dataSource = categoryValues
+        areaDropDown.bottomOffset = CGPoint(x: 0, y:(areaDropDown.anchorView?.plainView.bounds.height)!)
+        areaDropDown.topOffset = CGPoint(x: 0, y:-(categoryDropDown.anchorView?.plainView.bounds.height)!)
+        categoryDropDown.bottomOffset = CGPoint(x: 0, y:(areaDropDown.anchorView?.plainView.bounds.height)!)
+        categoryDropDown.topOffset = CGPoint(x: 0, y:-(areaDropDown.anchorView?.plainView.bounds.height)!)
+        areaDropDown.direction = .any
+        categoryDropDown.direction = .any
+        areaDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+            print("Selected item: \(item) at index: \(index)")
+            //self.lblSelectArea.text = areaValues[index]
+        }
+        categoryDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+            print("Selected item: \(item) at index: \(index)")
+            //self.lblSelectCategory.text = categoryValues[index]
+        }
     }
 }
+
 //-------------------exstensions------------------------
 extension PromotionForTeacherVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
@@ -114,7 +145,18 @@ extension PromotionForTeacherVC: UICollectionViewDelegate, UICollectionViewDataS
         }
 
     }
-
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if collectionView == self.collectionViewTeachMethods{
+            return CGSize(width: collectionView.frame.width/2.5, height: 38)
+        } else if collectionView == self.collectionViewAddingAreas{
+            return CGSize(width: collectionView.frame.width/3.5, height: 33)
+        } else{
+            return CGSize(width: collectionView.frame.width/3.5, height: 33)
+        }
+    }
+    
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == self.collectionViewTeachMethods{
             //let storyBoard = UIStoryboard(name: "Main", bundle: nil)
@@ -131,16 +173,6 @@ extension PromotionForTeacherVC: UICollectionViewDelegate, UICollectionViewDataS
             //let vc = storyBoard.instantiateViewController(withIdentifier: "SecondVC") as! SecondVC
             //vc.modalPresentationStyle = .fullScreen
             //self.present(vc, animated: true)
-        }
-    }
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if collectionView == self.collectionViewTeachMethods{
-            return CGSize(width: collectionView.frame.width/2.5, height: 38)
-        } else if collectionView == self.collectionViewAddingAreas{
-            return CGSize(width: collectionView.frame.width/3.5, height: 33)
-        } else{
-            return CGSize(width: collectionView.frame.width/3.5, height: 33)
         }
     }
 }
