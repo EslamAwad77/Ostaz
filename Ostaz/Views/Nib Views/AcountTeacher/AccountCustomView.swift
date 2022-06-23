@@ -10,9 +10,6 @@ import UIKit
 @IBDesignable
 class AccountCustomView: UIView {
 
-        //-------------------IBOutlet------------------------
-    
-        
         //-------------------Actions------------------------
         
         @IBAction func btnGoToYourService(_ sender: UIButton) {

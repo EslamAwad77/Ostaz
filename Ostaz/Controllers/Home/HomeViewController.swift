@@ -9,6 +9,11 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    //-------------------Variables------------------------
+    var homeMostViewedSlides: [CollectionViewHomeMostViewedSlide] = []
+    var homecategoriesSlides: [CollectionViewCategorySlide] = []
+    lazy var homeFilterVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "HomeFilterVC")
+    
     //-------------------IBOutlet------------------------
     @IBOutlet weak var viewSearchWithFilter: UIView!
     
@@ -16,10 +21,26 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var collectionViewCategoriesInHome: UICollectionView!
     
-    //-------------------Variables------------------------
+    //-------------------Actions------------------------
+
+    @IBAction func btnHomeFilter(_ sender: UIButton) {
+        if let sheet = homeFilterVC.sheetPresentationController {
+            sheet.detents = [.medium()]
+            sheet.prefersScrollingExpandsWhenScrolledToEdge = false
+            sheet.prefersGrabberVisible = true
+            sheet.preferredCornerRadius = 38
+        }
+        self.present(homeFilterVC, animated: true, completion: nil)
+    }
+    @IBAction func btnGoToCategories(_ sender: UIButton) {
+        //let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        //let vc = storyBoard.instantiateViewController(withIdentifier: "SecondVC") as! SecondVC
+        //vc.modalPresentationStyle = .fullScreen
+        //self.present(vc, animated: true)
+    }
     
-    var homeMostViewedSlides: [CollectionViewHomeMostViewedSlide] = []
-    var homecategoriesSlides: [CollectionViewCategorySlide] = []
+    
+    
     
     //-------------------LifeCycle------------------------
     

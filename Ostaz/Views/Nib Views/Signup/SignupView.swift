@@ -7,10 +7,9 @@
 
 import UIKit
 
-//@IBDesignable
+@IBDesignable
 class SignupView: UIView {
     
-    @IBOutlet var contentView: UIView!
     @IBOutlet weak var btnRegister: UIButton!
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblDesc: UILabel!
@@ -27,27 +26,32 @@ class SignupView: UIView {
 //    }
     
     @IBAction func resgisterClicked(_ sender: Any) {
-//        let vc = UIStoryboard(name:"Main", bundle: nil).instantiateViewController(identifier: "RegisterVC") as! RegisterViewController
-//        self.navigationController?.pushViewController(vc, animated: true)
-        //print("register")
+        //let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        //let vc = storyBoard.instantiateViewController(withIdentifier: "SecondVC") as! SecondVC
+        //vc.modalPresentationStyle = .fullScreen
+        //self.present(vc, animated: true)
     }
-    
-    
+
+    //-------------------Functions-----------------------
     override init(frame: CGRect) {
         super.init(frame: frame)
-        commonInit()
+        configureView()
     }
-    
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        commonInit()
+        configureView()
     }
     
-    private func commonInit(){
-        Bundle.main.loadNibNamed("SignupView", owner: self, options: nil)
-        addSubview(contentView)
-        contentView.frame = self.bounds
-        contentView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
+    func configureView(){
+        guard let view = self.loadViewFromNib(nibName: "SignupView") else { return }
+        view.frame = self.bounds
+        self.addSubview(view)
     }
+    
+//    func configurationView(name: String, phoneNumber: String){
+//        lblName.text = name
+//        lblPhoneNumber.text = phoneNumber
+//    }
 
 }

@@ -16,8 +16,8 @@ class PromotionForTeacherVC: UIViewController {
     
     let areaDropDown = DropDown()
     let categoryDropDown = DropDown()
-    let areaValues: [String] = ["alex", "mans"]
-    let categoryValues: [String] = ["alex library", "samia elgamal"]
+    let areaValues: [String] = ["Egypt", "Dakahlia","Mansoura", "Samia El Gamal","Ahmed Maher"]
+    let categoryValues: [String] = ["Teaching", "Math", "Grade 6"]
     var TeacherMethodSlides: [CollectionViewPromotionMethodsSlide] = []
     var TeacherAreaSlides: [CollectionViewPromotionAreasSlide] = []
     var TeachercategorySlides: [CollectionViewPromotionCategoriesSlide] = []
@@ -68,6 +68,26 @@ class PromotionForTeacherVC: UIViewController {
     
     //-------------------functions------------------------
     func setUpUI(){
+   
+        areaDropDown.anchorView = viewAreaDropDowm
+        areaDropDown.dataSource = areaValues
+        categoryDropDown.anchorView = viewCategoryDropDown
+        categoryDropDown.dataSource = categoryValues
+        areaDropDown.bottomOffset = CGPoint(x: 0, y:(areaDropDown.anchorView?.plainView.bounds.height)!)
+        areaDropDown.topOffset = CGPoint(x: 0, y:-(categoryDropDown.anchorView?.plainView.bounds.height)!)
+        categoryDropDown.bottomOffset = CGPoint(x: 0, y:(areaDropDown.anchorView?.plainView.bounds.height)!)
+        categoryDropDown.topOffset = CGPoint(x: 0, y:-(areaDropDown.anchorView?.plainView.bounds.height)!)
+        areaDropDown.direction = .any
+        categoryDropDown.direction = .any
+//        areaDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+//            print("Selected item: \(item) at index: \(index)")
+//            self.TeacherAreaSlides = [CollectionViewPromotionAreasSlide(areaName: areaValues[index])]
+//
+//        }
+//        categoryDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+//            print("Selected item: \(item) at index: \(index)")
+//            self.lblSelectCategory.text = categoryValues[index]
+//        }
         
         collectionViewTeachMethods.delegate = self
         collectionViewTeachMethods.dataSource = self
@@ -84,36 +104,17 @@ class PromotionForTeacherVC: UIViewController {
             CollectionViewPromotionMethodsSlide(methodImage: #imageLiteral(resourceName: "checkBoxMarknotselected"), methodName: "Groups")
         ]
         TeacherAreaSlides = [
-            CollectionViewPromotionAreasSlide(areaName: "Egypt"),
-            CollectionViewPromotionAreasSlide(areaName: "Dakahlia"),
-            CollectionViewPromotionAreasSlide(areaName: "Mansoura")
+            CollectionViewPromotionAreasSlide(areaName: areaDropDown.selectedItem ?? ""),
+            CollectionViewPromotionAreasSlide(areaName: areaDropDown.selectedItem ?? ""),
+            CollectionViewPromotionAreasSlide(areaName: areaDropDown.selectedItem ?? "")
             
         ]
         TeachercategorySlides = [
 
-            CollectionViewPromotionCategoriesSlide(categoryName: "Teaching"),
-            CollectionViewPromotionCategoriesSlide(categoryName: "Math"),
-            CollectionViewPromotionCategoriesSlide(categoryName: "Grade 6")
+            CollectionViewPromotionCategoriesSlide(categoryName: categoryDropDown.selectedItem ?? ""),
+            CollectionViewPromotionCategoriesSlide(categoryName: categoryDropDown.selectedItem ?? ""),
+            CollectionViewPromotionCategoriesSlide(categoryName: categoryDropDown.selectedItem ?? "")
         ]
-        
-        areaDropDown.anchorView = viewAreaDropDowm
-        areaDropDown.dataSource = areaValues
-        categoryDropDown.anchorView = viewCategoryDropDown
-        categoryDropDown.dataSource = categoryValues
-        areaDropDown.bottomOffset = CGPoint(x: 0, y:(areaDropDown.anchorView?.plainView.bounds.height)!)
-        areaDropDown.topOffset = CGPoint(x: 0, y:-(categoryDropDown.anchorView?.plainView.bounds.height)!)
-        categoryDropDown.bottomOffset = CGPoint(x: 0, y:(areaDropDown.anchorView?.plainView.bounds.height)!)
-        categoryDropDown.topOffset = CGPoint(x: 0, y:-(areaDropDown.anchorView?.plainView.bounds.height)!)
-        areaDropDown.direction = .any
-        categoryDropDown.direction = .any
-        areaDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
-            print("Selected item: \(item) at index: \(index)")
-            //self.lblSelectArea.text = areaValues[index]
-        }
-        categoryDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
-            print("Selected item: \(item) at index: \(index)")
-            //self.lblSelectCategory.text = categoryValues[index]
-        }
     }
 }
 
