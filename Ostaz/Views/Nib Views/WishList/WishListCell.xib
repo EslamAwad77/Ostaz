@@ -25,6 +25,11 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="m1S-wd-Qsm"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QfU-vm-bxc">
                                 <rect key="frame" x="25" y="135" width="288" height="55"/>
@@ -78,6 +83,11 @@
                             <constraint firstAttribute="trailing" secondItem="ZfM-lp-1M4" secondAttribute="trailing" constant="20" id="dbP-XC-iPI"/>
                             <constraint firstAttribute="bottom" secondItem="QfU-vm-bxc" secondAttribute="bottom" constant="25" id="ikb-1X-IpB"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
