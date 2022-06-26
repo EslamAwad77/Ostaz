@@ -10,7 +10,7 @@ import UIKit
 class SportsViewController: UIViewController {
     
     //-------------------variables------------------------
-
+    var selectedItem: CollectionViewCategorySlide!
     var sportsItems: [WishListItems] = [
         WishListItems(descriptionImg: #imageLiteral(resourceName: "WishListPic1"), teacherImg: #imageLiteral(resourceName: "TeacherImage"), teacherName: "ahmed", teacherJob: "maths"),
         WishListItems(descriptionImg: #imageLiteral(resourceName: "WishListPic2"), teacherImg: #imageLiteral(resourceName: "TeacherImage"), teacherName: "ali", teacherJob: "arabic"),
@@ -20,8 +20,12 @@ class SportsViewController: UIViewController {
     ]
     
     //-------------------IBOutlet------------------------
-
     @IBOutlet weak var tbleViewSports: UITableView!
+    
+    //-------------------Actions------------------------
+    @IBAction func btnBackToCategories(_ sender: UIButton) {
+        self.dismiss(animated: true)
+    }
     
     //-------------------lifecycle------------------------
 
@@ -29,9 +33,12 @@ class SportsViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //let item = NS
+    }
 
     //-------------------functions------------------------
-
     func setupUI() {
         tbleViewSports.dataSource = self
         tbleViewSports.delegate = self
@@ -55,5 +62,8 @@ extension SportsViewController: UITableViewDelegate,UITableViewDataSource{
         cell.lblTeacherName.text = sportItem.teacherName
         cell.lblTeacherJob.text = sportItem.teacherJob
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
     }
 }

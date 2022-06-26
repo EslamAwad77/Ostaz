@@ -68,10 +68,16 @@ extension CategoriesViewController: UICollectionViewDelegate, UICollectionViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        //let vc = storyBoard.instantiateViewController(withIdentifier: "SecondVC") as! SecondVC
-        //vc.modalPresentationStyle = .fullScreen
-        //self.present(vc, animated: true)
+//        let cell = collectionView.cellForItem(at: indexPath) as! CategoriesCollectionViewCell {
+//            let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+//            let sportsVC = storyBoard.instantiateViewController(withIdentifier: "SportsViewController") as! SportsViewController
+//            sportsVC.modalPresentationStyle = .fullScreen
+//            self.present(sportsVC, animated: true)
+//        }
+        let tbleViewSports: SportsViewController = self.storyboard?.instantiateViewController(withIdentifier: "SportsViewController") as! SportsViewController
+        tbleViewSports.modalPresentationStyle = .fullScreen
+        self.present(tbleViewSports, animated: true)
+        tbleViewSports.selectedItem = categoriesSlides[indexPath.row]
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

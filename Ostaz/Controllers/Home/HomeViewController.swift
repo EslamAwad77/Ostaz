@@ -33,10 +33,10 @@ class HomeViewController: UIViewController {
         self.present(homeFilterVC, animated: true, completion: nil)
     }
     @IBAction func btnGoToCategories(_ sender: UIButton) {
-        //let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        //let vc = storyBoard.instantiateViewController(withIdentifier: "SecondVC") as! SecondVC
-        //vc.modalPresentationStyle = .fullScreen
-        //self.present(vc, animated: true)
+        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+        let categoriesVC = storyBoard.instantiateViewController(withIdentifier: "CategoriesViewController") as! CategoriesViewController
+        categoriesVC.modalPresentationStyle = .fullScreen
+        self.present(categoriesVC, animated: true)
     }
     
     
@@ -104,10 +104,10 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             //vc.modalPresentationStyle = .fullScreen
             //self.present(vc, animated: true)
         } else{
-            //let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-            //let vc = storyBoard.instantiateViewController(withIdentifier: "SecondVC") as! SecondVC
-            //vc.modalPresentationStyle = .fullScreen
-            //self.present(vc, animated: true)
+            let tbleViewSports: SportsViewController = self.storyboard?.instantiateViewController(withIdentifier: "SportsViewController") as! SportsViewController
+            tbleViewSports.modalPresentationStyle = .fullScreen
+            self.present(tbleViewSports, animated: true)
+            tbleViewSports.selectedItem = homecategoriesSlides[indexPath.row]
         }
     }
     
@@ -115,7 +115,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         if collectionView == self.collectionViewMostViewedInHome{
             return CGSize(width: collectionView.frame.width*0.6, height: collectionView.frame.height)
         } else {
-            return CGSize(width: collectionView.frame.width/3.5, height: 106)
+            return CGSize(width: collectionView.frame.width/3.5, height: 95)
         }
     }
 }

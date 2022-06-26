@@ -9,28 +9,42 @@ import UIKit
 
 class RegisterViewController: UIViewController {
     
-    //-------------------IBOutlet------------------------
+    //-------------------variables------------------------
+    var passwordVisible: Bool = true
    
+    //-------------------IBOutlet------------------------
     @IBOutlet weak var viewContentPassword: UIView!
     @IBOutlet weak var viewConfirmPassword: UIView!
-    @IBOutlet weak var txtFieldPhoneNumber: UITextField!
     @IBOutlet weak var txtFieldRegisterUserName: UITextField!
+    @IBOutlet weak var txtFieldPhoneNumber: UITextField!
     @IBOutlet weak var txtFieldRegisterPassword: UITextField!
     @IBOutlet weak var txtFieldRegisterConfirmPassword: UITextField!
     
     //-------------------Actions------------------------
-    
-    @IBAction func btnBackHome(_ sender: UIButton) {
-        //let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        //let vc = storyBoard.instantiateViewController(withIdentifier: "SecondVC") as! SecondVC
-        //vc.modalPresentationStyle = .fullScreen
-        //self.present(vc, animated: true)
+    @IBAction func btnBackLogin(_ sender: UIButton) {
+        let storyBoard = UIStoryboard(name: "Auth", bundle: nil)
+        let loginVC = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+        loginVC.modalPresentationStyle = .fullScreen
+        self.present(loginVC, animated: true)
     }
     
     @IBAction func btnShowPassword(_ sender: UIButton) {
+        if passwordVisible{
+            txtFieldRegisterPassword.isSecureTextEntry = false
+            txtFieldRegisterConfirmPassword.isSecureTextEntry = false
+            passwordVisible = false
+        } else {
+            txtFieldRegisterPassword.isSecureTextEntry = true
+            txtFieldRegisterConfirmPassword.isSecureTextEntry = true
+            passwordVisible = true
+        }
     }
     
     @IBAction func btnRegisterCreateAccount(_ sender: UIButton) {
+        let storyBoard = UIStoryboard(name: "Auth", bundle: nil)
+        let locationVC = storyBoard.instantiateViewController(withIdentifier: "LocationViewController") as! LocationViewController
+        locationVC.modalPresentationStyle = .fullScreen
+        self.present(locationVC, animated: true)
     }
     
     //-------------------LifeCycle------------------------

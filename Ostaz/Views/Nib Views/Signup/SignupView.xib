@@ -24,10 +24,10 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i78-X8-QTd" userLabel="view Scroll">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="680"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="POP" translatesAutoresizingMaskIntoConstraints="NO" id="EeA-LU-HyR">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="680"/>
                                 </imageView>
                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ose-wZ-uW9">
                                     <rect key="frame" x="17" y="52" width="380" height="23"/>
@@ -114,7 +114,7 @@ until you register</string>
                                 <constraint firstItem="ose-wZ-uW9" firstAttribute="leading" secondItem="i78-X8-QTd" secondAttribute="leading" constant="17" id="bLS-UP-4kZ"/>
                                 <constraint firstItem="DbA-t9-ccd" firstAttribute="leading" secondItem="i78-X8-QTd" secondAttribute="leading" constant="17" id="djW-7e-Awp"/>
                                 <constraint firstAttribute="trailing" secondItem="EeA-LU-HyR" secondAttribute="trailing" id="gzP-Mo-5bF"/>
-                                <constraint firstAttribute="height" constant="896" id="ouz-Vg-h2H"/>
+                                <constraint firstAttribute="height" constant="680" id="ouz-Vg-h2H"/>
                                 <constraint firstItem="9IY-8K-WtU" firstAttribute="top" secondItem="dLo-1J-ELI" secondAttribute="bottom" constant="24.75" id="pk1-Mq-fop"/>
                                 <constraint firstAttribute="trailing" secondItem="ose-wZ-uW9" secondAttribute="trailing" constant="17" id="rab-5n-gj7"/>
                                 <constraint firstItem="EeA-LU-HyR" firstAttribute="top" secondItem="i78-X8-QTd" secondAttribute="top" id="sft-zP-ZFG"/>
@@ -124,6 +124,7 @@ until you register</string>
                             </constraints>
                         </view>
                     </subviews>
+                    <color key="backgroundColor" name="BackgroundColor"/>
                     <constraints>
                         <constraint firstItem="i78-X8-QTd" firstAttribute="top" secondItem="Irs-fJ-Jda" secondAttribute="top" id="2Zj-SH-6Ol"/>
                         <constraint firstAttribute="bottom" secondItem="i78-X8-QTd" secondAttribute="bottom" id="2q5-zJ-NYs"/>
@@ -150,6 +151,9 @@ until you register</string>
         <image name="FailGoToTeacherImage" width="300" height="299.5"/>
         <image name="POP" width="428" height="987"/>
         <image name="btnBack" width="26.5" height="13"/>
+        <namedColor name="BackgroundColor">
+            <color red="0.96899998188018799" green="0.96100002527236938" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="ButtonColor">
             <color red="0.52899998426437378" green="0.27799999713897705" blue="0.94499999284744263" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

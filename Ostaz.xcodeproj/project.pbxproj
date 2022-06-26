@@ -30,6 +30,7 @@
 		A857EC1E285613450095AA01 /* SignupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A857EC1D285613450095AA01 /* SignupView.xib */; };
 		A857EC20285616F50095AA01 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A857EC1F285616F50095AA01 /* SignupView.swift */; };
 		A85DFAE3285FB3C700CEF27B /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85DFAE2285FB3C700CEF27B /* CategoriesCollectionViewCell.swift */; };
+		A8672C7E2867DED300ED514D /* HomeTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8672C7D2867DED300ED514D /* HomeTabBarVC.swift */; };
 		A8807DD72861B7F9007E1C9D /* TeacherProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8807DD62861B7F9007E1C9D /* TeacherProfileCollectionViewCell.swift */; };
 		A8807DD92861F336007E1C9D /* PromotionForTeacherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8807DD82861F336007E1C9D /* PromotionForTeacherVC.swift */; };
 		A8954B08284F4D6600493142 /* ExstensionsAndViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8954B07284F4D6600493142 /* ExstensionsAndViews.swift */; };
@@ -102,6 +103,7 @@
 		A857EC1D285613450095AA01 /* SignupView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignupView.xib; sourceTree = "<group>"; };
 		A857EC1F285616F50095AA01 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		A85DFAE2285FB3C700CEF27B /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
+		A8672C7D2867DED300ED514D /* HomeTabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarVC.swift; sourceTree = "<group>"; };
 		A8807DD62861B7F9007E1C9D /* TeacherProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 		A8807DD82861F336007E1C9D /* PromotionForTeacherVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionForTeacherVC.swift; sourceTree = "<group>"; };
 		A8954B07284F4D6600493142 /* ExstensionsAndViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExstensionsAndViews.swift; sourceTree = "<group>"; };
@@ -282,12 +284,14 @@
 		A85DFAE4285FB3D500CEF27B /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				A8672C7D2867DED300ED514D /* HomeTabBarVC.swift */,
 				A84D15EA28521F55004E1995 /* HomeViewController.swift */,
 				A8B499032863D4760038C782 /* HomeFilterVC.swift */,
 				A839205C2855D7BE00CD2126 /* HomeMostViewedCollectionViewCell.swift */,
 				A8A7DD5F28617A8100DABB8A /* HomeCategoriesCollectionViewCell.swift */,
 				A89CD14E2858A52E009D049D /* CategoriesViewController.swift */,
 				A85DFAE2285FB3C700CEF27B /* CategoriesCollectionViewCell.swift */,
+				A89CD1522858BACB009D049D /* SportsViewController.swift */,
 				A89CD14728589B52009D049D /* WishListViewController.swift */,
 				A89CD13E28587832009D049D /* MoreViewController.swift */,
 			);
@@ -299,6 +303,7 @@
 			children = (
 				A8173528284E68300008CF8E /* LoginViewController.swift */,
 				A817355A284E7D170008CF8E /* RegisterViewController.swift */,
+				A8B33C19284F91900025BE8A /* LocationViewController.swift */,
 				A8DC659928577590008879B4 /* EditPasswordViewController.swift */,
 				A8B750D12860012700305575 /* ForgetPasswordVC.swift */,
 			);
@@ -310,9 +315,7 @@
 			children = (
 				A857EC1B2855FE900095AA01 /* TeacherProfileViewController.swift */,
 				A8807DD62861B7F9007E1C9D /* TeacherProfileCollectionViewCell.swift */,
-				A8B33C19284F91900025BE8A /* LocationViewController.swift */,
 				A89CD14028588A99009D049D /* AcountViewController.swift */,
-				A89CD1522858BACB009D049D /* SportsViewController.swift */,
 				A8807DD82861F336007E1C9D /* PromotionForTeacherVC.swift */,
 				A8E1F80028620A87004DFC21 /* TeacherPromotionCollectionViewCell.swift */,
 			);
@@ -615,6 +618,7 @@
 				A89CD14F2858A52E009D049D /* CategoriesViewController.swift in Sources */,
 				A8E1F80128620A87004DFC21 /* TeacherPromotionCollectionViewCell.swift in Sources */,
 				A8DC659A28577590008879B4 /* EditPasswordViewController.swift in Sources */,
+				A8672C7E2867DED300ED514D /* HomeTabBarVC.swift in Sources */,
 				A8173529284E68300008CF8E /* LoginViewController.swift in Sources */,
 				A89CD1512858B05F009D049D /* WishListItems.swift in Sources */,
 				A8A7DD5E286162FE00DABB8A /* PasswordCustomView.swift in Sources */,
@@ -823,7 +827,7 @@
 				INFOPLIST_FILE = Ostaz/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Home;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -852,7 +856,7 @@
 				INFOPLIST_FILE = Ostaz/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Home;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -9,8 +9,10 @@ import UIKit
 
 class EditPasswordViewController: UIViewController {
     
-    //-------------------IBOutlet------------------------
+    //-------------------variables------------------------
+    var passwordVisible: Bool = true
     
+    //-------------------IBOutlet------------------------
     @IBOutlet weak var viewCurrentPassword: UIView!
     @IBOutlet weak var viewNewPassword: UIView!
     @IBOutlet weak var viewConfirmNewPass: UIView!
@@ -19,7 +21,6 @@ class EditPasswordViewController: UIViewController {
     @IBOutlet weak var txtFieldConfirmNewPassword: UITextField!
     
     //-------------------Actions------------------------
-    
     @IBAction func backToAcountVC(_ sender: UIButton) {
         //let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         //let vc = storyBoard.instantiateViewController(withIdentifier: "SecondVC") as! SecondVC
@@ -28,9 +29,24 @@ class EditPasswordViewController: UIViewController {
     }
     
     @IBAction func btnShowPassword(_ sender: UIButton) {
+        if passwordVisible{
+            txtFieldCurrentPassword.isSecureTextEntry = false
+            txtFieldNewPassword.isSecureTextEntry = false
+            txtFieldConfirmNewPassword.isSecureTextEntry = false
+            passwordVisible = false
+        } else {
+            txtFieldCurrentPassword.isSecureTextEntry = true
+            txtFieldNewPassword.isSecureTextEntry = true
+            txtFieldConfirmNewPassword.isSecureTextEntry = true
+            passwordVisible = true
+        }
     }
     
     @IBAction func btnConfirmNewPassword(_ sender: UIButton) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let acountVC = storyBoard.instantiateViewController(withIdentifier: "AcountViewController") as! AcountViewController
+        acountVC.modalPresentationStyle = .fullScreen
+        self.present(acountVC, animated: true)
     }
     
     //-------------------LifeCycle------------------------

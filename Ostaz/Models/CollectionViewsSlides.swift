@@ -48,3 +48,5 @@ struct CollectionViewTeahcerCategoriesSlide{
 struct CollectionViewPromotionCategoriesSlide{
     let categoryName: String
 }
+
+

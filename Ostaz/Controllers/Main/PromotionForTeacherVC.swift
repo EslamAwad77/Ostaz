@@ -62,13 +62,10 @@ class PromotionForTeacherVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpUI()
-        //self.setupDropDown()
-
     }
     
     //-------------------functions------------------------
     func setUpUI(){
-   
         areaDropDown.anchorView = viewAreaDropDowm
         areaDropDown.dataSource = areaValues
         categoryDropDown.anchorView = viewCategoryDropDown
@@ -79,15 +76,14 @@ class PromotionForTeacherVC: UIViewController {
         categoryDropDown.topOffset = CGPoint(x: 0, y:-(areaDropDown.anchorView?.plainView.bounds.height)!)
         areaDropDown.direction = .any
         categoryDropDown.direction = .any
-//        areaDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
-//            print("Selected item: \(item) at index: \(index)")
-//            self.TeacherAreaSlides = [CollectionViewPromotionAreasSlide(areaName: areaValues[index])]
-//
-//        }
-//        categoryDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
-//            print("Selected item: \(item) at index: \(index)")
-//            self.lblSelectCategory.text = categoryValues[index]
-//        }
+        areaDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+            print("Selected item: \(item) at index: \(index)")
+            self.TeacherAreaSlides.append(CollectionViewPromotionAreasSlide(areaName: categoryValues[index]))
+        }
+        categoryDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+            print("Selected item: \(item) at index: \(index)")
+            self.TeacherAreaSlides.append(CollectionViewPromotionAreasSlide(areaName: categoryValues[index]))
+        }
         
         collectionViewTeachMethods.delegate = self
         collectionViewTeachMethods.dataSource = self
@@ -103,24 +99,23 @@ class PromotionForTeacherVC: UIViewController {
             CollectionViewPromotionMethodsSlide(methodImage: #imageLiteral(resourceName: "checkBoxMarknotselected"), methodName: "Center"),
             CollectionViewPromotionMethodsSlide(methodImage: #imageLiteral(resourceName: "checkBoxMarknotselected"), methodName: "Groups")
         ]
-        TeacherAreaSlides = [
-            CollectionViewPromotionAreasSlide(areaName: areaDropDown.selectedItem ?? ""),
-            CollectionViewPromotionAreasSlide(areaName: areaDropDown.selectedItem ?? ""),
-            CollectionViewPromotionAreasSlide(areaName: areaDropDown.selectedItem ?? "")
-            
-        ]
-        TeachercategorySlides = [
-
-            CollectionViewPromotionCategoriesSlide(categoryName: categoryDropDown.selectedItem ?? ""),
-            CollectionViewPromotionCategoriesSlide(categoryName: categoryDropDown.selectedItem ?? ""),
-            CollectionViewPromotionCategoriesSlide(categoryName: categoryDropDown.selectedItem ?? "")
-        ]
+//        TeacherAreaSlides = [
+//            CollectionViewPromotionAreasSlide(areaName: areaDropDown.selectedItem ?? ""),
+//            CollectionViewPromotionAreasSlide(areaName: areaDropDown.selectedItem ?? ""),
+//            CollectionViewPromotionAreasSlide(areaName: areaDropDown.selectedItem ?? "")
+//
+//        ]
+//        TeachercategorySlides = [
+//
+//            CollectionViewPromotionCategoriesSlide(categoryName: categoryDropDown.selectedItem ?? ""),
+//            CollectionViewPromotionCategoriesSlide(categoryName: categoryDropDown.selectedItem ?? ""),
+//            CollectionViewPromotionCategoriesSlide(categoryName: categoryDropDown.selectedItem ?? "")
+//        ]
     }
 }
 
 //-------------------exstensions------------------------
 extension PromotionForTeacherVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.collectionViewTeachMethods{
             return TeacherMethodSlides.count
@@ -156,7 +151,6 @@ extension PromotionForTeacherVC: UICollectionViewDelegate, UICollectionViewDataS
             return CGSize(width: collectionView.frame.width/3.5, height: 33)
         }
     }
-    
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == self.collectionViewTeachMethods{

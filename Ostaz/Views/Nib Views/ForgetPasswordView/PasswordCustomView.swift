@@ -10,18 +10,31 @@ import UIKit
 @IBDesignable
 class PasswordCustomView: UIView {
     
+    //-------------------variables--------------------
+    
+    var passwordVisible: Bool = true
+    
     //-------------------Outlet-----------------------
-  
     @IBOutlet weak var txtFieldNewPassword: UITextField!
     @IBOutlet weak var txtFieldConfirmPassword: UITextField!
     @IBOutlet weak var viewNewPassword: UIView!
     @IBOutlet weak var viewConfirmPassword: UIView!
     
     //-------------------Actions-----------------------
-   
     @IBAction func btnConfirm(_ sender: UIButton) {
+        
     }
+    
     @IBAction func btnShowPassword(_ sender: UIButton) {
+        if passwordVisible{
+            txtFieldNewPassword.isSecureTextEntry = false
+            txtFieldConfirmPassword.isSecureTextEntry = false
+            passwordVisible = false
+        } else {
+            txtFieldNewPassword.isSecureTextEntry = true
+            txtFieldConfirmPassword.isSecureTextEntry = true
+            passwordVisible = true
+        }
     }
 
     //-------------------Functions-----------------------

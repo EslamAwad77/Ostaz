@@ -46,6 +46,7 @@ class HomeFilterVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpUIDropDown()
+        
     }
     
     //-------------------functions---------------------------

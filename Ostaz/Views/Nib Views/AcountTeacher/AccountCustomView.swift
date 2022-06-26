@@ -11,7 +11,6 @@ import UIKit
 class AccountCustomView: UIView {
 
         //-------------------Actions------------------------
-        
         @IBAction func btnGoToYourService(_ sender: UIButton) {
         }
 
@@ -22,7 +21,6 @@ class AccountCustomView: UIView {
         }
         
         //-------------------Functions-----------------------
-        
         override init(frame: CGRect) {
             super.init(frame: frame)
             configureView()
@@ -43,8 +41,4 @@ class AccountCustomView: UIView {
 //        lblName.text = name
 //        lblPhoneNumber.text = phoneNumber
 //    }
-        
-    
-
-
 }

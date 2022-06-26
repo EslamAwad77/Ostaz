@@ -20,10 +20,10 @@ class MoreViewController: UIViewController {
     
     //-------------------Actions--------------------------
     @IBAction func GoToAccountVC(_ sender: UIButton) {
-        //let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        //let vc = storyBoard.instantiateViewController(withIdentifier: "SecondVC") as! SecondVC
-        //vc.modalPresentationStyle = .fullScreen
-        //self.present(vc, animated: true)
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let acountVC = storyBoard.instantiateViewController(withIdentifier: "AcountViewController") as! AcountViewController
+        acountVC.modalPresentationStyle = .fullScreen
+        self.present(acountVC, animated: true)
     }
     
     @IBAction func GoToAboutUsVC(_ sender: UIButton) {
@@ -40,6 +40,10 @@ class MoreViewController: UIViewController {
         //self.present(vc, animated: true)
     }
     @IBAction func btnLogout(_ sender: UIButton) {
+        let storyBoard = UIStoryboard(name: "Auth", bundle: nil)
+        let loginVC = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+        loginVC.modalPresentationStyle = .fullScreen
+        self.present(loginVC, animated: true)
     }
     
     //-------------------LifeCycle------------------------

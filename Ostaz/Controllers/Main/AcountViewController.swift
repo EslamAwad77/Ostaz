@@ -19,27 +19,32 @@ class AcountViewController: UIViewController {
     //-------------------Actions------------------------
     
     @IBAction func btnBackToMoreVC(_ sender: UIButton) {
-        //let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        //let vc = storyBoard.instantiateViewController(withIdentifier: "SecondVC") as! SecondVC
-        //vc.modalPresentationStyle = .fullScreen
-        //self.present(vc, animated: true)
+        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+        let moreVC = storyBoard.instantiateViewController(withIdentifier: "MoreViewController") as! MoreViewController
+        moreVC.modalPresentationStyle = .fullScreen
+        self.present(moreVC, animated: true)
     }
     
     @IBAction func btnGoToPasswordVC(_ sender: UIButton) {
-        //let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        //let vc = storyBoard.instantiateViewController(withIdentifier: "SecondVC") as! SecondVC
-        //vc.modalPresentationStyle = .fullScreen
-        //self.present(vc, animated: true)
+        let storyBoard = UIStoryboard(name: "Auth", bundle: nil)
+        let editPasswordVC = storyBoard.instantiateViewController(withIdentifier: "EditPasswordViewController") as! EditPasswordViewController
+        editPasswordVC.modalPresentationStyle = .fullScreen
+        self.present(editPasswordVC, animated: true)
     }
     
     @IBAction func btnGoToLocationVC(_ sender: UIButton) {
-        //let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        //let vc = storyBoard.instantiateViewController(withIdentifier: "SecondVC") as! SecondVC
-        //vc.modalPresentationStyle = .fullScreen
-        //self.present(vc, animated: true)
+        let storyBoard = UIStoryboard(name: "Auth", bundle: nil)
+        let locationVC = storyBoard.instantiateViewController(withIdentifier: "LocationViewController") as! LocationViewController
+        locationVC.modalPresentationStyle = .fullScreen
+        self.present(locationVC, animated: true)
     }
     
     @IBAction func btnPromotionForTeacherVC(_ sender: UIButton) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let promotionForTeacherVC = storyBoard.instantiateViewController(withIdentifier: "PromotionForTeacherVC") as! PromotionForTeacherVC
+        promotionForTeacherVC.modalPresentationStyle = .fullScreen
+        self.present(promotionForTeacherVC, animated: true)
+        
     }
     
     //-------------------LifeCycle------------------------
