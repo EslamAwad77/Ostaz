@@ -22,10 +22,7 @@ class RegisterViewController: UIViewController {
     
     //-------------------Actions------------------------
     @IBAction func btnBackLogin(_ sender: UIButton) {
-        let storyBoard = UIStoryboard(name: "Auth", bundle: nil)
-        let loginVC = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-        loginVC.modalPresentationStyle = .fullScreen
-        self.present(loginVC, animated: true)
+        self.dismiss(animated: true)
     }
     
     @IBAction func btnShowPassword(_ sender: UIButton) {

@@ -22,10 +22,10 @@ class EditPasswordViewController: UIViewController {
     
     //-------------------Actions------------------------
     @IBAction func backToAcountVC(_ sender: UIButton) {
-        //let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        //let vc = storyBoard.instantiateViewController(withIdentifier: "SecondVC") as! SecondVC
-        //vc.modalPresentationStyle = .fullScreen
-        //self.present(vc, animated: true)
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let acountVC = storyBoard.instantiateViewController(withIdentifier: "AcountViewController") as! AcountViewController
+        acountVC.modalPresentationStyle = .fullScreen
+        self.present(acountVC, animated: true)
     }
     
     @IBAction func btnShowPassword(_ sender: UIButton) {

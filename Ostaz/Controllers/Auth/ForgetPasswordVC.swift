@@ -15,7 +15,11 @@ class ForgetPasswordVC: UIViewController {
     
     @IBOutlet weak var txtFieldOpt: UITextField!
     
-    //-------------------Outlet---------------------------
+    @IBOutlet weak var btnShowPassView: UIButton!
+    //-------------------Actions---------------------------
+    @IBAction func btnBackToLogin(_ sender: UIButton) {
+        self.dismiss(animated: true)
+    }
     
     @IBAction func btnSend(_ sender: UIButton) {
         

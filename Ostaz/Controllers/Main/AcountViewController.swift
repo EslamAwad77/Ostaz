@@ -19,10 +19,7 @@ class AcountViewController: UIViewController {
     //-------------------Actions------------------------
     
     @IBAction func btnBackToMoreVC(_ sender: UIButton) {
-        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
-        let moreVC = storyBoard.instantiateViewController(withIdentifier: "MoreViewController") as! MoreViewController
-        moreVC.modalPresentationStyle = .fullScreen
-        self.present(moreVC, animated: true)
+        self.dismiss(animated: true)
     }
     
     @IBAction func btnGoToPasswordVC(_ sender: UIButton) {
@@ -44,7 +41,6 @@ class AcountViewController: UIViewController {
         let promotionForTeacherVC = storyBoard.instantiateViewController(withIdentifier: "PromotionForTeacherVC") as! PromotionForTeacherVC
         promotionForTeacherVC.modalPresentationStyle = .fullScreen
         self.present(promotionForTeacherVC, animated: true)
-        
     }
     
     //-------------------LifeCycle------------------------
