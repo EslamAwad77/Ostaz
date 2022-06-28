@@ -11,6 +11,8 @@
 		924C71154C8BF85913072234 /* Pods_Ostaz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2662B4B43FA68DCB481E170C /* Pods_Ostaz.framework */; };
 		9947218739307DEDC367C631 /* Pods_Ostaz_OstazUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 768B8B4D1E5AF5D70E2FA545 /* Pods_Ostaz_OstazUITests.framework */; };
 		A8042706286B01A3005C5EC1 /* TeacherCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8042705286B01A3005C5EC1 /* TeacherCategoryModel.swift */; };
+		A8042709286B27E9005C5EC1 /* PromotionTeacherVC+SetupUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8042708286B27E9005C5EC1 /* PromotionTeacherVC+SetupUI.swift */; };
+		A804270B286B282A005C5EC1 /* PromotionTeacherVC+Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A804270A286B282A005C5EC1 /* PromotionTeacherVC+Collection.swift */; };
 		A8173525284E68300008CF8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8173524284E68300008CF8E /* AppDelegate.swift */; };
 		A8173527284E68300008CF8E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8173526284E68300008CF8E /* SceneDelegate.swift */; };
 		A8173529284E68300008CF8E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8173528284E68300008CF8E /* LoginViewController.swift */; };
@@ -85,6 +87,8 @@
 		8969C4E8AAC1ED7B41A50729 /* Pods_OstazTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OstazTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9157A2E03C1536D7F265321D /* Pods-Ostaz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ostaz.release.xcconfig"; path = "Target Support Files/Pods-Ostaz/Pods-Ostaz.release.xcconfig"; sourceTree = "<group>"; };
 		A8042705286B01A3005C5EC1 /* TeacherCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherCategoryModel.swift; sourceTree = "<group>"; };
+		A8042708286B27E9005C5EC1 /* PromotionTeacherVC+SetupUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PromotionTeacherVC+SetupUI.swift"; sourceTree = "<group>"; };
+		A804270A286B282A005C5EC1 /* PromotionTeacherVC+Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PromotionTeacherVC+Collection.swift"; sourceTree = "<group>"; };
 		A8173521284E68300008CF8E /* Ostaz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ostaz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8173524284E68300008CF8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8173526284E68300008CF8E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -175,6 +179,16 @@
 				8969C4E8AAC1ED7B41A50729 /* Pods_OstazTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A8042707286B27C5005C5EC1 /* PromotionTeacher */ = {
+			isa = PBXGroup;
+			children = (
+				A8807DD82861F336007E1C9D /* PromotionForTeacherVC.swift */,
+				A8042708286B27E9005C5EC1 /* PromotionTeacherVC+SetupUI.swift */,
+				A804270A286B282A005C5EC1 /* PromotionTeacherVC+Collection.swift */,
+			);
+			path = PromotionTeacher;
 			sourceTree = "<group>";
 		};
 		A8173518284E68300008CF8E = {
@@ -327,7 +341,7 @@
 		A85DFAE6285FB40200CEF27B /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				A8807DD82861F336007E1C9D /* PromotionForTeacherVC.swift */,
+				A8042707286B27C5005C5EC1 /* PromotionTeacher */,
 				A8E1F80028620A87004DFC21 /* TeacherPromotionCollectionViewCell.swift */,
 				A857EC1B2855FE900095AA01 /* TeacherProfileViewController.swift */,
 				A8807DD62861B7F9007E1C9D /* TeacherProfileCollectionViewCell.swift */,
@@ -634,7 +648,9 @@
 			files = (
 				A8672C822868469300ED514D /* HomeSearchVC.swift in Sources */,
 				A89CD14F2858A52E009D049D /* CategoriesViewController.swift in Sources */,
+				A8042709286B27E9005C5EC1 /* PromotionTeacherVC+SetupUI.swift in Sources */,
 				A8E1F80128620A87004DFC21 /* TeacherPromotionCollectionViewCell.swift in Sources */,
+				A804270B286B282A005C5EC1 /* PromotionTeacherVC+Collection.swift in Sources */,
 				A8DC659A28577590008879B4 /* EditPasswordViewController.swift in Sources */,
 				A8672C7E2867DED300ED514D /* HomeTabBarVC.swift in Sources */,
 				A8173529284E68300008CF8E /* LoginViewController.swift in Sources */,

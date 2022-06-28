@@ -46,7 +46,6 @@ class TeacherPromotionCollectionViewCell: UICollectionViewCell {
     }
     
     func updateTeachMethod() {
-        
         if teachMethod?.isActive == true {
             btnCheckBox.setImage(UIImage(named: "checkBoxMark"), for: .normal)
         } else {
@@ -60,12 +59,12 @@ class TeacherPromotionCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    func updateSelectedArea(){
-        if teacherArea?.isDeleted == true {
-    
-        }
-        
-    }
+//    func updateSelectedArea(){
+//        if teacherArea?.isDeleted == true {
+//
+//        }
+//
+//    }
     
     var teacherCategory: TeacherCategoryModel? {
         didSet{
@@ -73,9 +72,9 @@ class TeacherPromotionCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    func UpdateSelectedCategory(){
-        if teacherCategory?.isDeleted == true{
-            
-        }
-    }
+//    func UpdateSelectedCategory(){
+//        if teacherCategory?.isDeleted == true{
+//            
+//        }
+//    }
 }
