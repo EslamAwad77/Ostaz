@@ -23,6 +23,13 @@ class HomeViewController: UIViewController {
     
     //-------------------Actions------------------------
 
+    @IBAction func btnSearchResult(_ sender: UIButton) {
+        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+        let homeSearchVC = storyBoard.instantiateViewController(withIdentifier: "HomeSearchVC") as! HomeSearchVC
+        homeSearchVC.modalPresentationStyle = .fullScreen
+        self.present(homeSearchVC, animated: true)
+    }
+    
     @IBAction func btnHomeFilter(_ sender: UIButton) {
         if let sheet = homeFilterVC.sheetPresentationController {
             sheet.detents = [.medium()]
@@ -32,15 +39,13 @@ class HomeViewController: UIViewController {
         }
         self.present(homeFilterVC, animated: true, completion: nil)
     }
+    
     @IBAction func btnGoToCategories(_ sender: UIButton) {
         let storyBoard = UIStoryboard(name: "Home", bundle: nil)
         let categoriesVC = storyBoard.instantiateViewController(withIdentifier: "CategoriesViewController") as! CategoriesViewController
         categoriesVC.modalPresentationStyle = .fullScreen
         self.present(categoriesVC, animated: true)
     }
-    
-    
-    
     
     //-------------------LifeCycle------------------------
     
@@ -59,9 +64,9 @@ class HomeViewController: UIViewController {
         collectionViewCategoriesInHome.dataSource = self
         //collectionViewHome.collectionViewLayout = UICollectionViewFlowLayout()
         homeMostViewedSlides = [
-            CollectionViewHomeMostViewedSlide(teacherName: "Teacher Name", teacherJob: "Music ( Guitar)", descriptionImage: #imageLiteral(resourceName: "WishListPic1"), teacherImage: #imageLiteral(resourceName: "TeacherImage")),
-            CollectionViewHomeMostViewedSlide(teacherName: "Teacher Name", teacherJob: "Sports ( Swimming)", descriptionImage: #imageLiteral(resourceName: "WishListPic2"), teacherImage: #imageLiteral(resourceName: "TeacherImage")),
-            CollectionViewHomeMostViewedSlide(teacherName: "Teacher Name", teacherJob: "Music ( Guitar)", descriptionImage: #imageLiteral(resourceName: "WishListPic1"), teacherImage: #imageLiteral(resourceName: "TeacherImage"))
+            CollectionViewHomeMostViewedSlide(teacherName: "Ahmed Mohamed", teacherJob: "Music ( Guitar)", descriptionImage: #imageLiteral(resourceName: "WishListPic1"), teacherImage: #imageLiteral(resourceName: "TeacherImage")),
+            CollectionViewHomeMostViewedSlide(teacherName: "Ali Ibrahim", teacherJob: "Sports ( Swimming)", descriptionImage: #imageLiteral(resourceName: "WishListPic2"), teacherImage: #imageLiteral(resourceName: "TeacherImage")),
+            CollectionViewHomeMostViewedSlide(teacherName: "Reem gamal", teacherJob: "Music ( Guitar)", descriptionImage: #imageLiteral(resourceName: "WishListPic1"), teacherImage: #imageLiteral(resourceName: "TeacherImage"))
         ]
         homecategoriesSlides = [
             CollectionViewCategorySlide(categoryImage: #imageLiteral(resourceName: "musicIcon"), categoryName: "Music"),
@@ -99,15 +104,19 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == self.collectionViewMostViewedInHome{
-            //let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-            //let vc = storyBoard.instantiateViewController(withIdentifier: "SecondVC") as! SecondVC
-            //vc.modalPresentationStyle = .fullScreen
-            //self.present(vc, animated: true)
+            let item = homeMostViewedSlides[indexPath.row]
+            if item.teacherName == "Reem gamal"{
+                let teacherVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TeacherProfileViewController") as! TeacherProfileViewController
+                teacherVC.modalPresentationStyle = .fullScreen
+                self.present(teacherVC, animated: true)
+            }
         } else{
-            let tbleViewSports: SportsViewController = self.storyboard?.instantiateViewController(withIdentifier: "SportsViewController") as! SportsViewController
-            tbleViewSports.modalPresentationStyle = .fullScreen
-            self.present(tbleViewSports, animated: true)
-            tbleViewSports.selectedItem = homecategoriesSlides[indexPath.row]
+            let item = homecategoriesSlides[indexPath.row]
+            if item.categoryName == "Sports"{
+                let sportsVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "SportsViewController") as! SportsViewController
+                sportsVC.modalPresentationStyle = .fullScreen
+                self.present(sportsVC, animated: true)
+            }
         }
     }
     

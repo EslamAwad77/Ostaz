@@ -36,8 +36,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="26.5" height="23"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" image="btnBack"/>
+                                            <connections>
+                                                <action selector="btnBackToHome:" destination="-1" eventType="touchUpInside" id="wce-KD-ImB"/>
+                                            </connections>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" text="Teacher Profile" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQs-RL-0VA">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" text="                         " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQs-RL-0VA">
                                             <rect key="frame" x="26.5" y="0.0" width="323.5" height="23"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                             <color key="textColor" name="ButtonColor"/>
@@ -66,7 +69,7 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="5W5-Fp-XQb"/>
                                     </constraints>
-                                    <string key="text">you can't see the teacher's page 
+                                    <string key="text">you can't see this page
 until you register</string>
                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                     <color key="textColor" name="TxtColor"/>

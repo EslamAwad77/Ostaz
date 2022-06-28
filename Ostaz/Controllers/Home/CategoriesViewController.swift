@@ -8,15 +8,22 @@
 import UIKit
 
 class CategoriesViewController: UIViewController {
-    //-------------------Variables------------------------
-    @IBOutlet weak var viewSearch: UIView!
-    
-    @IBOutlet weak var collectionViewCategories: UICollectionView!
-    
+   
     //-------------------Variables------------------------
     
     var categoriesSlides: [CollectionViewCategorySlide] = []
     
+    //-------------------IBOutlet------------------------
+    @IBOutlet weak var viewSearch: UIView!
+    
+    @IBOutlet weak var collectionViewCategories: UICollectionView!
+    
+    //-------------------Actions------------------------
+    
+    @IBAction func btnSearchCategoryResult(_ sender: Any) {
+    }
+    
+   
     //-------------------LifeCycle------------------------
     
     override func viewDidLoad() {
@@ -68,16 +75,12 @@ extension CategoriesViewController: UICollectionViewDelegate, UICollectionViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let cell = collectionView.cellForItem(at: indexPath) as! CategoriesCollectionViewCell {
-//            let storyBoard = UIStoryboard(name: "Home", bundle: nil)
-//            let sportsVC = storyBoard.instantiateViewController(withIdentifier: "SportsViewController") as! SportsViewController
-//            sportsVC.modalPresentationStyle = .fullScreen
-//            self.present(sportsVC, animated: true)
-//        }
-        let tbleViewSports: SportsViewController = self.storyboard?.instantiateViewController(withIdentifier: "SportsViewController") as! SportsViewController
-        tbleViewSports.modalPresentationStyle = .fullScreen
-        self.present(tbleViewSports, animated: true)
-        tbleViewSports.selectedItem = categoriesSlides[indexPath.row]
+        let item = categoriesSlides[indexPath.row]
+        if item.categoryName == "Sports"{
+            let sportsVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "SportsViewController") as! SportsViewController
+            sportsVC.modalPresentationStyle = .fullScreen
+            self.present(sportsVC, animated: true)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

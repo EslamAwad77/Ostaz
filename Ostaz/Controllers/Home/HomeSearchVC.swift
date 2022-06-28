@@ -1,17 +1,16 @@
 //
-//  SportsViewController.swift
+//  HomeSearchVC.swift
 //  Ostaz
 //
-//  Created by eslam awad elsayed awad on 14/06/2022.
+//  Created by eslam awad elsayed awad on 26/06/2022.
 //
 
 import UIKit
 
-class SportsViewController: UIViewController {
+class HomeSearchVC: UIViewController {
     
     //-------------------variables------------------------
-    
-    var sportsItems: [WishListItems] = [
+    var searchItems: [WishListItems] = [
         WishListItems(descriptionImg: #imageLiteral(resourceName: "WishListPic1"), teacherImg: #imageLiteral(resourceName: "TeacherImage"), teacherName: "ahmed", teacherJob: "maths"),
         WishListItems(descriptionImg: #imageLiteral(resourceName: "WishListPic2"), teacherImg: #imageLiteral(resourceName: "TeacherImage"), teacherName: "ali", teacherJob: "arabic"),
         WishListItems(descriptionImg: #imageLiteral(resourceName: "WishListPic2"), teacherImg: #imageLiteral(resourceName: "TeacherImage"), teacherName: "nour", teacherJob: "region"),
@@ -20,47 +19,41 @@ class SportsViewController: UIViewController {
     ]
     
     //-------------------IBOutlet------------------------
-    @IBOutlet weak var tbleViewSports: UITableView!
+    @IBOutlet weak var tableViewSearchResult: UITableView!
     
-    //-------------------Actions------------------------
-    @IBAction func btnBackToCategories(_ sender: UIButton) {
+    //-------------------IBAction------------------------
+    @IBAction func btnBackToHomeVC(_ sender: UIButton) {
         self.dismiss(animated: true)
     }
     
     //-------------------lifecycle------------------------
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
+        self.setupUI()
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        //let item = NS
-    }
-
+    
     //-------------------functions------------------------
     func setupUI() {
-        tbleViewSports.dataSource = self
-        tbleViewSports.delegate = self
-        self.tbleViewSports.register(UINib.init(nibName: "WishListCell", bundle: nil), forCellReuseIdentifier: "WishListCell")
-        tbleViewSports.reloadData()
+        tableViewSearchResult.dataSource = self
+        tableViewSearchResult.delegate = self
+        self.tableViewSearchResult.register(UINib.init(nibName: "WishListCell", bundle: nil), forCellReuseIdentifier: "WishListCell")
+        tableViewSearchResult.reloadData()
     }
 }
 
 //-------------------extension------------------------
-
-extension SportsViewController: UITableViewDelegate,UITableViewDataSource{
+extension HomeSearchVC: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        sportsItems.count
+        searchItems.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let sportItem = sportsItems[indexPath.row]
-        let cell = tbleViewSports.dequeueReusableCell(withIdentifier: "WishListCell", for: indexPath) as! WishListCell
-        cell.imgViewDecription.image = sportItem.descriptionImg
-        cell.imgViewTeacher.image = sportItem.teacherImg
-        cell.lblTeacherName.text = sportItem.teacherName
-        cell.lblTeacherJob.text = sportItem.teacherJob
+        let searchItem = searchItems[indexPath.row]
+        let cell = tableViewSearchResult.dequeueReusableCell(withIdentifier: "WishListCell", for: indexPath) as! WishListCell
+        cell.imgViewDecription.image = searchItem.descriptionImg
+        cell.imgViewTeacher.image = searchItem.teacherImg
+        cell.lblTeacherName.text = searchItem.teacherName
+        cell.lblTeacherJob.text = searchItem.teacherJob
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

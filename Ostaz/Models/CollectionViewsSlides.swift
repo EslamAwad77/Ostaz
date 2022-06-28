@@ -13,7 +13,6 @@ struct CollectionViewHomeMostViewedSlide {
     let teacherJob: String
     let descriptionImage: UIImage
     let teacherImage: UIImage
- 
 }
 
 struct CollectionViewCategorySlide {
@@ -26,27 +25,19 @@ struct CollectionViewMethodsSlide{
     let methodImage: UIImage
 }
 
-struct CollectionViewPromotionMethodsSlide{
-    let methodImage: UIImage
-    let methodName: String
-}
+
 
 struct CollectionViewAreasSlide{
     let areaName: String
     let areaImage: UIImage
 }
 
-struct CollectionViewPromotionAreasSlide{
-    let areaName: String
-}
 
 struct CollectionViewTeahcerCategoriesSlide{
+   
+    
     let categoryName: String
     let categoryImage: UIImage
+    
+    
 }
-
-struct CollectionViewPromotionCategoriesSlide{
-    let categoryName: String
-}
-
-

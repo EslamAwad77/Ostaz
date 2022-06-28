@@ -7,7 +7,9 @@ target 'Ostaz' do
 
   # Pods for Ostaz
 pod 'DropDown'
-
+pod 'IQKeyboardManagerSwift'
+pod 'Alamofire'
+pod 'SwiftyJSON'
 
   target 'OstazTests' do
     inherit! :search_paths
@@ -16,6 +18,7 @@ pod 'DropDown'
 
   target 'OstazUITests' do
     # Pods for testing
+    
   end
 
 end

@@ -9,27 +9,30 @@ import UIKit
 
 @IBDesignable
 class SignupView: UIView {
-    
-    @IBOutlet weak var btnRegister: UIButton!
+   
+    //-------------------IBOutlet-----------------------
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblDesc: UILabel!
     
-//    var titlePage: String? {
-//        didSet{
-//            self.lblTitle.text = titlePage
-//        }
-//    }
-//    var descPage: String? {
-//        didSet {
-//            self.lblDesc.text = descPage
-//        }
-//    }
+    //-------------------Actions------------------------
+    @IBAction func btnBackToHome(_ sender: UIButton) {
+        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+        let homeVC = storyBoard.instantiateViewController(withIdentifier: "HomeTabBarVC") as! HomeTabBarVC
+        homeVC.modalPresentationStyle = .fullScreen
+        //self.inputViewController?.showDetailViewController(homeVC, sender: nil)
+        //self.present(homeVC, animated: true)
+        //let nav = UINavigationController()
+        //nav.pushViewController(homeVC, animated: true)
+        //nav.popViewController(animated: true)
+    }
     
     @IBAction func resgisterClicked(_ sender: Any) {
-        //let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        //let vc = storyBoard.instantiateViewController(withIdentifier: "SecondVC") as! SecondVC
-        //vc.modalPresentationStyle = .fullScreen
-        //self.present(vc, animated: true)
+        let storyBoard = UIStoryboard(name: "Auth", bundle: nil)
+        let registerVC = storyBoard.instantiateViewController(withIdentifier: "RegisterViewController") as! RegisterViewController
+        registerVC.modalPresentationStyle = .fullScreen
+        //self.present(registerVC, animated: true)
+//        let nav = UINavigationController()
+//        nav.pushViewController(registerVC, animated: true)
     }
 
     //-------------------Functions-----------------------

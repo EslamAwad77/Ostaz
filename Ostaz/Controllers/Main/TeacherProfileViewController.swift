@@ -16,7 +16,6 @@ class TeacherProfileViewController: UIViewController {
     var TeachercategoriesSlides: [CollectionViewTeahcerCategoriesSlide] = []
     
     //-------------------IBOutlet------------------------
-    
     @IBOutlet weak var signUpView: SignupView!
     @IBOutlet weak var imgViewTeacher: UIImageView!
     @IBOutlet weak var lblTeacherName: UILabel!
@@ -33,10 +32,7 @@ class TeacherProfileViewController: UIViewController {
     //-------------------Actions------------------------
     
     @IBAction func btnReturnHome(_ sender: UIButton) {
-        //let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        //let vc = storyBoard.instantiateViewController(withIdentifier: "SecondVC") as! SecondVC
-        //vc.modalPresentationStyle = .fullScreen
-        //self.present(vc, animated: true)
+        self.dismiss(animated: true)
     }
     
     @IBAction func btnAddToWishList(_ sender: Any) {
