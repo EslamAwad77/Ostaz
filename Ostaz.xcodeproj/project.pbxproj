@@ -13,6 +13,8 @@
 		A8042706286B01A3005C5EC1 /* TeacherCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8042705286B01A3005C5EC1 /* TeacherCategoryModel.swift */; };
 		A8042709286B27E9005C5EC1 /* PromotionTeacherVC+SetupUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8042708286B27E9005C5EC1 /* PromotionTeacherVC+SetupUI.swift */; };
 		A804270B286B282A005C5EC1 /* PromotionTeacherVC+Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A804270A286B282A005C5EC1 /* PromotionTeacherVC+Collection.swift */; };
+		A804270E286B310D005C5EC1 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A804270D286B310D005C5EC1 /* API.swift */; };
+		A8042710286B349F005C5EC1 /* ExstensionsOfString.swift in Sources */ = {isa = PBXBuildFile; fileRef = A804270F286B349F005C5EC1 /* ExstensionsOfString.swift */; };
 		A8173525284E68300008CF8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8173524284E68300008CF8E /* AppDelegate.swift */; };
 		A8173527284E68300008CF8E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8173526284E68300008CF8E /* SceneDelegate.swift */; };
 		A8173529284E68300008CF8E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8173528284E68300008CF8E /* LoginViewController.swift */; };
@@ -89,6 +91,8 @@
 		A8042705286B01A3005C5EC1 /* TeacherCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherCategoryModel.swift; sourceTree = "<group>"; };
 		A8042708286B27E9005C5EC1 /* PromotionTeacherVC+SetupUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PromotionTeacherVC+SetupUI.swift"; sourceTree = "<group>"; };
 		A804270A286B282A005C5EC1 /* PromotionTeacherVC+Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PromotionTeacherVC+Collection.swift"; sourceTree = "<group>"; };
+		A804270D286B310D005C5EC1 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		A804270F286B349F005C5EC1 /* ExstensionsOfString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExstensionsOfString.swift; sourceTree = "<group>"; };
 		A8173521284E68300008CF8E /* Ostaz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ostaz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8173524284E68300008CF8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8173526284E68300008CF8E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -191,6 +195,14 @@
 			path = PromotionTeacher;
 			sourceTree = "<group>";
 		};
+		A804270C286B30BE005C5EC1 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				A804270D286B310D005C5EC1 /* API.swift */,
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
 		A8173518284E68300008CF8E = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +230,7 @@
 			children = (
 				A8173524284E68300008CF8E /* AppDelegate.swift */,
 				A8173526284E68300008CF8E /* SceneDelegate.swift */,
+				A804270C286B30BE005C5EC1 /* APIs */,
 				A8954B09284F4D6B00493142 /* Exstensions */,
 				A83920592855CF1900CD2126 /* Models */,
 				A8173557284E684A0008CF8E /* Views */,
@@ -355,6 +368,7 @@
 			isa = PBXGroup;
 			children = (
 				A8954B07284F4D6600493142 /* ExstensionsAndViews.swift */,
+				A804270F286B349F005C5EC1 /* ExstensionsOfString.swift */,
 			);
 			path = Exstensions;
 			sourceTree = "<group>";
@@ -649,6 +663,7 @@
 				A8672C822868469300ED514D /* HomeSearchVC.swift in Sources */,
 				A89CD14F2858A52E009D049D /* CategoriesViewController.swift in Sources */,
 				A8042709286B27E9005C5EC1 /* PromotionTeacherVC+SetupUI.swift in Sources */,
+				A8042710286B349F005C5EC1 /* ExstensionsOfString.swift in Sources */,
 				A8E1F80128620A87004DFC21 /* TeacherPromotionCollectionViewCell.swift in Sources */,
 				A804270B286B282A005C5EC1 /* PromotionTeacherVC+Collection.swift in Sources */,
 				A8DC659A28577590008879B4 /* EditPasswordViewController.swift in Sources */,
@@ -666,6 +681,7 @@
 				A8173525284E68300008CF8E /* AppDelegate.swift in Sources */,
 				A857EC20285616F50095AA01 /* SignupView.swift in Sources */,
 				A8A7DD6028617A8100DABB8A /* HomeCategoriesCollectionViewCell.swift in Sources */,
+				A804270E286B310D005C5EC1 /* API.swift in Sources */,
 				A857EC1C2855FE900095AA01 /* TeacherProfileViewController.swift in Sources */,
 				A89CD13F28587832009D049D /* MoreViewController.swift in Sources */,
 				A89CD1532858BACB009D049D /* SportsViewController.swift in Sources */,

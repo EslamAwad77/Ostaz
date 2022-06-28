@@ -16,7 +16,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var viewContentPassword: UIView!
     @IBOutlet weak var viewConfirmPassword: UIView!
     @IBOutlet weak var txtFieldRegisterUserName: UITextField!
-    @IBOutlet weak var txtFieldPhoneNumber: UITextField!
+    @IBOutlet weak var txtFieldEmail: UITextField!
     @IBOutlet weak var txtFieldRegisterPassword: UITextField!
     @IBOutlet weak var txtFieldRegisterConfirmPassword: UITextField!
     
@@ -38,10 +38,15 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func btnRegisterCreateAccount(_ sender: UIButton) {
-        let storyBoard = UIStoryboard(name: "Auth", bundle: nil)
-        let locationVC = storyBoard.instantiateViewController(withIdentifier: "LocationViewController") as! LocationViewController
-        locationVC.modalPresentationStyle = .fullScreen
-        self.present(locationVC, animated: true)
+        
+        guard let name = txtFieldRegisterUserName.text?.trimmed, !name.isEmpty, let email = txtFieldEmail.text?.trimmed, !email.isEmpty, let password = txtFieldRegisterPassword.text?.trimmed, !password.isEmpty, let confirmPass = txtFieldRegisterConfirmPassword.text?.trimmed, !confirmPass.isEmpty else {return}
+        API.fetchingRegister(name: name, email: email, password: password) { (error: Error?, success: Bool) in
+            if success {
+                print("register success ")
+            }
+        }
+        
+        goToLocationVC()
     }
     
     //-------------------LifeCycle------------------------
@@ -50,6 +55,15 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
         self.viewContentPassword.addborder(10)
         self.viewConfirmPassword.addborder(10)
+    }
+}
+
+extension RegisterViewController {
+    func goToLocationVC(){
+        let storyBoard = UIStoryboard(name: "Auth", bundle: nil)
+        let locationVC = storyBoard.instantiateViewController(withIdentifier: "LocationViewController") as! LocationViewController
+        locationVC.modalPresentationStyle = .fullScreen
+        self.present(locationVC, animated: true)
     }
 }
 
