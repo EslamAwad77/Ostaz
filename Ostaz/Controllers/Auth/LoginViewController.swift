@@ -13,7 +13,6 @@ class LoginViewController: UIViewController {
    
     //-------------------variables------------------------
     var passwordVisible: Bool = true
-
     
     //-------------------IBOutlet------------------------
     
@@ -33,15 +32,15 @@ class LoginViewController: UIViewController {
     @IBAction func btnLogin(_ sender: UIButton) {
         guard let email = txtFieldLoginUserName.text, !email.isEmpty else {return}
         guard let password = txtFieldLoginPassword.text, !password.isEmpty else {return}
-        API.fetchingLogin(email: email, password: password){ (error: Error?, success: Bool) in
-            if success {
-                        print("hello")
-            } else {
-                // sorry and try agian
+    
+        API.fetchingLogin(email: email, password: password) { error, response in
+            if error != nil {
+                print(error)
+            } else {                
+                print(response?.message)
+                self.goToHome()
             }
-            
         }
-        goToHome()
         
     }
     
@@ -52,6 +51,7 @@ class LoginViewController: UIViewController {
         self.present(registerVC, animated: true)
     }
     @IBAction func btnShowPassword(_ sender: UIButton) {
+        //passwordVisible
         if passwordVisible{
             txtFieldLoginPassword.isSecureTextEntry = false
             passwordVisible = false

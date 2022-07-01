@@ -16,9 +16,9 @@ extension PromotionForTeacherVC {
         let m3 = TeachMethodModel()
         m3.name = "test3"
         let m4 = TeachMethodModel()
-        m3.name = "test4"
+        m4.name = "test4"
         let m5 = TeachMethodModel()
-        m3.name = "test5"
+        m5.name = "test5"
         teacherMethodItems = [m1, m2, m3, m4, m5]
         
         let a1 = AreaModel()
