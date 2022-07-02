@@ -13,7 +13,7 @@ class ForgetPasswordVC: UIViewController {
     
     @IBOutlet weak var PasswordCustomView: PasswordCustomView!
     
-    @IBOutlet weak var txtFieldOpt: UITextField!
+    @IBOutlet weak var txtFieldEmail: UITextField!
     
     @IBOutlet weak var btnShowPassView: UIButton!
     //-------------------Actions---------------------------

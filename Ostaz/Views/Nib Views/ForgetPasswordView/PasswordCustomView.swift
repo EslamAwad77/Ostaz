@@ -15,6 +15,8 @@ class PasswordCustomView: UIView {
     var passwordVisible: Bool = true
     
     //-------------------Outlet-----------------------
+    
+    @IBOutlet weak var txtFieldOtp: UITextField!
     @IBOutlet weak var txtFieldNewPassword: UITextField!
     @IBOutlet weak var txtFieldConfirmPassword: UITextField!
     @IBOutlet weak var viewNewPassword: UIView!

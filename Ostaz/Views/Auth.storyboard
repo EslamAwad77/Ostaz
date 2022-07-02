@@ -524,7 +524,7 @@
                                                 <color key="textColor" name="TxtColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="   Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9P4-ik-Txe" userLabel="Otp">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="   Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9P4-ik-Txe">
                                                 <rect key="frame" x="17" y="433" width="380" height="56"/>
                                                 <color key="backgroundColor" name="TxtFieldColor"/>
                                                 <constraints>
@@ -558,7 +558,7 @@
                                                     <action selector="btnSend:" destination="it3-74-dl4" eventType="touchUpInside" id="4Ct-0v-V0q"/>
                                                 </connections>
                                             </button>
-                                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O1M-LG-tKc" customClass="PasswordCustomView" customModule="Ostaz" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O1M-LG-tKc" customClass="PasswordCustomView" customModule="Ostaz" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="416" width="414" height="369"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
@@ -616,7 +616,7 @@
                     <connections>
                         <outlet property="PasswordCustomView" destination="O1M-LG-tKc" id="tkf-P6-hML"/>
                         <outlet property="btnShowPassView" destination="2d5-Gu-pVn" id="oYD-UR-q4c"/>
-                        <outlet property="txtFieldOpt" destination="9P4-ik-Txe" id="h7T-gy-n4F"/>
+                        <outlet property="txtFieldEmail" destination="9P4-ik-Txe" id="SQk-Kf-vps"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JeZ-Sh-sX8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
