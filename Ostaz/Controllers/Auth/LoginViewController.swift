@@ -36,8 +36,12 @@ class LoginViewController: UIViewController {
         API.fetchingLogin(email: email, password: password) { error, response in
             if error != nil {
                 print(error)
+                
             } else {                
                 print(response?.message)
+//                let vc = UIAlertController.init(title: "alert", message: response?.message, preferredStyle: .alert)
+//                vc.addAction(UIAlertAction.init(title: "ok", style: .default))
+//                self.present(vc, animated: true)
                 self.goToHome()
             }
         }

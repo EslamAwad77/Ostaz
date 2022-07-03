@@ -20,6 +20,7 @@ class SportsViewController: UIViewController {
     ]
     
     //-------------------IBOutlet------------------------
+    @IBOutlet weak var signupView: SignupView!
     @IBOutlet weak var tbleViewSports: UITableView!
     
     //-------------------Actions------------------------

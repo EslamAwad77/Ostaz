@@ -12,57 +12,57 @@ import SwiftyJSON
 
 struct LoginResponse {
     var message: String?
-    var user: UserModel?
+    //var user: UserModel?
 }
 
 class API: NSObject{
     static func fetchingLogin(email: String, password: String, completion: @escaping (_ error :String?, _ response: LoginResponse?) -> Void){
         
-        let url = "https://inst.roqay.solutions/api/login"
+        let url = URLs.login
         let parameters = [
-            "email": email ,
+            "email": email ,  // "email" parameters in the api
             "password": password
         ]
         AF.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: nil)
             .response { response in
                 if (response.response?.statusCode ?? 0) >= 200 && (response.response?.statusCode ?? 0) <= 299 {
                     let json = JSON(response.data)
-                    var res = LoginResponse()
-                    res.message = json["message"].string
-                    completion(nil , res)
+                    var result = LoginResponse()
+                    result.message = json["message"].string
+                    completion(nil , result)
                 }else {
                     let json = JSON(response.data)
                     let msg = json["message"].string
-
                     completion(msg, nil)
                 }
             }
     }
-    static func fetchingRegister(name: String, email: String, password: String, completion: @escaping (_ error :Error?, _ success: Bool) -> Void){
+    
+    struct RegisterResponse {
+        var message: String?
+    }
+    
+    static func fetchingRegister(name: String, email: String, password: String, completion: @escaping (_ error :String?, _ response: RegisterResponse?) -> Void){
         
-        let url = "https://inst.roqay.solutions/api/register"
+        let url = URLs.register
         let parameters = [
             "name": name,
             "email": email ,
             "password": password,
-            "confirmPass": password
+            "password_confirmation": password
         ]
         AF.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: nil)
-            .validate(statusCode: 200..<600)
             .response { response in
-                switch response.result {
-                    
-                case .success(let value):
-                    let json = JSON(value)
-                    if let apiToken = json["data"]["token"].string {
-                        print("\(apiToken)")
-                        completion(nil, true)
-                    }
-                    
-                case .failure(let error):
-                    print(error)
-                    break
-                    
+                
+                if (response.response?.statusCode ?? 0) >= 200 && (response.response?.statusCode ?? 0) <= 299{
+                    let json = JSON(response.data)
+                    var result = RegisterResponse()
+                    result.message = json["message"].string
+                    completion(nil, result)
+                } else {
+                    let json = JSON(response.data)
+                    let message = json["message"].string
+                    completion(message, nil)
                 }
             }
     }

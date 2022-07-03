@@ -42,6 +42,7 @@
 		A8672C8A2868908D00ED514D /* AreaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8672C892868908D00ED514D /* AreaModel.swift */; };
 		A8807DD72861B7F9007E1C9D /* TeacherProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8807DD62861B7F9007E1C9D /* TeacherProfileCollectionViewCell.swift */; };
 		A8807DD92861F336007E1C9D /* PromotionForTeacherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8807DD82861F336007E1C9D /* PromotionForTeacherVC.swift */; };
+		A893B4BF2870BECF00E42F36 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893B4BE2870BECF00E42F36 /* Config.swift */; };
 		A8954B08284F4D6600493142 /* ExstensionsAndViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8954B07284F4D6600493142 /* ExstensionsAndViews.swift */; };
 		A89CD13F28587832009D049D /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89CD13E28587832009D049D /* MoreViewController.swift */; };
 		A89CD14128588A99009D049D /* AcountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89CD14028588A99009D049D /* AcountViewController.swift */; };
@@ -55,6 +56,7 @@
 		A8A7DD5C2861596D00DABB8A /* AccountCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A7DD5B2861596D00DABB8A /* AccountCustomView.swift */; };
 		A8A7DD5E286162FE00DABB8A /* PasswordCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A7DD5D286162FE00DABB8A /* PasswordCustomView.swift */; };
 		A8A7DD6028617A8100DABB8A /* HomeCategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A7DD5F28617A8100DABB8A /* HomeCategoriesCollectionViewCell.swift */; };
+		A8AE0E57287197D4007596EA /* RegiserVC+ValidationOfUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AE0E56287197D4007596EA /* RegiserVC+ValidationOfUI.swift */; };
 		A8B33C1A284F91900025BE8A /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B33C19284F91900025BE8A /* LocationViewController.swift */; };
 		A8B499042863D4760038C782 /* HomeFilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B499032863D4760038C782 /* HomeFilterVC.swift */; };
 		A8B750D22860012700305575 /* ForgetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B750D12860012700305575 /* ForgetPasswordVC.swift */; };
@@ -124,6 +126,7 @@
 		A8672C892868908D00ED514D /* AreaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaModel.swift; sourceTree = "<group>"; };
 		A8807DD62861B7F9007E1C9D /* TeacherProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 		A8807DD82861F336007E1C9D /* PromotionForTeacherVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionForTeacherVC.swift; sourceTree = "<group>"; };
+		A893B4BE2870BECF00E42F36 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		A8954B07284F4D6600493142 /* ExstensionsAndViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExstensionsAndViews.swift; sourceTree = "<group>"; };
 		A89CD13E28587832009D049D /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		A89CD14028588A99009D049D /* AcountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcountViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +140,7 @@
 		A8A7DD5B2861596D00DABB8A /* AccountCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCustomView.swift; sourceTree = "<group>"; };
 		A8A7DD5D286162FE00DABB8A /* PasswordCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordCustomView.swift; sourceTree = "<group>"; };
 		A8A7DD5F28617A8100DABB8A /* HomeCategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
+		A8AE0E56287197D4007596EA /* RegiserVC+ValidationOfUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegiserVC+ValidationOfUI.swift"; sourceTree = "<group>"; };
 		A8B33C19284F91900025BE8A /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		A8B499032863D4760038C782 /* HomeFilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFilterVC.swift; sourceTree = "<group>"; };
 		A8B750D12860012700305575 /* ForgetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordVC.swift; sourceTree = "<group>"; };
@@ -230,6 +234,7 @@
 			children = (
 				A8173524284E68300008CF8E /* AppDelegate.swift */,
 				A8173526284E68300008CF8E /* SceneDelegate.swift */,
+				A893B4BD2870BEB400E42F36 /* Config */,
 				A804270C286B30BE005C5EC1 /* APIs */,
 				A8954B09284F4D6B00493142 /* Exstensions */,
 				A83920592855CF1900CD2126 /* Models */,
@@ -343,8 +348,8 @@
 		A85DFAE5285FB3F800CEF27B /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				A8AE0E58287197E9007596EA /* RegisterVC */,
 				A8173528284E68300008CF8E /* LoginViewController.swift */,
-				A817355A284E7D170008CF8E /* RegisterViewController.swift */,
 				A8B33C19284F91900025BE8A /* LocationViewController.swift */,
 				A8B750D12860012700305575 /* ForgetPasswordVC.swift */,
 			);
@@ -362,6 +367,14 @@
 				A8DC659928577590008879B4 /* EditPasswordViewController.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		A893B4BD2870BEB400E42F36 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				A893B4BE2870BECF00E42F36 /* Config.swift */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 		A8954B09284F4D6B00493142 /* Exstensions */ = {
@@ -389,6 +402,15 @@
 				A89CD14A28589C99009D049D /* WishListCell.xib */,
 			);
 			path = WishList;
+			sourceTree = "<group>";
+		};
+		A8AE0E58287197E9007596EA /* RegisterVC */ = {
+			isa = PBXGroup;
+			children = (
+				A817355A284E7D170008CF8E /* RegisterViewController.swift */,
+				A8AE0E56287197D4007596EA /* RegiserVC+ValidationOfUI.swift */,
+			);
+			path = RegisterVC;
 			sourceTree = "<group>";
 		};
 		A8B750D3286006BB00305575 /* ForgetPasswordView */ = {
@@ -697,6 +719,8 @@
 				A817352F284E68300008CF8E /* Ostaz.xcdatamodeld in Sources */,
 				A8B499042863D4760038C782 /* HomeFilterVC.swift in Sources */,
 				A89CD14128588A99009D049D /* AcountViewController.swift in Sources */,
+				A893B4BF2870BECF00E42F36 /* Config.swift in Sources */,
+				A8AE0E57287197D4007596EA /* RegiserVC+ValidationOfUI.swift in Sources */,
 				A8672C8A2868908D00ED514D /* AreaModel.swift in Sources */,
 				A8B33C1A284F91900025BE8A /* LocationViewController.swift in Sources */,
 			);
@@ -881,7 +905,7 @@
 				INFOPLIST_FILE = Ostaz/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Auth;
+				INFOPLIST_KEY_UIMainStoryboardFile = Home;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -911,7 +935,7 @@
 				INFOPLIST_FILE = Ostaz/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Auth;
+				INFOPLIST_KEY_UIMainStoryboardFile = Home;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;

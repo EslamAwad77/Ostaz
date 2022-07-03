@@ -19,6 +19,7 @@ class HomeSearchVC: UIViewController {
     ]
     
     //-------------------IBOutlet------------------------
+    @IBOutlet weak var signupView: SignupView!
     @IBOutlet weak var tableViewSearchResult: UITableView!
     
     //-------------------IBAction------------------------

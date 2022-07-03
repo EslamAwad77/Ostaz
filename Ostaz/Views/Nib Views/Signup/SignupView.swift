@@ -16,14 +16,8 @@ class SignupView: UIView {
     
     //-------------------Actions------------------------
     @IBAction func btnBackToHome(_ sender: UIButton) {
-        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
-        let homeVC = storyBoard.instantiateViewController(withIdentifier: "HomeTabBarVC") as! HomeTabBarVC
-        homeVC.modalPresentationStyle = .fullScreen
-        //self.inputViewController?.showDetailViewController(homeVC, sender: nil)
-        //self.present(homeVC, animated: true)
-        //let nav = UINavigationController()
-        //nav.pushViewController(homeVC, animated: true)
-        //nav.popViewController(animated: true)
+       
+     
     }
     
     @IBAction func resgisterClicked(_ sender: Any) {

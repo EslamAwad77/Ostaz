@@ -41,6 +41,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="39C-Lz-1Pm" customClass="SignupView" customModule="Ostaz" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundPic" translatesAutoresizingMaskIntoConstraints="NO" id="tk2-au-WGc">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -138,6 +143,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="signupView" destination="39C-Lz-1Pm" id="yCm-lK-Vrz"/>
                         <outlet property="tableViewSearchResult" destination="NwB-vF-efd" id="pxt-8A-vvf"/>
                     </connections>
                 </viewController>
@@ -153,6 +159,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KxS-dC-yZg" customClass="SignupView" customModule="Ostaz" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g3b-W0-jBy">
                                 <rect key="frame" x="0.0" y="54" width="414" height="18"/>
                                 <constraints>
@@ -520,6 +531,7 @@
                     <connections>
                         <outlet property="collectionViewCategoriesInHome" destination="fbJ-Ga-0eh" id="Veb-9I-Oyr"/>
                         <outlet property="collectionViewMostViewedInHome" destination="WjE-0g-LaH" id="Sdy-Xp-i6N"/>
+                        <outlet property="signupView" destination="KxS-dC-yZg" id="lW8-So-RAH"/>
                         <outlet property="viewSearchWithFilter" destination="2vB-q1-EIM" id="bsY-Zb-Qyk"/>
                     </connections>
                 </viewController>
@@ -995,6 +1007,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QF0-BM-6Ww" customClass="SignupView" customModule="Ostaz" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ImageBackGround" translatesAutoresizingMaskIntoConstraints="NO" id="nU1-fH-8jL">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="BackgroundColor"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wishlist" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tfh-J5-5K6">
                                 <rect key="frame" x="0.0" y="54" width="414" height="34"/>
                                 <constraints>
@@ -1007,7 +1029,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WRI-3K-SCA">
                                 <rect key="frame" x="0.0" y="93" width="414" height="720"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cTa-MH-Lzv" userLabel="content view">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cTa-MH-Lzv" userLabel="view scroll">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="720"/>
                                         <subviews>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="R8j-ee-TAD">
@@ -1068,6 +1090,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Wishist" image="wishListIcon" id="XxH-ox-td7"/>
                     <connections>
+                        <outlet property="signupView" destination="QF0-BM-6Ww" id="fp5-J1-cP6"/>
                         <outlet property="tbleViewWishList" destination="R8j-ee-TAD" id="Vl4-Nx-tdw"/>
                     </connections>
                 </viewController>
@@ -1246,6 +1269,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4uZ-zh-5fT" customClass="SignupView" customModule="Ostaz" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroundPic" translatesAutoresizingMaskIntoConstraints="NO" id="g4k-fj-p54">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1342,6 +1370,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Wishist" image="wishListIcon" id="Vl9-hm-QJK"/>
                     <connections>
+                        <outlet property="signupView" destination="4uZ-zh-5fT" id="sd8-JW-ktg"/>
                         <outlet property="tbleViewSports" destination="48L-S5-L2O" id="XhA-a8-37h"/>
                     </connections>
                 </viewController>
@@ -1355,6 +1384,7 @@
         <image name="DropDownMark" width="12" height="8.5"/>
         <image name="FilterButton" width="41" height="36"/>
         <image name="HomeIcon" width="212.5" height="109"/>
+        <image name="ImageBackGround" width="428" height="992"/>
         <image name="btnBack" width="26.5" height="13"/>
         <image name="caterageIcon" width="21" height="21"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>

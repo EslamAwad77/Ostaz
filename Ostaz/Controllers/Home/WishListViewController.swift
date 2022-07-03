@@ -8,7 +8,8 @@
 import UIKit
 
 class WishListViewController: UIViewController {
-    
+   
+    //-------------------variables--------------------------
     var wishListItems: [WishListItems] = [
         WishListItems(descriptionImg: #imageLiteral(resourceName: "WishListPic1"), teacherImg: #imageLiteral(resourceName: "TeacherImage"), teacherName: "ahmed Mohmaed ali", teacherJob: "maths (maths)"),
         WishListItems(descriptionImg: #imageLiteral(resourceName: "WishListPic2"), teacherImg: #imageLiteral(resourceName: "TeacherImage"), teacherName: "ali ahmed mohamed", teacherJob: "arabic(maths)"),
@@ -16,13 +17,19 @@ class WishListViewController: UIViewController {
         WishListItems(descriptionImg: #imageLiteral(resourceName: "WishListPic2"), teacherImg: #imageLiteral(resourceName: "TeacherImage"), teacherName: "nour ahmed mohamed", teacherJob: "region(maths)"),WishListItems(descriptionImg: #imageLiteral(resourceName: "WishListPic1"), teacherImg: #imageLiteral(resourceName: "TeacherImage"), teacherName: "nour ahmed mohamed", teacherJob: "region(maths)")
     ]
     
+    //-------------------outlet--------------------------
+    @IBOutlet weak var signupView: SignupView!
     @IBOutlet weak var tbleViewWishList: UITableView!
     
+    
+    //-------------------lifecycle--------------------------
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         
     }
+    
+    //-------------------functions--------------------------
     func setupUI() {
         tbleViewWishList.dataSource = self
         tbleViewWishList.delegate = self
@@ -32,6 +39,7 @@ class WishListViewController: UIViewController {
 
 }
 
+//-------------------exstensions--------------------------
 extension WishListViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         wishListItems.count
