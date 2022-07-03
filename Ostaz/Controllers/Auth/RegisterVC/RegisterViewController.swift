@@ -51,10 +51,9 @@ class RegisterViewController: UIViewController {
             API.fetchingRegister(name: txtFieldRegisterUserName.text!, email: txtFieldEmail.text!, password: txtFieldRegisterPassword.text!) { error, response in
                 //
                 if error != nil {
-                    print(error)
-                   
+                    print(error!)
                 } else {
-                    print(response?.message)
+                    print(response?.message ?? "")
                     self.goToLocationVC()
                 }
             }

@@ -61,6 +61,8 @@
 		A8B499042863D4760038C782 /* HomeFilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B499032863D4760038C782 /* HomeFilterVC.swift */; };
 		A8B750D22860012700305575 /* ForgetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B750D12860012700305575 /* ForgetPasswordVC.swift */; };
 		A8B750D5286006E600305575 /* PasswordCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8B750D4286006E600305575 /* PasswordCustomView.xib */; };
+		A8C8C8082871CAFB00143872 /* LoginResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C8C8072871CAFB00143872 /* LoginResponseModel.swift */; };
+		A8C8C80A2871CB3800143872 /* RegisterResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C8C8092871CB3800143872 /* RegisterResponseModel.swift */; };
 		A8DC659A28577590008879B4 /* EditPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC659928577590008879B4 /* EditPasswordViewController.swift */; };
 		A8E1F80128620A87004DFC21 /* TeacherPromotionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E1F80028620A87004DFC21 /* TeacherPromotionCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -145,6 +147,8 @@
 		A8B499032863D4760038C782 /* HomeFilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFilterVC.swift; sourceTree = "<group>"; };
 		A8B750D12860012700305575 /* ForgetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordVC.swift; sourceTree = "<group>"; };
 		A8B750D4286006E600305575 /* PasswordCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PasswordCustomView.xib; sourceTree = "<group>"; };
+		A8C8C8072871CAFB00143872 /* LoginResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseModel.swift; sourceTree = "<group>"; };
+		A8C8C8092871CB3800143872 /* RegisterResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResponseModel.swift; sourceTree = "<group>"; };
 		A8DC659928577590008879B4 /* EditPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPasswordViewController.swift; sourceTree = "<group>"; };
 		A8E1F80028620A87004DFC21 /* TeacherPromotionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherPromotionCollectionViewCell.swift; sourceTree = "<group>"; };
 		AF56F268C1243AC2F59B4D84 /* Pods-Ostaz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ostaz.debug.xcconfig"; path = "Target Support Files/Pods-Ostaz/Pods-Ostaz.debug.xcconfig"; sourceTree = "<group>"; };
@@ -299,10 +303,10 @@
 			children = (
 				A839205A2855CF5A00CD2126 /* CollectionViewsSlides.swift */,
 				A89CD1502858B05F009D049D /* WishListItems.swift */,
-				A8672C832868830600ED514D /* UserModel.swift */,
 				A8672C872868856000ED514D /* TeachMethodModel.swift */,
 				A8672C892868908D00ED514D /* AreaModel.swift */,
 				A8042705286B01A3005C5EC1 /* TeacherCategoryModel.swift */,
+				A8C8C80B2871CB5000143872 /* Json Response */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -420,6 +424,16 @@
 				A8A7DD5D286162FE00DABB8A /* PasswordCustomView.swift */,
 			);
 			path = ForgetPasswordView;
+			sourceTree = "<group>";
+		};
+		A8C8C80B2871CB5000143872 /* Json Response */ = {
+			isa = PBXGroup;
+			children = (
+				A8672C832868830600ED514D /* UserModel.swift */,
+				A8C8C8072871CAFB00143872 /* LoginResponseModel.swift */,
+				A8C8C8092871CB3800143872 /* RegisterResponseModel.swift */,
+			);
+			path = "Json Response";
 			sourceTree = "<group>";
 		};
 		C85D77CDE44C3C1FFD3EF048 /* Pods */ = {
@@ -715,9 +729,11 @@
 				A839205D2855D7BE00CD2126 /* HomeMostViewedCollectionViewCell.swift in Sources */,
 				A84D15EB28521F55004E1995 /* HomeViewController.swift in Sources */,
 				A8672C842868830600ED514D /* UserModel.swift in Sources */,
+				A8C8C80A2871CB3800143872 /* RegisterResponseModel.swift in Sources */,
 				A8954B08284F4D6600493142 /* ExstensionsAndViews.swift in Sources */,
 				A817352F284E68300008CF8E /* Ostaz.xcdatamodeld in Sources */,
 				A8B499042863D4760038C782 /* HomeFilterVC.swift in Sources */,
+				A8C8C8082871CAFB00143872 /* LoginResponseModel.swift in Sources */,
 				A89CD14128588A99009D049D /* AcountViewController.swift in Sources */,
 				A893B4BF2870BECF00E42F36 /* Config.swift in Sources */,
 				A8AE0E57287197D4007596EA /* RegiserVC+ValidationOfUI.swift in Sources */,
@@ -905,7 +921,7 @@
 				INFOPLIST_FILE = Ostaz/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Home;
+				INFOPLIST_KEY_UIMainStoryboardFile = Auth;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -935,7 +951,7 @@
 				INFOPLIST_FILE = Ostaz/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Home;
+				INFOPLIST_KEY_UIMainStoryboardFile = Auth;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;

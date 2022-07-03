@@ -15,6 +15,7 @@ class HomeViewController: UIViewController {
     lazy var homeFilterVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "HomeFilterVC")
     
     //-------------------IBOutlet------------------------
+    @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var signupView: SignupView!
     
@@ -107,12 +108,21 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == self.collectionViewMostViewedInHome{
-            let item = homeMostViewedSlides[indexPath.row]
-            if item.teacherName == "Reem gamal"{
-                let teacherVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TeacherProfileViewController") as! TeacherProfileViewController
-                teacherVC.modalPresentationStyle = .fullScreen
-                self.present(teacherVC, animated: true)
+            //if let
+            if let userToken = UserDefaults.standard.value(forKey: "token") as? String, userToken == "tester" {
+                //signupView.alpha = 0
+                //scrollView.alpha = 1
+                let item = homeMostViewedSlides[indexPath.row]
+                if item.teacherName == "Reem gamal"{
+                    let teacherVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TeacherProfileViewController") as! TeacherProfileViewController
+                    teacherVC.modalPresentationStyle = .fullScreen
+                    self.present(teacherVC, animated: true)
+                }
+            }else {
+                //signupView.alpha = 1
+                //scrollView.alpha = 0
             }
+           
         } else{
             let item = homecategoriesSlides[indexPath.row]
             if item.categoryName == "Sports"{
