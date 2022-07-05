@@ -10,23 +10,30 @@ import UIKit
 @IBDesignable
 class SignupView: UIView {
    
+    //-------------------variables----------------------
+    var title: String? {
+        didSet {
+            self.lblTitle.text = title
+        }
+    }
+    
+    var descrip: String? {
+        didSet {
+            self.lblDesc.text = description
+        }
+    }
+    
+    var didClickButton: (()->())?
+    
     //-------------------IBOutlet-----------------------
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblDesc: UILabel!
     
     //-------------------Actions------------------------
-    @IBAction func btnBackToHome(_ sender: UIButton) {
-       
-     
-    }
+   
     
     @IBAction func resgisterClicked(_ sender: Any) {
-        let storyBoard = UIStoryboard(name: "Auth", bundle: nil)
-        let registerVC = storyBoard.instantiateViewController(withIdentifier: "RegisterViewController") as! RegisterViewController
-        registerVC.modalPresentationStyle = .fullScreen
-        //self.present(registerVC, animated: true)
-//        let nav = UINavigationController()
-//        nav.pushViewController(registerVC, animated: true)
+        didClickButton?()
     }
 
     //-------------------Functions-----------------------

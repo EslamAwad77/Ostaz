@@ -13,4 +13,6 @@ struct URLs {
     static let login = main + "login"
     /// POST {name, email, password, config-Password }
     static let register = main + "register"
+    /// GET {}
+    static let logout = main + "logout"
 }

@@ -40,10 +40,13 @@
 		A8672C842868830600ED514D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8672C832868830600ED514D /* UserModel.swift */; };
 		A8672C882868856000ED514D /* TeachMethodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8672C872868856000ED514D /* TeachMethodModel.swift */; };
 		A8672C8A2868908D00ED514D /* AreaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8672C892868908D00ED514D /* AreaModel.swift */; };
+		A877D11C28741E0000A57E7C /* LogoutResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A877D11B28741E0000A57E7C /* LogoutResponseModel.swift */; };
+		A877D11F28742C6600A57E7C /* LoginVC+ValidationOfUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A877D11E28742C6600A57E7C /* LoginVC+ValidationOfUI.swift */; };
+		A877D12228742F5A00A57E7C /* EditPassVC+ValidationOfUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A877D12128742F5A00A57E7C /* EditPassVC+ValidationOfUI.swift */; };
 		A8807DD72861B7F9007E1C9D /* TeacherProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8807DD62861B7F9007E1C9D /* TeacherProfileCollectionViewCell.swift */; };
 		A8807DD92861F336007E1C9D /* PromotionForTeacherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8807DD82861F336007E1C9D /* PromotionForTeacherVC.swift */; };
 		A893B4BF2870BECF00E42F36 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893B4BE2870BECF00E42F36 /* Config.swift */; };
-		A8954B08284F4D6600493142 /* ExstensionsAndViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8954B07284F4D6600493142 /* ExstensionsAndViews.swift */; };
+		A8954B08284F4D6600493142 /* ExstensionsOfUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8954B07284F4D6600493142 /* ExstensionsOfUIView.swift */; };
 		A89CD13F28587832009D049D /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89CD13E28587832009D049D /* MoreViewController.swift */; };
 		A89CD14128588A99009D049D /* AcountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89CD14028588A99009D049D /* AcountViewController.swift */; };
 		A89CD14628588D15009D049D /* AccountCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A89CD14528588D15009D049D /* AccountCustomView.xib */; };
@@ -126,10 +129,13 @@
 		A8672C832868830600ED514D /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		A8672C872868856000ED514D /* TeachMethodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachMethodModel.swift; sourceTree = "<group>"; };
 		A8672C892868908D00ED514D /* AreaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaModel.swift; sourceTree = "<group>"; };
+		A877D11B28741E0000A57E7C /* LogoutResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutResponseModel.swift; sourceTree = "<group>"; };
+		A877D11E28742C6600A57E7C /* LoginVC+ValidationOfUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginVC+ValidationOfUI.swift"; sourceTree = "<group>"; };
+		A877D12128742F5A00A57E7C /* EditPassVC+ValidationOfUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditPassVC+ValidationOfUI.swift"; sourceTree = "<group>"; };
 		A8807DD62861B7F9007E1C9D /* TeacherProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 		A8807DD82861F336007E1C9D /* PromotionForTeacherVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionForTeacherVC.swift; sourceTree = "<group>"; };
 		A893B4BE2870BECF00E42F36 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
-		A8954B07284F4D6600493142 /* ExstensionsAndViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExstensionsAndViews.swift; sourceTree = "<group>"; };
+		A8954B07284F4D6600493142 /* ExstensionsOfUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExstensionsOfUIView.swift; sourceTree = "<group>"; };
 		A89CD13E28587832009D049D /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		A89CD14028588A99009D049D /* AcountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcountViewController.swift; sourceTree = "<group>"; };
 		A89CD14528588D15009D049D /* AccountCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountCustomView.xib; sourceTree = "<group>"; };
@@ -353,7 +359,7 @@
 			isa = PBXGroup;
 			children = (
 				A8AE0E58287197E9007596EA /* RegisterVC */,
-				A8173528284E68300008CF8E /* LoginViewController.swift */,
+				A877D11D28742C4100A57E7C /* LoginVC */,
 				A8B33C19284F91900025BE8A /* LocationViewController.swift */,
 				A8B750D12860012700305575 /* ForgetPasswordVC.swift */,
 			);
@@ -368,9 +374,27 @@
 				A857EC1B2855FE900095AA01 /* TeacherProfileViewController.swift */,
 				A8807DD62861B7F9007E1C9D /* TeacherProfileCollectionViewCell.swift */,
 				A89CD14028588A99009D049D /* AcountViewController.swift */,
-				A8DC659928577590008879B4 /* EditPasswordViewController.swift */,
+				A877D12028742F2B00A57E7C /* EditPassVC */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		A877D11D28742C4100A57E7C /* LoginVC */ = {
+			isa = PBXGroup;
+			children = (
+				A8173528284E68300008CF8E /* LoginViewController.swift */,
+				A877D11E28742C6600A57E7C /* LoginVC+ValidationOfUI.swift */,
+			);
+			path = LoginVC;
+			sourceTree = "<group>";
+		};
+		A877D12028742F2B00A57E7C /* EditPassVC */ = {
+			isa = PBXGroup;
+			children = (
+				A8DC659928577590008879B4 /* EditPasswordViewController.swift */,
+				A877D12128742F5A00A57E7C /* EditPassVC+ValidationOfUI.swift */,
+			);
+			path = EditPassVC;
 			sourceTree = "<group>";
 		};
 		A893B4BD2870BEB400E42F36 /* Config */ = {
@@ -384,7 +408,7 @@
 		A8954B09284F4D6B00493142 /* Exstensions */ = {
 			isa = PBXGroup;
 			children = (
-				A8954B07284F4D6600493142 /* ExstensionsAndViews.swift */,
+				A8954B07284F4D6600493142 /* ExstensionsOfUIView.swift */,
 				A804270F286B349F005C5EC1 /* ExstensionsOfString.swift */,
 			);
 			path = Exstensions;
@@ -393,8 +417,8 @@
 		A89CD14228588C93009D049D /* AcountTeacher */ = {
 			isa = PBXGroup;
 			children = (
-				A89CD14528588D15009D049D /* AccountCustomView.xib */,
 				A8A7DD5B2861596D00DABB8A /* AccountCustomView.swift */,
+				A89CD14528588D15009D049D /* AccountCustomView.xib */,
 			);
 			path = AcountTeacher;
 			sourceTree = "<group>";
@@ -420,8 +444,8 @@
 		A8B750D3286006BB00305575 /* ForgetPasswordView */ = {
 			isa = PBXGroup;
 			children = (
-				A8B750D4286006E600305575 /* PasswordCustomView.xib */,
 				A8A7DD5D286162FE00DABB8A /* PasswordCustomView.swift */,
+				A8B750D4286006E600305575 /* PasswordCustomView.xib */,
 			);
 			path = ForgetPasswordView;
 			sourceTree = "<group>";
@@ -432,6 +456,7 @@
 				A8672C832868830600ED514D /* UserModel.swift */,
 				A8C8C8072871CAFB00143872 /* LoginResponseModel.swift */,
 				A8C8C8092871CB3800143872 /* RegisterResponseModel.swift */,
+				A877D11B28741E0000A57E7C /* LogoutResponseModel.swift */,
 			);
 			path = "Json Response";
 			sourceTree = "<group>";
@@ -700,6 +725,8 @@
 				A89CD14F2858A52E009D049D /* CategoriesViewController.swift in Sources */,
 				A8042709286B27E9005C5EC1 /* PromotionTeacherVC+SetupUI.swift in Sources */,
 				A8042710286B349F005C5EC1 /* ExstensionsOfString.swift in Sources */,
+				A877D11F28742C6600A57E7C /* LoginVC+ValidationOfUI.swift in Sources */,
+				A877D12228742F5A00A57E7C /* EditPassVC+ValidationOfUI.swift in Sources */,
 				A8E1F80128620A87004DFC21 /* TeacherPromotionCollectionViewCell.swift in Sources */,
 				A804270B286B282A005C5EC1 /* PromotionTeacherVC+Collection.swift in Sources */,
 				A8DC659A28577590008879B4 /* EditPasswordViewController.swift in Sources */,
@@ -730,7 +757,7 @@
 				A84D15EB28521F55004E1995 /* HomeViewController.swift in Sources */,
 				A8672C842868830600ED514D /* UserModel.swift in Sources */,
 				A8C8C80A2871CB3800143872 /* RegisterResponseModel.swift in Sources */,
-				A8954B08284F4D6600493142 /* ExstensionsAndViews.swift in Sources */,
+				A8954B08284F4D6600493142 /* ExstensionsOfUIView.swift in Sources */,
 				A817352F284E68300008CF8E /* Ostaz.xcdatamodeld in Sources */,
 				A8B499042863D4760038C782 /* HomeFilterVC.swift in Sources */,
 				A8C8C8082871CAFB00143872 /* LoginResponseModel.swift in Sources */,
@@ -738,6 +765,7 @@
 				A893B4BF2870BECF00E42F36 /* Config.swift in Sources */,
 				A8AE0E57287197D4007596EA /* RegiserVC+ValidationOfUI.swift in Sources */,
 				A8672C8A2868908D00ED514D /* AreaModel.swift in Sources */,
+				A877D11C28741E0000A57E7C /* LogoutResponseModel.swift in Sources */,
 				A8B33C1A284F91900025BE8A /* LocationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

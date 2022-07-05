@@ -17,6 +17,7 @@ class TeacherProfileViewController: UIViewController {
     
     //-------------------IBOutlet------------------------
     @IBOutlet weak var signUpView: SignupView!
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imgViewTeacher: UIImageView!
     @IBOutlet weak var lblTeacherName: UILabel!
     @IBOutlet weak var lblTeacherPhone: UILabel!
@@ -43,6 +44,8 @@ class TeacherProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpUI()
+        self.goToRegister()
+        self.checkUser()
     }
     
     //-------------------Functions------------------------
@@ -74,6 +77,26 @@ class TeacherProfileViewController: UIViewController {
             CollectionViewTeahcerCategoriesSlide(categoryName: "Math", categoryImage: #imageLiteral(resourceName: "tagesMark")),
             CollectionViewTeahcerCategoriesSlide(categoryName: "Grade 6", categoryImage: #imageLiteral(resourceName: "tagesMark"))
         ]
+    }
+    func checkUser(){
+        if let apiToken = UserDefaults.standard.value(forKey: "token"){
+            self.signUpView.alpha = 0
+            self.scrollView.alpha = 1
+        } else {
+            self.signUpView.alpha = 1
+            self.scrollView.alpha = 0
+        }
+    }
+    func goToRegister(){
+        self.signUpView.didClickButton = { [weak self] in
+            guard let self = self else{return}
+            print("did Clicked ")
+            let storyBoard = UIStoryboard(name: "Auth", bundle: nil)
+            let registerVC = storyBoard.instantiateViewController(withIdentifier: "RegisterViewController") as! RegisterViewController
+            registerVC.modalPresentationStyle = .fullScreen
+            self.present(registerVC, animated: true)
+            
+        }
     }
 }
 

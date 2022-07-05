@@ -18,8 +18,9 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var viewPassword: UIView!
     @IBOutlet weak var txtFieldLoginUserName: UITextField!
+    @IBOutlet var lblEmailValidation: UILabel!
     @IBOutlet weak var txtFieldLoginPassword: UITextField!
-    
+    @IBOutlet var lblPasswordValidation: UILabel!
     //-------------------Actions-------------------------
     
     @IBAction func btnFrogetPassword(_ sender: UIButton) {
@@ -30,23 +31,24 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func btnLogin(_ sender: UIButton) {
-        guard let email = txtFieldLoginUserName.text, !email.isEmpty else {return}
-        guard let password = txtFieldLoginPassword.text, !password.isEmpty else {return}
-    
-        API.fetchingLogin(email: email, password: password) { error, response in
-            if error != nil {
-                print(error!)
-                
-            } else {                
-                print(response?.message ?? "")
-                print(response?.user?.token ?? "")                
-                UserDefaults.standard.set(response?.user?.token, forKey: "token")
-//                let vc = UIAlertController.init(title: "alert", message: response?.message, preferredStyle: .alert)
-//                vc.addAction(UIAlertAction.init(title: "ok", style: .default))
-//                self.present(vc, animated: true)
-                self.goToHome()
+        
+        if validation(){
+            API.fetchingLogin(email: txtFieldLoginUserName.text!, password: txtFieldLoginPassword.text!) { error, response in
+                if error != nil {
+                    print(error!)
+                    
+                } else {
+                    print(response?.message ?? "")
+                    print(response?.user?.token ?? "")
+                    UserDefaults.standard.set(response?.user?.token, forKey: "token")
+    //                let vc = UIAlertController.init(title: "alert", message: response?.message, preferredStyle: .alert)
+    //                vc.addAction(UIAlertAction.init(title: "ok", style: .default))
+    //                self.present(vc, animated: true)
+                    self.goToHome()
+                }
             }
         }
+ 
     }
     
     @IBAction func btnGoToRegister(_ sender: UIButton) {
@@ -56,7 +58,6 @@ class LoginViewController: UIViewController {
         self.present(registerVC, animated: true)
     }
     @IBAction func btnShowPassword(_ sender: UIButton) {
-        //passwordVisible
         if passwordVisible{
             txtFieldLoginPassword.isSecureTextEntry = false
             passwordVisible = false
@@ -64,26 +65,16 @@ class LoginViewController: UIViewController {
             txtFieldLoginPassword.isSecureTextEntry = true
             passwordVisible = true
         }
-        
-        
     }
     
     //-------------------LifeCycle------------------------
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        txtFieldLoginPassword.clearsOnBeginEditing = false
-        self.viewPassword.addborder(10)
+        self.setupUI()
     }
 }
 
-extension LoginViewController {
-    func goToHome(){
-        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
-        let homeVC = storyBoard.instantiateViewController(withIdentifier: "HomeTabBarVC") as! HomeTabBarVC
-        homeVC.modalPresentationStyle = .fullScreen
-        self.present(homeVC, animated: true)
-    }
-}
+
 
 

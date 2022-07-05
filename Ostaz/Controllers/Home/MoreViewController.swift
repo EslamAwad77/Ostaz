@@ -40,10 +40,16 @@ class MoreViewController: UIViewController {
         //self.present(vc, animated: true)
     }
     @IBAction func btnLogout(_ sender: UIButton) {
-        let storyBoard = UIStoryboard(name: "Auth", bundle: nil)
-        let loginVC = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-        loginVC.modalPresentationStyle = .fullScreen
-        self.present(loginVC, animated: true)
+        
+        API.fetchingLogout { error, response in
+            if error != nil {
+                print(error!)
+            } else {
+                print(response?.message ?? "")
+                UserDefaults.standard.set(nil, forKey: "token")
+                self.goToLogin()
+            }
+        }
     }
     
     //-------------------LifeCycle------------------------
@@ -53,5 +59,10 @@ class MoreViewController: UIViewController {
     }
     
     //-------------------functions------------------------
-   
+    func goToLogin(){
+        let storyBoard = UIStoryboard(name: "Auth", bundle: nil)
+        let loginVC = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+        loginVC.modalPresentationStyle = .fullScreen
+        self.present(loginVC, animated: true)
+    }
 }

@@ -25,7 +25,7 @@ class API: NSObject{
                     var result = LoginResponse()
                     result.message = json["message"].string
                     result.user = UserModel(apiData: json["data"].dictionaryObject)
-                    print(result.user?.id)
+                    print(result.user!.id!)
                     completion(nil , result)
                 }else {
                     let json = JSON(response.data!)
@@ -50,6 +50,25 @@ class API: NSObject{
                 if (response.response?.statusCode ?? 0) >= 200 && (response.response?.statusCode ?? 0) <= 299{
                     let json = JSON(response.data!)
                     var result = RegisterResponse()
+                    result.message = json["message"].string
+                    completion(nil, result)
+                } else {
+                    let json = JSON(response.data!)
+                    let message = json["message"].string
+                    completion(message, nil)
+                }
+            }
+    }
+    
+    static func fetchingLogout(completion: @escaping (_ error :String?, _ response: LogoutResponse?) -> Void){
+        
+        let url = URLs.logout
+        
+        AF.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil)
+            .response { response in
+                if (response.response?.statusCode ?? 0) >= 200 && (response.response?.statusCode ?? 0) <= 299{
+                    let json = JSON(response.data!)
+                    var result = LogoutResponse()
                     result.message = json["message"].string
                     completion(nil, result)
                 } else {
