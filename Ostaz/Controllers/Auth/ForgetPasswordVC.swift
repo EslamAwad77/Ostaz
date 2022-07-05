@@ -9,6 +9,8 @@ import UIKit
 
 class ForgetPasswordVC: UIViewController {
     
+    var registerVC: RegisterViewController = RegisterViewController()
+    
     //-------------------Outlet---------------------------
     
     @IBOutlet weak var PasswordCustomView: PasswordCustomView!
@@ -22,13 +24,23 @@ class ForgetPasswordVC: UIViewController {
     }
     
     @IBAction func btnSend(_ sender: UIButton) {
+
+        // if email true view.alpha =  1
         
+        PasswordCustomView.alpha = 1
     }
     
     //-------------------lifecycle---------------------------
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.goToLogin()
+    }
+    
+    func goToLogin(){
+        self.PasswordCustomView.didClickButtonConfirm = { [weak self] in
+            guard let self = self else{return}
+            self.dismiss(animated: true, completion: nil)
+        }
     }
 }

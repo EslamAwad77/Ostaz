@@ -1573,6 +1573,9 @@
                                                                                 <real key="value" value="10"/>
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="btnGoToPasswordVC:" destination="S6C-bU-5is" eventType="touchUpInside" id="WTg-ki-6Fe"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>
@@ -1623,6 +1626,9 @@
                                                                                 <real key="value" value="10"/>
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="btnGoToLocationVC:" destination="S6C-bU-5is" eventType="touchUpInside" id="MeZ-c5-jwK"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <userDefinedRuntimeAttributes>

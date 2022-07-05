@@ -43,6 +43,8 @@
 		A877D11C28741E0000A57E7C /* LogoutResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A877D11B28741E0000A57E7C /* LogoutResponseModel.swift */; };
 		A877D11F28742C6600A57E7C /* LoginVC+ValidationOfUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A877D11E28742C6600A57E7C /* LoginVC+ValidationOfUI.swift */; };
 		A877D12228742F5A00A57E7C /* EditPassVC+ValidationOfUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A877D12128742F5A00A57E7C /* EditPassVC+ValidationOfUI.swift */; };
+		A877D12528743DA000A57E7C /* TeacherProfileVC+Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A877D12428743DA000A57E7C /* TeacherProfileVC+Collection.swift */; };
+		A877D12728743DE000A57E7C /* TeacherProfileVC+SetupUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A877D12628743DE000A57E7C /* TeacherProfileVC+SetupUI.swift */; };
 		A8807DD72861B7F9007E1C9D /* TeacherProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8807DD62861B7F9007E1C9D /* TeacherProfileCollectionViewCell.swift */; };
 		A8807DD92861F336007E1C9D /* PromotionForTeacherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8807DD82861F336007E1C9D /* PromotionForTeacherVC.swift */; };
 		A893B4BF2870BECF00E42F36 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = A893B4BE2870BECF00E42F36 /* Config.swift */; };
@@ -132,6 +134,8 @@
 		A877D11B28741E0000A57E7C /* LogoutResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutResponseModel.swift; sourceTree = "<group>"; };
 		A877D11E28742C6600A57E7C /* LoginVC+ValidationOfUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginVC+ValidationOfUI.swift"; sourceTree = "<group>"; };
 		A877D12128742F5A00A57E7C /* EditPassVC+ValidationOfUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditPassVC+ValidationOfUI.swift"; sourceTree = "<group>"; };
+		A877D12428743DA000A57E7C /* TeacherProfileVC+Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TeacherProfileVC+Collection.swift"; sourceTree = "<group>"; };
+		A877D12628743DE000A57E7C /* TeacherProfileVC+SetupUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TeacherProfileVC+SetupUI.swift"; sourceTree = "<group>"; };
 		A8807DD62861B7F9007E1C9D /* TeacherProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 		A8807DD82861F336007E1C9D /* PromotionForTeacherVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionForTeacherVC.swift; sourceTree = "<group>"; };
 		A893B4BE2870BECF00E42F36 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -358,8 +362,8 @@
 		A85DFAE5285FB3F800CEF27B /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				A8AE0E58287197E9007596EA /* RegisterVC */,
-				A877D11D28742C4100A57E7C /* LoginVC */,
+				A8AE0E58287197E9007596EA /* Register */,
+				A877D11D28742C4100A57E7C /* Login */,
 				A8B33C19284F91900025BE8A /* LocationViewController.swift */,
 				A8B750D12860012700305575 /* ForgetPasswordVC.swift */,
 			);
@@ -371,7 +375,7 @@
 			children = (
 				A8042707286B27C5005C5EC1 /* PromotionTeacher */,
 				A8E1F80028620A87004DFC21 /* TeacherPromotionCollectionViewCell.swift */,
-				A857EC1B2855FE900095AA01 /* TeacherProfileViewController.swift */,
+				A877D12328743D7500A57E7C /* TeacherProfile */,
 				A8807DD62861B7F9007E1C9D /* TeacherProfileCollectionViewCell.swift */,
 				A89CD14028588A99009D049D /* AcountViewController.swift */,
 				A877D12028742F2B00A57E7C /* EditPassVC */,
@@ -379,13 +383,13 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		A877D11D28742C4100A57E7C /* LoginVC */ = {
+		A877D11D28742C4100A57E7C /* Login */ = {
 			isa = PBXGroup;
 			children = (
 				A8173528284E68300008CF8E /* LoginViewController.swift */,
 				A877D11E28742C6600A57E7C /* LoginVC+ValidationOfUI.swift */,
 			);
-			path = LoginVC;
+			path = Login;
 			sourceTree = "<group>";
 		};
 		A877D12028742F2B00A57E7C /* EditPassVC */ = {
@@ -395,6 +399,16 @@
 				A877D12128742F5A00A57E7C /* EditPassVC+ValidationOfUI.swift */,
 			);
 			path = EditPassVC;
+			sourceTree = "<group>";
+		};
+		A877D12328743D7500A57E7C /* TeacherProfile */ = {
+			isa = PBXGroup;
+			children = (
+				A857EC1B2855FE900095AA01 /* TeacherProfileViewController.swift */,
+				A877D12428743DA000A57E7C /* TeacherProfileVC+Collection.swift */,
+				A877D12628743DE000A57E7C /* TeacherProfileVC+SetupUI.swift */,
+			);
+			path = TeacherProfile;
 			sourceTree = "<group>";
 		};
 		A893B4BD2870BEB400E42F36 /* Config */ = {
@@ -432,13 +446,13 @@
 			path = WishList;
 			sourceTree = "<group>";
 		};
-		A8AE0E58287197E9007596EA /* RegisterVC */ = {
+		A8AE0E58287197E9007596EA /* Register */ = {
 			isa = PBXGroup;
 			children = (
 				A817355A284E7D170008CF8E /* RegisterViewController.swift */,
 				A8AE0E56287197D4007596EA /* RegiserVC+ValidationOfUI.swift */,
 			);
-			path = RegisterVC;
+			path = Register;
 			sourceTree = "<group>";
 		};
 		A8B750D3286006BB00305575 /* ForgetPasswordView */ = {
@@ -741,10 +755,12 @@
 				A817355B284E7D170008CF8E /* RegisterViewController.swift in Sources */,
 				A85DFAE3285FB3C700CEF27B /* CategoriesCollectionViewCell.swift in Sources */,
 				A8A7DD5C2861596D00DABB8A /* AccountCustomView.swift in Sources */,
+				A877D12528743DA000A57E7C /* TeacherProfileVC+Collection.swift in Sources */,
 				A8173525284E68300008CF8E /* AppDelegate.swift in Sources */,
 				A857EC20285616F50095AA01 /* SignupView.swift in Sources */,
 				A8A7DD6028617A8100DABB8A /* HomeCategoriesCollectionViewCell.swift in Sources */,
 				A804270E286B310D005C5EC1 /* API.swift in Sources */,
+				A877D12728743DE000A57E7C /* TeacherProfileVC+SetupUI.swift in Sources */,
 				A857EC1C2855FE900095AA01 /* TeacherProfileViewController.swift in Sources */,
 				A89CD13F28587832009D049D /* MoreViewController.swift in Sources */,
 				A89CD1532858BACB009D049D /* SportsViewController.swift in Sources */,
@@ -949,7 +965,7 @@
 				INFOPLIST_FILE = Ostaz/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Auth;
+				INFOPLIST_KEY_UIMainStoryboardFile = Home;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -979,7 +995,7 @@
 				INFOPLIST_FILE = Ostaz/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Auth;
+				INFOPLIST_KEY_UIMainStoryboardFile = Home;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;

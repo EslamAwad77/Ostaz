@@ -27,7 +27,7 @@ extension EditPasswordViewController{
         let newPass = txtFieldNewPassword.text!
         let confirmNewPass = txtFieldConfirmNewPassword.text!
         
-        if currentPass == ""{
+        if currentPass == ""{ //registerVC.txtFieldRegisterPassword.text!
             flag = false
             lblCurrentPassValidation.isHidden = false
             lblCurrentPassValidation.text = "Require to Enter your current Password"
@@ -69,9 +69,6 @@ extension EditPasswordViewController{
     }
     
     func goToAccountVC(){
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let acountVC = storyBoard.instantiateViewController(withIdentifier: "AcountViewController") as! AcountViewController
-        acountVC.modalPresentationStyle = .fullScreen
-        self.present(acountVC, animated: true)
+        self.dismiss(animated: true, completion: nil)
     }
 }

@@ -35,10 +35,10 @@ class LocationViewController: UIViewController{
     }
     
     @IBAction func btnConfirmLocation(_ sender: UIButton) {
-        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
-        let homeVC = storyBoard.instantiateViewController(withIdentifier: "HomeTabBarVC") as! HomeTabBarVC
-        homeVC.modalPresentationStyle = .fullScreen
-        self.present(homeVC, animated: true)
+        let storyBoard = UIStoryboard(name: "Auth", bundle: nil)
+        let loginVC = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+        loginVC.modalPresentationStyle = .fullScreen
+        self.present(loginVC, animated: true)
     }
     
     //-------------------LifeCycle------------------------

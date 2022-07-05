@@ -23,7 +23,7 @@ class AcountViewController: UIViewController {
     }
     
     @IBAction func btnGoToPasswordVC(_ sender: UIButton) {
-        let storyBoard = UIStoryboard(name: "Auth", bundle: nil)
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let editPasswordVC = storyBoard.instantiateViewController(withIdentifier: "EditPasswordViewController") as! EditPasswordViewController
         editPasswordVC.modalPresentationStyle = .fullScreen
         self.present(editPasswordVC, animated: true)
@@ -48,4 +48,5 @@ class AcountViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+
 }

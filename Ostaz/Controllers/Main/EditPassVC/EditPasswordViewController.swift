@@ -12,7 +12,7 @@ class EditPasswordViewController: UIViewController {
     //-------------------variables------------------------
     var passwordVisible: Bool = true
     var registerVC: RegisterViewController = RegisterViewController()
-
+    
     //-------------------IBOutlet------------------------
     @IBOutlet weak var viewCurrentPassword: UIView!
     @IBOutlet weak var viewNewPassword: UIView!
@@ -26,10 +26,7 @@ class EditPasswordViewController: UIViewController {
     
     //-------------------Actions------------------------
     @IBAction func backToAcountVC(_ sender: UIButton) {
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let acountVC = storyBoard.instantiateViewController(withIdentifier: "AcountViewController") as! AcountViewController
-        acountVC.modalPresentationStyle = .fullScreen
-        self.present(acountVC, animated: true)
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func btnShowPassword(_ sender: UIButton) {
@@ -47,7 +44,9 @@ class EditPasswordViewController: UIViewController {
     }
     
     @IBAction func btnConfirmNewPassword(_ sender: UIButton) {
-        self.goToAccountVC()
+        if validation(){
+            self.goToAccountVC()
+        }
     }
     
     //-------------------LifeCycle------------------------
@@ -56,8 +55,4 @@ class EditPasswordViewController: UIViewController {
         super.viewDidLoad()
         self.setupUI()
     }
-  
-    
-    
-    
 }
