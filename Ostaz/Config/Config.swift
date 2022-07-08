@@ -15,4 +15,8 @@ struct URLs {
     static let register = main + "register"
     /// GET {}
     static let logout = main + "logout"
+    /// POST {email}
+    static let froget = main + "forget-password"
+    /// POST {Otp, Password, Confirm_Password}
+    static let reset = main + "reset-password"
 }

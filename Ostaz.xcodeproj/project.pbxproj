@@ -58,6 +58,11 @@
 		A89CD14F2858A52E009D049D /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89CD14E2858A52E009D049D /* CategoriesViewController.swift */; };
 		A89CD1512858B05F009D049D /* WishListItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89CD1502858B05F009D049D /* WishListItems.swift */; };
 		A89CD1532858BACB009D049D /* SportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89CD1522858BACB009D049D /* SportsViewController.swift */; };
+		A8A0166D28745DD000F45C50 /* HomeVC+Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A0166C28745DD000F45C50 /* HomeVC+Collection.swift */; };
+		A8A016702874679000F45C50 /* ResetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A0166F2874679000F45C50 /* ResetPasswordVC.swift */; };
+		A8A0167228746DC300F45C50 /* ResetVC+ValidationUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A0167128746DC300F45C50 /* ResetVC+ValidationUI.swift */; };
+		A8A016742874701500F45C50 /* FrogetResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A016732874701500F45C50 /* FrogetResponseModel.swift */; };
+		A8A016762874704300F45C50 /* ResetResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A016752874704300F45C50 /* ResetResponseModel.swift */; };
 		A8A7DD5C2861596D00DABB8A /* AccountCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A7DD5B2861596D00DABB8A /* AccountCustomView.swift */; };
 		A8A7DD5E286162FE00DABB8A /* PasswordCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A7DD5D286162FE00DABB8A /* PasswordCustomView.swift */; };
 		A8A7DD6028617A8100DABB8A /* HomeCategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A7DD5F28617A8100DABB8A /* HomeCategoriesCollectionViewCell.swift */; };
@@ -149,6 +154,11 @@
 		A89CD14E2858A52E009D049D /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		A89CD1502858B05F009D049D /* WishListItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListItems.swift; sourceTree = "<group>"; };
 		A89CD1522858BACB009D049D /* SportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsViewController.swift; sourceTree = "<group>"; };
+		A8A0166C28745DD000F45C50 /* HomeVC+Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+Collection.swift"; sourceTree = "<group>"; };
+		A8A0166F2874679000F45C50 /* ResetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordVC.swift; sourceTree = "<group>"; };
+		A8A0167128746DC300F45C50 /* ResetVC+ValidationUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResetVC+ValidationUI.swift"; sourceTree = "<group>"; };
+		A8A016732874701500F45C50 /* FrogetResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrogetResponseModel.swift; sourceTree = "<group>"; };
+		A8A016752874704300F45C50 /* ResetResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetResponseModel.swift; sourceTree = "<group>"; };
 		A8A7DD5B2861596D00DABB8A /* AccountCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCustomView.swift; sourceTree = "<group>"; };
 		A8A7DD5D286162FE00DABB8A /* PasswordCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordCustomView.swift; sourceTree = "<group>"; };
 		A8A7DD5F28617A8100DABB8A /* HomeCategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -246,8 +256,8 @@
 		A8173523284E68300008CF8E /* Ostaz */ = {
 			isa = PBXGroup;
 			children = (
-				A8173524284E68300008CF8E /* AppDelegate.swift */,
 				A8173526284E68300008CF8E /* SceneDelegate.swift */,
+				A8173524284E68300008CF8E /* AppDelegate.swift */,
 				A893B4BD2870BEB400E42F36 /* Config */,
 				A804270C286B30BE005C5EC1 /* APIs */,
 				A8954B09284F4D6B00493142 /* Exstensions */,
@@ -345,7 +355,7 @@
 			isa = PBXGroup;
 			children = (
 				A8672C7D2867DED300ED514D /* HomeTabBarVC.swift */,
-				A84D15EA28521F55004E1995 /* HomeViewController.swift */,
+				A8A0166B28745DB900F45C50 /* HomePage */,
 				A8672C812868469300ED514D /* HomeSearchVC.swift */,
 				A8B499032863D4760038C782 /* HomeFilterVC.swift */,
 				A839205C2855D7BE00CD2126 /* HomeMostViewedCollectionViewCell.swift */,
@@ -364,8 +374,8 @@
 			children = (
 				A8AE0E58287197E9007596EA /* Register */,
 				A877D11D28742C4100A57E7C /* Login */,
+				A8A0166E2874676700F45C50 /* Froget Password */,
 				A8B33C19284F91900025BE8A /* LocationViewController.swift */,
-				A8B750D12860012700305575 /* ForgetPasswordVC.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -446,6 +456,25 @@
 			path = WishList;
 			sourceTree = "<group>";
 		};
+		A8A0166B28745DB900F45C50 /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				A84D15EA28521F55004E1995 /* HomeViewController.swift */,
+				A8A0166C28745DD000F45C50 /* HomeVC+Collection.swift */,
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
+		A8A0166E2874676700F45C50 /* Froget Password */ = {
+			isa = PBXGroup;
+			children = (
+				A8B750D12860012700305575 /* ForgetPasswordVC.swift */,
+				A8A0166F2874679000F45C50 /* ResetPasswordVC.swift */,
+				A8A0167128746DC300F45C50 /* ResetVC+ValidationUI.swift */,
+			);
+			path = "Froget Password";
+			sourceTree = "<group>";
+		};
 		A8AE0E58287197E9007596EA /* Register */ = {
 			isa = PBXGroup;
 			children = (
@@ -471,6 +500,8 @@
 				A8C8C8072871CAFB00143872 /* LoginResponseModel.swift */,
 				A8C8C8092871CB3800143872 /* RegisterResponseModel.swift */,
 				A877D11B28741E0000A57E7C /* LogoutResponseModel.swift */,
+				A8A016732874701500F45C50 /* FrogetResponseModel.swift */,
+				A8A016752874704300F45C50 /* ResetResponseModel.swift */,
 			);
 			path = "Json Response";
 			sourceTree = "<group>";
@@ -736,6 +767,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8672C822868469300ED514D /* HomeSearchVC.swift in Sources */,
+				A8A016702874679000F45C50 /* ResetPasswordVC.swift in Sources */,
 				A89CD14F2858A52E009D049D /* CategoriesViewController.swift in Sources */,
 				A8042709286B27E9005C5EC1 /* PromotionTeacherVC+SetupUI.swift in Sources */,
 				A8042710286B349F005C5EC1 /* ExstensionsOfString.swift in Sources */,
@@ -753,12 +785,14 @@
 				A8807DD72861B7F9007E1C9D /* TeacherProfileCollectionViewCell.swift in Sources */,
 				A89CD14828589B52009D049D /* WishListViewController.swift in Sources */,
 				A817355B284E7D170008CF8E /* RegisterViewController.swift in Sources */,
+				A8A016742874701500F45C50 /* FrogetResponseModel.swift in Sources */,
 				A85DFAE3285FB3C700CEF27B /* CategoriesCollectionViewCell.swift in Sources */,
 				A8A7DD5C2861596D00DABB8A /* AccountCustomView.swift in Sources */,
 				A877D12528743DA000A57E7C /* TeacherProfileVC+Collection.swift in Sources */,
 				A8173525284E68300008CF8E /* AppDelegate.swift in Sources */,
 				A857EC20285616F50095AA01 /* SignupView.swift in Sources */,
 				A8A7DD6028617A8100DABB8A /* HomeCategoriesCollectionViewCell.swift in Sources */,
+				A8A0167228746DC300F45C50 /* ResetVC+ValidationUI.swift in Sources */,
 				A804270E286B310D005C5EC1 /* API.swift in Sources */,
 				A877D12728743DE000A57E7C /* TeacherProfileVC+SetupUI.swift in Sources */,
 				A857EC1C2855FE900095AA01 /* TeacherProfileViewController.swift in Sources */,
@@ -778,6 +812,8 @@
 				A8B499042863D4760038C782 /* HomeFilterVC.swift in Sources */,
 				A8C8C8082871CAFB00143872 /* LoginResponseModel.swift in Sources */,
 				A89CD14128588A99009D049D /* AcountViewController.swift in Sources */,
+				A8A0166D28745DD000F45C50 /* HomeVC+Collection.swift in Sources */,
+				A8A016762874704300F45C50 /* ResetResponseModel.swift in Sources */,
 				A893B4BF2870BECF00E42F36 /* Config.swift in Sources */,
 				A8AE0E57287197D4007596EA /* RegiserVC+ValidationOfUI.swift in Sources */,
 				A8672C8A2868908D00ED514D /* AreaModel.swift in Sources */,

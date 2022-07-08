@@ -11,21 +11,18 @@ import DropDown
 class LocationViewController: UIViewController{
     
     //-------------------Variables------------------------
-   
     let cityDropDown = DropDown()
     let areaDropDown = DropDown()
     let cityValues: [String] = ["alex", "mans"]
     let areaValues: [String] = ["alex library", "samia elgamal"]
     
     //-------------------Outlet---------------------------
-   
     @IBOutlet weak var viewCity: UIView!
     @IBOutlet weak var viewArea: UIView!
     @IBOutlet weak var lblCity: UILabel!
     @IBOutlet weak var lblArea: UILabel!
     
     //-------------------Actions--------------------------
-    
     @IBAction func btnSelectCity(_ sender: UIButton) {
         cityDropDown.show()
     }
@@ -35,15 +32,12 @@ class LocationViewController: UIViewController{
     }
     
     @IBAction func btnConfirmLocation(_ sender: UIButton) {
-        let storyBoard = UIStoryboard(name: "Auth", bundle: nil)
-        let loginVC = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-        loginVC.modalPresentationStyle = .fullScreen
-        self.present(loginVC, animated: true)
+        self.goToLoginVC()
     }
     
     //-------------------LifeCycle------------------------
     
-    override func viewDidLoad() {
+    override func viewDidLoad(){
         super.viewDidLoad()
         setUpUI()
     }
@@ -70,6 +64,11 @@ class LocationViewController: UIViewController{
             self.lblArea.text = areaValues[index]
         }
     }
+    
+    func goToLoginVC(){
+        let storyBoard = UIStoryboard(name: "Auth", bundle: nil)
+        let loginVC = storyBoard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+        loginVC.modalPresentationStyle = .fullScreen
+        self.present(loginVC, animated: true)
+    }
 }
-
-

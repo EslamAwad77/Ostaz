@@ -61,14 +61,59 @@ class API: NSObject{
     }
     
     static func fetchingLogout(completion: @escaping (_ error :String?, _ response: LogoutResponse?) -> Void){
-        
         let url = URLs.logout
-        
-        AF.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil)
+        let token = UserDefaults.standard.value(forKey: "token") as? String
+        let bearerToken =  token != nil ? "Bearer \(token!)" : ""
+        AF.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: ["Authorization": bearerToken])
             .response { response in
                 if (response.response?.statusCode ?? 0) >= 200 && (response.response?.statusCode ?? 0) <= 299{
                     let json = JSON(response.data!)
+                    print(json)
                     var result = LogoutResponse()
+                    result.message = json["message"].string
+                    completion(nil, result)
+                } else {
+                    let json = JSON(response.data!)
+                    print(json)
+                    let message = json["message"].string
+                    completion(message, nil)
+                }
+            }
+    }
+    
+     static func fetchingFrogetPass(email: String, completion: @escaping (_ error :String?, _ response: FrogetResponse?) -> Void){
+         let url = URLs.froget
+         let parameters = [
+             "email": email
+         ]
+         AF.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: nil)
+             .response { response in
+                 if (response.response?.statusCode ?? 0) >= 200 && (response.response?.statusCode ?? 0) <= 299{
+                     let json = JSON(response.data!)
+                     var result = FrogetResponse()
+                     result.message = json["message"].string
+                     completion(nil, result)
+                 } else {
+                     let json = JSON(response.data!)
+                     let message = json["message"].string
+                     completion(message, nil)
+                 }
+             }
+     }
+    
+    static func fetchingResetPass(otp: String, password: String, confirmPassword: String, completion: @escaping (_ error :String?, _ response: ResetResponse?) -> Void){
+        let url = URLs.reset
+        let parameters = [
+            "otp": otp,
+            "password": password,
+            "password_confirmation": confirmPassword
+        ]
+        AF.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: nil)
+            .response { response in
+                
+                if (response.response?.statusCode ?? 0) >= 200 && (response.response?.statusCode ?? 0) <= 299{
+                    let json = JSON(response.data!)
+                    var result = ResetResponse()
                     result.message = json["message"].string
                     completion(nil, result)
                 } else {
