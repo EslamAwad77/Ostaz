@@ -1265,22 +1265,32 @@
                                     <constraint firstAttribute="trailing" secondItem="Vqn-WF-XEH" secondAttribute="trailing" id="nsQ-1c-PJ7"/>
                                 </constraints>
                             </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GF2-TR-fon">
+                                <rect key="frame" x="186.5" y="438" width="41.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iKt-uy-ELQ"/>
                         <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
                             <constraint firstItem="efU-VZ-Deb" firstAttribute="top" secondItem="iKt-uy-ELQ" secondAttribute="top" constant="10" id="18k-dR-XGa"/>
+                            <constraint firstItem="GF2-TR-fon" firstAttribute="centerX" secondItem="FOA-5g-hX2" secondAttribute="centerX" id="1ko-a7-9K0"/>
                             <constraint firstAttribute="trailing" secondItem="Sdd-8N-oRP" secondAttribute="trailing" id="2Ed-sm-JqN"/>
                             <constraint firstAttribute="bottom" secondItem="Sdd-8N-oRP" secondAttribute="bottom" constant="83" id="5K0-mQ-uFK"/>
                             <constraint firstItem="efU-VZ-Deb" firstAttribute="trailing" secondItem="iKt-uy-ELQ" secondAttribute="trailing" id="8Cb-EQ-JIZ"/>
                             <constraint firstItem="Sdd-8N-oRP" firstAttribute="top" secondItem="efU-VZ-Deb" secondAttribute="bottom" constant="30" id="JXb-xy-CPF"/>
                             <constraint firstItem="efU-VZ-Deb" firstAttribute="leading" secondItem="iKt-uy-ELQ" secondAttribute="leading" id="OVV-om-eRJ"/>
+                            <constraint firstItem="GF2-TR-fon" firstAttribute="centerY" secondItem="FOA-5g-hX2" secondAttribute="centerY" id="Qrf-rD-Z9s"/>
                             <constraint firstItem="Sdd-8N-oRP" firstAttribute="leading" secondItem="FOA-5g-hX2" secondAttribute="leading" id="UNn-Ig-vQi"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Categories" image="caterageIcon" id="kcn-Lw-vsB"/>
                     <connections>
                         <outlet property="collectionViewCategories" destination="5gW-ge-OMo" id="nyC-Vk-BfW"/>
+                        <outlet property="lblErrorDescription" destination="GF2-TR-fon" id="cgC-kA-i7G"/>
+                        <outlet property="scrollView" destination="Sdd-8N-oRP" id="sce-cU-s7v"/>
                         <outlet property="viewSearch" destination="FaO-Ap-d17" id="3XJ-0j-woV"/>
                     </connections>
                 </viewController>

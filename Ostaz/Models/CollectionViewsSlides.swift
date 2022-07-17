@@ -16,8 +16,16 @@ struct CollectionViewHomeMostViewedSlide {
 }
 
 struct CollectionViewCategorySlide {
-    let categoryImage: UIImage
-    let categoryName: String
+    var categoryImage: String = ""
+    var categoryName: String = ""
+    
+    init() {}
+    
+    init(apiModel: [String: Any]?) {
+        self.categoryImage = (apiModel?["cat_image"] as? String) ?? ""
+        self.categoryName = (apiModel?["Category Name"] as? String) ?? ""
+    }
+    
 }
 
 struct CollectionViewMethodsSlide{

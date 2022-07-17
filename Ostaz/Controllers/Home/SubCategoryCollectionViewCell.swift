@@ -20,7 +20,7 @@ class SubCategoryCollectionViewCell: UICollectionViewCell {
     //-------------------Functions------------------------
     
     func setupUI(_ subCategoriesSlide: CollectionViewCategorySlide){
-        imgViewSubCategory.image = subCategoriesSlide.categoryImage
+        //imgViewSubCategory.image = subCategoriesSlide.categoryImage
         lblDescription.text = subCategoriesSlide.categoryName
         
     }
