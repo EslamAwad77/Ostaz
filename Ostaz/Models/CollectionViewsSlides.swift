@@ -34,10 +34,6 @@ struct CollectionViewAreasSlide{
 
 
 struct CollectionViewTeahcerCategoriesSlide{
-   
-    
     let categoryName: String
     let categoryImage: UIImage
-    
-    
 }

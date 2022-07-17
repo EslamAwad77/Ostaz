@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UITextFieldDelegate {
     
     //-------------------Variables------------------------
     var homeMostViewedSlides: [CollectionViewHomeMostViewedSlide] = []
@@ -15,14 +15,11 @@ class HomeViewController: UIViewController {
     lazy var homeFilterVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "HomeFilterVC")
     
     //-------------------IBOutlet------------------------
+    
     @IBOutlet weak var scrollView: UIScrollView!
-    
-    @IBOutlet weak var signupView: SignupView!
-    
     @IBOutlet weak var viewSearchWithFilter: UIView!
-    
+    @IBOutlet weak var txtFieldSearch: UITextField!
     @IBOutlet weak var collectionViewMostViewedInHome: UICollectionView!
-    
     @IBOutlet weak var collectionViewCategoriesInHome: UICollectionView!
     
     //-------------------Actions------------------------
@@ -82,3 +79,5 @@ class HomeViewController: UIViewController {
         ]
     }
 }
+
+

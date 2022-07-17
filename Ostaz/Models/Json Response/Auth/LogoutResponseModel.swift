@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 struct LogoutResponse {
     var message: String?
     

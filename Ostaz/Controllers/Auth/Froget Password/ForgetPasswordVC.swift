@@ -22,7 +22,7 @@ class ForgetPasswordVC: UIViewController {
     
     @IBAction func btnSend(_ sender: UIButton) {
         if validation(){
-            API.fetchingFrogetPass(email: txtFieldEmail.text!) { error, response in
+            APIAuth.fetchingFrogetPass(email: txtFieldEmail.text!) { error, response in
                 if error != nil {
                     print(error!)
                 } else {

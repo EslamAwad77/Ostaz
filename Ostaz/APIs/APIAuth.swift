@@ -5,7 +5,8 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class API: NSObject{
+class APIAuth: NSObject{
+    
     static func fetchingLogin(email: String, password: String, completion: @escaping (_ error :String?, _ response: LoginResponse?) -> Void){
         let url = URLs.login
         let parameters = [
@@ -105,6 +106,26 @@ class API: NSObject{
                 if (response.response?.statusCode ?? 0) >= 200 && (response.response?.statusCode ?? 0) <= 299{
                     let json = JSON(response.data!)
                     var result = ResetResponse()
+                    result.message = json["message"].string
+                    completion(nil, result)
+                } else {
+                    let json = JSON(response.data!)
+                    let message = json["message"].string
+                    completion(message, nil)
+                }
+            }
+    }
+    
+    static func fetchingSetLocation(areaId: String, completion: @escaping (_ error :String?, _ response: SetLocationResponse?) -> Void){
+        let url = URLs.setLocation
+        let parameters = [
+            "area_id": areaId
+        ]
+        AF.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: nil)
+            .response { response in
+                if (response.response?.statusCode ?? 0) >= 200 && (response.response?.statusCode ?? 0) <= 299{
+                    let json = JSON(response.data!)
+                    var result = SetLocationResponse()
                     result.message = json["message"].string
                     completion(nil, result)
                 } else {

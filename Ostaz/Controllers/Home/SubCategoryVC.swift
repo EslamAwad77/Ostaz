@@ -1,21 +1,21 @@
 //
-//  CategoriesViewController.swift
+//  SubCategoryVC.swift
 //  Ostaz
 //
-//  Created by eslam awad elsayed awad on 14/06/2022.
+//  Created by eslam awad elsayed awad on 17/07/2022.
 //
 
 import UIKit
 
-class CategoriesViewController: UIViewController {
+class SubCategoryVC: UIViewController {
     
     //-------------------Variables------------------------
     
-    var categoriesSlides: [CollectionViewCategorySlide] = []
+    var subCategoriesSlides: [CollectionViewCategorySlide] = []
     
     //-------------------IBOutlet------------------------
     @IBOutlet weak var viewSearch: UIView!
-    @IBOutlet weak var collectionViewCategories: UICollectionView!
+    @IBOutlet weak var collectionViewSubCategory: UICollectionView!
     
     //-------------------Actions------------------------
     
@@ -34,10 +34,10 @@ class CategoriesViewController: UIViewController {
     
     func setUpUI(){
         self.viewSearch.addborder(10)
-        collectionViewCategories.delegate = self
-        collectionViewCategories.dataSource = self
+        collectionViewSubCategory.delegate = self
+        collectionViewSubCategory.dataSource = self
         //collectionViewCategories.collectionViewLayout = UICollectionViewFlowLayout()
-        categoriesSlides = [
+        subCategoriesSlides = [
             CollectionViewCategorySlide(categoryImage: #imageLiteral(resourceName: "musicIcon"), categoryName: "Music"),
             CollectionViewCategorySlide(categoryImage: #imageLiteral(resourceName: "quranIcon"), categoryName: "Quran"),
             CollectionViewCategorySlide(categoryImage: #imageLiteral(resourceName: "sportsIcon"), categoryName: "Sports"),
@@ -62,23 +62,23 @@ class CategoriesViewController: UIViewController {
 
 //-------------------Exstensions------------------------
 
-extension CategoriesViewController: UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+extension SubCategoryVC: UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return categoriesSlides.count
+        return subCategoriesSlides.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoriesCollectionViewCell.identifier, for: indexPath) as! CategoriesCollectionViewCell
-        cell.setupUI(categoriesSlides[indexPath.row])
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SubCategoryCollectionViewCell.identifier, for: indexPath) as! SubCategoryCollectionViewCell
+        cell.setupUI(subCategoriesSlides[indexPath.row])
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let item = categoriesSlides[indexPath.row]
+        let item = subCategoriesSlides[indexPath.row]
         if item.categoryName == "Sports"{
-            let subCategoryVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "SubCategoryVC") as! SubCategoryVC
-            subCategoryVC.modalPresentationStyle = .fullScreen
-            self.present(subCategoryVC, animated: true)
+            let sportsVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "SportsViewController") as! SportsViewController
+            sportsVC.modalPresentationStyle = .fullScreen
+            self.present(sportsVC, animated: true)
         }
     }
     

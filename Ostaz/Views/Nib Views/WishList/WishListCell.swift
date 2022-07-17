@@ -31,7 +31,6 @@ class WishListCell: UITableViewCell {
             btnAddToWishList.setImage(UIImage(named: "wishListIcon"), for: .normal)
             isActive = true
         }
-        
     }
     
     //-------------------lifecycle------------------------

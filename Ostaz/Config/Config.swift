@@ -1,10 +1,13 @@
 //  Config.swift
 //  Ostaz
 //  Created by eslam awad elsayed awad on 02/07/2022.
+
 import Foundation
 
 struct URLs {
     static let main = "https://inst.roqay.solutions/api/"
+    // Auth
+    
     /// POST {email, password}
     static let login = main + "login"
     /// POST {name, email, password, config-Password }
@@ -15,4 +18,42 @@ struct URLs {
     static let froget = main + "forget-password"
     /// POST {Otp, Password, Confirm_Password}
     static let reset = main + "reset-password"
+    /// POST {area_id, city_id}
+    static let setLocation = main + "set-location"
+    
+    // Profile
+    
+    /// GET {}
+    static let profile = main + "profile"
+    /// POST {email, image}
+    static let updateProfile = main + "update-profile"
+    /// POST {oldPass, newPass}
+    static let editPassword = main + "change-password"
+    /// POST {number, area1, area2, specialization1, specialization2, email }
+    static let upgradeUserToInstructor = main + "upgrade"
+    
+    // Home
+    
+    /// GET{}
+    static let Search = main + "home/search"
+    /// GET{}
+    static let getAllCategories = main + "getcats"
+    /// GET{}
+    static let getAllInstructors = main + "getinsts"
+    
+    // Caegory
+    
+    ///Get{}
+    static let category = main + "specializations"
+    ///Get{}
+    static let subCategory = main + "specializations/1"
+    ///Get{}
+    static let instructorOfSubCategory = main + "subSpecializations/1"
+    
+    // WishList
+    
+    ///GET{}
+    static let wishlist = main + "wishlist"
+    ///POST{favorite_id}
+    static let addToWishlist = main + "like-dislike"
 }

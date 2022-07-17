@@ -38,9 +38,9 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         } else{
             let item = homecategoriesSlides[indexPath.row]
             if item.categoryName == "Sports"{
-                let sportsVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "SportsViewController") as! SportsViewController
-                sportsVC.modalPresentationStyle = .fullScreen
-                self.present(sportsVC, animated: true)
+                let subCategoryVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "SubCategoryVC") as! SubCategoryVC
+                subCategoryVC.modalPresentationStyle = .fullScreen
+                self.present(subCategoryVC, animated: true)
             }
         }
     }

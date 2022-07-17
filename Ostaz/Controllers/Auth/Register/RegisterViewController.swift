@@ -48,7 +48,7 @@ class RegisterViewController: UIViewController {
     @IBAction func btnRegisterCreateAccount(_ sender: UIButton) {
         
         if validation() {
-            API.fetchingRegister(name: txtFieldRegisterUserName.text!, email: txtFieldEmail.text!, password: txtFieldRegisterPassword.text!) { error, response in
+            APIAuth.fetchingRegister(name: txtFieldRegisterUserName.text!, email: txtFieldEmail.text!, password: txtFieldRegisterPassword.text!) { error, response in
                 if error != nil {
                     print(error!)
                 } else {

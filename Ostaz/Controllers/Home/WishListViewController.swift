@@ -4,7 +4,6 @@
 //
 //  Created by eslam awad elsayed awad on 14/06/2022.
 //
-
 import UIKit
 
 class WishListViewController: UIViewController {
@@ -21,12 +20,10 @@ class WishListViewController: UIViewController {
     @IBOutlet weak var signupView: SignupView!
     @IBOutlet weak var tbleViewWishList: UITableView!
     
-    
     //-------------------lifecycle--------------------------
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        
     }
     
     //-------------------functions--------------------------

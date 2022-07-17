@@ -24,7 +24,7 @@ class ResetPasswordVC: UIViewController {
     
     @IBAction func btnConfirmNewPassPressed(_ sender: UIButton) {
         if validation() {
-            API.fetchingResetPass(otp: txtFieldOtp.text!, password: txtFieldNewPass.text!, confirmPassword: txtFieldConfirmNewPass.text!) { error, response in
+            APIAuth.fetchingResetPass(otp: txtFieldOtp.text!, password: txtFieldNewPass.text!, confirmPassword: txtFieldConfirmNewPass.text!) { error, response in
                 if error != nil {
                     print(error!)
                 } else {

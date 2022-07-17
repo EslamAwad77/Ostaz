@@ -44,5 +44,14 @@ class TeacherProfileViewController: UIViewController {
         self.setUpUI()
         self.goToRegister()
         self.checkUser()
+        
+        APIProfile.fetchingProfile { error, response in
+            if error != nil {
+                print(error!)
+            } else {
+                print(response?.message ?? "")
+                UserDefaults.standard.set(nil, forKey: "token")
+            }
+        }
     }
 }
