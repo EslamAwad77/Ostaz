@@ -46,4 +46,11 @@ extension LoginViewController {
         homeVC.modalPresentationStyle = .fullScreen
         self.present(homeVC, animated: true)
     }
+    
+    func goToRegister(){
+        let storyBoard = UIStoryboard(name: "Auth", bundle: nil)
+        let registerVC = storyBoard.instantiateViewController(withIdentifier: "RegisterViewController") as! RegisterViewController
+        registerVC.modalPresentationStyle = .fullScreen
+        self.present(registerVC, animated: true)
+    }
 }

@@ -256,8 +256,8 @@
 		A8173523284E68300008CF8E /* Ostaz */ = {
 			isa = PBXGroup;
 			children = (
-				A8173526284E68300008CF8E /* SceneDelegate.swift */,
 				A8173524284E68300008CF8E /* AppDelegate.swift */,
+				A8173526284E68300008CF8E /* SceneDelegate.swift */,
 				A893B4BD2870BEB400E42F36 /* Config */,
 				A804270C286B30BE005C5EC1 /* APIs */,
 				A8954B09284F4D6B00493142 /* Exstensions */,

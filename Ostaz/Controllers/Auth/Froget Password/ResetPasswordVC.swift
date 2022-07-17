@@ -9,7 +9,6 @@ import UIKit
 
 class ResetPasswordVC: UIViewController {
     
-    
     var registerVC: RegisterViewController = RegisterViewController()
     
     @IBOutlet weak var txtFieldOtp: UITextField!
@@ -34,15 +33,10 @@ class ResetPasswordVC: UIViewController {
                 }
             }
         }
-
-        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
     }
-    
-    
-    
 }

@@ -52,10 +52,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func btnGoToRegister(_ sender: UIButton) {
-        let storyBoard = UIStoryboard(name: "Auth", bundle: nil)
-        let registerVC = storyBoard.instantiateViewController(withIdentifier: "RegisterViewController") as! RegisterViewController
-        registerVC.modalPresentationStyle = .fullScreen
-        self.present(registerVC, animated: true)
+        self.goToRegister()
     }
     @IBAction func btnShowPassword(_ sender: UIButton) {
         if passwordVisible{
