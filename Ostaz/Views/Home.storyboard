@@ -1286,7 +1286,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vEe-Wy-v2V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5750.7246376811599" y="1174.5535714285713"/>
+            <point key="canvasLocation" x="5701" y="1175"/>
         </scene>
         <!--SportsViewController Scene-->
         <scene sceneID="bjw-Qf-VoQ">
@@ -1416,17 +1416,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="SubCategory" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mUP-YB-y8K">
-                                <rect key="frame" x="0.0" y="54" width="414" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="Bab-N8-1w9"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <color key="textColor" name="ButtonColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="6Se-3e-re1">
+                                <rect key="frame" x="15" y="54" width="384" height="29"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w1w-OK-XvR">
+                                        <rect key="frame" x="0.0" y="0.0" width="26.5" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="btnBack"/>
+                                        <connections>
+                                            <action selector="btnBackToCategory:" destination="aYt-dW-w1E" eventType="touchUpInside" id="pju-81-Fmo"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" text="SubCategory" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mUP-YB-y8K">
+                                        <rect key="frame" x="142" y="0.0" width="102.5" height="29"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <color key="textColor" name="ButtonColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0G-Oo-yFh" userLabel="hidden button">
+                                        <rect key="frame" x="360" y="0.0" width="24" height="29"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9kU-Hp-3c1">
-                                <rect key="frame" x="0.0" y="109" width="414" height="704"/>
+                                <rect key="frame" x="0.0" y="103" width="414" height="710"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A4Y-is-d1Z" userLabel="view scroll">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="704"/>
@@ -1484,7 +1500,7 @@
                                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         </collectionViewFlowLayout>
                                                         <cells>
-                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoriesCollectionViewCell" id="5rI-Me-MPh" customClass="SubCategoryCollectionViewCell" customModule="Ostaz" customModuleProvider="target">
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SubCategoryCollectionViewCell" id="5rI-Me-MPh" customClass="SubCategoryCollectionViewCell" customModule="Ostaz" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="115" height="106"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="cUf-uv-lea">
@@ -1560,13 +1576,13 @@
                         <viewLayoutGuide key="safeArea" id="dDv-1d-ZEY"/>
                         <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="mUP-YB-y8K" firstAttribute="top" secondItem="dDv-1d-ZEY" secondAttribute="top" constant="10" id="4Lx-VU-vjp"/>
                             <constraint firstItem="9kU-Hp-3c1" firstAttribute="leading" secondItem="NNJ-gV-Oox" secondAttribute="leading" id="7BS-pP-y0i"/>
+                            <constraint firstItem="dDv-1d-ZEY" firstAttribute="trailing" secondItem="6Se-3e-re1" secondAttribute="trailing" constant="15" id="9Z5-3t-a1C"/>
+                            <constraint firstItem="6Se-3e-re1" firstAttribute="top" secondItem="dDv-1d-ZEY" secondAttribute="top" constant="10" id="CCQ-yZ-1og"/>
                             <constraint firstAttribute="bottom" secondItem="9kU-Hp-3c1" secondAttribute="bottom" constant="83" id="EFg-NO-0Cj"/>
-                            <constraint firstItem="mUP-YB-y8K" firstAttribute="leading" secondItem="dDv-1d-ZEY" secondAttribute="leading" id="Gyg-Bl-Dt2"/>
+                            <constraint firstItem="6Se-3e-re1" firstAttribute="leading" secondItem="dDv-1d-ZEY" secondAttribute="leading" constant="15" id="Poc-zF-XrX"/>
                             <constraint firstAttribute="trailing" secondItem="9kU-Hp-3c1" secondAttribute="trailing" id="ZOs-hJ-C8V"/>
-                            <constraint firstItem="9kU-Hp-3c1" firstAttribute="top" secondItem="mUP-YB-y8K" secondAttribute="bottom" constant="30" id="fxa-WH-kbw"/>
-                            <constraint firstItem="mUP-YB-y8K" firstAttribute="trailing" secondItem="dDv-1d-ZEY" secondAttribute="trailing" id="naY-T3-U5N"/>
+                            <constraint firstItem="9kU-Hp-3c1" firstAttribute="top" secondItem="6Se-3e-re1" secondAttribute="bottom" constant="20" id="ra7-nP-YtL"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Categories" image="caterageIcon" id="ggk-e6-we9"/>
@@ -1577,7 +1593,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t7c-6l-qj8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5751" y="520"/>
+            <point key="canvasLocation" x="5701" y="520"/>
         </scene>
     </scenes>
     <resources>

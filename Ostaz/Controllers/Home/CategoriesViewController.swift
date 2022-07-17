@@ -28,6 +28,7 @@ class CategoriesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpUI()
+        self.setUpAPI()
     }
     
     //-------------------Functions------------------------
@@ -57,6 +58,17 @@ class CategoriesViewController: UIViewController {
             CollectionViewCategorySlide(categoryImage: #imageLiteral(resourceName: "UniversityIcon"), categoryName: "University"),
             CollectionViewCategorySlide(categoryImage: #imageLiteral(resourceName: "schoolIcon"), categoryName: "School")
         ]
+    }
+    
+    func setUpAPI(){
+        APICategory.fetchingCategory{ error, response in
+            if error != nil {
+                print(error!)
+            } else {
+                print(response?.message ?? "")
+                //UserDefaults.standard.set(nil, forKey: "token")
+            }
+        }
     }
 }
 

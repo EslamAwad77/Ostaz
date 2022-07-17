@@ -18,7 +18,10 @@ class SubCategoryVC: UIViewController {
     @IBOutlet weak var collectionViewSubCategory: UICollectionView!
     
     //-------------------Actions------------------------
-    
+ 
+    @IBAction func btnBackToCategory(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
     @IBAction func btnSearchCategoryResult(_ sender: Any) {
     }
     
@@ -57,6 +60,17 @@ class SubCategoryVC: UIViewController {
             CollectionViewCategorySlide(categoryImage: #imageLiteral(resourceName: "UniversityIcon"), categoryName: "University"),
             CollectionViewCategorySlide(categoryImage: #imageLiteral(resourceName: "schoolIcon"), categoryName: "School")
         ]
+    }
+    
+    func setUpAPI(){
+        APICategory.fetchingSubCategory{ error, response in
+            if error != nil {
+                print(error!)
+            } else {
+                print(response?.message ?? "")
+                //UserDefaults.standard.set(nil, forKey: "token")
+            }
+        }
     }
 }
 

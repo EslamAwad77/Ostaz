@@ -10,7 +10,6 @@ import UIKit
 
 extension EditPasswordViewController{
     
-    
     func setupUI(){
         self.viewCurrentPassword.addborder(10)
         self.viewNewPassword.addborder(10)

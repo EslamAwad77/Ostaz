@@ -50,7 +50,7 @@ class TeacherProfileViewController: UIViewController {
                 print(error!)
             } else {
                 print(response?.message ?? "")
-                UserDefaults.standard.set(nil, forKey: "token")
+                //UserDefaults.standard.set(nil, forKey: "token")
             }
         }
     }
