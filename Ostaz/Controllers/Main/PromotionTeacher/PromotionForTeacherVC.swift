@@ -8,7 +8,6 @@
 import UIKit
 import DropDown
 
-
 class PromotionForTeacherVC: UIViewController {
     
     //-------------------Variables------------------------

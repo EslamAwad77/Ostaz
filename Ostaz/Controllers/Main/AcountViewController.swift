@@ -3,21 +3,17 @@
 //  Ostaz
 //
 //  Created by eslam awad elsayed awad on 14/06/2022.
-//
 
 import UIKit
 
 class AcountViewController: UIViewController {
     
     //-------------------IBOutlet------------------------
-    
-    
     @IBOutlet weak var AccountCustomView: AccountCustomView!
     @IBOutlet weak var lblName: UILabel!
-    @IBOutlet weak var lblPhoneNumber: UILabel!
+    @IBOutlet weak var lblEmail: UILabel!
     
     //-------------------Actions------------------------
-    
     @IBAction func btnBackToMoreVC(_ sender: UIButton) {
         self.dismiss(animated: true)
     }
@@ -37,16 +33,24 @@ class AcountViewController: UIViewController {
     }
     
     @IBAction func btnPromotionForTeacherVC(_ sender: UIButton) {
+        self.goToPromotion()
+    }
+    
+    @IBAction func btnEditAccount(_ sender: UIButton) {
+        self.goToPromotion()
+    }
+    
+    //-------------------LifeCycle------------------------
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    
+
+    func goToPromotion(){
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let promotionForTeacherVC = storyBoard.instantiateViewController(withIdentifier: "PromotionForTeacherVC") as! PromotionForTeacherVC
         promotionForTeacherVC.modalPresentationStyle = .fullScreen
         self.present(promotionForTeacherVC, animated: true)
     }
-    
-    //-------------------LifeCycle------------------------
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
 }

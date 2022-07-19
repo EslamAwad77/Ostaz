@@ -5,9 +5,10 @@
 //  Created by eslam awad elsayed awad on 28/06/2022.
 //
 
-import Foundation
 import UIKit
+
 extension PromotionForTeacherVC {
+  
     func setUpUI(){
         let m1 = TeachMethodModel()
         m1.name = "test"

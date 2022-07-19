@@ -28,6 +28,10 @@
 		A817355B284E7D170008CF8E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817355A284E7D170008CF8E /* RegisterViewController.swift */; };
 		A8174D252858CFA700121A62 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8174D242858CFA700121A62 /* Auth.storyboard */; };
 		A8174D272858D23E00121A62 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8174D262858D23E00121A62 /* Home.storyboard */; };
+		A836114928868F6C009BDB38 /* LocationCollViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A836114828868F6C009BDB38 /* LocationCollViewCell.swift */; };
+		A836114C288691A3009BDB38 /* LocationVC+Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A836114B288691A3009BDB38 /* LocationVC+Collection.swift */; };
+		A836114E288691FE009BDB38 /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A836114D288691FE009BDB38 /* CityModel.swift */; };
+		A83611502886953C009BDB38 /* LocationVC+SetupUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A836114F2886953C009BDB38 /* LocationVC+SetupUI.swift */; };
 		A839205B2855CF5A00CD2126 /* CollectionViewsSlides.swift in Sources */ = {isa = PBXBuildFile; fileRef = A839205A2855CF5A00CD2126 /* CollectionViewsSlides.swift */; };
 		A839205D2855D7BE00CD2126 /* HomeMostViewedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A839205C2855D7BE00CD2126 /* HomeMostViewedCollectionViewCell.swift */; };
 		A84BCBC82883F4D900F21FF1 /* ProfileResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84BCBC72883F4D900F21FF1 /* ProfileResponseModel.swift */; };
@@ -143,6 +147,10 @@
 		A817355A284E7D170008CF8E /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		A8174D242858CFA700121A62 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		A8174D262858D23E00121A62 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		A836114828868F6C009BDB38 /* LocationCollViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCollViewCell.swift; sourceTree = "<group>"; };
+		A836114B288691A3009BDB38 /* LocationVC+Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationVC+Collection.swift"; sourceTree = "<group>"; };
+		A836114D288691FE009BDB38 /* CityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
+		A836114F2886953C009BDB38 /* LocationVC+SetupUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationVC+SetupUI.swift"; sourceTree = "<group>"; };
 		A839205A2855CF5A00CD2126 /* CollectionViewsSlides.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewsSlides.swift; sourceTree = "<group>"; };
 		A839205C2855D7BE00CD2126 /* HomeMostViewedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMostViewedCollectionViewCell.swift; sourceTree = "<group>"; };
 		A84BCBC72883F4D900F21FF1 /* ProfileResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileResponseModel.swift; sourceTree = "<group>"; };
@@ -360,12 +368,24 @@
 			path = "Assets & Launch";
 			sourceTree = "<group>";
 		};
+		A836114728868F43009BDB38 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				A8B33C19284F91900025BE8A /* LocationViewController.swift */,
+				A836114F2886953C009BDB38 /* LocationVC+SetupUI.swift */,
+				A836114B288691A3009BDB38 /* LocationVC+Collection.swift */,
+				A836114828868F6C009BDB38 /* LocationCollViewCell.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
 		A83920592855CF1900CD2126 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				A839205A2855CF5A00CD2126 /* CollectionViewsSlides.swift */,
 				A89CD1502858B05F009D049D /* WishListItems.swift */,
 				A8672C872868856000ED514D /* TeachMethodModel.swift */,
+				A836114D288691FE009BDB38 /* CityModel.swift */,
 				A8672C892868908D00ED514D /* AreaModel.swift */,
 				A8042705286B01A3005C5EC1 /* TeacherCategoryModel.swift */,
 				A8C8C80B2871CB5000143872 /* Json Response */,
@@ -472,7 +492,7 @@
 				A8AE0E58287197E9007596EA /* Register */,
 				A877D11D28742C4100A57E7C /* Login */,
 				A8A0166E2874676700F45C50 /* Froget Password */,
-				A8B33C19284F91900025BE8A /* LocationViewController.swift */,
+				A836114728868F43009BDB38 /* Location */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -866,6 +886,7 @@
 				A84BCBDC288402BF00F21FF1 /* APIHome.swift in Sources */,
 				A8672C822868469300ED514D /* HomeSearchVC.swift in Sources */,
 				A84BCBD12883F92D00F21FF1 /* EditPassResponseModel.swift in Sources */,
+				A83611502886953C009BDB38 /* LocationVC+SetupUI.swift in Sources */,
 				A8A016702874679000F45C50 /* ResetPasswordVC.swift in Sources */,
 				A89CD14F2858A52E009D049D /* CategoriesViewController.swift in Sources */,
 				A8042709286B27E9005C5EC1 /* PromotionTeacherVC+SetupUI.swift in Sources */,
@@ -876,6 +897,7 @@
 				A804270B286B282A005C5EC1 /* PromotionTeacherVC+Collection.swift in Sources */,
 				A84BCBF328840FE800F21FF1 /* SubCategoryVC.swift in Sources */,
 				A8DC659A28577590008879B4 /* EditPasswordViewController.swift in Sources */,
+				A836114C288691A3009BDB38 /* LocationVC+Collection.swift in Sources */,
 				A8672C7E2867DED300ED514D /* HomeTabBarVC.swift in Sources */,
 				A84BCBE82884058200F21FF1 /* InstOfSubCateResponseModel.swift in Sources */,
 				A8173529284E68300008CF8E /* LoginViewController.swift in Sources */,
@@ -892,10 +914,12 @@
 				A8A016742874701500F45C50 /* FrogetResponseModel.swift in Sources */,
 				A85DFAE3285FB3C700CEF27B /* CategoriesCollectionViewCell.swift in Sources */,
 				A8A7DD5C2861596D00DABB8A /* AccountCustomView.swift in Sources */,
+				A836114928868F6C009BDB38 /* LocationCollViewCell.swift in Sources */,
 				A877D12528743DA000A57E7C /* TeacherProfileVC+Collection.swift in Sources */,
 				A84BCBF128840CC900F21FF1 /* APIWishlist.swift in Sources */,
 				A8173525284E68300008CF8E /* AppDelegate.swift in Sources */,
 				A857EC20285616F50095AA01 /* SignupView.swift in Sources */,
+				A836114E288691FE009BDB38 /* CityModel.swift in Sources */,
 				A8A7DD6028617A8100DABB8A /* HomeCategoriesCollectionViewCell.swift in Sources */,
 				A8A0167228746DC300F45C50 /* ResetVC+ValidationUI.swift in Sources */,
 				A804270E286B310D005C5EC1 /* APIAuth.swift in Sources */,

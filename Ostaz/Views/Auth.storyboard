@@ -6,6 +6,7 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -709,10 +710,10 @@
                                 <rect key="frame" x="0.0" y="107" width="414" height="789"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7aw-jd-BWY" userLabel="view scroll">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="680"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="766"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="fIl-hE-bvS">
-                                                <rect key="frame" x="17" y="0.0" width="380" height="646"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="fIl-hE-bvS">
+                                                <rect key="frame" x="17" y="0.0" width="380" height="732"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LocationPicture" translatesAutoresizingMaskIntoConstraints="NO" id="6q2-Ek-AQ7">
                                                         <rect key="frame" x="0.0" y="0.0" width="380" height="300"/>
@@ -724,7 +725,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select the location" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mjd-rY-4T5">
-                                                        <rect key="frame" x="0.0" y="336" width="380" height="30"/>
+                                                        <rect key="frame" x="0.0" y="325" width="380" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="ast-9c-9Xm"/>
                                                         </constraints>
@@ -733,7 +734,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8SC-bH-T0z" userLabel="City DropDown">
-                                                        <rect key="frame" x="0.0" y="402" width="380" height="58"/>
+                                                        <rect key="frame" x="0.0" y="380" width="380" height="58"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XBJ-sG-nBi">
                                                                 <rect key="frame" x="15" y="0.0" width="365" height="58"/>
@@ -789,8 +790,83 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
+                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="zpb-kg-7xn">
+                                                        <rect key="frame" x="0.0" y="463" width="380" height="40"/>
+                                                        <color key="backgroundColor" name="BackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="eej-Ut-j9I"/>
+                                                        </constraints>
+                                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="771-fs-erh">
+                                                            <size key="itemSize" width="135" height="33"/>
+                                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        </collectionViewFlowLayout>
+                                                        <cells>
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LocationCollViewCell" id="Khd-rt-4d1" customClass="LocationCollViewCell" customModule="Ostaz" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="3.5" width="106" height="33"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="d6m-Cs-pY9">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="106" height="33"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <subviews>
+                                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="HIp-rw-qlh">
+                                                                            <rect key="frame" x="5" y="0.0" width="96" height="33"/>
+                                                                            <subviews>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" text="Area Lbl" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zL6-Q2-KCj">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="76" height="33"/>
+                                                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                                                                    <color key="textColor" name="TxtColor"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                                <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUS-tE-nLo" userLabel="delete Btn">
+                                                                                    <rect key="frame" x="78" y="0.0" width="18" height="33"/>
+                                                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                                    <state key="normal" image="imgButtonDelete"/>
+                                                                                    <connections>
+                                                                                        <action selector="btnDeleteLocation:" destination="Khd-rt-4d1" eventType="touchUpInside" id="E23-2f-9fr"/>
+                                                                                    </connections>
+                                                                                </button>
+                                                                            </subviews>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
+                                                                                    <real key="value" value="10"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                        </stackView>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="bottom" secondItem="HIp-rw-qlh" secondAttribute="bottom" id="AdM-2G-OBB"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="HIp-rw-qlh" secondAttribute="trailing" constant="5" id="Jpt-Ig-H3w"/>
+                                                                        <constraint firstItem="HIp-rw-qlh" firstAttribute="leading" secondItem="d6m-Cs-pY9" secondAttribute="leading" constant="5" id="Udm-Xx-WDB"/>
+                                                                        <constraint firstItem="HIp-rw-qlh" firstAttribute="top" secondItem="d6m-Cs-pY9" secondAttribute="top" id="yQT-QI-8Ha"/>
+                                                                    </constraints>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
+                                                                            <real key="value" value="10"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </collectionViewCellContentView>
+                                                                <color key="backgroundColor" name="CollectionViewTeacherColor"/>
+                                                                <size key="customSize" width="106" height="33"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
+                                                                        <real key="value" value="10"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <outlet property="lblSelectedCity" destination="zL6-Q2-KCj" id="S3M-qD-HHp"/>
+                                                                </connections>
+                                                            </collectionViewCell>
+                                                        </cells>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </collectionView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xbq-Rw-Kti" userLabel="Area DropDown">
-                                                        <rect key="frame" x="0.0" y="496" width="380" height="58"/>
+                                                        <rect key="frame" x="0.0" y="528" width="380" height="58"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Area" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDA-ZJ-jgi">
                                                                 <rect key="frame" x="15" y="0.0" width="365" height="58"/>
@@ -846,8 +922,80 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
+                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Cqs-um-tU0">
+                                                        <rect key="frame" x="0.0" y="611" width="380" height="40"/>
+                                                        <color key="backgroundColor" name="BackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="sMU-WD-mv1"/>
+                                                        </constraints>
+                                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Imt-Nu-Yl6">
+                                                            <size key="itemSize" width="135" height="33"/>
+                                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        </collectionViewFlowLayout>
+                                                        <cells>
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LocationCollViewCell" id="ybp-Ie-ct9" customClass="LocationCollViewCell" customModule="Ostaz" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="3.5" width="106" height="33"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8Fu-CX-quU">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="106" height="33"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <subviews>
+                                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="stg-DB-7dK">
+                                                                            <rect key="frame" x="5" y="0.0" width="96" height="33"/>
+                                                                            <subviews>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" text="Area Lbl" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zoa-Sg-Yh8">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="76" height="33"/>
+                                                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                                                                    <color key="textColor" name="TxtColor"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                                <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bm8-Zv-caX" userLabel="delete Btn">
+                                                                                    <rect key="frame" x="78" y="0.0" width="18" height="33"/>
+                                                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                                    <state key="normal" image="imgButtonDelete"/>
+                                                                                    <connections>
+                                                                                        <action selector="btnDeleteLocation:" destination="ybp-Ie-ct9" eventType="touchUpInside" id="neM-oK-VbW"/>
+                                                                                    </connections>
+                                                                                </button>
+                                                                            </subviews>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
+                                                                                    <real key="value" value="10"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                        </stackView>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstItem="stg-DB-7dK" firstAttribute="top" secondItem="8Fu-CX-quU" secondAttribute="top" id="4km-35-WLU"/>
+                                                                        <constraint firstItem="stg-DB-7dK" firstAttribute="leading" secondItem="8Fu-CX-quU" secondAttribute="leading" constant="5" id="P4v-Le-bOH"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="stg-DB-7dK" secondAttribute="bottom" id="aHT-UB-HQy"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="stg-DB-7dK" secondAttribute="trailing" constant="5" id="plE-yA-X7Q"/>
+                                                                    </constraints>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
+                                                                            <real key="value" value="10"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </collectionViewCellContentView>
+                                                                <color key="backgroundColor" name="CollectionViewTeacherColor"/>
+                                                                <size key="customSize" width="106" height="33"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
+                                                                        <real key="value" value="10"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </collectionViewCell>
+                                                        </cells>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </collectionView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1W-g9-rfW">
-                                                        <rect key="frame" x="0.0" y="590" width="380" height="56"/>
+                                                        <rect key="frame" x="0.0" y="676" width="380" height="56"/>
                                                         <color key="backgroundColor" name="ButtonColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="56" id="IAN-1V-wbp"/>
@@ -909,6 +1057,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="collViewArea" destination="Cqs-um-tU0" id="xiJ-5f-KYf"/>
+                        <outlet property="collViewCity" destination="zpb-kg-7xn" id="pyn-aQ-Ua2"/>
                         <outlet property="lblArea" destination="cDA-ZJ-jgi" id="SHd-xh-sLL"/>
                         <outlet property="lblCity" destination="XBJ-sG-nBi" id="KB9-3n-cRD"/>
                         <outlet property="viewArea" destination="xbq-Rw-Kti" id="VH0-Ps-4Jo"/>
@@ -1142,9 +1292,16 @@
         <image name="LocationPicture" width="323.5" height="304"/>
         <image name="Login" width="267" height="329"/>
         <image name="btnBack" width="26.5" height="13"/>
+        <image name="imgButtonDelete" width="18" height="18"/>
         <image name="logo" width="444.5" height="354"/>
+        <namedColor name="BackgroundColor">
+            <color red="0.96899998188018799" green="0.96100002527236938" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="ButtonColor">
             <color red="0.52899998426437378" green="0.27799999713897705" blue="0.94499999284744263" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="CollectionViewTeacherColor">
+            <color red="0.88200002908706665" green="0.81999999284744263" blue="0.98400002717971802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="LogoutBtnColor">
             <color red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

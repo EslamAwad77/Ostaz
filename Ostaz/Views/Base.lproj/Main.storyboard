@@ -113,7 +113,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yv0-Dp-ncO">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yv0-Dp-ncO">
                                                                 <rect key="frame" x="16" y="70" width="356" height="17"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="17" id="ift-cg-tn1"/>
@@ -127,7 +127,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01012345678" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f1X-fB-cKj">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ahmed@gmail.com" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f1X-fB-cKj">
                                                                 <rect key="frame" x="16" y="90" width="356" height="17"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="17" id="kSE-dQ-wCV"/>
@@ -637,9 +637,9 @@
                         <outlet property="imgViewTeacher" destination="xS0-si-xSq" id="99H-Qp-rYP"/>
                         <outlet property="lblDescriptionJobName" destination="1WX-iR-iZA" id="sRp-Mu-Dol"/>
                         <outlet property="lblDescriptionText" destination="H9m-Mj-Fcd" id="YIO-7D-jp1"/>
+                        <outlet property="lblEmail" destination="f1X-fB-cKj" id="faK-Pp-j4V"/>
                         <outlet property="lblTeacherFacebookAccount" destination="YNc-mF-ptE" id="Slj-fo-nnd"/>
                         <outlet property="lblTeacherName" destination="uQF-hA-zcH" id="6fz-cg-Hbg"/>
-                        <outlet property="lblTeacherPhone" destination="f1X-fB-cKj" id="hcW-F0-rAg"/>
                         <outlet property="lblTeacherWhatsApp" destination="Abc-ja-xFJ" id="IYp-cb-fuf"/>
                         <outlet property="scrollView" destination="bnx-C1-Y1n" id="Slb-7c-L9A"/>
                         <outlet property="signUpView" destination="EIO-ke-29S" id="u8O-fs-VWM"/>
@@ -1409,23 +1409,26 @@
                                 <rect key="frame" x="15" y="54" width="384" height="25"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q9B-JR-N3W" userLabel="Arrow button">
-                                        <rect key="frame" x="0.0" y="0.0" width="26.5" height="25"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="40.5" height="25"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="btnBack"/>
+                                        <state key="normal" title="   " image="btnBack"/>
                                         <connections>
                                             <action selector="btnBackToMoreVC:" destination="S6C-bU-5is" eventType="touchUpInside" id="pxd-RU-Ppk"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="roM-3m-cJZ">
-                                        <rect key="frame" x="161" y="0.0" width="64.5" height="25"/>
+                                        <rect key="frame" x="162" y="0.0" width="64.5" height="25"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                         <color key="textColor" name="ButtonColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OXz-p1-NbW" userLabel="hidden button">
-                                        <rect key="frame" x="360" y="0.0" width="24" height="25"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OXz-p1-NbW" userLabel="Edit ">
+                                        <rect key="frame" x="347.5" y="0.0" width="36.5" height="25"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="    " image="EditTeacherProfileMark"/>
+                                        <connections>
+                                            <action selector="btnEditAccount:" destination="S6C-bU-5is" eventType="touchUpInside" id="Wrl-9W-nR7"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -1481,7 +1484,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3H-VG-lQa">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3H-VG-lQa">
                                                                 <rect key="frame" x="8" y="72" width="372" height="17"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="17" id="rHb-OB-Cin"/>
@@ -1495,7 +1498,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01012345678" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AAV-Vb-cmX">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ahmed@gmail.com" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AAV-Vb-cmX">
                                                                 <rect key="frame" x="8" y="97" width="372" height="17"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="17" id="lxm-Oz-eL9"/>
@@ -1786,8 +1789,8 @@
                     </view>
                     <connections>
                         <outlet property="AccountCustomView" destination="39N-9X-FxB" id="SoZ-Rd-PMz"/>
+                        <outlet property="lblEmail" destination="AAV-Vb-cmX" id="QYp-TG-6aK"/>
                         <outlet property="lblName" destination="HGV-cZ-cbt" id="zkn-Ke-YLa"/>
-                        <outlet property="lblPhoneNumber" destination="AAV-Vb-cmX" id="RIi-XF-8hS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WL6-ya-NtI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2061,6 +2064,7 @@
     <resources>
         <image name="BackgroundPic" width="428" height="987"/>
         <image name="DropDownMark" width="12" height="8.5"/>
+        <image name="EditTeacherProfileMark" width="17.5" height="20.5"/>
         <image name="EyeLogo" width="25" height="16"/>
         <image name="PutYourImagePic" width="141" height="138"/>
         <image name="RightMark" width="15" height="15"/>

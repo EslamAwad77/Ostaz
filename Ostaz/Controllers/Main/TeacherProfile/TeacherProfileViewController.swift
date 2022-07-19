@@ -19,7 +19,7 @@ class TeacherProfileViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imgViewTeacher: UIImageView!
     @IBOutlet weak var lblTeacherName: UILabel!
-    @IBOutlet weak var lblTeacherPhone: UILabel!
+    @IBOutlet weak var lblEmail: UILabel!
     @IBOutlet weak var lblTeacherWhatsApp: UILabel!
     @IBOutlet weak var lblTeacherFacebookAccount: UILabel!
     @IBOutlet weak var collectionViewMehtods: UICollectionView!
