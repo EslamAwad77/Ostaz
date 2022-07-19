@@ -3,16 +3,15 @@
 //  Ostaz
 //
 //  Created by eslam awad elsayed awad on 19/07/2022.
-//
-//
+
 import UIKit
 
 extension LocationViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.collViewCity{
-            return cityValues.count
+            return selectedCity.count
         }
-        return areaValues.count
+        return selectedArea.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

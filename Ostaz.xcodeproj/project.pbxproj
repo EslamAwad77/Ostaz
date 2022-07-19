@@ -32,6 +32,7 @@
 		A836114C288691A3009BDB38 /* LocationVC+Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A836114B288691A3009BDB38 /* LocationVC+Collection.swift */; };
 		A836114E288691FE009BDB38 /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A836114D288691FE009BDB38 /* CityModel.swift */; };
 		A83611502886953C009BDB38 /* LocationVC+SetupUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A836114F2886953C009BDB38 /* LocationVC+SetupUI.swift */; };
+		A83611522886AD57009BDB38 /* APIMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83611512886AD57009BDB38 /* APIMethods.swift */; };
 		A839205B2855CF5A00CD2126 /* CollectionViewsSlides.swift in Sources */ = {isa = PBXBuildFile; fileRef = A839205A2855CF5A00CD2126 /* CollectionViewsSlides.swift */; };
 		A839205D2855D7BE00CD2126 /* HomeMostViewedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A839205C2855D7BE00CD2126 /* HomeMostViewedCollectionViewCell.swift */; };
 		A84BCBC82883F4D900F21FF1 /* ProfileResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84BCBC72883F4D900F21FF1 /* ProfileResponseModel.swift */; };
@@ -151,6 +152,7 @@
 		A836114B288691A3009BDB38 /* LocationVC+Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationVC+Collection.swift"; sourceTree = "<group>"; };
 		A836114D288691FE009BDB38 /* CityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
 		A836114F2886953C009BDB38 /* LocationVC+SetupUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationVC+SetupUI.swift"; sourceTree = "<group>"; };
+		A83611512886AD57009BDB38 /* APIMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIMethods.swift; sourceTree = "<group>"; };
 		A839205A2855CF5A00CD2126 /* CollectionViewsSlides.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewsSlides.swift; sourceTree = "<group>"; };
 		A839205C2855D7BE00CD2126 /* HomeMostViewedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMostViewedCollectionViewCell.swift; sourceTree = "<group>"; };
 		A84BCBC72883F4D900F21FF1 /* ProfileResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileResponseModel.swift; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 				A84BCBDB288402BF00F21FF1 /* APIHome.swift */,
 				A84BCBDD288402CD00F21FF1 /* APICategory.swift */,
 				A84BCBF028840CC900F21FF1 /* APIWishlist.swift */,
+				A83611512886AD57009BDB38 /* APIMethods.swift */,
 			);
 			path = APIs;
 			sourceTree = "<group>";
@@ -374,7 +377,6 @@
 				A8B33C19284F91900025BE8A /* LocationViewController.swift */,
 				A836114F2886953C009BDB38 /* LocationVC+SetupUI.swift */,
 				A836114B288691A3009BDB38 /* LocationVC+Collection.swift */,
-				A836114828868F6C009BDB38 /* LocationCollViewCell.swift */,
 			);
 			path = Location;
 			sourceTree = "<group>";
@@ -493,6 +495,7 @@
 				A877D11D28742C4100A57E7C /* Login */,
 				A8A0166E2874676700F45C50 /* Froget Password */,
 				A836114728868F43009BDB38 /* Location */,
+				A836114828868F6C009BDB38 /* LocationCollViewCell.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -930,6 +933,7 @@
 				A8672C882868856000ED514D /* TeachMethodModel.swift in Sources */,
 				A84BCBD62883FE8700F21FF1 /* SetLocationResponseModel.swift in Sources */,
 				A89CD14B28589C99009D049D /* WishListCell.swift in Sources */,
+				A83611522886AD57009BDB38 /* APIMethods.swift in Sources */,
 				A8042706286B01A3005C5EC1 /* TeacherCategoryModel.swift in Sources */,
 				A8807DD92861F336007E1C9D /* PromotionForTeacherVC.swift in Sources */,
 				A8173527284E68300008CF8E /* SceneDelegate.swift in Sources */,

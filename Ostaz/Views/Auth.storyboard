@@ -986,6 +986,9 @@
                                                                         <real key="value" value="10"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <outlet property="lblSelectedArea" destination="zoa-Sg-Yh8" id="egX-Pw-YIj"/>
+                                                                </connections>
                                                             </collectionViewCell>
                                                         </cells>
                                                         <userDefinedRuntimeAttributes>
