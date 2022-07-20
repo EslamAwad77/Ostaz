@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import ESPullToRefresh
+import PullToRefresh
 
 class CategoriesViewController: UIViewController {
     
@@ -14,73 +16,82 @@ class CategoriesViewController: UIViewController {
     var categoriesSlides: [CollectionViewCategorySlide] = []
     
     //-------------------IBOutlet------------------------
+    @IBOutlet weak var viewReloading: UIView!
+    @IBOutlet weak var activityLoadingPage: UIActivityIndicatorView!
     @IBOutlet weak var viewSearch: UIView!
     @IBOutlet weak var collectionViewCategories: UICollectionView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var lblErrorDescription: UILabel!
-    //-------------------Actions------------------------
     
+    //-------------------Actions------------------------
+    @IBAction func btnReloadingData(_ sender: UIButton) {
+        self.loadingData()
+        self.activityLoadingPage.startAnimating()
+        self.setUpAPI()
+    }
     @IBAction func btnSearchCategoryResult(_ sender: Any) {
     }
-    
     
     //-------------------LifeCycle------------------------
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpUI()
-        self.setUpAPI()
     }
     
     //-------------------Functions------------------------
     
     func setUpUI(){
+        self.loadingData()
         self.viewSearch.addborder(10)
         collectionViewCategories.delegate = self
         collectionViewCategories.dataSource = self
-        //collectionViewCategories.collectionViewLayout = UICollectionViewFlowLayout()
+        self.activityLoadingPage.startAnimating()
+        self.setupTableRefresh()
+        self.setUpAPI()
+        
     }
     
-    func setupDemoData() {
-        categoriesSlides = [
-//            CollectionViewCategorySlide(categoryImage: #imageLiteral(resourceName: "musicIcon"), categoryName: "Music"),
-//            CollectionViewCategorySlide(categoryImage: #imageLiteral(resourceName: "quranIcon"), categoryName: "Quran"),
-//            CollectionViewCategorySlide(categoryImage: #imageLiteral(resourceName: "sportsIcon"), categoryName: "Sports"),
-//            CollectionViewCategorySlide(categoryImage: #imageLiteral(resourceName: "ProgrammingIcon"), categoryName: "Programming"),
-//            CollectionViewCategorySlide(categoryImage: #imageLiteral(resourceName: "UniversityIcon"), categoryName: "University"),
-//            CollectionViewCategorySlide(categoryImage: #imageLiteral(resourceName: "schoolIcon"), categoryName: "School"),
-//            CollectionViewCategorySlide(categoryImage: #imageLiteral(resourceName: "musicIcon"), categoryName: "Music"),
-//            CollectionViewCategorySlide(categoryImage: #imageLiteral(resourceName: "quranIcon"), categoryName: "Quran"),
-//            CollectionViewCategorySlide(categoryImage: #imageLiteral(resourceName: "sportsIcon"), categoryName: "Sports"),
-//            CollectionViewCategorySlide(categoryImage: #imageLiteral(resourceName: "ProgrammingIcon"), categoryName: "Programming"),
-//            CollectionViewCategorySlide(categoryImage: #imageLiteral(resourceName: "UniversityIcon"), categoryName: "University"),
-//            CollectionViewCategorySlide(categoryImage: #imageLiteral(resourceName: "schoolIcon"), categoryName: "School"),
-//            CollectionViewCategorySlide(categoryImage: #imageLiteral(resourceName: "musicIcon"), categoryName: "Music"),
-//            CollectionViewCategorySlide(categoryImage: #imageLiteral(resourceName: "quranIcon"), categoryName: "Quran"),
-//            CollectionViewCategorySlide(categoryImage: #imageLiteral(resourceName: "sportsIcon"), categoryName: "Sports"),
-//            CollectionViewCategorySlide(categoryImage: #imageLiteral(resourceName: "ProgrammingIcon"), categoryName: "Programming"),
-//            CollectionViewCategorySlide(categoryImage: #imageLiteral(resourceName: "UniversityIcon"), categoryName: "University"),
-//            CollectionViewCategorySlide(categoryImage: #imageLiteral(resourceName: "schoolIcon"), categoryName: "School")
-        ]
+    func setupTableRefresh(){
+        //if refresh from top
+        self.scrollView.es.addPullToRefresh { [weak self] in
+            guard let self = self else { return }
+            self.setUpAPI()
+            print("top")
+        }
+    }
+    
+    func loadingData() {
+        self.scrollView.alpha = 0
+        self.viewReloading.alpha = 0
+    }
+    
+    
+    func hideError() {
+        self.scrollView.alpha = 1
+        self.viewReloading.alpha = 0
+        self.activityLoadingPage.alpha = 0
     }
     
     func setUpAPI(){
         APICategory.fetchingCategory{ error, response in
+            self.scrollView.es.stopPullToRefresh()
+            self.activityLoadingPage.stopAnimating()
+
             if error != nil {
                 print(error!)
                 self.scrollView.alpha = 0
+                self.viewReloading.alpha = 1
                 self.lblErrorDescription.alpha = 1
                 self.lblErrorDescription.text = error
             } else {
-                self.scrollView.alpha = 1
+                self.hideError()
                 self.lblErrorDescription.alpha = 0
                 self.lblErrorDescription.text = ""
-                
                 self.categoriesSlides = response?.catArr ?? []
+                print(response!)
                 self.collectionViewCategories.reloadData()
-                
                 print(response?.message ?? "")
-                //UserDefaults.standard.set(nil, forKey: "token")
             }
         }
     }
@@ -101,11 +112,11 @@ extension CategoriesViewController: UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let item = categoriesSlides[indexPath.row]
-        if item.categoryName == "Sports"{
-            let subCategoryVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "SubCategoryVC") as! SubCategoryVC
-            subCategoryVC.modalPresentationStyle = .fullScreen
-            self.present(subCategoryVC, animated: true)
-        }
+        let subCategoryVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "SubCategoryVC") as! SubCategoryVC
+        subCategoryVC.modalPresentationStyle = .fullScreen
+        subCategoryVC.category_id = item.categoryId
+        self.present(subCategoryVC, animated: true)
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

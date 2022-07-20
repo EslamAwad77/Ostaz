@@ -53,6 +53,8 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpUI()
+        self.setUpAPI()
+
     }
     
     //-------------------Functions------------------------
@@ -63,20 +65,38 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
         collectionViewMostViewedInHome.dataSource = self
         collectionViewCategoriesInHome.delegate = self
         collectionViewCategoriesInHome.dataSource = self
+        
+
         //collectionViewHome.collectionViewLayout = UICollectionViewFlowLayout()
         homeMostViewedSlides = [
             CollectionViewHomeMostViewedSlide(teacherName: "Ahmed Mohamed", teacherJob: "Music ( Guitar)", descriptionImage: #imageLiteral(resourceName: "WishListPic1"), teacherImage: #imageLiteral(resourceName: "TeacherImage")),
             CollectionViewHomeMostViewedSlide(teacherName: "Ali Ibrahim", teacherJob: "Sports ( Swimming)", descriptionImage: #imageLiteral(resourceName: "WishListPic2"), teacherImage: #imageLiteral(resourceName: "TeacherImage")),
             CollectionViewHomeMostViewedSlide(teacherName: "Reem gamal", teacherJob: "Music ( Guitar)", descriptionImage: #imageLiteral(resourceName: "WishListPic1"), teacherImage: #imageLiteral(resourceName: "TeacherImage"))
         ]
-        homecategoriesSlides = [
-//            CollectionViewCategorySlide(categoryImage: #imageLiteral(resourceName: "musicIcon"), categoryName: "Music"),
-//            CollectionViewCategorySlide(categoryImage: #imageLiteral(resourceName: "quranIcon"), categoryName: "Quran"),
-//            CollectionViewCategorySlide(categoryImage: #imageLiteral(resourceName: "sportsIcon"), categoryName: "Sports"),
-//            CollectionViewCategorySlide(categoryImage: #imageLiteral(resourceName: "ProgrammingIcon"), categoryName: "Programming"),
-//            CollectionViewCategorySlide(categoryImage: #imageLiteral(resourceName: "UniversityIcon"), categoryName: "University"),
-//            CollectionViewCategorySlide(categoryImage: #imageLiteral(resourceName: "schoolIcon"), categoryName: "School")
-        ]
+
+    }
+    
+    func setUpAPI(){
+        APICategory.fetchingCategory{ error, response in
+            //self.scrollView.es.stopPullToRefresh()
+            //self.activityLoadingPage.stopAnimating()
+
+            if error != nil {
+                print(error!)
+                //self.scrollView.alpha = 0
+                //self.viewReloading.alpha = 1
+                //self.lblErrorDescription.alpha = 1
+               // self.lblErrorDescription.text = error
+            } else {
+               // self.hideError()
+               // self.lblErrorDescription.alpha = 0
+               // self.lblErrorDescription.text = ""
+                self.homecategoriesSlides = response?.catArr ?? []
+                print(response!)
+                self.collectionViewCategoriesInHome.reloadData()
+                print(response?.message ?? "")
+            }
+        }
     }
 }
 

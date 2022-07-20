@@ -17,7 +17,7 @@ class WishListViewController: UIViewController {
     ]
     
     //-------------------outlet--------------------------
-    @IBOutlet weak var signupView: SignupView!
+    //@IBOutlet weak var signupView: SignupView!
     @IBOutlet weak var tbleViewWishList: UITableView!
     
     //-------------------lifecycle--------------------------

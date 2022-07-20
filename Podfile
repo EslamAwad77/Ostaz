@@ -10,6 +10,9 @@ pod 'DropDown'
 pod 'IQKeyboardManagerSwift'
 pod 'Alamofire'
 pod 'SwiftyJSON'
+pod 'Kingfisher'
+pod 'PullToRefresher'
+pod 'ESPullToRefresh'
 
   target 'OstazTests' do
     inherit! :search_paths

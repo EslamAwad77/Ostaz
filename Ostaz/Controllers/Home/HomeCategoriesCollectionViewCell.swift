@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class HomeCategoriesCollectionViewCell: UICollectionViewCell {
     
@@ -22,7 +23,13 @@ class HomeCategoriesCollectionViewCell: UICollectionViewCell {
     
     func setupUI(_ categoriesSlide: CollectionViewCategorySlide){
 
-        //imgViewCategory.image = categoriesSlide.categoryImage
+        imgViewCategory.kf.indicatorType = .activity
+        if let url = URL(string: categoriesSlide.categoryImage){
+            imgViewCategory.kf.setImage(with: url)
+        }else {
+            imgViewCategory.image = UIImage.init(named:  "FailGoToTeacherImage")
+        }
+        
         lblDescription.text = categoriesSlide.categoryName
 
     }

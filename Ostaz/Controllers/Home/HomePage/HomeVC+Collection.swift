@@ -25,6 +25,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         } else{
             let cell2 = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCategoriesCollectionViewCell.identifier, for: indexPath) as! HomeCategoriesCollectionViewCell
             cell2.setupUI (homecategoriesSlides[indexPath.row])
+            
             return cell2
         }
     }
@@ -34,14 +35,14 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             let teacherVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TeacherProfileViewController") as! TeacherProfileViewController
             teacherVC.modalPresentationStyle = .fullScreen
             self.present(teacherVC, animated: true)
-//            let item = homeMostViewedSlides[indexPath.row] 
+            //            let item = homeMostViewedSlides[indexPath.row]
         } else{
             let item = homecategoriesSlides[indexPath.row]
-            if item.categoryName == "Sports"{
-                let subCategoryVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "SubCategoryVC") as! SubCategoryVC
-                subCategoryVC.modalPresentationStyle = .fullScreen
-                self.present(subCategoryVC, animated: true)
-            }
+            let subCategoryVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "SubCategoryVC") as! SubCategoryVC
+            subCategoryVC.modalPresentationStyle = .fullScreen
+            subCategoryVC.category_id = item.categoryId
+            self.present(subCategoryVC, animated: true)
+            
         }
     }
     

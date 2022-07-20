@@ -16,14 +16,17 @@ struct CollectionViewHomeMostViewedSlide {
 }
 
 struct CollectionViewCategorySlide {
+   
+    var categoryId: Int = 0
     var categoryImage: String = ""
     var categoryName: String = ""
     
     init() {}
     
     init(apiModel: [String: Any]?) {
-        self.categoryImage = (apiModel?["cat_image"] as? String) ?? ""
-        self.categoryName = (apiModel?["Category Name"] as? String) ?? ""
+        self.categoryId = (apiModel?["id"] as? Int) ?? 0
+        self.categoryName = (apiModel?["category_name"] as? String) ?? ""
+        self.categoryImage = (apiModel?["category_image"] as? String) ?? ""
     }
     
 }

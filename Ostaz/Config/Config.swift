@@ -47,9 +47,9 @@ struct URLs {
     ///Get{}
     static let category = main + "specializations"
     ///Get{}
-    static let subCategory = main + "specializations/1"
+    static let subCategory = main + "specializations"
     ///Get{}
-    static let instructorOfSubCategory = main + "subSpecializations/1"
+    static let instructorOfSubCategory = main + "subSpecializations"
     
     // WishList
     

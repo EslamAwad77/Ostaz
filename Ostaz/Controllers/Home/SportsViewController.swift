@@ -10,7 +10,8 @@ import UIKit
 class SportsViewController: UIViewController {
     
     //-------------------variables------------------------
-    
+    var subCategory_id: Int = 0
+
     var sportsItems: [WishListItems] = [
         WishListItems(descriptionImg: #imageLiteral(resourceName: "WishListPic1"), teacherImg: #imageLiteral(resourceName: "TeacherImage"), teacherName: "ahmed", teacherJob: "maths"),
         WishListItems(descriptionImg: #imageLiteral(resourceName: "WishListPic2"), teacherImg: #imageLiteral(resourceName: "TeacherImage"), teacherName: "ali", teacherJob: "arabic"),
