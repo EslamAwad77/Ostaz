@@ -10,6 +10,7 @@ import UIKit
 class TeacherProfileViewController: UIViewController {
 
     //-------------------Variables------------------------
+   
     var TeacherMethodsSlides: [CollectionViewMethodsSlide] = []
     var TeacherAreasSlides: [CollectionViewAreasSlide] = []
     var TeachercategoriesSlides: [CollectionViewTeahcerCategoriesSlide] = []
@@ -36,6 +37,8 @@ class TeacherProfileViewController: UIViewController {
     }
     
     @IBAction func btnAddToWishList(_ sender: Any) {
+        // if he is add to wish list go to wish list
+        // if he will update APIUpdate here and replace wish list button to edit button
     }
     
     //-------------------LifeCycle------------------------
@@ -44,16 +47,17 @@ class TeacherProfileViewController: UIViewController {
         self.setUpUI()
         self.goToRegister()
         self.checkUser()
-        self.APIProfile()
+        self.APIUserProfile()
       
     }
     
-    func APIProfile(){
+    func APIUserProfile(){
         APIProfile.fetchingProfile { error, response in
             if error != nil {
                 print(error!)
             } else {
-                print(response?.profile?.email)
+                print(response?.profile!)
+                //print(response?.profile?.email)
                 print(response?.message ?? "")
                 UserDefaults.standard.set(nil, forKey: "token")
             }

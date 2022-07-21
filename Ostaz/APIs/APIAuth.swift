@@ -19,15 +19,15 @@ class APIAuth: NSObject{
                     let json = JSON(response.data!)
                     var result = LoginResponse()
                     result.message = json["message"].string
-                    result.user = UserModel(apiData: json["data"].dictionaryObject)
-//                    result.user = []
-//                    let apiLogin = json["data"].arrayObject
-//                    for item in apiLogin ?? [] {
-//                        let model = UserModel.init(apiData: item as? [String: Any])
-//                        result.user?.append(model)
-//                    } // for array 
+                    //result.user = UserModel(apiData: json["data"].dictionaryObject)
+                    result.user = []
+                    let apiLogin = json["data"].arrayObject
+                    for item in apiLogin ?? [] {
+                        let model = UserModel.init(apiData: item as? [String: Any])
+                        result.user?.append(model)
+                    }
                     
-                    print(result.user!.id!)
+                    //print(result.user!.id!)
                     
                     completion(nil , result)
                 }else {

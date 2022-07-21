@@ -13,7 +13,7 @@ class LoginViewController: UIViewController {
    
     //-------------------variables------------------------
     var passwordVisible: Bool = true
-    
+    var ArrOfUserData: [UserModel] = []
     //-------------------IBOutlet------------------------
     
     @IBOutlet weak var viewPassword: UIView!
@@ -38,10 +38,15 @@ class LoginViewController: UIViewController {
                     print(error!)
                     
                 } else {
+                    
+
+                    self.ArrOfUserData = response?.user ?? []
                     print(response?.message ?? "")
                     print(response?.user!)
-                    print(response?.user?.token ?? "")
-                    UserDefaults.standard.set(response?.user?.token, forKey: "token")
+                    print(response?.user?.last)
+                    //print(response?.user?.token ?? "")
+                    //UserDefaults.standard.set(response?.user?.token, forKey: "token")
+                    UserDefaults.standard.set(response?.user?.last, forKey: "token")
                     self.goToHome()
                 }
             }

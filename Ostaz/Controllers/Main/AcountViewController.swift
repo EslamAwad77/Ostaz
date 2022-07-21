@@ -7,7 +7,11 @@
 import UIKit
 
 class AcountViewController: UIViewController {
+   
+    var email: String = ""
+    var image: String = ""
     
+    var updateProfile: [ProfileModel] = []
     //-------------------IBOutlet------------------------
     @IBOutlet weak var AccountCustomView: AccountCustomView!
     @IBOutlet weak var lblName: UILabel!
@@ -37,7 +41,17 @@ class AcountViewController: UIViewController {
     }
     
     @IBAction func btnEditAccount(_ sender: UIButton) {
-        self.goToPromotion()
+        APIProfile.fetchingUpdateProfile(email: email, image: image) { error, response in
+            if error != nil{
+                print(error!)
+            }else{
+                self.updateProfile = response?.profile ?? []
+                print(response!)
+                print(response?.message ?? "")
+                self.goToPromotion()
+            }
+            
+        }
     }
     
     //-------------------LifeCycle------------------------
