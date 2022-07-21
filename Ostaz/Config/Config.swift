@@ -57,4 +57,9 @@ struct URLs {
     static let wishlist = main + "wishlist"
     ///POST{favorite_id}
     static let addToWishlist = main + "like-dislike"
+    
+    ///GET{}
+    static let methodsList = main + "method-list"
+    ///POST{online}
+    static let methodCreate = main + "create-method"
 }

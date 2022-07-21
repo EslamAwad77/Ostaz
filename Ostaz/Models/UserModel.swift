@@ -10,7 +10,7 @@ import Foundation
 //must not contain ui
 //must not import uikit
 
-class UserModel {
+struct UserModel {
     var id: Int?
     var name: String?
     var email: String?

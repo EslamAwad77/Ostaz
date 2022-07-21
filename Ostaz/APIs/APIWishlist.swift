@@ -11,11 +11,14 @@ import SwiftyJSON
 
 class APIWishlist: NSObject {
     
-    static func fetchingWishList(completion: @escaping (_ error :String?, _ response: WishListResponse?) -> Void){
+    static func fetchingWishList(favouriteId: Int, completion: @escaping (_ error :String?, _ response: WishListResponse?) -> Void){
         let url = URLs.wishlist
+        let parameters = [
+            "favourite_id": favouriteId
+        ]
         let token = UserDefaults.standard.value(forKey: "token") as? String
         let bearerToken =  token != nil ? "Bearer \(token!)" : ""    // ternary Operator
-        AF.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: ["Authorization": bearerToken])
+        AF.request(url, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: ["Authorization": bearerToken, "Accept": "application/json"])
             .response { response in
                 if (response.response?.statusCode ?? 0) >= 200 && (response.response?.statusCode ?? 0) <= 299{
                     let json = JSON(response.data!)

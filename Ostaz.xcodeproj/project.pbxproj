@@ -97,6 +97,10 @@
 		A8B750D5286006E600305575 /* PasswordCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8B750D4286006E600305575 /* PasswordCustomView.xib */; };
 		A8C8C8082871CAFB00143872 /* LoginResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C8C8072871CAFB00143872 /* LoginResponseModel.swift */; };
 		A8C8C80A2871CB3800143872 /* RegisterResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C8C8092871CB3800143872 /* RegisterResponseModel.swift */; };
+		A8DA42FE2888CB7E00F1493E /* ListOfMehtodsResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DA42FD2888CB7E00F1493E /* ListOfMehtodsResponseModel.swift */; };
+		A8DA43012888CD4000F1493E /* CreateMethodResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DA43002888CD4000F1493E /* CreateMethodResponseModel.swift */; };
+		A8DA43032888CD7C00F1493E /* CreateMethodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DA43022888CD7C00F1493E /* CreateMethodModel.swift */; };
+		A8DA43052888CFFC00F1493E /* UpgradeUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DA43042888CFFC00F1493E /* UpgradeUserModel.swift */; };
 		A8DC659A28577590008879B4 /* EditPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC659928577590008879B4 /* EditPasswordViewController.swift */; };
 		A8E1F80128620A87004DFC21 /* TeacherPromotionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E1F80028620A87004DFC21 /* TeacherPromotionCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -217,6 +221,10 @@
 		A8B750D4286006E600305575 /* PasswordCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PasswordCustomView.xib; sourceTree = "<group>"; };
 		A8C8C8072871CAFB00143872 /* LoginResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseModel.swift; sourceTree = "<group>"; };
 		A8C8C8092871CB3800143872 /* RegisterResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResponseModel.swift; sourceTree = "<group>"; };
+		A8DA42FD2888CB7E00F1493E /* ListOfMehtodsResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfMehtodsResponseModel.swift; sourceTree = "<group>"; };
+		A8DA43002888CD4000F1493E /* CreateMethodResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMethodResponseModel.swift; sourceTree = "<group>"; };
+		A8DA43022888CD7C00F1493E /* CreateMethodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMethodModel.swift; sourceTree = "<group>"; };
+		A8DA43042888CFFC00F1493E /* UpgradeUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradeUserModel.swift; sourceTree = "<group>"; };
 		A8DC659928577590008879B4 /* EditPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPasswordViewController.swift; sourceTree = "<group>"; };
 		A8E1F80028620A87004DFC21 /* TeacherPromotionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherPromotionCollectionViewCell.swift; sourceTree = "<group>"; };
 		AF56F268C1243AC2F59B4D84 /* Pods-Ostaz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ostaz.debug.xcconfig"; path = "Target Support Files/Pods-Ostaz/Pods-Ostaz.debug.xcconfig"; sourceTree = "<group>"; };
@@ -311,9 +319,9 @@
 			children = (
 				A8173524284E68300008CF8E /* AppDelegate.swift */,
 				A8173526284E68300008CF8E /* SceneDelegate.swift */,
+				A8954B09284F4D6B00493142 /* Exstensions */,
 				A893B4BD2870BEB400E42F36 /* Config */,
 				A804270C286B30BE005C5EC1 /* APIs */,
-				A8954B09284F4D6B00493142 /* Exstensions */,
 				A83920592855CF1900CD2126 /* Models */,
 				A8173557284E684A0008CF8E /* Views */,
 				A8173558284E68520008CF8E /* Controllers */,
@@ -384,12 +392,15 @@
 		A83920592855CF1900CD2126 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A8672C832868830600ED514D /* UserModel.swift */,
 				A839205A2855CF5A00CD2126 /* CollectionViewsSlides.swift */,
 				A89CD1502858B05F009D049D /* WishListItems.swift */,
 				A8672C872868856000ED514D /* TeachMethodModel.swift */,
 				A836114D288691FE009BDB38 /* CityModel.swift */,
 				A8672C892868908D00ED514D /* AreaModel.swift */,
 				A8042705286B01A3005C5EC1 /* TeacherCategoryModel.swift */,
+				A8DA43022888CD7C00F1493E /* CreateMethodModel.swift */,
+				A8DA43042888CFFC00F1493E /* UpgradeUserModel.swift */,
 				A8C8C80B2871CB5000143872 /* Json Response */,
 			);
 			path = Models;
@@ -616,14 +627,23 @@
 		A8C8C80B2871CB5000143872 /* Json Response */ = {
 			isa = PBXGroup;
 			children = (
-				A8672C832868830600ED514D /* UserModel.swift */,
 				A84BCBCB2883F83300F21FF1 /* Auth */,
 				A84BCBCC2883F83E00F21FF1 /* Profile */,
 				A84BCBD82884019600F21FF1 /* Home */,
 				A84BCBD72884018000F21FF1 /* Category */,
 				A84BCBEB28840B6F00F21FF1 /* WishList */,
+				A8DA42FF2888CB8200F1493E /* Methods */,
 			);
 			path = "Json Response";
+			sourceTree = "<group>";
+		};
+		A8DA42FF2888CB8200F1493E /* Methods */ = {
+			isa = PBXGroup;
+			children = (
+				A8DA42FD2888CB7E00F1493E /* ListOfMehtodsResponseModel.swift */,
+				A8DA43002888CD4000F1493E /* CreateMethodResponseModel.swift */,
+			);
+			path = Methods;
 			sourceTree = "<group>";
 		};
 		C85D77CDE44C3C1FFD3EF048 /* Pods */ = {
@@ -942,10 +962,13 @@
 				A84BCBE62884054900F21FF1 /* SubCateOfMainCateResponseModel.swift in Sources */,
 				A8672C842868830600ED514D /* UserModel.swift in Sources */,
 				A84BCBD32883FBDF00F21FF1 /* UpgradeResponseModel.swift in Sources */,
+				A8DA43032888CD7C00F1493E /* CreateMethodModel.swift in Sources */,
 				A8C8C80A2871CB3800143872 /* RegisterResponseModel.swift in Sources */,
+				A8DA42FE2888CB7E00F1493E /* ListOfMehtodsResponseModel.swift in Sources */,
 				A8954B08284F4D6600493142 /* ExstensionsOfUIView.swift in Sources */,
 				A84BCBF5288410BD00F21FF1 /* SubCategoryCollectionViewCell.swift in Sources */,
 				A817352F284E68300008CF8E /* Ostaz.xcdatamodeld in Sources */,
+				A8DA43052888CFFC00F1493E /* UpgradeUserModel.swift in Sources */,
 				A8B499042863D4760038C782 /* HomeFilterVC.swift in Sources */,
 				A84BCBCA2883F59600F21FF1 /* APIProfile.swift in Sources */,
 				A8C8C8082871CAFB00143872 /* LoginResponseModel.swift in Sources */,
@@ -954,6 +977,7 @@
 				A84BCBE02884033700F21FF1 /* GetAllCateResponseModel.swift in Sources */,
 				A8A016762874704300F45C50 /* ResetResponseModel.swift in Sources */,
 				A84BCBED28840BA600F21FF1 /* WishListResponseModel.swift in Sources */,
+				A8DA43012888CD4000F1493E /* CreateMethodResponseModel.swift in Sources */,
 				A84BCBDE288402CD00F21FF1 /* APICategory.swift in Sources */,
 				A893B4BF2870BECF00E42F36 /* Config.swift in Sources */,
 				A84BCBEF28840BED00F21FF1 /* LikeAndDisLikeResponseModel.swift in Sources */,

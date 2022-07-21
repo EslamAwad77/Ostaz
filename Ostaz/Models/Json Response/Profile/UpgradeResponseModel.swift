@@ -9,4 +9,5 @@ import Foundation
 
 struct UpgradeResponse{
     var message: String?
+    var user: [UpgradeUserModel]?
 }
