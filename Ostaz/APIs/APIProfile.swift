@@ -22,12 +22,15 @@ class APIProfile: NSObject {
                     print(json)
                     var result = ProfileResponse()
                     result.message = json["message"].string
-                    result.user = []
-                    let apiProfile = json["data"].arrayObject
-                    for item in apiProfile ?? []{
-                        let model = UserModel.init(apiData: item as? [String: Any])
-                        result.user?.append(model)
-                    }
+                    result.profile = ProfileModel(apiData: json["data"].dictionaryObject)
+                    print(result.profile?.email)
+                    
+                    //result.profile = []
+//                    let apiProfile = json["data"].arrayObject
+//                    for item in apiProfile ?? []{
+//                        let model = ProfileModel.init(apiData: item as? [String: Any])
+//                        result.profile?.append(model)
+//                    }
                     completion(nil, result)
                 } else {
                     let json = JSON(response.data!)

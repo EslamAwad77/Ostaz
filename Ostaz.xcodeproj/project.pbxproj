@@ -55,6 +55,7 @@
 		A84BCBF328840FE800F21FF1 /* SubCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84BCBF228840FE800F21FF1 /* SubCategoryVC.swift */; };
 		A84BCBF5288410BD00F21FF1 /* SubCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84BCBF4288410BD00F21FF1 /* SubCategoryCollectionViewCell.swift */; };
 		A84D15EB28521F55004E1995 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84D15EA28521F55004E1995 /* HomeViewController.swift */; };
+		A8552CE62889B78400CDBCE9 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8552CE52889B78400CDBCE9 /* ProfileModel.swift */; };
 		A857EC1C2855FE900095AA01 /* TeacherProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A857EC1B2855FE900095AA01 /* TeacherProfileViewController.swift */; };
 		A857EC1E285613450095AA01 /* SignupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A857EC1D285613450095AA01 /* SignupView.xib */; };
 		A857EC20285616F50095AA01 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A857EC1F285616F50095AA01 /* SignupView.swift */; };
@@ -182,6 +183,7 @@
 		A84BCBF228840FE800F21FF1 /* SubCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCategoryVC.swift; sourceTree = "<group>"; };
 		A84BCBF4288410BD00F21FF1 /* SubCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		A84D15EA28521F55004E1995 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A8552CE52889B78400CDBCE9 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		A857EC1B2855FE900095AA01 /* TeacherProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherProfileViewController.swift; sourceTree = "<group>"; };
 		A857EC1D285613450095AA01 /* SignupView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignupView.xib; sourceTree = "<group>"; };
 		A857EC1F285616F50095AA01 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
@@ -399,6 +401,7 @@
 			isa = PBXGroup;
 			children = (
 				A8672C832868830600ED514D /* UserModel.swift */,
+				A8552CE52889B78400CDBCE9 /* ProfileModel.swift */,
 				A839205A2855CF5A00CD2126 /* CollectionViewsSlides.swift */,
 				A89CD1502858B05F009D049D /* WishListItems.swift */,
 				A8672C872868856000ED514D /* TeachMethodModel.swift */,
@@ -983,6 +986,7 @@
 				A84BCBD32883FBDF00F21FF1 /* UpgradeResponseModel.swift in Sources */,
 				A8DA43032888CD7C00F1493E /* CreateMethodModel.swift in Sources */,
 				A8C8C80A2871CB3800143872 /* RegisterResponseModel.swift in Sources */,
+				A8552CE62889B78400CDBCE9 /* ProfileModel.swift in Sources */,
 				A8DA42FE2888CB7E00F1493E /* ListOfMehtodsResponseModel.swift in Sources */,
 				A8954B08284F4D6600493142 /* ExstensionsOfUIView.swift in Sources */,
 				A8DA430C2888D9B000F1493E /* CategoriesVC+Collection.swift in Sources */,

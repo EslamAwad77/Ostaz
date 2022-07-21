@@ -25,8 +25,8 @@ struct CollectionViewCategorySlide {
     
     init(apiModel: [String: Any]?) {
         self.categoryId = (apiModel?["id"] as? Int) ?? 0
-        self.categoryName = (apiModel?["category_name"] as? String) ?? ""
-        self.categoryImage = (apiModel?["category_image"] as? String) ?? ""
+        self.categoryName = (apiModel?["name"] as? String) ?? ""
+        self.categoryImage = (apiModel?["image"] as? String) ?? ""
     }
     
 }

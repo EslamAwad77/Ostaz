@@ -39,11 +39,9 @@ class LoginViewController: UIViewController {
                     
                 } else {
                     print(response?.message ?? "")
+                    print(response?.user!)
                     print(response?.user?.token ?? "")
                     UserDefaults.standard.set(response?.user?.token, forKey: "token")
-    //                let vc = UIAlertController.init(title: "alert", message: response?.message, preferredStyle: .alert)
-    //                vc.addAction(UIAlertAction.init(title: "ok", style: .default))
-    //                self.present(vc, animated: true)
                     self.goToHome()
                 }
             }

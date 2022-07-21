@@ -11,7 +11,6 @@ class SubCategoryVC: UIViewController {
     
     //-------------------Variables------------------------
     var category_id: Int = 0
-    
     var subCategoriesSlides: [CollectionViewCategorySlide] = []
     
     //-------------------IBOutlet------------------------

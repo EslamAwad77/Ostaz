@@ -65,8 +65,6 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpUI()
-        self.setUpAPI()
-
     }
     
 }

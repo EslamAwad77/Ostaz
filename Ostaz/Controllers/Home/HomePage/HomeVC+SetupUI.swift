@@ -62,7 +62,7 @@ extension HomeViewController {
         self.viewReloadData.alpha = 0
         self.activityLoadingPage.alpha = 0
     }
-    
+
     func setupTableRefresh(){
         //if refresh from top
         self.scrollView.es.addPullToRefresh { [weak self] in
