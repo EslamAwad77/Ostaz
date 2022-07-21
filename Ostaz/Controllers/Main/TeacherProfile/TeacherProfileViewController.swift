@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class TeacherProfileViewController: UIViewController {
 
@@ -52,15 +53,30 @@ class TeacherProfileViewController: UIViewController {
     }
     
     func APIUserProfile(){
-        APIProfile.fetchingProfile { error, response in
+        APIProfile.fetchingProfile{ error, response in
             if error != nil {
                 print(error!)
             } else {
-                print(response?.profile!)
-                //print(response?.profile?.email)
+                print(response?.profile?.email)
                 print(response?.message ?? "")
-                UserDefaults.standard.set(nil, forKey: "token")
             }
         }
+    }
+    
+    func SetupProfile(_ profileData: ProfileModel){
+        
+        lblEmail.text = profileData.email
+        lblTeacherName.text = profileData.name
+        lblDescriptionText.text = profileData.description
+        lblTeacherWhatsApp.text = profileData.whatsapp
+        lblTeacherFacebookAccount.text = profileData.facebook
+        lblDescriptionJobName.text = profileData.type
+        
+        if let url = URL(string: profileData.image){
+            imgViewTeacher.kf.setImage(with: url)
+        }else {
+            imgViewTeacher.image = UIImage.init(named:  "FailGoToTeacherImage")
+        }
+        
     }
 }

@@ -8,6 +8,6 @@
 import Foundation
 
 class TeachMethodModel{
-    var name: String?
-    var isActive: Bool?
+    var name: String = ""
+    var isActive: Bool = false
 }

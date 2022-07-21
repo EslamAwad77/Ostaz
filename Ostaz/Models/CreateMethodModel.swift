@@ -8,11 +8,11 @@
 import Foundation
 
 struct MethodModel {
-    var name: String?
+    var name: String = ""
     
     init (){}
     
     init(apiMethod: [String: Any]?) {
-        self.name = apiMethod?["name"] as? String
+        self.name = apiMethod?["name"] as? String ?? ""
     }
 }

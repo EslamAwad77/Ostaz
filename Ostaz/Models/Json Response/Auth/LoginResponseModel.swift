@@ -8,5 +8,5 @@ import Foundation
 
 struct LoginResponse {
     var message: String?
-    var user: [UserModel]?
+    var user: UserModel?
 }

@@ -8,6 +8,6 @@
 import Foundation
 
 class AreaModel{ 
-    var name: String?
-    var isDeleted: Bool?
+    var name: String = ""
+    var isDeleted: Bool = false
 }

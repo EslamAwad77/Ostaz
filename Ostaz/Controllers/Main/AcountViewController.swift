@@ -11,7 +11,7 @@ class AcountViewController: UIViewController {
     var email: String = ""
     var image: String = ""
     
-    var updateProfile: [ProfileModel] = []
+    //var updateProfile: [ProfileModel] = []
     //-------------------IBOutlet------------------------
     @IBOutlet weak var AccountCustomView: AccountCustomView!
     @IBOutlet weak var lblName: UILabel!
@@ -45,7 +45,7 @@ class AcountViewController: UIViewController {
             if error != nil{
                 print(error!)
             }else{
-                self.updateProfile = response?.profile ?? []
+                //self.updateProfile = response?.profile ?? []
                 print(response!)
                 print(response?.message ?? "")
                 self.goToPromotion()

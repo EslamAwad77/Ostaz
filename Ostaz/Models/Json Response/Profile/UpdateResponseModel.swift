@@ -9,5 +9,5 @@ import Foundation
 
 struct UpdateResponse{
     var message: String?
-    var profile: [ProfileModel]?
+    var profile: ProfileModel?
 }

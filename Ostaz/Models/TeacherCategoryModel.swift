@@ -8,6 +8,6 @@
 import Foundation
 
 class TeacherCategoryModel{
-    var isDeleted: Bool?
-    var categoryName: String?
+    var isDeleted: Bool = false
+    var categoryName: String = ""
 }

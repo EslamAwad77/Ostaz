@@ -54,7 +54,7 @@ class PromotionForTeacherVC: UIViewController {
             let textEntered = vc.textFields?.first?.text
             if textEntered != "" {
                 let objMethod = TeachMethodModel.init()
-                objMethod.name = textEntered
+                objMethod.name = textEntered ?? ""
                 self.teacherMethodItems.append(objMethod)
                 self.collectionViewTeachMethods.reloadData()
             } else {
