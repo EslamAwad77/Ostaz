@@ -171,6 +171,13 @@
                                 <color key="textColor" name="ButtonColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="DLL-W7-l82">
+                                <rect key="frame" x="182" y="403.5" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="GXu-pG-zFV"/>
+                                    <constraint firstAttribute="height" constant="50" id="cjZ-Yl-SKr"/>
+                                </constraints>
+                            </activityIndicatorView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f6j-KY-KgO">
                                 <rect key="frame" x="0.0" y="98" width="414" height="715"/>
                                 <subviews>
@@ -512,25 +519,71 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="WE8-8S-dhz"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="UJa-bU-kTs"/>
                             </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nDT-vr-qzE" userLabel="reload View">
+                                <rect key="frame" x="20" y="329" width="374" height="230"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zHB-x6-HqY">
+                                        <rect key="frame" x="0.0" y="40" width="374" height="150"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wg3-3d-CZa">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="YGK-er-gBZ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" name="ButtonColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="am4-Nd-MVq">
+                                                <rect key="frame" x="0.0" y="80" width="374" height="70"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Reloading">
+                                                    <color key="titleColor" name="ButtonColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="btnReloadingData:" destination="wPb-C0-Kth" eventType="touchUpInside" id="FZS-bB-Ugk"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="NQJ-7L-o2z"/>
+                                    <constraint firstItem="zHB-x6-HqY" firstAttribute="leading" secondItem="nDT-vr-qzE" secondAttribute="leading" id="QR0-dp-gie"/>
+                                    <constraint firstAttribute="trailing" secondItem="zHB-x6-HqY" secondAttribute="trailing" id="Ush-vw-RGJ"/>
+                                    <constraint firstItem="zHB-x6-HqY" firstAttribute="top" secondItem="nDT-vr-qzE" secondAttribute="top" constant="40" id="ca5-jv-ijN"/>
+                                    <constraint firstAttribute="width" constant="374" id="tIi-zQ-5Kh"/>
+                                    <constraint firstAttribute="bottom" secondItem="zHB-x6-HqY" secondAttribute="bottom" constant="40" id="yP2-gK-4sV"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HIq-pC-OlK"/>
                         <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="f6j-KY-KgO" secondAttribute="bottom" constant="83" id="1pj-ME-kAd"/>
                             <constraint firstItem="g3b-W0-jBy" firstAttribute="leading" secondItem="HIq-pC-OlK" secondAttribute="leading" id="3b5-jH-S3V"/>
+                            <constraint firstItem="nDT-vr-qzE" firstAttribute="top" secondItem="x2J-du-4BC" secondAttribute="topMargin" constant="285" id="4GD-Rw-slH"/>
                             <constraint firstItem="g3b-W0-jBy" firstAttribute="top" secondItem="HIq-pC-OlK" secondAttribute="top" constant="10" id="5xj-xd-KaK"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="nDT-vr-qzE" secondAttribute="bottom" constant="254" id="KxU-Tl-iYM"/>
+                            <constraint firstItem="nDT-vr-qzE" firstAttribute="leading" secondItem="x2J-du-4BC" secondAttribute="leadingMargin" id="PN0-XB-4yz"/>
+                            <constraint firstItem="DLL-W7-l82" firstAttribute="centerX" secondItem="HIq-pC-OlK" secondAttribute="centerX" id="R5t-6a-x8y"/>
+                            <constraint firstItem="nDT-vr-qzE" firstAttribute="trailing" secondItem="x2J-du-4BC" secondAttribute="trailingMargin" id="TeQ-cv-aqc"/>
                             <constraint firstItem="g3b-W0-jBy" firstAttribute="trailing" secondItem="HIq-pC-OlK" secondAttribute="trailing" id="anr-zj-L0U"/>
                             <constraint firstAttribute="trailing" secondItem="f6j-KY-KgO" secondAttribute="trailing" id="b0y-Ei-TLl"/>
                             <constraint firstItem="f6j-KY-KgO" firstAttribute="leading" secondItem="x2J-du-4BC" secondAttribute="leading" id="ecD-4o-KGe"/>
                             <constraint firstItem="f6j-KY-KgO" firstAttribute="top" secondItem="g3b-W0-jBy" secondAttribute="bottom" constant="26" id="fka-55-BiJ"/>
+                            <constraint firstItem="DLL-W7-l82" firstAttribute="centerY" secondItem="HIq-pC-OlK" secondAttribute="centerY" id="j3T-fv-7Md"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="homeIcons" id="PaR-rj-F7S"/>
                     <connections>
+                        <outlet property="activityLoadingPage" destination="DLL-W7-l82" id="mNW-6n-rl2"/>
                         <outlet property="collectionViewCategoriesInHome" destination="fbJ-Ga-0eh" id="Veb-9I-Oyr"/>
                         <outlet property="collectionViewMostViewedInHome" destination="WjE-0g-LaH" id="Sdy-Xp-i6N"/>
+                        <outlet property="lblErrorDescrip" destination="wg3-3d-CZa" id="IoL-Jf-lGZ"/>
                         <outlet property="scrollView" destination="f6j-KY-KgO" id="ZeQ-Yb-9Wl"/>
                         <outlet property="txtFieldSearch" destination="Lv2-jt-JO0" id="LET-fr-K45"/>
+                        <outlet property="viewReloadData" destination="nDT-vr-qzE" id="Heq-Sh-1WH"/>
                         <outlet property="viewSearchWithFilter" destination="2vB-q1-EIM" id="bsY-Zb-Qyk"/>
                     </connections>
                 </viewController>

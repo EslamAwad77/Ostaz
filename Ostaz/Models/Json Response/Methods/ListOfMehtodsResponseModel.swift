@@ -9,4 +9,5 @@ import Foundation
 
 struct ListOfMehtodsResponse {
     var message: String?
+    var arrOfList: [MethodModel]?
 }

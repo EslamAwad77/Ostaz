@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CreateMethod {
+struct MethodModel {
     var name: String?
     
     init (){}

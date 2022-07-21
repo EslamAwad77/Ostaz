@@ -22,6 +22,12 @@ class APIMethods: NSObject {
                     print(json)
                     var result = ListOfMehtodsResponse()
                     result.message = json["message"].string
+                    result.arrOfList = []
+                    let apiMehtod = json["data"].arrayObject
+                    for item in apiMehtod ?? [] {
+                        let model = MethodModel.init(apiMethod: item as? [String: Any])
+                        result.arrOfList?.append(model)
+                    }
                     completion(nil, result)
                 } else {
                     let json = JSON(response.data!)
@@ -32,7 +38,7 @@ class APIMethods: NSObject {
             }
     }
     
-    static func fetchingMethodCreate(name: String, completion: @escaping (_ error :String?, _ response: CreateMethodResponse?) -> Void){
+    static func fetchingCreateMethod(name: String, completion: @escaping (_ error :String?, _ response: CreateMethodResponse?) -> Void){
         let url = URLs.methodCreate
          let parameters = [
              "name": name

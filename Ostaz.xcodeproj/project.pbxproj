@@ -101,6 +101,9 @@
 		A8DA43012888CD4000F1493E /* CreateMethodResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DA43002888CD4000F1493E /* CreateMethodResponseModel.swift */; };
 		A8DA43032888CD7C00F1493E /* CreateMethodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DA43022888CD7C00F1493E /* CreateMethodModel.swift */; };
 		A8DA43052888CFFC00F1493E /* UpgradeUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DA43042888CFFC00F1493E /* UpgradeUserModel.swift */; };
+		A8DA43072888D92400F1493E /* HomeVC+SetupUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DA43062888D92400F1493E /* HomeVC+SetupUI.swift */; };
+		A8DA430A2888D99400F1493E /* CategoriesVC+SetupUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DA43092888D99400F1493E /* CategoriesVC+SetupUI.swift */; };
+		A8DA430C2888D9B000F1493E /* CategoriesVC+Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DA430B2888D9B000F1493E /* CategoriesVC+Collection.swift */; };
 		A8DC659A28577590008879B4 /* EditPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC659928577590008879B4 /* EditPasswordViewController.swift */; };
 		A8E1F80128620A87004DFC21 /* TeacherPromotionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E1F80028620A87004DFC21 /* TeacherPromotionCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -225,6 +228,9 @@
 		A8DA43002888CD4000F1493E /* CreateMethodResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMethodResponseModel.swift; sourceTree = "<group>"; };
 		A8DA43022888CD7C00F1493E /* CreateMethodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMethodModel.swift; sourceTree = "<group>"; };
 		A8DA43042888CFFC00F1493E /* UpgradeUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradeUserModel.swift; sourceTree = "<group>"; };
+		A8DA43062888D92400F1493E /* HomeVC+SetupUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+SetupUI.swift"; sourceTree = "<group>"; };
+		A8DA43092888D99400F1493E /* CategoriesVC+SetupUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoriesVC+SetupUI.swift"; sourceTree = "<group>"; };
+		A8DA430B2888D9B000F1493E /* CategoriesVC+Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoriesVC+Collection.swift"; sourceTree = "<group>"; };
 		A8DC659928577590008879B4 /* EditPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPasswordViewController.swift; sourceTree = "<group>"; };
 		A8E1F80028620A87004DFC21 /* TeacherPromotionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherPromotionCollectionViewCell.swift; sourceTree = "<group>"; };
 		AF56F268C1243AC2F59B4D84 /* Pods-Ostaz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ostaz.debug.xcconfig"; path = "Target Support Files/Pods-Ostaz/Pods-Ostaz.debug.xcconfig"; sourceTree = "<group>"; };
@@ -488,7 +494,7 @@
 				A8B499032863D4760038C782 /* HomeFilterVC.swift */,
 				A839205C2855D7BE00CD2126 /* HomeMostViewedCollectionViewCell.swift */,
 				A8A7DD5F28617A8100DABB8A /* HomeCategoriesCollectionViewCell.swift */,
-				A89CD14E2858A52E009D049D /* CategoriesViewController.swift */,
+				A8DA43082888D96C00F1493E /* Categories Page */,
 				A85DFAE2285FB3C700CEF27B /* CategoriesCollectionViewCell.swift */,
 				A84BCBF228840FE800F21FF1 /* SubCategoryVC.swift */,
 				A84BCBF4288410BD00F21FF1 /* SubCategoryCollectionViewCell.swift */,
@@ -592,6 +598,7 @@
 			children = (
 				A84D15EA28521F55004E1995 /* HomeViewController.swift */,
 				A8A0166C28745DD000F45C50 /* HomeVC+Collection.swift */,
+				A8DA43062888D92400F1493E /* HomeVC+SetupUI.swift */,
 			);
 			path = HomePage;
 			sourceTree = "<group>";
@@ -644,6 +651,16 @@
 				A8DA43002888CD4000F1493E /* CreateMethodResponseModel.swift */,
 			);
 			path = Methods;
+			sourceTree = "<group>";
+		};
+		A8DA43082888D96C00F1493E /* Categories Page */ = {
+			isa = PBXGroup;
+			children = (
+				A89CD14E2858A52E009D049D /* CategoriesViewController.swift */,
+				A8DA43092888D99400F1493E /* CategoriesVC+SetupUI.swift */,
+				A8DA430B2888D9B000F1493E /* CategoriesVC+Collection.swift */,
+			);
+			path = "Categories Page";
 			sourceTree = "<group>";
 		};
 		C85D77CDE44C3C1FFD3EF048 /* Pods */ = {
@@ -919,6 +936,7 @@
 				A8E1F80128620A87004DFC21 /* TeacherPromotionCollectionViewCell.swift in Sources */,
 				A804270B286B282A005C5EC1 /* PromotionTeacherVC+Collection.swift in Sources */,
 				A84BCBF328840FE800F21FF1 /* SubCategoryVC.swift in Sources */,
+				A8DA43072888D92400F1493E /* HomeVC+SetupUI.swift in Sources */,
 				A8DC659A28577590008879B4 /* EditPasswordViewController.swift in Sources */,
 				A836114C288691A3009BDB38 /* LocationVC+Collection.swift in Sources */,
 				A8672C7E2867DED300ED514D /* HomeTabBarVC.swift in Sources */,
@@ -958,6 +976,7 @@
 				A8807DD92861F336007E1C9D /* PromotionForTeacherVC.swift in Sources */,
 				A8173527284E68300008CF8E /* SceneDelegate.swift in Sources */,
 				A839205D2855D7BE00CD2126 /* HomeMostViewedCollectionViewCell.swift in Sources */,
+				A8DA430A2888D99400F1493E /* CategoriesVC+SetupUI.swift in Sources */,
 				A84D15EB28521F55004E1995 /* HomeViewController.swift in Sources */,
 				A84BCBE62884054900F21FF1 /* SubCateOfMainCateResponseModel.swift in Sources */,
 				A8672C842868830600ED514D /* UserModel.swift in Sources */,
@@ -966,6 +985,7 @@
 				A8C8C80A2871CB3800143872 /* RegisterResponseModel.swift in Sources */,
 				A8DA42FE2888CB7E00F1493E /* ListOfMehtodsResponseModel.swift in Sources */,
 				A8954B08284F4D6600493142 /* ExstensionsOfUIView.swift in Sources */,
+				A8DA430C2888D9B000F1493E /* CategoriesVC+Collection.swift in Sources */,
 				A84BCBF5288410BD00F21FF1 /* SubCategoryCollectionViewCell.swift in Sources */,
 				A817352F284E68300008CF8E /* Ostaz.xcdatamodeld in Sources */,
 				A8DA43052888CFFC00F1493E /* UpgradeUserModel.swift in Sources */,

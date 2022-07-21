@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import ESPullToRefresh
+import PullToRefresh
 
 class HomeViewController: UIViewController, UITextFieldDelegate {
     
@@ -16,11 +18,14 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
     
     //-------------------IBOutlet------------------------
     
+    @IBOutlet weak var activityLoadingPage: UIActivityIndicatorView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var viewSearchWithFilter: UIView!
     @IBOutlet weak var txtFieldSearch: UITextField!
     @IBOutlet weak var collectionViewMostViewedInHome: UICollectionView!
     @IBOutlet weak var collectionViewCategoriesInHome: UICollectionView!
+    @IBOutlet weak var viewReloadData: UIView!
+    @IBOutlet weak var lblErrorDescrip: UILabel!
     
     //-------------------Actions------------------------
     
@@ -48,6 +53,13 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
         self.present(categoriesVC, animated: true)
     }
     
+    @IBAction func btnReloadingData(_ sender: UIButton) {
+        self.loadingData()
+        self.activityLoadingPage.startAnimating()
+        self.setUpAPI()
+        
+    }
+    
     //-------------------LifeCycle------------------------
     
     override func viewDidLoad() {
@@ -57,47 +69,6 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
 
     }
     
-    //-------------------Functions------------------------
-    
-    func setUpUI(){
-        self.viewSearchWithFilter.addborder(10)
-        collectionViewMostViewedInHome.delegate = self
-        collectionViewMostViewedInHome.dataSource = self
-        collectionViewCategoriesInHome.delegate = self
-        collectionViewCategoriesInHome.dataSource = self
-        
-
-        //collectionViewHome.collectionViewLayout = UICollectionViewFlowLayout()
-        homeMostViewedSlides = [
-            CollectionViewHomeMostViewedSlide(teacherName: "Ahmed Mohamed", teacherJob: "Music ( Guitar)", descriptionImage: #imageLiteral(resourceName: "WishListPic1"), teacherImage: #imageLiteral(resourceName: "TeacherImage")),
-            CollectionViewHomeMostViewedSlide(teacherName: "Ali Ibrahim", teacherJob: "Sports ( Swimming)", descriptionImage: #imageLiteral(resourceName: "WishListPic2"), teacherImage: #imageLiteral(resourceName: "TeacherImage")),
-            CollectionViewHomeMostViewedSlide(teacherName: "Reem gamal", teacherJob: "Music ( Guitar)", descriptionImage: #imageLiteral(resourceName: "WishListPic1"), teacherImage: #imageLiteral(resourceName: "TeacherImage"))
-        ]
-
-    }
-    
-    func setUpAPI(){
-        APICategory.fetchingCategory{ error, response in
-            //self.scrollView.es.stopPullToRefresh()
-            //self.activityLoadingPage.stopAnimating()
-
-            if error != nil {
-                print(error!)
-                //self.scrollView.alpha = 0
-                //self.viewReloading.alpha = 1
-                //self.lblErrorDescription.alpha = 1
-               // self.lblErrorDescription.text = error
-            } else {
-               // self.hideError()
-               // self.lblErrorDescription.alpha = 0
-               // self.lblErrorDescription.text = ""
-                self.homecategoriesSlides = response?.catArr ?? []
-                print(response!)
-                self.collectionViewCategoriesInHome.reloadData()
-                print(response?.message ?? "")
-            }
-        }
-    }
 }
 
 
