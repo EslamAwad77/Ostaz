@@ -21,7 +21,7 @@ class HomeCategoriesCollectionViewCell: UICollectionViewCell {
     
     //-------------------Functions------------------------
     
-    func setupUI(_ categoriesSlide: CollectionViewCategorySlide){
+    func setupUI(_ categoriesSlide: HomeCategoryModel){
 
         imgViewCategory.kf.indicatorType = .activity
         if let url = URL(string: categoriesSlide.categoryImage){

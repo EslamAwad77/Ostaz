@@ -12,8 +12,9 @@ import PullToRefresh
 class HomeViewController: UIViewController, UITextFieldDelegate {
     
     //-------------------Variables------------------------
-    var homeMostViewedSlides: [CollectionViewHomeMostViewedSlide] = []
-    var homecategoriesSlides: [CollectionViewCategorySlide] = []
+    var homePaidInstructorsSlides = [HomePaidInstructorsModel]()
+    var homecategoriesSlides = [HomeCategoryModel]()
+    var homeMostViewedSlides = [HomeMostViewedModel]()
     lazy var homeFilterVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "HomeFilterVC")
     
     //-------------------IBOutlet------------------------
@@ -24,6 +25,8 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var txtFieldSearch: UITextField!
     @IBOutlet weak var collectionViewMostViewedInHome: UICollectionView!
     @IBOutlet weak var collectionViewCategoriesInHome: UICollectionView!
+    @IBOutlet weak var collectionViewPiadInstInHome: UICollectionView!
+
     @IBOutlet weak var viewReloadData: UIView!
     @IBOutlet weak var lblErrorDescrip: UILabel!
     

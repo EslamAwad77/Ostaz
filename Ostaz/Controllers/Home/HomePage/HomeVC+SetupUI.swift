@@ -18,18 +18,10 @@ extension HomeViewController {
         collectionViewCategoriesInHome.dataSource = self
         self.setupTableRefresh()
         self.setUpAPI()
-        
-
-        //collectionViewHome.collectionViewLayout = UICollectionViewFlowLayout()
-        homeMostViewedSlides = [
-            CollectionViewHomeMostViewedSlide(teacherName: "Ahmed Mohamed", teacherJob: "Music ( Guitar)", descriptionImage: #imageLiteral(resourceName: "WishListPic1"), teacherImage: #imageLiteral(resourceName: "TeacherImage")),
-            CollectionViewHomeMostViewedSlide(teacherName: "Ali Ibrahim", teacherJob: "Sports ( Swimming)", descriptionImage: #imageLiteral(resourceName: "WishListPic2"), teacherImage: #imageLiteral(resourceName: "TeacherImage")),
-            CollectionViewHomeMostViewedSlide(teacherName: "Reem gamal", teacherJob: "Music ( Guitar)", descriptionImage: #imageLiteral(resourceName: "WishListPic1"), teacherImage: #imageLiteral(resourceName: "TeacherImage"))
-        ]
     }
     
     func setUpAPI(){
-        APICategory.fetchingCategory{ error, response in
+        APIHome.fetchingHome{ error, response in
             self.scrollView.es.stopPullToRefresh()
             self.activityLoadingPage.stopAnimating()
 
@@ -43,8 +35,14 @@ extension HomeViewController {
                 self.hideError()
                 self.lblErrorDescrip.alpha = 0
                 self.lblErrorDescrip.text = ""
-                self.homecategoriesSlides = response?.catArr ?? []
+                self.homecategoriesSlides = response?.homeCategory ?? []
+                self.homeMostViewedSlides = response?.homeMostViewed ?? []
+                self.homePaidInstructorsSlides = response?.homePaidInstructor ?? []
+                
                 print(response!)
+                
+                self.collectionViewPiadInstInHome.reloadData()
+                self.collectionViewMostViewedInHome.reloadData()
                 self.collectionViewCategoriesInHome.reloadData()
                 print(response?.message ?? "")
             }

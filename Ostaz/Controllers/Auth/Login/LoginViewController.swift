@@ -38,8 +38,6 @@ class LoginViewController: UIViewController {
                     print(error!)
                     
                 } else {
-                    
-
                     //self.ArrOfUserData = response?.user ?? []
                     print(response?.message ?? "")
                     print(response?.user!)

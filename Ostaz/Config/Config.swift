@@ -62,4 +62,12 @@ struct URLs {
     static let methodsList = main + "method-list"
     ///POST{online}
     static let methodCreate = main + "create-method"
+    
+    
+    // Home
+    
+    /// GET{}
+    static let home = main + "home"
+
+
 }
