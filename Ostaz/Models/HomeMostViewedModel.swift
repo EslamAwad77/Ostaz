@@ -40,7 +40,7 @@ struct HomeMostViewedModel{
         self.isFavourite = (apiData?["is_favourite"] as? Bool) ?? false
         self.locations = (apiData?["locations"] as? Bool) ?? false
         self.teachingMethod = (apiData?["teaching_method"] as? String) ?? ""
-        //self.teacherCategory = (apiData?["categories"] as? [String: Any]) ?? []
+        self.teacherCategory = (apiData?["categories"] as? [HomeCategoryModel]) ?? []
         //self.services = (apiData?["services"] as? Array) ?? []
         self.facebook = (apiData?["facebook"] as? String) ?? ""
     }

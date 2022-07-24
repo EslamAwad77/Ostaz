@@ -16,7 +16,15 @@ struct HomeCategoryModel{
     
     init(apiModel: [String: Any]?) {
         self.categoryId = (apiModel?["id"] as? Int) ?? 0
-        self.categoryName = (apiModel?["name"] as? String) ?? ""
+        //self.categoryName = (apiModel?["name"] as? String) ?? ""
+        
+        if self.categoryName == "" {
+            self.categoryName = ""
+            
+        } else {
+            self.categoryName = (apiModel?["name"] as? String) ?? ""
+        }
+        
         self.categoryImage = (apiModel?["image"] as? String) ?? ""
     }
 }

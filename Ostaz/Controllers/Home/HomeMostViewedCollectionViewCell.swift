@@ -24,12 +24,12 @@ class HomeMostViewedCollectionViewCell: UICollectionViewCell {
     func setup(_ slide: HomeMostViewedModel){
         
         lblTeacherName.text = slide.name
-        if slide.teacherCategory.isEmpty{
-            lblTeacherJob.text = ""
+        //if slide.teacherCategory.isEmpty{
+           // lblTeacherJob.text = ""
 
-        } else {
+        //} else {
             lblTeacherJob.text = slide.teacherCategory[0].categoryName
-        }
+        //}
         
         slideImgViewDescription.kf.indicatorType = .activity
         if let url = URL(string: slide.image){

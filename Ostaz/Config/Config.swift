@@ -70,4 +70,13 @@ struct URLs {
     static let home = main + "home"
 
 
+    // City
+    
+    /// GET{}
+    static let city = main + "city-list"
+
+    // Area
+    
+    ///POST{cityID}
+    static let area = main + "area-list"
 }

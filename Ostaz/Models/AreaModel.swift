@@ -7,7 +7,19 @@
 
 import Foundation
 
-class AreaModel{ 
+class AreaModel{
+    var id: Int = 0
+    var country: String = ""
+    var city: String = ""
     var name: String = ""
     var isDeleted: Bool = false
+    
+    init(){}
+    
+    init(apiData: [String: Any]?){
+        self.id = (apiData?["id"] as? Int) ?? 0
+        self.country = (apiData?["country"] as? String) ?? ""
+        self.city = (apiData?["city"] as? String) ?? ""
+        self.name = (apiData?["name"] as? String) ?? ""
+    }
 }

@@ -35,6 +35,10 @@
 		A83611522886AD57009BDB38 /* APIMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83611512886AD57009BDB38 /* APIMethods.swift */; };
 		A839205B2855CF5A00CD2126 /* CollectionViewsSlides.swift in Sources */ = {isa = PBXBuildFile; fileRef = A839205A2855CF5A00CD2126 /* CollectionViewsSlides.swift */; };
 		A839205D2855D7BE00CD2126 /* HomeMostViewedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A839205C2855D7BE00CD2126 /* HomeMostViewedCollectionViewCell.swift */; };
+		A847E295288D7A9700C2DAE0 /* APICity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A847E294288D7A9700C2DAE0 /* APICity.swift */; };
+		A847E297288D7ABE00C2DAE0 /* APIArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = A847E296288D7ABE00C2DAE0 /* APIArea.swift */; };
+		A847E29B288D7B9D00C2DAE0 /* CityResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A847E29A288D7B9D00C2DAE0 /* CityResponseModel.swift */; };
+		A847E29D288D7E1700C2DAE0 /* AreaResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A847E29C288D7E1700C2DAE0 /* AreaResponseModel.swift */; };
 		A84BCBC82883F4D900F21FF1 /* ProfileResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84BCBC72883F4D900F21FF1 /* ProfileResponseModel.swift */; };
 		A84BCBCA2883F59600F21FF1 /* APIProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84BCBC92883F59600F21FF1 /* APIProfile.swift */; };
 		A84BCBCF2883F86300F21FF1 /* UpdateResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84BCBCE2883F86300F21FF1 /* UpdateResponseModel.swift */; };
@@ -168,6 +172,10 @@
 		A83611512886AD57009BDB38 /* APIMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIMethods.swift; sourceTree = "<group>"; };
 		A839205A2855CF5A00CD2126 /* CollectionViewsSlides.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewsSlides.swift; sourceTree = "<group>"; };
 		A839205C2855D7BE00CD2126 /* HomeMostViewedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMostViewedCollectionViewCell.swift; sourceTree = "<group>"; };
+		A847E294288D7A9700C2DAE0 /* APICity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICity.swift; sourceTree = "<group>"; };
+		A847E296288D7ABE00C2DAE0 /* APIArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIArea.swift; sourceTree = "<group>"; };
+		A847E29A288D7B9D00C2DAE0 /* CityResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityResponseModel.swift; sourceTree = "<group>"; };
+		A847E29C288D7E1700C2DAE0 /* AreaResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaResponseModel.swift; sourceTree = "<group>"; };
 		A84BCBC72883F4D900F21FF1 /* ProfileResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileResponseModel.swift; sourceTree = "<group>"; };
 		A84BCBC92883F59600F21FF1 /* APIProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProfile.swift; sourceTree = "<group>"; };
 		A84BCBCE2883F86300F21FF1 /* UpdateResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateResponseModel.swift; sourceTree = "<group>"; };
@@ -306,6 +314,8 @@
 				A84BCBDD288402CD00F21FF1 /* APICategory.swift */,
 				A84BCBF028840CC900F21FF1 /* APIWishlist.swift */,
 				A83611512886AD57009BDB38 /* APIMethods.swift */,
+				A847E294288D7A9700C2DAE0 /* APICity.swift */,
+				A847E296288D7ABE00C2DAE0 /* APIArea.swift */,
 			);
 			path = APIs;
 			sourceTree = "<group>";
@@ -426,6 +436,22 @@
 				A8C8C80B2871CB5000143872 /* Json Response */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		A847E298288D7B7C00C2DAE0 /* City */ = {
+			isa = PBXGroup;
+			children = (
+				A847E29A288D7B9D00C2DAE0 /* CityResponseModel.swift */,
+			);
+			path = City;
+			sourceTree = "<group>";
+		};
+		A847E299288D7B8100C2DAE0 /* Area */ = {
+			isa = PBXGroup;
+			children = (
+				A847E29C288D7E1700C2DAE0 /* AreaResponseModel.swift */,
+			);
+			path = Area;
 			sourceTree = "<group>";
 		};
 		A84BCBCB2883F83300F21FF1 /* Auth */ = {
@@ -658,6 +684,8 @@
 				A84BCBD72884018000F21FF1 /* Category */,
 				A84BCBEB28840B6F00F21FF1 /* WishList */,
 				A8DA42FF2888CB8200F1493E /* Methods */,
+				A847E298288D7B7C00C2DAE0 /* City */,
+				A847E299288D7B8100C2DAE0 /* Area */,
 			);
 			path = "Json Response";
 			sourceTree = "<group>";
@@ -943,11 +971,13 @@
 			files = (
 				A84BCBDC288402BF00F21FF1 /* APIHome.swift in Sources */,
 				A8672C822868469300ED514D /* HomeSearchVC.swift in Sources */,
+				A847E29B288D7B9D00C2DAE0 /* CityResponseModel.swift in Sources */,
 				A84BCBD12883F92D00F21FF1 /* EditPassResponseModel.swift in Sources */,
 				A83611502886953C009BDB38 /* LocationVC+SetupUI.swift in Sources */,
 				A8A016702874679000F45C50 /* ResetPasswordVC.swift in Sources */,
 				A89CD14F2858A52E009D049D /* CategoriesViewController.swift in Sources */,
 				A8042709286B27E9005C5EC1 /* PromotionTeacherVC+SetupUI.swift in Sources */,
+				A847E297288D7ABE00C2DAE0 /* APIArea.swift in Sources */,
 				A8042710286B349F005C5EC1 /* ExstensionsOfString.swift in Sources */,
 				A877D11F28742C6600A57E7C /* LoginVC+ValidationOfUI.swift in Sources */,
 				A877D12228742F5A00A57E7C /* EditPassVC+ValidationOfUI.swift in Sources */,
@@ -983,6 +1013,7 @@
 				A857EC20285616F50095AA01 /* SignupView.swift in Sources */,
 				A836114E288691FE009BDB38 /* CityModel.swift in Sources */,
 				A8A7DD6028617A8100DABB8A /* HomeCategoriesCollectionViewCell.swift in Sources */,
+				A847E295288D7A9700C2DAE0 /* APICity.swift in Sources */,
 				A8A0167228746DC300F45C50 /* ResetVC+ValidationUI.swift in Sources */,
 				A804270E286B310D005C5EC1 /* APIAuth.swift in Sources */,
 				A877D12728743DE000A57E7C /* TeacherProfileVC+SetupUI.swift in Sources */,
@@ -1009,6 +1040,7 @@
 				A8552CE62889B78400CDBCE9 /* ProfileModel.swift in Sources */,
 				A8DA42FE2888CB7E00F1493E /* ListOfMehtodsResponseModel.swift in Sources */,
 				A8954B08284F4D6600493142 /* ExstensionsOfUIView.swift in Sources */,
+				A847E29D288D7E1700C2DAE0 /* AreaResponseModel.swift in Sources */,
 				A8DA430C2888D9B000F1493E /* CategoriesVC+Collection.swift in Sources */,
 				A84BCBF5288410BD00F21FF1 /* SubCategoryCollectionViewCell.swift in Sources */,
 				A817352F284E68300008CF8E /* Ostaz.xcdatamodeld in Sources */,
