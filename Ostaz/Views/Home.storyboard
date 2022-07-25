@@ -242,30 +242,30 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FJZ-4g-k6C">
+                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="raE-FG-y09">
                                                         <rect key="frame" x="0.0" y="90" width="381" height="210"/>
                                                         <color key="backgroundColor" name="BackgroundColor"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="210" id="5bv-t3-f70"/>
+                                                            <constraint firstAttribute="height" constant="210" id="HOV-q3-IdT"/>
                                                         </constraints>
-                                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Stf-0y-uJ1">
-                                                            <size key="itemSize" width="312" height="194"/>
+                                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6Cn-ka-avw">
+                                                            <size key="itemSize" width="314" height="194"/>
                                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         </collectionViewFlowLayout>
                                                         <cells>
-                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomePiadInstCollViewCell" id="6of-rm-xsN" customClass="HomePiadInstCollViewCell" customModule="Ostaz" customModuleProvider="target">
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomePaidInstCollectionViewCell" id="N5T-TJ-B4d" customClass="HomePaidInstCollectionViewCell" customModule="Ostaz" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="8" width="312" height="194"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Rgg-C9-YbW">
+                                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dBc-oy-RLh">
                                                                     <rect key="frame" x="0.0" y="0.0" width="312" height="194"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
-                                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sWb-U6-qGy">
+                                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3xE-Nk-J5v">
                                                                             <rect key="frame" x="12" y="13" width="288" height="161"/>
                                                                             <subviews>
-                                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="Cge-z9-bBN">
+                                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="diE-uf-TCw">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="288" height="106"/>
                                                                                     <userDefinedRuntimeAttributes>
                                                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
@@ -273,25 +273,25 @@
                                                                                         </userDefinedRuntimeAttribute>
                                                                                     </userDefinedRuntimeAttributes>
                                                                                 </imageView>
-                                                                                <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Cc9-qz-gKy">
+                                                                                <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="mrQ-Tg-Xji">
                                                                                     <rect key="frame" x="0.0" y="116" width="288" height="45"/>
                                                                                     <subviews>
-                                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="249" verticalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="j4v-Gt-Gfb">
+                                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="249" verticalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="bO6-H3-mtF">
                                                                                             <rect key="frame" x="0.0" y="0.0" width="50" height="45"/>
                                                                                             <constraints>
-                                                                                                <constraint firstAttribute="width" constant="50" id="CeU-JI-0Ke"/>
+                                                                                                <constraint firstAttribute="width" constant="50" id="2Mi-xF-fEH"/>
                                                                                             </constraints>
                                                                                         </imageView>
-                                                                                        <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="9ru-fV-oCk">
+                                                                                        <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="3EH-Oq-T8J">
                                                                                             <rect key="frame" x="55" y="0.0" width="233" height="45"/>
                                                                                             <subviews>
-                                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teacher Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qxj-X8-FA1">
+                                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teacher Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAb-RZ-kLT">
                                                                                                     <rect key="frame" x="0.0" y="0.0" width="233" height="21.5"/>
                                                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                                                                     <nil key="textColor"/>
                                                                                                     <nil key="highlightedColor"/>
                                                                                                 </label>
-                                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teacher Job" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ftj-ka-29t">
+                                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teacher Job" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSj-pE-8Mb">
                                                                                                     <rect key="frame" x="0.0" y="23.5" width="233" height="21.5"/>
                                                                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                                                                                     <color key="textColor" name="TxtColor"/>
@@ -301,7 +301,7 @@
                                                                                         </stackView>
                                                                                     </subviews>
                                                                                     <constraints>
-                                                                                        <constraint firstAttribute="height" constant="45" id="2m5-w6-W83"/>
+                                                                                        <constraint firstAttribute="height" constant="45" id="THm-q3-Gcn"/>
                                                                                     </constraints>
                                                                                 </stackView>
                                                                             </subviews>
@@ -313,29 +313,19 @@
                                                                         </stackView>
                                                                     </subviews>
                                                                     <constraints>
-                                                                        <constraint firstItem="sWb-U6-qGy" firstAttribute="top" secondItem="Rgg-C9-YbW" secondAttribute="top" constant="13" id="LZj-4F-qNP"/>
-                                                                        <constraint firstItem="sWb-U6-qGy" firstAttribute="leading" secondItem="Rgg-C9-YbW" secondAttribute="leading" constant="12" id="m2g-iT-SgU"/>
-                                                                        <constraint firstAttribute="bottom" secondItem="sWb-U6-qGy" secondAttribute="bottom" constant="20" id="nkB-n1-kPJ"/>
-                                                                        <constraint firstAttribute="trailing" secondItem="sWb-U6-qGy" secondAttribute="trailing" constant="12" id="nua-QT-o6u"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="3xE-Nk-J5v" secondAttribute="trailing" constant="12" id="65L-ZH-VQO"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="3xE-Nk-J5v" secondAttribute="bottom" constant="20" id="ZRd-dO-oLE"/>
+                                                                        <constraint firstItem="3xE-Nk-J5v" firstAttribute="top" secondItem="dBc-oy-RLh" secondAttribute="top" constant="13" id="c3I-WS-2c6"/>
+                                                                        <constraint firstItem="3xE-Nk-J5v" firstAttribute="leading" secondItem="dBc-oy-RLh" secondAttribute="leading" constant="12" id="lGZ-Si-kA1"/>
                                                                     </constraints>
-                                                                    <userDefinedRuntimeAttributes>
-                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
-                                                                            <real key="value" value="10"/>
-                                                                        </userDefinedRuntimeAttribute>
-                                                                    </userDefinedRuntimeAttributes>
                                                                 </collectionViewCellContentView>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <size key="customSize" width="312" height="194"/>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
-                                                                        <real key="value" value="10"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                </userDefinedRuntimeAttributes>
                                                                 <connections>
-                                                                    <outlet property="lblTeacherJob" destination="Ftj-ka-29t" id="31M-NM-4Bn"/>
-                                                                    <outlet property="lblTeacherName" destination="qxj-X8-FA1" id="rB5-vv-8VP"/>
-                                                                    <outlet property="slideImgViewDescription" destination="Cge-z9-bBN" id="lk0-ph-tJf"/>
-                                                                    <outlet property="slideImgViewTeacher" destination="j4v-Gt-Gfb" id="pai-wS-408"/>
+                                                                    <outlet property="imgViewInstCategory" destination="diE-uf-TCw" id="f5e-Hn-1sJ"/>
+                                                                    <outlet property="imgViewTeacher" destination="bO6-H3-mtF" id="T53-fV-uta"/>
+                                                                    <outlet property="lblTeacherJob" destination="YSj-pE-8Mb" id="wlq-IA-VS4"/>
+                                                                    <outlet property="lblTeacherName" destination="tAb-RZ-kLT" id="32U-X0-cvC"/>
                                                                 </connections>
                                                             </collectionViewCell>
                                                         </cells>
@@ -552,9 +542,11 @@
                                                     <constraint firstAttribute="trailing" secondItem="2vB-q1-EIM" secondAttribute="trailing" id="85E-TH-BLt"/>
                                                     <constraint firstAttribute="trailing" secondItem="WjE-0g-LaH" secondAttribute="trailing" id="BmO-If-mmS"/>
                                                     <constraint firstItem="2vB-q1-EIM" firstAttribute="leading" secondItem="KcM-zj-fJl" secondAttribute="leading" id="R6d-fd-X8c"/>
+                                                    <constraint firstItem="raE-FG-y09" firstAttribute="leading" secondItem="KcM-zj-fJl" secondAttribute="leading" id="bH7-dp-JHT"/>
                                                     <constraint firstItem="WjE-0g-LaH" firstAttribute="leading" secondItem="KcM-zj-fJl" secondAttribute="leading" id="cLX-sq-vZc"/>
                                                     <constraint firstAttribute="trailing" secondItem="fbJ-Ga-0eh" secondAttribute="trailing" id="cbp-dQ-Ymm"/>
                                                     <constraint firstItem="fbJ-Ga-0eh" firstAttribute="leading" secondItem="KcM-zj-fJl" secondAttribute="leading" id="vUb-4c-PXE"/>
+                                                    <constraint firstAttribute="trailing" secondItem="raE-FG-y09" secondAttribute="trailing" id="xEx-fQ-Esr"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>
@@ -639,7 +631,7 @@
                         <outlet property="activityLoadingPage" destination="DLL-W7-l82" id="mNW-6n-rl2"/>
                         <outlet property="collectionViewCategoriesInHome" destination="fbJ-Ga-0eh" id="Veb-9I-Oyr"/>
                         <outlet property="collectionViewMostViewedInHome" destination="WjE-0g-LaH" id="Sdy-Xp-i6N"/>
-                        <outlet property="collectionViewPiadInstInHome" destination="FJZ-4g-k6C" id="sBu-oo-z5Y"/>
+                        <outlet property="collectionViewPiadInstInHome" destination="raE-FG-y09" id="2Em-qK-4Q8"/>
                         <outlet property="lblErrorDescrip" destination="wg3-3d-CZa" id="IoL-Jf-lGZ"/>
                         <outlet property="scrollView" destination="f6j-KY-KgO" id="ZeQ-Yb-9Wl"/>
                         <outlet property="txtFieldSearch" destination="Lv2-jt-JO0" id="LET-fr-K45"/>

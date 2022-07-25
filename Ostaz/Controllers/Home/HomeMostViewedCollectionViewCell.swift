@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class HomeMostViewedCollectionViewCell: UICollectionViewCell {
     
@@ -24,26 +25,30 @@ class HomeMostViewedCollectionViewCell: UICollectionViewCell {
     func setup(_ slide: HomeMostViewedModel){
         
         lblTeacherName.text = slide.name
-        //if slide.teacherCategory.isEmpty{
-           // lblTeacherJob.text = ""
-
-        //} else {
+        if (slide.teacherCategory.isEmpty){
+            print("error")
+        } else {
             lblTeacherJob.text = slide.teacherCategory[0].categoryName
-        //}
-        
-        slideImgViewDescription.kf.indicatorType = .activity
-        if let url = URL(string: slide.image){
-            slideImgViewDescription.kf.setImage(with: url)
-        }else {
-            slideImgViewDescription.image = UIImage.init(named:  "FailGoToTeacherImage")
+            slideImgViewDescription.kf.indicatorType = .activity
+            
+            if let url = URL(string: slide.teacherCategory[0].categoryImage){
+                slideImgViewDescription.kf.setImage(with: url)
+            }else {
+                slideImgViewDescription.image = UIImage.init(named:  "FailGoToTeacherImage")
+            }
         }
         
+        
         slideImgViewTeacher.kf.indicatorType = .activity
-        if let url = URL(string: slide.teacherCategory[0].categoryImage){
+        if let url = URL(string: slide.image){
             slideImgViewTeacher.kf.setImage(with: url)
         }else {
             slideImgViewTeacher.image = UIImage.init(named:  "FailGoToTeacherImage")
         }
+        
+        
     }
 }
+
+
 

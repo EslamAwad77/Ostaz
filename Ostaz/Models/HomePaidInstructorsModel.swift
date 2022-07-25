@@ -16,7 +16,7 @@ struct HomePaidInstructorsModel{
     var type: String = ""
     var description: String = ""
     var views: Int = 0
-    var image : String = ""
+    var image: String = ""
     var isFavourite: Bool = false
     var locations: Bool = false
     var teachingMethod: String = ""

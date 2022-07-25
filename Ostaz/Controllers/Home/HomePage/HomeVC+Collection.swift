@@ -21,18 +21,20 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == self.collectionViewPiadInstInHome{
-            let cell1 = collectionView.dequeueReusableCell(withReuseIdentifier: HomeMostViewedCollectionViewCell.identifier, for: indexPath) as! HomeMostViewedCollectionViewCell
-            cell1.setup(homeMostViewedSlides[indexPath.row])
+            let cell1 = collectionView.dequeueReusableCell(withReuseIdentifier: HomePaidInstCollectionViewCell.identifier, for: indexPath) as! HomePaidInstCollectionViewCell
+            cell1.setupUI(homePaidInstructorsSlides[indexPath.row])
             return cell1
         } else if collectionView == self.collectionViewMostViewedInHome {
             let cell2 = collectionView.dequeueReusableCell(withReuseIdentifier: HomeMostViewedCollectionViewCell.identifier, for: indexPath) as! HomeMostViewedCollectionViewCell
             cell2.setup(homeMostViewedSlides[indexPath.row])
             return cell2
+        } else {
+            let cell3 = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCategoriesCollectionViewCell.identifier, for: indexPath) as! HomeCategoriesCollectionViewCell
+            cell3.setupUI (homecategoriesSlides[indexPath.row])
+            return cell3
         }
         
-        let cell3 = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCategoriesCollectionViewCell.identifier, for: indexPath) as! HomeCategoriesCollectionViewCell
-        cell3.setupUI (homecategoriesSlides[indexPath.row])
-        return cell3
+        
         
     }
     
@@ -48,13 +50,15 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             teacherVC.modalPresentationStyle = .fullScreen
             self.present(teacherVC, animated: true)
             //            let item = homeMostViewedSlides[indexPath.row]
+        } else{
+            let item = homecategoriesSlides[indexPath.row]
+            let subCategoryVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "SubCategoryVC") as! SubCategoryVC
+            subCategoryVC.modalPresentationStyle = .fullScreen
+            subCategoryVC.category_id = item.categoryId
+            self.present(subCategoryVC, animated: true)
+            
         }
-        let item = homecategoriesSlides[indexPath.row]
-        let subCategoryVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "SubCategoryVC") as! SubCategoryVC
-        subCategoryVC.modalPresentationStyle = .fullScreen
-        subCategoryVC.category_id = item.categoryId
-        self.present(subCategoryVC, animated: true)
-        
+      
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
