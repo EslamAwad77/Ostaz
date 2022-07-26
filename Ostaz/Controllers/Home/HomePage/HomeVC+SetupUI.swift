@@ -37,11 +37,11 @@ extension HomeViewController {
                 self.hideError()
                 self.lblErrorDescrip.alpha = 0
                 self.lblErrorDescrip.text = ""
-                self.homecategoriesSlides = response?.homeCategory ?? []
+                self.homecategoriesSlides = response?.homeCategory ?? [] 
                 self.homeMostViewedSlides = response?.homeMostViewed ?? []
                 self.homePaidInstructorsSlides = response?.homePaidInstructor ?? []
                 
-                print(response!)
+                //print(response!)
                 
                 self.collectionViewPiadInstInHome.reloadData()
                 self.collectionViewMostViewedInHome.reloadData()

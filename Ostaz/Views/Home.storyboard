@@ -1822,16 +1822,38 @@
                                     <constraint firstItem="A4Y-is-d1Z" firstAttribute="width" secondItem="9kU-Hp-3c1" secondAttribute="width" id="dRS-HY-Ok0"/>
                                 </constraints>
                             </scrollView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PaW-Xx-5Ef">
-                                <rect key="frame" x="132" y="428" width="150" height="50"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gtv-Iy-Jsh">
+                                <rect key="frame" x="0.0" y="367" width="414" height="165"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="TVC-Kd-iHj">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="165"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PaW-Xx-5Ef">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="81"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ncp-x7-Q9R">
+                                                <rect key="frame" x="0.0" y="84" width="414" height="81"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Reloading"/>
+                                                <connections>
+                                                    <action selector="btnReloadingDataPressed:" destination="aYt-dW-w1E" eventType="touchUpInside" id="AFx-JN-nPt"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="DHZ-Md-O2W"/>
-                                    <constraint firstAttribute="width" constant="150" id="Wbj-oc-a0F"/>
+                                    <constraint firstItem="TVC-Kd-iHj" firstAttribute="top" secondItem="Gtv-Iy-Jsh" secondAttribute="top" id="0eV-dC-LBH"/>
+                                    <constraint firstAttribute="trailing" secondItem="TVC-Kd-iHj" secondAttribute="trailing" id="FZs-pI-HmW"/>
+                                    <constraint firstItem="TVC-Kd-iHj" firstAttribute="leading" secondItem="Gtv-Iy-Jsh" secondAttribute="leading" id="Gfo-xI-d6t"/>
+                                    <constraint firstAttribute="height" constant="165" id="Tdp-uE-uBE"/>
+                                    <constraint firstAttribute="bottom" secondItem="TVC-Kd-iHj" secondAttribute="bottom" id="oAy-hX-fNQ"/>
+                                    <constraint firstAttribute="width" constant="414" id="y9P-PJ-ucb"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </view>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="FYU-nF-sQ6">
                                 <rect key="frame" x="182" y="428" width="50" height="50"/>
                                 <constraints>
@@ -1845,14 +1867,16 @@
                         <constraints>
                             <constraint firstItem="9kU-Hp-3c1" firstAttribute="leading" secondItem="NNJ-gV-Oox" secondAttribute="leading" id="7BS-pP-y0i"/>
                             <constraint firstItem="dDv-1d-ZEY" firstAttribute="trailing" secondItem="6Se-3e-re1" secondAttribute="trailing" constant="15" id="9Z5-3t-a1C"/>
-                            <constraint firstItem="PaW-Xx-5Ef" firstAttribute="centerY" secondItem="dDv-1d-ZEY" secondAttribute="centerY" id="BB0-qM-ZoK"/>
+                            <constraint firstItem="Gtv-Iy-Jsh" firstAttribute="top" secondItem="6Se-3e-re1" secondAttribute="bottom" constant="284" id="Bn1-Qs-sZp"/>
                             <constraint firstItem="6Se-3e-re1" firstAttribute="top" secondItem="dDv-1d-ZEY" secondAttribute="top" constant="10" id="CCQ-yZ-1og"/>
                             <constraint firstAttribute="bottom" secondItem="9kU-Hp-3c1" secondAttribute="bottom" constant="83" id="EFg-NO-0Cj"/>
+                            <constraint firstItem="Gtv-Iy-Jsh" firstAttribute="leading" secondItem="dDv-1d-ZEY" secondAttribute="leading" id="GFy-Gh-xdk"/>
                             <constraint firstItem="FYU-nF-sQ6" firstAttribute="centerY" secondItem="dDv-1d-ZEY" secondAttribute="centerY" id="Lbs-bH-8Dv"/>
                             <constraint firstItem="6Se-3e-re1" firstAttribute="leading" secondItem="dDv-1d-ZEY" secondAttribute="leading" constant="15" id="Poc-zF-XrX"/>
-                            <constraint firstItem="PaW-Xx-5Ef" firstAttribute="centerX" secondItem="dDv-1d-ZEY" secondAttribute="centerX" id="RrJ-DK-I0B"/>
+                            <constraint firstItem="dDv-1d-ZEY" firstAttribute="bottom" secondItem="Gtv-Iy-Jsh" secondAttribute="bottom" constant="330" id="QVb-qv-j4I"/>
                             <constraint firstItem="FYU-nF-sQ6" firstAttribute="centerX" secondItem="dDv-1d-ZEY" secondAttribute="centerX" id="Rzq-yc-dkG"/>
                             <constraint firstAttribute="trailing" secondItem="9kU-Hp-3c1" secondAttribute="trailing" id="ZOs-hJ-C8V"/>
+                            <constraint firstItem="Gtv-Iy-Jsh" firstAttribute="trailing" secondItem="dDv-1d-ZEY" secondAttribute="trailing" id="qB5-Tn-imw"/>
                             <constraint firstItem="9kU-Hp-3c1" firstAttribute="top" secondItem="6Se-3e-re1" secondAttribute="bottom" constant="20" id="ra7-nP-YtL"/>
                         </constraints>
                     </view>
@@ -1862,6 +1886,7 @@
                         <outlet property="collectionViewSubCategory" destination="swv-zS-Plb" id="9ID-7B-l2y"/>
                         <outlet property="lblErrorDescrip" destination="PaW-Xx-5Ef" id="qGI-PK-c3f"/>
                         <outlet property="scrollView" destination="9kU-Hp-3c1" id="Gtq-kk-hgt"/>
+                        <outlet property="viewRealoding" destination="Gtv-Iy-Jsh" id="aYP-vV-f6n"/>
                         <outlet property="viewSearch" destination="nMZ-Se-cAU" id="YSC-EO-BbK"/>
                     </connections>
                 </viewController>

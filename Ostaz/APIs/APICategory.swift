@@ -45,7 +45,7 @@ class APICategory: NSObject {
     }
     
     static func fetchingSubCategory(id: Int, completion: @escaping (_ error :String?, _ response: SubCategoryResponse?) -> Void){
-        let url = URLs.subCategory
+        let url = URLs.subCategory + "/\(id)"
         let parameters = [
             "id": id
         ]
@@ -60,11 +60,11 @@ class APICategory: NSObject {
                     print(result)
                     result.message = json["message"].string
                     //convert arr of api to my array
-                    result.catArr = []
+                    result.subCatArr = []
                     let apiCategories = json["data"].arrayObject
                     for item in apiCategories ?? [] {
                         let model = CollectionViewCategorySlide.init(apiModel: item as? [String : Any])
-                        result.catArr?.append(model)
+                        result.subCatArr?.append(model)
                     }
                     completion(nil, result)
                 } else {
@@ -76,6 +76,8 @@ class APICategory: NSObject {
                         let json = JSON(data)
                         print(json)
                         let message = json["message"].string
+                        let dataFounded = json["data"].string
+                        completion(dataFounded, nil)
                         completion(message, nil)
                     }else {
                         completion("error occur", nil)

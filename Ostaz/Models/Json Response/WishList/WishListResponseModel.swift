@@ -9,4 +9,5 @@ import Foundation
 
 struct WishListResponse{
     var message: String?
+    var wishListArr: [WishListModel]?
 }

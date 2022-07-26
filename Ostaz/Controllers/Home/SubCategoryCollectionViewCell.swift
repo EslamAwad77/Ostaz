@@ -20,8 +20,16 @@ class SubCategoryCollectionViewCell: UICollectionViewCell {
     //-------------------Functions------------------------
     
     func setupUI(_ subCategoriesSlide: CollectionViewCategorySlide){
-        //imgViewSubCategory.image = subCategoriesSlide.categoryImage
+        
+        imgViewSubCategory.kf.indicatorType = .activity
+        
+        if let url = URL(string: subCategoriesSlide.categoryImage){
+            imgViewSubCategory.kf.setImage(with: url)
+        }else {
+            imgViewSubCategory.image = UIImage.init(named:  "FailGoToTeacherImage")
+        }
         lblDescription.text = subCategoriesSlide.categoryName
+        
         
     }
 }

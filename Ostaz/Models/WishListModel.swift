@@ -1,13 +1,13 @@
 //
-//  HomeMostViewedModel.swift
+//  WishListModel.swift
 //  Ostaz
 //
-//  Created by eslam awad elsayed awad on 24/07/2022.
+//  Created by eslam awad elsayed awad on 26/07/2022.
 //
 
 import Foundation
 
-struct HomeMostViewedModel{
+struct WishListModel{
     var id: Int = 0
     var name: String = ""
     var email: String = ""
@@ -21,9 +21,9 @@ struct HomeMostViewedModel{
     var locations: Bool = false
     var teachingMethod: String = ""
     var teacherCategory: [HomeCategoryModel] = []
-    
     //var services: [String] = []
     var facebook: String = ""
+    //var cources: [String] = []
     
     init(){}
     
@@ -56,12 +56,3 @@ struct HomeMostViewedModel{
         self.facebook = (apiData?["facebook"] as? String) ?? ""
     }
 }
-
-//    if let FAQArray = responseData["FAQ"]?.array{
-//
-//                for faq in FAQArray{
-//
-//                    self.FAQArr.append(FAQ(responseData: faq.array!))
-//
-//                }
-//            }

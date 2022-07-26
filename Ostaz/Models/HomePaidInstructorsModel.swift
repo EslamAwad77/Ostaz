@@ -40,7 +40,18 @@ struct HomePaidInstructorsModel{
         self.isFavourite = (apiData?["is_favourite"] as? Bool) ?? false
         self.locations = (apiData?["locations"] as? Bool) ?? false
         self.teachingMethod = (apiData?["teaching_method"] as? String) ?? ""
-        self.teacherCategory = (apiData?["categories"] as? [HomeCategoryModel]) ?? []
+        //self.teacherCategory = (apiData?["categories"] as? [HomeCategoryModel]) ?? []
+        print("=========categories\n",(apiData?["categories"] as? AnyObject) as? NSArray )
+
+        if let teachCategories = (apiData?["categories"] as? AnyObject) as? NSArray{
+                print("============", apiData?["categories"])
+                    for cat in teachCategories{
+
+                        self.teacherCategory.append(HomeCategoryModel(apiModel: cat as! [String : Any]))
+
+                    }
+                }
+        print("=========\n",teacherCategory)
         //self.services = (apiData?["services"] as? Array) ?? []
         self.facebook = (apiData?["facebook"] as? String) ?? ""
     }
