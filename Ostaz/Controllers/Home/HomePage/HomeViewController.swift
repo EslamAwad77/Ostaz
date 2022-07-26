@@ -18,7 +18,7 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
     lazy var homeFilterVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "HomeFilterVC")
     
     //-------------------IBOutlet------------------------
-    
+
     @IBOutlet weak var activityLoadingPage: UIActivityIndicatorView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var viewSearchWithFilter: UIView!
@@ -68,8 +68,29 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpUI()
-    }
+//      
+//        var homePaid1: HomePaidInstructorsModel = HomePaidInstructorsModel()
+//        homePaid1.name = "ahmed"
+//        homePaid1.teacherCategory = []
+//        var t1 = HomeCategoryModel()
+//        t1.categoryName = "math"
+//        t1.categoryImage = "https://images.ctfassets.net/hrltx12pl8hq/a2hkMAaruSQ8haQZ4rBL9/8ff4a6f289b9ca3f4e6474f29793a74a/nature-image-for-website.jpg?fit=fill&w=480&h=320"
+//        homePaid1.teacherCategory.append(t1)
+//        homePaid1.image = "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072821__480.jpg"
+//        
+//        var homePaid2: HomePaidInstructorsModel = HomePaidInstructorsModel()
+//        homePaid2.name = "ali"
+//        homePaid2.teacherCategory = []
+//        var t2 = HomeCategoryModel()
+//        t2.categoryName = "math2"
+//        t2.categoryImage = "https://images.ctfassets.net/hrltx12pl8hq/a2hkMAaruSQ8haQZ4rBL9/8ff4a6f289b9ca3f4e6474f29793a74a/nature-image-for-website.jpg?fit=fill&w=480&h=320"
+//        homePaid2.teacherCategory.append(t2)
+//        homePaid2.image = "https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072821__480.jpg"
+//        
+//        homePaidInstructorsSlides = [homePaid1, homePaid2]
+       // self.collectionViewPiadInstInHome.reloadData()
     
+    }
 }
 
 

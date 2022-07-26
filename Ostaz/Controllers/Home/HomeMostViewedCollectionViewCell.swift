@@ -11,6 +11,7 @@ import Kingfisher
 class HomeMostViewedCollectionViewCell: UICollectionViewCell {
     
     //-------------------IBOutlet------------------------
+    @IBOutlet weak var viewRoundedMostViewed: UIView!
     @IBOutlet weak var slideImgViewDescription: UIImageView!
     @IBOutlet weak var slideImgViewTeacher: UIImageView!
     @IBOutlet weak var lblTeacherName: UILabel!
@@ -25,16 +26,23 @@ class HomeMostViewedCollectionViewCell: UICollectionViewCell {
     func setup(_ slide: HomeMostViewedModel){
         
         lblTeacherName.text = slide.name
-        if (slide.teacherCategory.isEmpty){
-            print("error")
+        if (slide.teacherCategory.isEmpty && slide.teacherCategory.count == 0) {
+            lblTeacherJob.text = "no teacher job"
+            slideImgViewDescription.image = UIImage.init(named:  "FailGoToTeacherImage")
+            slideImgViewDescription.roundedImage()
+
+    
         } else {
             lblTeacherJob.text = slide.teacherCategory[0].categoryName
             slideImgViewDescription.kf.indicatorType = .activity
             
             if let url = URL(string: slide.teacherCategory[0].categoryImage){
                 slideImgViewDescription.kf.setImage(with: url)
+                slideImgViewDescription.roundedImage()
             }else {
                 slideImgViewDescription.image = UIImage.init(named:  "FailGoToTeacherImage")
+                slideImgViewDescription.roundedImage()
+
             }
         }
         
@@ -42,8 +50,12 @@ class HomeMostViewedCollectionViewCell: UICollectionViewCell {
         slideImgViewTeacher.kf.indicatorType = .activity
         if let url = URL(string: slide.image){
             slideImgViewTeacher.kf.setImage(with: url)
+            slideImgViewTeacher.roundedImage()
+            
         }else {
             slideImgViewTeacher.image = UIImage.init(named:  "FailGoToTeacherImage")
+            slideImgViewTeacher.roundedImage()
+
         }
         
         

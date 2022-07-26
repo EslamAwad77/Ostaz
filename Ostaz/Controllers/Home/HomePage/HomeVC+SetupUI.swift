@@ -16,6 +16,8 @@ extension HomeViewController {
         collectionViewMostViewedInHome.dataSource = self
         collectionViewCategoriesInHome.delegate = self
         collectionViewCategoriesInHome.dataSource = self
+        collectionViewPiadInstInHome.delegate = self
+        collectionViewPiadInstInHome.dataSource = self
         self.setupTableRefresh()
         self.setUpAPI()
     }
@@ -53,7 +55,7 @@ extension HomeViewController {
         self.scrollView.alpha = 0
         self.viewReloadData.alpha = 0
     }
-    
+
     
     func hideError() {
         self.scrollView.alpha = 1

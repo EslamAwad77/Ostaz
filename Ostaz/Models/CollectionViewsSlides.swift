@@ -11,8 +11,8 @@ import UIKit
 struct CollectionViewHomeMostViewedSlide {
     let teacherName: String
     let teacherJob: String
-    let descriptionImage: UIImage
-    let teacherImage: UIImage
+    let descriptionImage: String
+    let teacherImage: String
 }
 
 struct CollectionViewCategorySlide {
