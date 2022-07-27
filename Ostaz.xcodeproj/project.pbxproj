@@ -563,11 +563,11 @@
 			children = (
 				A8672C7D2867DED300ED514D /* HomeTabBarVC.swift */,
 				A8A0166B28745DB900F45C50 /* HomePage */,
-				A8672C812868469300ED514D /* HomeSearchVC.swift */,
-				A8B499032863D4760038C782 /* HomeFilterVC.swift */,
 				A8618AA0288EC0260093B554 /* HomePaidInstCollectionViewCell.swift */,
 				A839205C2855D7BE00CD2126 /* HomeMostViewedCollectionViewCell.swift */,
 				A8A7DD5F28617A8100DABB8A /* HomeCategoriesCollectionViewCell.swift */,
+				A8672C812868469300ED514D /* HomeSearchVC.swift */,
+				A8B499032863D4760038C782 /* HomeFilterVC.swift */,
 				A8DA43082888D96C00F1493E /* Categories Page */,
 				A85DFAE2285FB3C700CEF27B /* CategoriesCollectionViewCell.swift */,
 				A824B6A028900847002A2E84 /* SubCategory VC */,

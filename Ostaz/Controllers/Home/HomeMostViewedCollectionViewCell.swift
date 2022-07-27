@@ -28,21 +28,15 @@ class HomeMostViewedCollectionViewCell: UICollectionViewCell {
         lblTeacherName.text = slide.name
         if (slide.teacherCategory.isEmpty && slide.teacherCategory.count == 0) {
             lblTeacherJob.text = "no teacher job"
-            slideImgViewDescription.image = UIImage.init(named:  "FailGoToTeacherImage")
-            slideImgViewDescription.roundedImage()
-
-    
+            slideImgViewDescription.image = UIImage.init(named:  "WishListPic2")
         } else {
             lblTeacherJob.text = slide.teacherCategory[0].categoryName
             slideImgViewDescription.kf.indicatorType = .activity
             
             if let url = URL(string: slide.teacherCategory[0].categoryImage){
                 slideImgViewDescription.kf.setImage(with: url)
-                slideImgViewDescription.roundedImage()
             }else {
-                slideImgViewDescription.image = UIImage.init(named:  "FailGoToTeacherImage")
-                slideImgViewDescription.roundedImage()
-
+                slideImgViewDescription.image = UIImage.init(named:  "WishListPic2")
             }
         }
         
@@ -53,7 +47,7 @@ class HomeMostViewedCollectionViewCell: UICollectionViewCell {
             slideImgViewTeacher.roundedImage()
             
         }else {
-            slideImgViewTeacher.image = UIImage.init(named:  "FailGoToTeacherImage")
+            slideImgViewTeacher.image = UIImage.init(named:  "TeacherImage")
             slideImgViewTeacher.roundedImage()
 
         }

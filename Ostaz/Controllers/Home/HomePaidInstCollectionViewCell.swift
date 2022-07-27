@@ -10,7 +10,6 @@ import Kingfisher
 
 class HomePaidInstCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var viewRoundedPiad: UIView!
-
     @IBOutlet weak var imgViewInstCategory: UIImageView!
     @IBOutlet weak var imgViewTeacher: UIImageView!
     @IBOutlet weak var lblTeacherName: UILabel!
@@ -24,19 +23,15 @@ class HomePaidInstCollectionViewCell: UICollectionViewCell {
         
         if (slide.teacherCategory.isEmpty && slide.teacherCategory.count == 0){
             lblTeacherJob.text = "no teacher job"
-            imgViewInstCategory.image = UIImage.init(named:  "FailGoToTeacherImage")
-            imgViewInstCategory.roundedImage()
-
+            imgViewInstCategory.image = UIImage.init(named:  "WishListPic2")
         } else {
             lblTeacherJob.text = slide.teacherCategory[0].categoryName
             imgViewInstCategory.kf.indicatorType = .activity
 
             if let url = URL(string: slide.teacherCategory[0].categoryImage){
                 imgViewInstCategory.kf.setImage(with: url)
-                imgViewInstCategory.roundedImage()
             }else {
-                imgViewInstCategory.image = UIImage.init(named:  "FailGoToTeacherImage")
-                imgViewInstCategory.roundedImage()
+                imgViewInstCategory.image = UIImage.init(named:  "WishListPic2")
             }
         }
 
@@ -46,7 +41,7 @@ class HomePaidInstCollectionViewCell: UICollectionViewCell {
             imgViewTeacher.kf.setImage(with: url)
             imgViewTeacher.roundedImage()
         }else {
-            imgViewTeacher.image = UIImage.init(named:  "FailGoToTeacherImage")
+            imgViewTeacher.image = UIImage.init(named:  "TeacherImage")
             imgViewTeacher.roundedImage()
         }
     

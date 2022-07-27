@@ -20,24 +20,25 @@ extension WishListViewController: UITableViewDelegate,UITableViewDataSource{
         cell.imgViewTeacher.kf.indicatorType = .activity
         if let url = URL(string: wishListitem.image){
             cell.imgViewTeacher.kf.setImage(with: url)
+            cell.imgViewTeacher.roundedImage()
+
         }else {
-            cell.imgViewTeacher.image = UIImage.init(named:  "FailGoToTeacherImage")
+            cell.imgViewTeacher.image = UIImage.init(named:  "TeacherImage")
+            cell.imgViewTeacher.roundedImage()
+
         }
         
         if (wishListitem.teacherCategory.isEmpty && wishListitem.teacherCategory.count == 0) {
             cell.lblTeacherJob.text = "no teacher job"
-            cell.imgViewDecription.image = UIImage.init(named:  "FailGoToTeacherImage")
-            cell.imgViewDecription.roundedImage()
+            cell.imgViewDecription.image = UIImage.init(named:  "WishListPic2")
         } else {
             cell.lblTeacherJob.text = wishListitem.teacherCategory[0].categoryName
             cell.imgViewDecription.kf.indicatorType = .activity
             
             if let url = URL(string: wishListitem.teacherCategory[0].categoryImage){
                 cell.imgViewDecription.kf.setImage(with: url)
-                cell.imgViewDecription.roundedImage()
             }else {
-                cell.imgViewDecription.image = UIImage.init(named:  "FailGoToTeacherImage")
-                cell.imgViewDecription.roundedImage()
+                cell.imgViewDecription.image = UIImage.init(named:  "WishListPic2")
             }
         }
         
