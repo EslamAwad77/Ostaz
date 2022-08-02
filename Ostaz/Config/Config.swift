@@ -32,11 +32,13 @@ struct URLs {
     static let editPassword = main + "change-password"
     /// POST {number, area1, area2, specialization1, specialization2, email }
     static let upgradeUserToInstructor = main + "upgrade"
+    static let showProfile = main + "show-profile"
+
     
     // Home
     
     /// GET{}
-    static let Search = main + "home/search"
+    static let search = main + "search"
     /// GET{}
     static let getAllCategories = main + "getcats"
     /// GET{}

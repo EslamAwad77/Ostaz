@@ -13,6 +13,8 @@ pod 'SwiftyJSON'
 pod 'Kingfisher'
 pod 'PullToRefresher'
 pod 'ESPullToRefresh'
+pod 'FirebaseMessaging'
+pod 'PushNotifications', '~> 4.0.0'
 
   target 'OstazTests' do
     inherit! :search_paths

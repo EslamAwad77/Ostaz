@@ -1509,6 +1509,7 @@
                         <outlet property="collectionViewCategories" destination="5gW-ge-OMo" id="nyC-Vk-BfW"/>
                         <outlet property="lblErrorDescription" destination="GF2-TR-fon" id="cgC-kA-i7G"/>
                         <outlet property="scrollView" destination="Sdd-8N-oRP" id="sce-cU-s7v"/>
+                        <outlet property="txtFieldSearch" destination="JXQ-ll-QgD" id="ICT-zU-A80"/>
                         <outlet property="viewReloading" destination="uue-mG-f2Y" id="hwt-N3-adI"/>
                         <outlet property="viewSearch" destination="FaO-Ap-d17" id="3XJ-0j-woV"/>
                     </connections>

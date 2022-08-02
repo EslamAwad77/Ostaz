@@ -57,6 +57,10 @@ extension CategoriesViewController {
                 self.lblErrorDescription.alpha = 0
                 self.lblErrorDescription.text = ""
                 self.categoriesSlides = response?.catArr ?? []
+                //self.filteredCategoriesSlides = (response?.catArr!.filter { CollResponse in
+//                    CollResponse.categoryName.contains()
+                //})!
+      
                 print(response!)
                 self.collectionViewCategories.reloadData()
                 print(response?.message ?? "")

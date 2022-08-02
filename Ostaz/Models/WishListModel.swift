@@ -47,7 +47,6 @@ struct WishListModel{
         if let teachCategories = (apiData?["categories"] as? AnyObject) as? NSArray{
                 print("============", apiData?["categories"])
                     for cat in teachCategories{
-
                         self.teacherCategory.append(HomeCategoryModel(apiModel: cat as! [String : Any]))
 
                     }

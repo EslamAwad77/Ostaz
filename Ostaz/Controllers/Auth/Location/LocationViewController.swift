@@ -22,7 +22,6 @@ class LocationViewController: UIViewController{
   
     
     //-------------------Outlet---------------------------
-    
     @IBOutlet weak var viewCity: UIView!
     @IBOutlet weak var viewArea: UIView!
     @IBOutlet weak var lblCity: UILabel!
@@ -45,12 +44,8 @@ class LocationViewController: UIViewController{
     }
     
     //-------------------LifeCycle------------------------
-    
     override func viewDidLoad(){
         super.viewDidLoad()
         self.setUpUI()
     }
-    
-    //-------------------functions------------------------
-   
 }

@@ -7,36 +7,72 @@ import SwiftyJSON
 
 class APIAuth: NSObject{
     
-    static func fetchingLogin(email: String, password: String, completion: @escaping (_ error :String?, _ response: LoginResponse?) -> Void){
-        let url = URLs.login
-        let parameters = [
-            "email": email ,  // "email" parameters in the api
-            "password": password
-        ]
-        AF.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: nil)
-            .response { response in
-                if (response.response?.statusCode ?? 0) >= 200 && (response.response?.statusCode ?? 0) <= 299 {
-                    let json = JSON(response.data!)
-                    var result = LoginResponse()
-                    result.message = json["message"].string
-                    result.user = UserModel(apiData: json["data"].dictionaryObject)
-//                    result.user = []
-//                    let apiLogin = json["data"].arrayObject
-//                    for item in apiLogin ?? [] {
-//                        let model = UserModel.init(apiData: item as? [String: Any])
-//                        result.user?.append(model)
+//    static func fetchingLogin(email: String, password: String, deviceToken: String, deviceType: String, completion: @escaping (_ error :String?, _ response: LoginResponse?) -> Void){
+//        let url = URLs.login
+//        let parameters = [
+//            "email": email ,  // "email" parameters in the api
+//            "password": password
+   // device_type
+    //device_token
+//        ]
+//        AF.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: nil)
+//            .response { response in
+//                if (response.response?.statusCode ?? 0) >= 200 && (response.response?.statusCode ?? 0) <= 299 {
+//                    let json = JSON(response.data!)
+//                    var result = LoginResponse()
+//                    result.message = json["message"].string
+//                    result.user = UserModel(apiData: json["data"].dictionaryObject)
+
 //                    }
-                    
-                    print(result.user!.id)
-                    
-                    completion(nil , result)
-                }else {
-                    let json = JSON(response.data!)
-                    let msg = json["message"].string
-                    completion(msg, nil)
-                }
-            }
+//
+//                    print(result.user!.id)
+//
+//                    completion(nil , result)
+//                }else {
+//                    let json = JSON(response.data!)
+//                    let msg = json["message"].string
+//                    completion(msg, nil)
+//                }
+//            }
+//    }
+    
+    
+    
+    static func fetchingAPI(request: RequestParameter){ //(request: RequestParameter)
+//        let parameters = [
+//            "email": email ,  // "email" parameters in the api
+//            "password": password
+//        ]
+//        let request: RequestParameter = RequestParameter(url: URLs.login, method: .post, parameters: parameters, headers: nil) { error, json in
+//            if error != nil {
+//                print(error!)
+//                completion(error, nil)
+//            } else {
+//
+//                var result = LoginResponse()
+//                result.message = json?["message"].string
+//                result.user = UserModel(apiData: json?["data"].dictionaryObject)
+//                print(result.user!.id)
+//
+//                completion(nil , result)
+//            }
+//        }
+        
+        AF.request(request.url!, method: request.method ?? .post, parameters: request.parameters, encoding: URLEncoding.default, headers: request.headers)
+           .response { response in
+               if (response.response?.statusCode ?? 0) >= 200 && (response.response?.statusCode ?? 0) <= 299 {
+                   let json = JSON(response.data!)
+                   print(json)
+                   request.completion(nil,json)
+               }else {
+                   let json = JSON(response.data!)
+                   print(json)
+                   let msg = json["message"].string
+                   request.completion(msg, nil)
+               }
+           }
     }
+    
    
     static func fetchingRegister(name: String, email: String, password: String, completion: @escaping (_ error :String?, _ response: RegisterResponse?) -> Void){
         let url = URLs.register

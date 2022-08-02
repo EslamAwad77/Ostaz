@@ -20,6 +20,7 @@ struct HomeMostViewedModel{
     var isFavourite: Bool = false
     var locations: Bool = false
     var teachingMethod: String = ""
+    var coveredArea: [AreaModel] = []
     var teacherCategory: [HomeCategoryModel] = []
     
     //var services: [String] = []
@@ -42,6 +43,19 @@ struct HomeMostViewedModel{
         self.locations = (apiData?["locations"] as? Bool) ?? false
         self.teachingMethod = (apiData?["teaching_method"] as? String) ?? ""
         //self.teacherCategory = (apiData?["categories"] as? [HomeCategoryModel]) ?? []
+        
+        print("=========coverdArea\n",(apiData?["coverd_area"] as? AnyObject) as? NSArray )
+
+        if let coveredArea = (apiData?["coverd_area"] as? AnyObject) as? NSArray{
+                print("============", apiData?["coverd_area"])
+                    for area in coveredArea{
+
+                        self.coveredArea.append(AreaModel(apiData: area as! [String : Any]))
+
+                    }
+                }
+        print("=========\n",coveredArea)
+        
         print("=========categories\n",(apiData?["categories"] as? AnyObject) as? NSArray )
 
         if let teachCategories = (apiData?["categories"] as? AnyObject) as? NSArray{

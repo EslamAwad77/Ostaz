@@ -19,7 +19,7 @@ extension LocationViewController {
         areaValues = [a1, a2, a3]
         var areas: [String] = []
         for item in areaValues {
-            areas.append(item.name ?? "")
+            areas.append(item.name)
         }
         
         let c1 = CityModel()
@@ -31,7 +31,7 @@ extension LocationViewController {
         cityValues = [c1, c2, c3]
         var cities: [String] = []
         for item in cityValues{
-            cities.append(item.name ?? "")
+            cities.append(item.name)
         }
         
         self.collViewCity.isHidden = true

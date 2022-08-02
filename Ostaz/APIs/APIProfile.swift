@@ -23,7 +23,7 @@ class APIProfile: NSObject {
                     var result = ProfileResponse()
                     result.message = json["message"].string
                     result.profile = ProfileModel(apiData: json["data"].dictionaryObject)
-                    print(result.profile?.email)
+                    print((result.profile?.email)!)
                     
 //                    result.profile = []
 //                    let apiProfile = json["data"].arrayObject
@@ -54,7 +54,7 @@ class APIProfile: NSObject {
                      var result = UpdateResponse()
                      result.message = json["message"].string
                      result.profile = ProfileModel(apiData: json["data"].dictionaryObject)
-                     print(result.profile?.email)
+                     print((result.profile?.email)!)
                      //result.userProfile = 
                      completion(nil, result)
                  } else {
@@ -110,6 +110,29 @@ class APIProfile: NSObject {
                          result.user?.append(model)
 
                      }
+                     completion(nil, result)
+                 } else {
+                     let json = JSON(response.data!)
+                     let message = json["message"].string
+                     completion(message, nil)
+                 }
+             }
+     }
+    
+    
+    static func fetchingShowProfile(istructorId: Int, completion: @escaping (_ error :String?, _ response: ShowProfileResponse?) -> Void){
+        let url = URLs.showProfile
+         let parameters = [
+             "instructor_id": istructorId
+         ]
+         AF.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: nil)
+             .response { response in
+                 if (response.response?.statusCode ?? 0) >= 200 && (response.response?.statusCode ?? 0) <= 299{
+                     let json = JSON(response.data!)
+                     var result = ShowProfileResponse()
+                     result.message = json["message"].string
+                     result.instructorProfile = WishListModel(apiData: json["data"].dictionaryObject)
+                     print((result.instructorProfile?.name)!)
                      completion(nil, result)
                  } else {
                      let json = JSON(response.data!)

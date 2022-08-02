@@ -31,7 +31,7 @@ extension PromotionForTeacherVC {
         TeacherAreaItems = [a1, a2, a3]
         var areas: [String] = []
         for item in TeacherAreaItems {
-            areas.append(item.name ?? "")
+            areas.append(item.name)
         }
         
         let c1 = TeacherCategoryModel()
@@ -43,7 +43,7 @@ extension PromotionForTeacherVC {
         TeachercategoryItems = [c1, c2, c3]
         var categories: [String] = []
         for item in TeachercategoryItems{
-            categories.append(item.categoryName ?? "")
+            categories.append(item.categoryName)
         }
         
         

@@ -9,8 +9,11 @@ import UIKit
 import CoreData
 //import DropDown
 import IQKeyboardManagerSwift
+import FirebaseMessaging
+import FirebaseCore
+import PushNotifications
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, MessagingDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -18,8 +21,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.enableAutoToolbar = false
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
+        FirebaseApp.configure()
+        Messaging.messaging().delegate = self
         return true
     }
+
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
+        print("Firebase registration token: \(String(describing: fcmToken))")
+        print("fcm= ",fcmToken!)
+        //NotificationHelper.fcmToken = fcmToken
+        UserDefaults.standard.set(fcmToken, forKey: "fcmToken")
+        let dataDict:[String: String] = ["token": fcmToken ?? ""]
+        NotificationCenter.default.post(name: Notification.Name("FCMToken"), object: nil, userInfo: dataDict)
+        // TODO: If necessary send token to application server.
+        // Note: This callback is fired at each app startup and whenever a new token is generated.
+     }
+
 
     // MARK: UISceneSession Lifecycle
 

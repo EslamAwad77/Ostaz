@@ -30,9 +30,7 @@ class APIHome: NSObject {
                         let model = HomeCategoryModel.init(apiModel: item as? [String : Any])
                         result.homeCategory?.append(model)
                         //result.homeCategory?.sorted(by: { $0.categoryId > $1.categoryId})
-                    }
-                    print(result.homeCategory)
-                    
+                    }                    
                     
                     result.homeMostViewed = []
                     let apiMostViewed = json["data"]["most_viewd"].arrayObject
@@ -63,17 +61,30 @@ class APIHome: NSObject {
     }
     
 
-    static func fetchingSearch(completion: @escaping (_ error :String?, _ response: SearchResponse?) -> Void){
-        let url = URLs.Search
+    static func fetchingSearch(text: String, specialization: Int, area: String, city: String, completion: @escaping (_ error :String?, _ response: SearchResponse?) -> Void){
+        let url = URLs.search
+        let parameters: [String: Any] = [
+            "text": text,
+            "specialization": specialization,
+            "area": area,
+            "city": city
+        ]
         let token = UserDefaults.standard.value(forKey: "token") as? String
         let bearerToken =  token != nil ? "Bearer \(token!)" : ""    // ternary Operator
-        AF.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: ["Authorization": bearerToken])
+        AF.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: ["Authorization": bearerToken])
             .response { response in
                 if (response.response?.statusCode ?? 0) >= 200 && (response.response?.statusCode ?? 0) <= 299{
                     let json = JSON(response.data!)
                     print(json)
                     var result = SearchResponse()
                     result.message = json["message"].string
+                    result.homeSearch = []
+                    let apiSearch = json["data"]["data"].arrayObject
+                    for item in apiSearch ?? []{
+                        let model = HomeMostViewedModel(apiData: item as? [String: Any])
+                        result.homeSearch?.append(model)
+                    }
+                    
                     completion(nil, result)
                 } else {
                     let json = JSON(response.data!)
@@ -84,45 +95,5 @@ class APIHome: NSObject {
             }
     }
     
-//    static func fetchingGetAllCate(completion: @escaping (_ error :String?, _ response: GetAllCateResponse?) -> Void){
-//        let url = URLs.getAllCategories
-//        let token = UserDefaults.standard.value(forKey: "token") as? String
-//        let bearerToken =  token != nil ? "Bearer \(token!)" : ""    // ternary Operator
-//        AF.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: ["Authorization": bearerToken])
-//            .response { response in
-//                if (response.response?.statusCode ?? 0) >= 200 && (response.response?.statusCode ?? 0) <= 299{
-//                    let json = JSON(response.data!)
-//                    print(json)
-//                    var result = GetAllCateResponse()
-//                    result.message = json["message"].string
-//                    completion(nil, result)
-//                } else {
-//                    let json = JSON(response.data!)
-//                    print(json)
-//                    let message = json["message"].string
-//                    completion(message, nil)
-//                }
-//            }
-//    }
-//    
-//    static func fetchingGetAllInst(completion: @escaping (_ error :String?, _ response: GetAllInstResponse?) -> Void){
-//        let url = URLs.getAllInstructors
-//        let token = UserDefaults.standard.value(forKey: "token") as? String
-//        let bearerToken =  token != nil ? "Bearer \(token!)" : ""    // ternary Operator
-//        AF.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: ["Authorization": bearerToken])
-//            .response { response in
-//                if (response.response?.statusCode ?? 0) >= 200 && (response.response?.statusCode ?? 0) <= 299{
-//                    let json = JSON(response.data!)
-//                    print(json)
-//                    var result = GetAllInstResponse()
-//                    result.message = json["message"].string
-//                    completion(nil, result)
-//                } else {
-//                    let json = JSON(response.data!)
-//                    print(json)
-//                    let message = json["message"].string
-//                    completion(message, nil)
-//                }
-//            }
-//    }
+
 }

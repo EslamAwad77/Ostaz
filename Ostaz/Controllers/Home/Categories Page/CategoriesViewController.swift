@@ -14,6 +14,7 @@ class CategoriesViewController: UIViewController {
     //-------------------Variables------------------------
     
     var categoriesSlides: [CollectionViewCategorySlide] = []
+    var filteredCategoriesSlides = [CollectionViewCategorySlide]()
     
     //-------------------IBOutlet------------------------
     @IBOutlet weak var viewReloading: UIView!
@@ -22,7 +23,7 @@ class CategoriesViewController: UIViewController {
     @IBOutlet weak var collectionViewCategories: UICollectionView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var lblErrorDescription: UILabel!
-    
+    @IBOutlet weak var txtFieldSearch: UITextField!
     //-------------------Actions------------------------
     @IBAction func btnReloadingData(_ sender: UIButton) {
         self.loadingData()
@@ -37,7 +38,31 @@ class CategoriesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpUI()
-        
+        txtFieldSearch.delegate = self
     }
+    
+//        func textField(
+//            _ textField: UITextField,
+//            shouldChangeCharactersIn range: NSRange,
+//            replacementString string: String
+//        ) -> Bool{}
+    
 }
 
+extension CategoriesViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField,
+                   shouldChangeCharactersIn range: NSRange,
+                   replacementString string: String) -> Bool {
+        print("text === ",textField.text!)
+        if (textField.text != ""){
+            self.setUpAPI()
+            if txtFieldSearch.text == categoriesSlides[0].categoryName {
+                
+            }
+            
+        }
+        return true
+    }
+   
+    
+}

@@ -25,7 +25,7 @@ class APIWishlist: NSObject {
                     
                     result.wishListArr = []
                     let apiWishList = json["data"]["data"].arrayObject
-
+                    print(apiWishList!)
                     for item in apiWishList ?? [] {
                         let model = WishListModel.init(apiData: item as? [String : Any])
                         result.wishListArr?.append(model)
