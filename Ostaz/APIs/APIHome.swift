@@ -14,9 +14,9 @@ class APIHome: NSObject {
     
     static func fetchingHome(completion: @escaping (_ error :String?, _ response: HomeResponse?) -> Void){
         let url = URLs.home
-        let token = UserDefaults.standard.value(forKey: "token") as? String
-        let bearerToken =  token != nil ? "Bearer \(token!)" : ""    // ternary Operator
-        AF.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: ["Authorization": bearerToken])
+        //let token = UserDefaults.standard.value(forKey: "token") as? String
+        //let bearerToken =  token != nil ? "Bearer \(token!)" : ""    // ternary Operator
+        AF.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil)
             .response { response in
                 if (response.response?.statusCode ?? 0) >= 200 && (response.response?.statusCode ?? 0) <= 299{
                     let json = JSON(response.data!)

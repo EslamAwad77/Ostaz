@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 extension PromotionForTeacherVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.collectionViewTeachMethods{
             return teacherMethodItems.count

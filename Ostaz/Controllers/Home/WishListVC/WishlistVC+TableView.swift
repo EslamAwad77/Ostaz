@@ -50,3 +50,5 @@ extension WishListViewController: UITableViewDelegate,UITableViewDataSource{
         wishListPrefered.id = wishListitem.id
     }
 }
+
+// model we must replace it with  InstructorModel we make and delete another model Don't need them

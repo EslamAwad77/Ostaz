@@ -9,10 +9,9 @@ import UIKit
 
 extension UIImageView {
     func roundedImage() {
-         self.layer.cornerRadius = (self.frame.size.width) / 2;
+        // TODO:  pic must have the same hieght and width
+        self.layer.cornerRadius = (self.frame.size.width) / 2;
         self.layer.cornerRadius = (self.frame.size.height) / 2;
-         self.clipsToBounds = true
-         //self.layer.borderWidth = 3.0
-         //self.layer.borderColor = UIColor.white.cgColor
-     }
+        self.clipsToBounds = true
+    }
 }

@@ -27,6 +27,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         } else if collectionView == self.collectionViewMostViewedInHome {
             let cell2 = collectionView.dequeueReusableCell(withReuseIdentifier: HomeMostViewedCollectionViewCell.identifier, for: indexPath) as! HomeMostViewedCollectionViewCell
             cell2.setup(homeMostViewedSlides[indexPath.row])
+            
             return cell2
         } else {
             let cell3 = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCategoriesCollectionViewCell.identifier, for: indexPath) as! HomeCategoriesCollectionViewCell
@@ -40,16 +41,21 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == self.collectionViewPiadInstInHome{
+            
+            let item = homePaidInstructorsSlides[indexPath.row]
             let teacherVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TeacherProfileViewController") as! TeacherProfileViewController
             teacherVC.modalPresentationStyle = .fullScreen
+            teacherVC.instructorId = item.id
             self.present(teacherVC, animated: true)
-            //            let item = homeMostViewedSlides[indexPath.row]
             
         } else if  collectionView == self.collectionViewMostViewedInHome{
+            
+            let item = homeMostViewedSlides[indexPath.row]
             let teacherVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TeacherProfileViewController") as! TeacherProfileViewController
             teacherVC.modalPresentationStyle = .fullScreen
             self.present(teacherVC, animated: true)
-            //            let item = homeMostViewedSlides[indexPath.row]
+            teacherVC.instructorId = item.id
+
         } else{
             let item = homecategoriesSlides[indexPath.row]
             let subCategoryVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "SubCategoryVC") as! SubCategoryVC

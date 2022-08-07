@@ -9,5 +9,5 @@ import Foundation
 
 struct ShowProfileResponse{
     var message: String?
-    var instructorProfile: WishListModel?
+    var instructorProfile: HomeMostViewedModel?
 }

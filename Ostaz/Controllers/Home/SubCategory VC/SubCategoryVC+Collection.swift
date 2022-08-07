@@ -20,7 +20,7 @@ extension SubCategoryVC: UICollectionViewDelegate, UICollectionViewDataSource,UI
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let item = subCategoriesSlides[indexPath.row]
-        let sportsVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "SportsViewController") as! SportsViewController
+        let sportsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SportsViewController") as! SportsViewController
         sportsVC.modalPresentationStyle = .fullScreen
         sportsVC.subCategory_id = item.categoryId
         self.present(sportsVC, animated: true)

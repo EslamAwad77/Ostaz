@@ -11,7 +11,7 @@ import Kingfisher
 class TeacherProfileViewController: UIViewController {
 
     //-------------------Variables------------------------
-   
+    var instructorId: Int = 0
     var TeacherMethodsSlides: [CollectionViewMethodsSlide] = []
     var TeacherAreasSlides: [CollectionViewAreasSlide] = []
     var TeachercategoriesSlides: [CollectionViewTeahcerCategoriesSlide] = []
@@ -49,15 +49,17 @@ class TeacherProfileViewController: UIViewController {
         self.goToRegister()
         self.checkUser()
         self.APIUserProfile()
-      
     }
     
     func APIUserProfile(){
-        APIProfile.fetchingProfile{ error, response in
+        APIProfile.fetchingShowProfile(istructorId: instructorId){ error, response in
             if error != nil {
                 print(error!)
             } else {
-                print(response?.profile?.email)
+                // here there's not complete
+                
+                // here we Calling api for category and method and area and reload there collection view
+                print((response?.instructorProfile?.email)!)
                 print(response?.message ?? "")
             }
         }
@@ -77,6 +79,5 @@ class TeacherProfileViewController: UIViewController {
         }else {
             imgViewTeacher.image = UIImage.init(named:  "FailGoToTeacherImage")
         }
-        
     }
 }

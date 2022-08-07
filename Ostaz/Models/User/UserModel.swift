@@ -26,6 +26,14 @@ struct UserModel {
     var location: Bool = false
     var token: String = ""
   
+    /*
+     var teachingMethod: String = ""
+     var coveredArea: [AreaModel] = []
+     var teacherCategory: [HomeCategoryModel] = []
+     var services: [String] = []
+     var cources: [String] = []
+     */
+    
     init(){}
     
     init(apiData: [String: Any]?) {
@@ -42,5 +50,30 @@ struct UserModel {
         self.is_favourite = apiData?["is_favourite"] as? Bool ?? false
         self.location = apiData?["location"] as? Bool ?? false
         self.token = apiData?["token"] as? String ?? ""
+        /*
+         self.teachingMethod = (apiData?["teaching_method"] as? String) ?? ""
+         
+         //print("=========coverdArea\n",(apiData?["coverd_area"] as? AnyObject) as? NSArray )
+         
+         if let coveredArea = (apiData?["coverd_area"] as? AnyObject) as? NSArray{
+             // print("============", apiData?["coverd_area"])
+             for area in coveredArea{
+                 self.coveredArea.append(AreaModel(apiData: area as? [String : Any]))
+             }
+         }
+         //print("=========\n",coveredArea)
+         
+         //print("=========categories\n",(apiData?["categories"] as? AnyObject) as? NSArray )
+         
+         if let teachCategories = (apiData?["categories"] as? AnyObject) as? NSArray{
+             //print("============", apiData?["categories"])
+             for cat in teachCategories{
+                 self.teacherCategory.append(HomeCategoryModel(apiModel: cat as? [String : Any]))
+             }
+         }
+         //print("=========\n",teacherCategory)
+         
+         
+         */
     }
 }

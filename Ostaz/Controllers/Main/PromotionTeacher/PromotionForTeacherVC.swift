@@ -47,11 +47,11 @@ class PromotionForTeacherVC: UIViewController {
         self.dismiss(animated: true)
     }
     @IBAction func btnAddOtherMethod(_ sender: UIButton) {
-        let vc = UIAlertController.init(title: "Teach Method", message: "please, Add Your Data", preferredStyle: .alert)
+        let alert = UIAlertController.init(title: "Teach Method", message: "please, Add Your Data", preferredStyle: .alert)
         
-        vc.addTextField(configurationHandler: nil)
-        vc.addAction(UIAlertAction.init(title: "Add", style: .default, handler: { action in
-            let textEntered = vc.textFields?.first?.text
+        alert.addTextField(configurationHandler: nil)
+        alert.addAction(UIAlertAction.init(title: "Add", style: .default, handler: { action in
+            let textEntered = alert.textFields?.first?.text
             if textEntered != "" {
                 let objMethod = TeachMethodModel.init()
                 objMethod.name = textEntered ?? ""
@@ -61,9 +61,9 @@ class PromotionForTeacherVC: UIViewController {
                 print("Error , please enter your data")
             }
         }))
-        vc.addAction(UIAlertAction.init(title: "cancel", style: .destructive, handler: { action in
+        alert.addAction(UIAlertAction.init(title: "cancel", style: .destructive, handler: { action in
         }))
-        self.present(vc, animated: true)
+        self.present(alert, animated: true)
     }
     @IBAction func btnDropDownSelectArea(_ sender: UIButton) {
         areaDropDown.show()
@@ -72,6 +72,11 @@ class PromotionForTeacherVC: UIViewController {
         categoryDropDown.show()
     }
     @IBAction func btnConfirmPromotion(_ sender: UIButton) {
+        
+//        APIProfile.fetchingUpgradeUser(phone: <#T##String#>, area1: <#T##Int#>, area2: <#T##Int#>, category1: <#T##Int#>, category2: <#T##Int#>, email: <#T##String#>, whatsapp: txtFieldWhatsAppNumber.text!, facebook: txtFieldFaceAccount.text!) { error, response in
+//            <#code#>
+//        }
+//
         self.dismiss(animated: true)
     }
     //-------------------lifecycle------------------------

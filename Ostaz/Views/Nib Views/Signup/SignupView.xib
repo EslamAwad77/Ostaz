@@ -111,7 +111,7 @@ until you register</string>
                 <constraint firstItem="Irs-fJ-Jda" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="qyp-26-yCX"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="123.18840579710145" y="55.245535714285715"/>
+            <point key="canvasLocation" x="506" y="41"/>
         </view>
     </objects>
     <resources>

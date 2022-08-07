@@ -8,12 +8,12 @@
 
 import UIKit
 
-struct CollectionViewHomeMostViewedSlide {
-    let teacherName: String
-    let teacherJob: String
-    let descriptionImage: String
-    let teacherImage: String
-}
+//struct CollectionViewHomeMostViewedSlide {
+//    let teacherName: String
+//    let teacherJob: String
+//    let descriptionImage: String
+//    let teacherImage: String
+//}
 
 struct CollectionViewCategorySlide {
    
@@ -28,7 +28,6 @@ struct CollectionViewCategorySlide {
         self.categoryName = (apiModel?["name"] as? String) ?? ""
         self.categoryImage = (apiModel?["image"] as? String) ?? ""
     }
-    
 }
 
 struct CollectionViewMethodsSlide{

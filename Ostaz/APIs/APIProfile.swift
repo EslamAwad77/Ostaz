@@ -24,13 +24,6 @@ class APIProfile: NSObject {
                     result.message = json["message"].string
                     result.profile = ProfileModel(apiData: json["data"].dictionaryObject)
                     print((result.profile?.email)!)
-                    
-//                    result.profile = []
-//                    let apiProfile = json["data"].arrayObject
-//                    for item in apiProfile ?? []{
-//                        let model = ProfileModel.init(apiData: item as? [String: Any])
-//                        result.profile?.append(model)
-//                    }
                     completion(nil, result)
                 } else {
                     let json = JSON(response.data!)
@@ -55,7 +48,7 @@ class APIProfile: NSObject {
                      result.message = json["message"].string
                      result.profile = ProfileModel(apiData: json["data"].dictionaryObject)
                      print((result.profile?.email)!)
-                     //result.userProfile = 
+                     //result.userProfile =
                      completion(nil, result)
                  } else {
                      let json = JSON(response.data!)
@@ -87,16 +80,18 @@ class APIProfile: NSObject {
              }
      }
     
-    static func fetchingUpgradeUser(phone: String, area1: Int, area2: Int, category1: Int, category2: Int, email: String , completion: @escaping (_ error :String?, _ response: UpgradeResponse?) -> Void){
+    static func fetchingUpgradeUser(phone: String, area1: Int, area2: Int, category1: Int, category2: Int, email: String, whatsapp: String, facebook: String, completion: @escaping (_ error :String?, _ response: UpgradeResponse?) -> Void){
         let url = URLs.upgradeUserToInstructor
-         let parameters = [
+        let parameters: [String : Any] = [
              "phone": phone,
              "areas[1]": area1,
              "areas[2]": area2,
              "subspecializations[1]": category1,
              "subspecializations[2]": category2,
-             "email": email
-         ] as [String : Any]
+             "email": email,
+             "whatsapp": whatsapp,
+             "facebook": facebook
+         ]
          AF.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: nil)
              .response { response in
                  if (response.response?.statusCode ?? 0) >= 200 && (response.response?.statusCode ?? 0) <= 299{
@@ -106,9 +101,8 @@ class APIProfile: NSObject {
                      result.user = []
                      let apiProfile = json["data"].arrayObject
                      for item in apiProfile ?? []{
-                         let model = UpgradeUserModel.init(apiModel: item as? [String: Any])
+                         let model = HomeMostViewedModel.init(apiData: item as? [String: Any])
                          result.user?.append(model)
-
                      }
                      completion(nil, result)
                  } else {
@@ -125,13 +119,15 @@ class APIProfile: NSObject {
          let parameters = [
              "instructor_id": istructorId
          ]
-         AF.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: nil)
+        let token = UserDefaults.standard.value(forKey: "token") as? String
+        let bearerToken =  token != nil ? "Bearer \(token!)" : ""    // ternary Operator
+         AF.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: ["Authorization": bearerToken, "Accept": "application/json"])
              .response { response in
                  if (response.response?.statusCode ?? 0) >= 200 && (response.response?.statusCode ?? 0) <= 299{
                      let json = JSON(response.data!)
                      var result = ShowProfileResponse()
                      result.message = json["message"].string
-                     result.instructorProfile = WishListModel(apiData: json["data"].dictionaryObject)
+                     result.instructorProfile = HomeMostViewedModel(apiData: json["data"].dictionaryObject)
                      print((result.instructorProfile?.name)!)
                      completion(nil, result)
                  } else {
@@ -141,5 +137,4 @@ class APIProfile: NSObject {
                  }
              }
      }
-    
 }

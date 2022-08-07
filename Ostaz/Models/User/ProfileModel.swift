@@ -20,7 +20,7 @@ struct ProfileModel {
     var views: [String] = []
     var is_favourite: Bool = false
     var location: Bool = false
-    
+
     init(){}
     
     init(apiData: [String: Any]?) {

@@ -28,7 +28,7 @@ class MoreViewController: UIViewController {
     
     @IBAction func btnLogout(_ sender: UIButton) {
         
-        APIAuth.fetchingLogout { error, response in
+        APIAuth.fetchingLogout{ error, response in
             if error != nil {
                 print(error!)
             } else {

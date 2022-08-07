@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CourseViewCell" rowHeight="257" id="KGk-i7-Jjw" customClass="CourseViewCell" customModule="Ostaz" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="378" height="257"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="378" height="257"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q2q-0G-LaZ">
+                        <rect key="frame" x="20" y="21" width="338" height="215"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="25F-HF-Cdl">
+                                <rect key="frame" x="8" y="7" width="322" height="91"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="322" id="g5s-P7-MYZ"/>
+                                    <constraint firstAttribute="height" constant="91" id="pk3-Ee-sNP"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="6Wo-yG-TGK">
+                                <rect key="frame" x="8" y="118" width="322" height="27.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNq-EU-Kcn">
+                                        <rect key="frame" x="0.0" y="0.0" width="157" height="27.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4OY-bA-OXC">
+                                        <rect key="frame" x="165" y="0.0" width="157" height="27.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="chZ-4D-Umd">
+                                <rect key="frame" x="8" y="160" width="322" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kgh-dK-xaZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="141" height="40"/>
+                                        <color key="backgroundColor" name="ButtonColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Attendance">
+                                            <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnAttendancePressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="T29-Yr-P9G"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sa3-68-ped">
+                                        <rect key="frame" x="181" y="0.0" width="141" height="40"/>
+                                        <color key="backgroundColor" name="ButtonColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="List Of Students">
+                                            <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnListOfStudentsPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="D6T-eA-DD5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="OkQ-mM-N9Z"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="25F-HF-Cdl" secondAttribute="trailing" constant="8" id="JCc-mi-2D8"/>
+                            <constraint firstAttribute="bottom" secondItem="chZ-4D-Umd" secondAttribute="bottom" constant="15" id="LtO-m9-4pe"/>
+                            <constraint firstItem="chZ-4D-Umd" firstAttribute="leading" secondItem="25F-HF-Cdl" secondAttribute="leading" id="S6G-dJ-8Te"/>
+                            <constraint firstItem="chZ-4D-Umd" firstAttribute="top" secondItem="6Wo-yG-TGK" secondAttribute="bottom" constant="14.5" id="cqL-8C-LHs"/>
+                            <constraint firstItem="25F-HF-Cdl" firstAttribute="top" secondItem="Q2q-0G-LaZ" secondAttribute="top" constant="7" id="hF4-MF-EgV"/>
+                            <constraint firstItem="chZ-4D-Umd" firstAttribute="trailing" secondItem="25F-HF-Cdl" secondAttribute="trailing" id="kbb-Xm-eFg"/>
+                            <constraint firstItem="6Wo-yG-TGK" firstAttribute="leading" secondItem="25F-HF-Cdl" secondAttribute="leading" id="svx-tb-cfV"/>
+                            <constraint firstItem="6Wo-yG-TGK" firstAttribute="trailing" secondItem="25F-HF-Cdl" secondAttribute="trailing" id="uvp-Nq-YQL"/>
+                            <constraint firstItem="6Wo-yG-TGK" firstAttribute="top" secondItem="25F-HF-Cdl" secondAttribute="bottom" constant="20" id="weP-90-dnt"/>
+                            <constraint firstItem="25F-HF-Cdl" firstAttribute="leading" secondItem="Q2q-0G-LaZ" secondAttribute="leading" constant="8" id="zDu-r0-V6H"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
+                                <real key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" name="BackgroundColor"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="Q2q-0G-LaZ" secondAttribute="bottom" constant="21" id="9V2-Cm-dF5"/>
+                    <constraint firstItem="Q2q-0G-LaZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="PmM-d7-EaW"/>
+                    <constraint firstAttribute="trailing" secondItem="Q2q-0G-LaZ" secondAttribute="trailing" constant="20" id="wWb-px-Rev"/>
+                    <constraint firstItem="Q2q-0G-LaZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="21" id="xHS-N6-PLf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
+                    <real key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="imgViewCategory" destination="25F-HF-Cdl" id="VZH-BC-whm"/>
+                <outlet property="lblCategoryAndSubCategory" destination="kNq-EU-Kcn" id="3Mp-Ki-bcb"/>
+                <outlet property="lblCourceName" destination="4OY-bA-OXC" id="glG-4h-7nJ"/>
+            </connections>
+            <point key="canvasLocation" x="349" y="-468"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="BackgroundColor">
+            <color red="0.96899998188018799" green="0.96100002527236938" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ButtonColor">
+            <color red="0.52899998426437378" green="0.27799999713897705" blue="0.94499999284744263" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

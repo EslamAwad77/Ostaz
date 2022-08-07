@@ -1,13 +1,13 @@
 //
-//  WishListModel.swift
+//  HomePaidInstructorsModel.swift
 //  Ostaz
 //
-//  Created by eslam awad elsayed awad on 26/07/2022.
+//  Created by eslam awad elsayed awad on 24/07/2022.
 //
 
 import Foundation
 
-struct WishListModel{
+struct HomePaidInstructorsModel{
     var id: Int = 0
     var name: String = ""
     var email: String = ""
@@ -16,14 +16,14 @@ struct WishListModel{
     var type: String = ""
     var description: String = ""
     var views: Int = 0
-    var image : String = ""
+    var image: String = ""
     var isFavourite: Bool = false
     var locations: Bool = false
     var teachingMethod: String = ""
+    var coveredArea: [AreaModel] = []
     var teacherCategory: [HomeCategoryModel] = []
     //var services: [String] = []
     var facebook: String = ""
-    //var cources: [String] = []
     
     init(){}
     
@@ -42,16 +42,26 @@ struct WishListModel{
         self.locations = (apiData?["locations"] as? Bool) ?? false
         self.teachingMethod = (apiData?["teaching_method"] as? String) ?? ""
         //self.teacherCategory = (apiData?["categories"] as? [HomeCategoryModel]) ?? []
-        print("=========categories\n",(apiData?["categories"] as? AnyObject) as? NSArray )
-
+        //print("=========coverdArea\n",(apiData?["coverd_area"] as? AnyObject) as? NSArray)
+        
+        if let coveredArea = (apiData?["coverd_area"] as? AnyObject) as? NSArray{
+            //print("============", apiData?["coverd_area"])
+            for area in coveredArea{
+                self.coveredArea.append(AreaModel(apiData: area as! [String : Any]))
+            }
+        }
+        //print("=========\n",coveredArea)
+        
+        //print("=========categories\n",(apiData?["categories"] as? AnyObject) as? NSArray )
+        
         if let teachCategories = (apiData?["categories"] as? AnyObject) as? NSArray{
-                print("============", apiData?["categories"])
-                    for cat in teachCategories{
-                        self.teacherCategory.append(HomeCategoryModel(apiModel: cat as! [String : Any]))
-
-                    }
-                }
-        print("=========\n",teacherCategory)
+            //print("============", apiData?["categories"])
+            for cat in teachCategories{
+                self.teacherCategory.append(HomeCategoryModel(apiModel: cat as! [String : Any]))
+            }
+        }
+        //print("=========\n",teacherCategory)
+        //self.services = (apiData?["services"] as? Array) ?? []
         self.facebook = (apiData?["facebook"] as? String) ?? ""
     }
 }

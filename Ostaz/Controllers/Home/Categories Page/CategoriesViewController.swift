@@ -14,7 +14,7 @@ class CategoriesViewController: UIViewController {
     //-------------------Variables------------------------
     
     var categoriesSlides: [CollectionViewCategorySlide] = []
-    var filteredCategoriesSlides = [CollectionViewCategorySlide]()
+    var filteredCategoriesSlides = [CollectionViewCategorySlide]() // take an area of memory
     
     //-------------------IBOutlet------------------------
     @IBOutlet weak var viewReloading: UIView!
