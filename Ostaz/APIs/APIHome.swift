@@ -43,7 +43,7 @@ class APIHome: NSObject {
                     result.homePaidInstructor = []
                     let apiPaidInstructor = json["data"]["paid_instructors"].arrayObject
                     for item in apiPaidInstructor ?? [] {
-                        let model = HomePaidInstructorsModel.init(apiData: item as? [String : Any])
+                        let model = HomeMostViewedModel.init(apiData: item as? [String : Any])
                         result.homePaidInstructor?.append(model)
                     }
                     

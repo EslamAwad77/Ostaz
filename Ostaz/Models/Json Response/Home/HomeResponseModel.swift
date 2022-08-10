@@ -11,5 +11,5 @@ struct HomeResponse {
     var message: String?
     var homeCategory: [HomeCategoryModel]?
     var homeMostViewed: [HomeMostViewedModel]?
-    var homePaidInstructor: [HomePaidInstructorsModel]?
+    var homePaidInstructor: [HomeMostViewedModel]?
 }

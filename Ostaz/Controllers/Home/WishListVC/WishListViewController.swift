@@ -13,47 +13,25 @@ class WishListViewController: UIViewController {
    
     //-------------------variables--------------------------
     var wishListPrefered: WishListModel = WishListModel()
-    var wishListItems = [WishListModel]()
+    var wishListItems = [HomeMostViewedModel]()
     
     //-------------------outlet--------------------------
+    @IBOutlet weak var signupView: SignupView!
     @IBOutlet weak var tbleViewWishList: UITableView!
+    @IBOutlet weak var activityLoadingPage: UIActivityIndicatorView!
+    @IBOutlet weak var lblErrorDesc: UILabel!
     
+    @IBOutlet weak var viewReloadData: UIView!
+    //-------------------actions--------------------------
+    @IBAction func btnReloadingData(_ sender: UIButton) {
+        self.loadingData()
+        self.activityLoadingPage.startAnimating()
+        self.setUpAPI()
+    }
     //-------------------lifecycle--------------------------
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
-    }
-    
-    //-------------------functions--------------------------
-    func setupUI() {
-        tbleViewWishList.dataSource = self
-        tbleViewWishList.delegate = self
-        self.tbleViewWishList.register(UINib.init(nibName: "WishListCell", bundle: nil), forCellReuseIdentifier: "WishListCell")
-        self.setUpAPI()
-        //tbleViewWishList.reloadData()
-    }
-    
-    func setUpAPI(){
-        APIWishlist.fetchingWishList{error, response in
-            //self.tbleViewWishList.es.stopPullToRefresh()
-            //self.activityLoadingPage.stopAnimating()
-
-            if error != nil {
-                print(error!)
-                self.tbleViewWishList.alpha = 0
-                //self.viewReloading.alpha = 1
-                //self.lblErrorDescription.alpha = 1
-                //self.lblErrorDescription.text = error
-            } else {
-                //self.hideError()
-                //self.lblErrorDescription.alpha = 0
-                //self.lblErrorDescription.text = ""
-                self.wishListItems = response?.wishListArr ?? []
-                print(response!)
-                self.tbleViewWishList.reloadData()
-                print(response?.message ?? "")
-            }
-        }
+        self.setupUI()
     }
 }
 

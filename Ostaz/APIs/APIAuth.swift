@@ -6,14 +6,13 @@ import Alamofire
 import SwiftyJSON
 
 class APIAuth: NSObject{
-    // deviceToken: String, deviceType: String,
-    static func fetchingLogin(email: String, password: String, completion: @escaping (_ error :String?, _ response: LoginResponse?) -> Void){
+    static func fetchingLogin(email: String, password: String, deviceToken: String, deviceType: String, completion: @escaping (_ error :String?, _ response: LoginResponse?) -> Void){
         let url = URLs.login
-        let parameters = [
+        let parameters: [String: Any] = [
             "email": email ,  // "email" parameters in the api
-            "password": password
-            //"device_type" : ,
-            //"device_token":
+            "password": password,
+            "device_type" : deviceType,
+            "device_token": deviceToken
         ]
         AF.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: nil)
             .response { response in

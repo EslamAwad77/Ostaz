@@ -29,6 +29,7 @@ class APICategory: NSObject {
                     for item in apiCategories ?? [] {
                         let model = CollectionViewCategorySlide.init(apiModel: item as? [String : Any])
                         result.catArr?.append(model)
+                        //result.catArr[0].categoryName
                     }
                     completion(nil, result)
                 } else {
@@ -72,7 +73,7 @@ class APICategory: NSObject {
 //                    print(json)
 //                    let message = json["message"].string
 //                    completion(message, nil)
-                    if let data = response.data {
+                    if let data = response.data{
                         let json = JSON(data)
                         print(json)
                         let message = json["message"].string

@@ -17,25 +17,15 @@ extension TeacherProfileViewController {
         collectionViewCategoryy.delegate = self
         collectionViewCategoryy.dataSource = self
         //collectionViewHome.collectionViewLayout = UICollectionViewFlowLayout()
-        TeacherMethodsSlides = [
-            CollectionViewMethodsSlide(methodName: "Online", methodImage: #imageLiteral(resourceName: "RightMark")),
-            CollectionViewMethodsSlide(methodName: "Student Home", methodImage: #imageLiteral(resourceName: "RightMark")),
-            CollectionViewMethodsSlide(methodName: "Teacher Place", methodImage: #imageLiteral(resourceName: "RightMark")),
-            CollectionViewMethodsSlide(methodName: "Center", methodImage: #imageLiteral(resourceName: "RightMark")),
-            CollectionViewMethodsSlide(methodName: "Groups", methodImage: #imageLiteral(resourceName: "RightMark"))
-        ]
-        TeacherAreasSlides = [
-            CollectionViewAreasSlide(areaName: "Egypt", areaImage: #imageLiteral(resourceName: "locationMark")),
-            CollectionViewAreasSlide(areaName: "Dakahlia", areaImage: #imageLiteral(resourceName: "locationMark")),
-            CollectionViewAreasSlide(areaName: "Mansoura", areaImage: #imageLiteral(resourceName: "locationMark")),
-            CollectionViewAreasSlide(areaName: "Samia El Gamal", areaImage: #imageLiteral(resourceName: "locationMark")),
-            CollectionViewAreasSlide(areaName: "Ahmed Maher", areaImage: #imageLiteral(resourceName: "locationMark"))
-        ]
-        TeachercategoriesSlides = [
-            CollectionViewTeahcerCategoriesSlide(categoryName: "Teaching", categoryImage: #imageLiteral(resourceName: "tagesMark")),
-            CollectionViewTeahcerCategoriesSlide(categoryName: "Math", categoryImage: #imageLiteral(resourceName: "tagesMark")),
-            CollectionViewTeahcerCategoriesSlide(categoryName: "Grade 6", categoryImage: #imageLiteral(resourceName: "tagesMark"))
-        ]
+
+//        if teacherMethodsSlides.isEmpty && teacherAreasSlides.isEmpty && teacherCategoriesSlides.isEmpty {
+//            self.collectionViewMehtods.isHidden = true
+//            self.lblTeachingMethods.text = ""
+//            self.collectionViewAreas.isHidden = true
+//            self.lblCoveredArea.text = ""
+//            self.collectionViewCategoryy.isHidden = true
+//            self.lblCategories.text = ""
+//        }
     }
     func checkUser(){
         if let apiToken = UserDefaults.standard.value(forKey: "token"){

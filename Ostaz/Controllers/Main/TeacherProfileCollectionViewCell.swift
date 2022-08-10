@@ -27,23 +27,23 @@ class TeacherProfileCollectionViewCell: UICollectionViewCell {
 
     //-------------------Functions------------------------
 
-    func setupUIMehtods(_ methodsSlide: CollectionViewMethodsSlide){
-        lblTeachingMethod.text = methodsSlide.methodName
-        imgViewRightMark.image = methodsSlide.methodImage
+    func setupUIMehtods(_ methodsSlide: MethodModel){
+        lblTeachingMethod.text = methodsSlide.name
+        imgViewRightMark.image = UIImage(named: "RightMark")
     }
     
    
     
-    func setupUIAreas(_ areasSlide: CollectionViewAreasSlide){
-        lblCoveredArea.text = areasSlide.areaName
-        imgViewLocationMark.image = areasSlide.areaImage
+    func setupUIAreas(_ areasSlide: AreaModel){
+        lblCoveredArea.text = areasSlide.name
+        imgViewLocationMark.image = UIImage(named: "locationMark")
     }
     
    
     
-    func setupUICategories(_ categoriesSlide: CollectionViewTeahcerCategoriesSlide){
+    func setupUICategories(_ categoriesSlide: HomeCategoryModel){
         lblCategory.text = categoriesSlide.categoryName
-        imgViewCategoryMark.image = categoriesSlide.categoryImage
+        imgViewCategoryMark.image = UIImage(named: "tagesMark")
     }
     
    

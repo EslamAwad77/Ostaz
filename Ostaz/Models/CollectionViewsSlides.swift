@@ -30,20 +30,20 @@ struct CollectionViewCategorySlide {
     }
 }
 
-struct CollectionViewMethodsSlide{
-    let methodName: String
-    let methodImage: UIImage
-}
-
-
-
-struct CollectionViewAreasSlide{
-    let areaName: String
-    let areaImage: UIImage
-}
-
-
-struct CollectionViewTeahcerCategoriesSlide{
-    let categoryName: String
-    let categoryImage: UIImage
-}
+//struct CollectionViewMethodsSlide{
+//    let methodName: String
+//    let methodImage: UIImage
+//}
+//
+//
+//
+//struct CollectionViewAreasSlide{
+//    let areaName: String
+//    let areaImage: UIImage
+//}
+//
+//
+//struct CollectionViewTeahcerCategoriesSlide{
+//    let categoryName: String
+//    let categoryImage: UIImage
+//}

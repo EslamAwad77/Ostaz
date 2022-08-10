@@ -32,16 +32,16 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func btnLogin(_ sender: UIButton) {
-        Messaging.messaging().token { token, error in
-            if let error = error {
-                print("Error fetching registration token: \(error)")
-            } else if let token = token {
-                print("registration token: \(token)")
-                self.deviceToken  = "Remote FCM registration token: \(token)"
-            }
-        }
+//        Messaging.messaging().token { token, error in
+//            if let error = error {
+//                print("Error fetching registration token: \(error)")
+//            } else if let token = token {
+//                print("registration token: \(token)")
+//                self.deviceToken  = "Remote FCM registration token: \(token)"
+//            }
+//        }
         if validation(){
-            APIAuth.fetchingLogin(email: txtFieldLoginUserName.text!, password: txtFieldLoginPassword.text!) { error, response in
+            APIAuth.fetchingLogin(email: txtFieldLoginUserName.text!, password: txtFieldLoginPassword.text!,deviceToken: UserDefaults.standard.value(forKey: "fcmToken") as! String, deviceType: "ios") { error, response in
                 if error != nil {
                     print(error!)
                     
@@ -53,35 +53,6 @@ class LoginViewController: UIViewController {
                     self.goToHome()
                 }
             }
-            
-            
-            
-            
-            //            let parameters: [String: Any] = [
-            //                "email": txtFieldLoginUserName.text!,
-            //                "password": txtFieldLoginPassword.text!,
-            //                "device_token": deviceToken,
-            //                "device_type": "ios"
-            //            ]
-            //            let loginRequest = RequestParameter(url: URLs.login, method: .post, parameters: parameters, headers: nil) { error, json in
-            //                // TODO: parse json to login
-            //                if error != nil {
-            //                    print(error!)
-            //                } else {
-            //
-            //                    var result = LoginResponse()
-            //                    result.message = json?["message"].string
-            //                    result.user = UserModel(apiData: json?["data"].dictionaryObject)
-            //
-            //                    print(result.user!.id)
-            //                    UserDefaults.standard.set(result.user?.token, forKey: "token")
-            //                    UserDefaults.standard.set(self.deviceToken, forKey: "fcmToken")
-            //                    self.goToHome()
-            //                }
-            //            }
-            //            APIAuth.fetchingAPI(request: loginRequest)
-            //
-            
         }
     }
     
@@ -104,12 +75,34 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         self.setupUI()
     }
-    
-    
-    
-    
 }
 
 
+
+
+//            let parameters: [String: Any] = [
+//                "email": txtFieldLoginUserName.text!,
+//                "password": txtFieldLoginPassword.text!,
+//                "device_token": deviceToken,
+//                "device_type": "ios"
+//            ]
+//            let loginRequest = RequestParameter(url: URLs.login, method: .post, parameters: parameters, headers: nil) { error, json in
+//                // TODO: parse json to login
+//                if error != nil {
+//                    print(error!)
+//                } else {
+//
+//                    var result = LoginResponse()
+//                    result.message = json?["message"].string
+//                    result.user = UserModel(apiData: json?["data"].dictionaryObject)
+//
+//                    print(result.user!.id)
+//                    UserDefaults.standard.set(result.user?.token, forKey: "token")
+//                    UserDefaults.standard.set(self.deviceToken, forKey: "fcmToken")
+//                    self.goToHome()
+//                }
+//            }
+//            APIAuth.fetchingAPI(request: loginRequest)
+//
 
 

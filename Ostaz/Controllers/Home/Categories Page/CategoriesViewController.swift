@@ -46,7 +46,7 @@ class CategoriesViewController: UIViewController {
 //            shouldChangeCharactersIn range: NSRange,
 //            replacementString string: String
 //        ) -> Bool{}
-    
+//
 }
 
 extension CategoriesViewController: UITextFieldDelegate {

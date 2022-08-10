@@ -12,7 +12,7 @@ import PullToRefresh
 class HomeViewController: UIViewController, UITextFieldDelegate {
     
     //-------------------Variables------------------------
-    var homePaidInstructorsSlides = [HomePaidInstructorsModel]()
+    var homePaidInstructorsSlides = [HomeMostViewedModel]()
     var homecategoriesSlides = [HomeCategoryModel]()
     var homeMostViewedSlides = [HomeMostViewedModel]()
     lazy var homeFilterVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "HomeFilterVC")
@@ -35,34 +35,6 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
     @IBAction func btnSearchResult(_ sender: UIButton) {
         
         
-        // المفروض دا ف ال search result vc
-//        let parameters = [
-//            "text": txtFieldSearch.text!,
-//            "specialization": "",
-//            "city": "",
-//            "area": ""
-//        ]
-//        let token = UserDefaults.standard.value(forKey: "token") as? String
-//        let bearerToken =  token != nil ? "Bearer \(token!)" : ""    // ternary Operator
-//        let searchRequest = RequestParameter(url: URLs.search, method: .post, parameters: parameters, headers: ["Authorization": bearerToken]) { error, json in
-//            if error != nil {
-//                print(error!)
-//            } else {
-//
-//                var result = SearchResponse()
-//                result.message = json?["message"].string
-//                result.homeSearch = []
-//                let apiSearch = json?["data"]["data"].arrayObject
-//                for item in apiSearch ?? []{
-//                    let model = HomeMostViewedModel.init(apiData: item as? [String: Any])
-//                    result.homeSearch?.append(model)
-//                    self.gotToSearchResult()
-//                }
-//            }
-//        }
-//        GeneralAPI.fetchingData(request: searchRequest)
-//
-//
         
     }
     
@@ -130,3 +102,32 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
 }
 
 
+//search result vc        // المفروض دا ف ال
+
+//        let parameters = [
+//            "text": txtFieldSearch.text!,
+//            "specialization": "",
+//            "city": "",
+//            "area": ""
+//        ]
+//        let token = UserDefaults.standard.value(forKey: "token") as? String
+//        let bearerToken =  token != nil ? "Bearer \(token!)" : ""    // ternary Operator
+//        let searchRequest = RequestParameter(url: URLs.search, method: .post, parameters: parameters, headers: ["Authorization": bearerToken]) { error, json in
+//            if error != nil {
+//                print(error!)
+//            } else {
+//
+//                var result = SearchResponse()
+//                result.message = json?["message"].string
+//                result.homeSearch = []
+//                let apiSearch = json?["data"]["data"].arrayObject
+//                for item in apiSearch ?? []{
+//                    let model = HomeMostViewedModel.init(apiData: item as? [String: Any])
+//                    result.homeSearch?.append(model)
+//                    self.gotToSearchResult()
+//                }
+//            }
+//        }
+//        GeneralAPI.fetchingData(request: searchRequest)
+//
+//

@@ -33,6 +33,7 @@
 		A824B6A428900889002A2E84 /* SubCategoryVC+Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A824B6A328900889002A2E84 /* SubCategoryVC+Collection.swift */; };
 		A824B6A6289016B3002A2E84 /* WishListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A824B6A5289016B3002A2E84 /* WishListModel.swift */; };
 		A824B6A928903B6A002A2E84 /* WishlistVC+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A824B6A828903B6A002A2E84 /* WishlistVC+TableView.swift */; };
+		A833893328A3A690005C9D7D /* WishListVC+SetupUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A833893228A3A690005C9D7D /* WishListVC+SetupUI.swift */; };
 		A836114928868F6C009BDB38 /* LocationCollViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A836114828868F6C009BDB38 /* LocationCollViewCell.swift */; };
 		A836114C288691A3009BDB38 /* LocationVC+Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A836114B288691A3009BDB38 /* LocationVC+Collection.swift */; };
 		A836114E288691FE009BDB38 /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A836114D288691FE009BDB38 /* CityModel.swift */; };
@@ -122,6 +123,7 @@
 		A8BB137B289FB3B70093CC64 /* StudentCoursesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BB1379289FB3B70093CC64 /* StudentCoursesViewCell.swift */; };
 		A8BB137C289FB3B70093CC64 /* StudentCoursesViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8BB137A289FB3B70093CC64 /* StudentCoursesViewCell.xib */; };
 		A8BB137F289FBC3A0093CC64 /* Cource.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8BB137E289FBC3A0093CC64 /* Cource.storyboard */; };
+		A8BB1381289FBD010093CC64 /* StudentCourseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BB1380289FBD010093CC64 /* StudentCourseVC.swift */; };
 		A8C8C8082871CAFB00143872 /* LoginResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C8C8072871CAFB00143872 /* LoginResponseModel.swift */; };
 		A8C8C80A2871CB3800143872 /* RegisterResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C8C8092871CB3800143872 /* RegisterResponseModel.swift */; };
 		A8C982D5289199C400E45872 /* ShowProfileResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C982D4289199C400E45872 /* ShowProfileResponseModel.swift */; };
@@ -188,6 +190,7 @@
 		A824B6A328900889002A2E84 /* SubCategoryVC+Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SubCategoryVC+Collection.swift"; sourceTree = "<group>"; };
 		A824B6A5289016B3002A2E84 /* WishListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListModel.swift; sourceTree = "<group>"; };
 		A824B6A828903B6A002A2E84 /* WishlistVC+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WishlistVC+TableView.swift"; sourceTree = "<group>"; };
+		A833893228A3A690005C9D7D /* WishListVC+SetupUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WishListVC+SetupUI.swift"; sourceTree = "<group>"; };
 		A836114828868F6C009BDB38 /* LocationCollViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCollViewCell.swift; sourceTree = "<group>"; };
 		A836114B288691A3009BDB38 /* LocationVC+Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationVC+Collection.swift"; sourceTree = "<group>"; };
 		A836114D288691FE009BDB38 /* CityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
@@ -277,6 +280,7 @@
 		A8BB1379289FB3B70093CC64 /* StudentCoursesViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentCoursesViewCell.swift; sourceTree = "<group>"; };
 		A8BB137A289FB3B70093CC64 /* StudentCoursesViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudentCoursesViewCell.xib; sourceTree = "<group>"; };
 		A8BB137E289FBC3A0093CC64 /* Cource.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cource.storyboard; sourceTree = "<group>"; };
+		A8BB1380289FBD010093CC64 /* StudentCourseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentCourseVC.swift; sourceTree = "<group>"; };
 		A8C8C8072871CAFB00143872 /* LoginResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseModel.swift; sourceTree = "<group>"; };
 		A8C8C8092871CB3800143872 /* RegisterResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResponseModel.swift; sourceTree = "<group>"; };
 		A8C982D4289199C400E45872 /* ShowProfileResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowProfileResponseModel.swift; sourceTree = "<group>"; };
@@ -460,6 +464,7 @@
 			isa = PBXGroup;
 			children = (
 				A89CD14728589B52009D049D /* WishListViewController.swift */,
+				A833893228A3A690005C9D7D /* WishListVC+SetupUI.swift */,
 				A824B6A828903B6A002A2E84 /* WishlistVC+TableView.swift */,
 			);
 			path = WishListVC;
@@ -655,6 +660,7 @@
 				A89CD1522858BACB009D049D /* SportsViewController.swift */,
 				A8BB1373289FA4400093CC64 /* CourseVC.swift */,
 				A8BB1377289FAD060093CC64 /* AttendanceVC.swift */,
+				A8BB1380289FBD010093CC64 /* StudentCourseVC.swift */,
 				A8042707286B27C5005C5EC1 /* PromotionTeacher */,
 				A8E1F80028620A87004DFC21 /* TeacherPromotionCollectionViewCell.swift */,
 				A877D12328743D7500A57E7C /* TeacherProfile */,
@@ -1092,10 +1098,12 @@
 				A8A016702874679000F45C50 /* ResetPasswordVC.swift in Sources */,
 				A89CD14F2858A52E009D049D /* CategoriesViewController.swift in Sources */,
 				A8042709286B27E9005C5EC1 /* PromotionTeacherVC+SetupUI.swift in Sources */,
+				A833893328A3A690005C9D7D /* WishListVC+SetupUI.swift in Sources */,
 				A847E297288D7ABE00C2DAE0 /* APIArea.swift in Sources */,
 				A8042710286B349F005C5EC1 /* ExstensionsOfString.swift in Sources */,
 				A8BA8CFC2895E931007A217D /* RequestParameter.swift in Sources */,
 				A877D11F28742C6600A57E7C /* LoginVC+ValidationOfUI.swift in Sources */,
+				A8BB1381289FBD010093CC64 /* StudentCourseVC.swift in Sources */,
 				A877D12228742F5A00A57E7C /* EditPassVC+ValidationOfUI.swift in Sources */,
 				A8E1F80128620A87004DFC21 /* TeacherPromotionCollectionViewCell.swift in Sources */,
 				A804270B286B282A005C5EC1 /* PromotionTeacherVC+Collection.swift in Sources */,

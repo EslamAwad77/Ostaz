@@ -182,10 +182,10 @@
                                 <rect key="frame" x="0.0" y="98" width="414" height="715"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BRJ-Qb-Jcm" userLabel="view Scroll">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="704"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="817"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KcM-zj-fJl">
-                                                <rect key="frame" x="16.5" y="5" width="381" height="690"/>
+                                                <rect key="frame" x="16.5" y="5" width="381" height="803"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2vB-q1-EIM" userLabel="search View with Filter">
                                                         <rect key="frame" x="0.0" y="0.0" width="381" height="56"/>
@@ -395,10 +395,10 @@
                                                         </constraints>
                                                     </stackView>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fbJ-Ga-0eh">
-                                                        <rect key="frame" x="0.0" y="334" width="381" height="112"/>
+                                                        <rect key="frame" x="0.0" y="334" width="381" height="225"/>
                                                         <color key="backgroundColor" name="BackgroundColor"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="112" id="xgd-7C-lRe"/>
+                                                            <constraint firstAttribute="height" constant="225" id="xgd-7C-lRe"/>
                                                         </constraints>
                                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jXI-Yb-iQs">
                                                             <size key="itemSize" width="136" height="102"/>
@@ -470,7 +470,7 @@
                                                         </cells>
                                                     </collectionView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Most Viewed " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxF-M5-BDG">
-                                                        <rect key="frame" x="0.0" y="454" width="381" height="18"/>
+                                                        <rect key="frame" x="0.0" y="567" width="381" height="18"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="18" id="yyM-nF-VXA"/>
                                                         </constraints>
@@ -479,7 +479,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WjE-0g-LaH">
-                                                        <rect key="frame" x="0.0" y="480" width="381" height="210"/>
+                                                        <rect key="frame" x="0.0" y="593" width="381" height="210"/>
                                                         <color key="backgroundColor" name="BackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="210" id="0iR-Gw-8GM"/>
@@ -1403,6 +1403,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fLF-t9-q8U" customClass="SignupView" customModule="Ostaz" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="96" width="414" height="717"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImageBackGround" translatesAutoresizingMaskIntoConstraints="NO" id="nU1-fH-8jL">
                                 <rect key="frame" x="-7" y="-48" width="428" height="992"/>
                                 <color key="backgroundColor" name="BackgroundColor"/>
@@ -1470,24 +1474,78 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="yun-ja-MWP"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="OEt-iv-kz3"/>
                             </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8qh-0O-tRc" userLabel="reload View">
+                                <rect key="frame" x="0.0" y="350" width="414" height="133"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="PCi-6U-6xq">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="133"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obr-Pn-uJF">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" name="ButtonColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I6Z-N3-Mm9">
+                                                <rect key="frame" x="0.0" y="103" width="414" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Reloading">
+                                                    <color key="titleColor" name="ButtonColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="btnReloadingData:" destination="v0C-sx-Vfq" eventType="touchUpInside" id="955-QQ-PRG"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="BackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="PCi-6U-6xq" firstAttribute="top" secondItem="8qh-0O-tRc" secondAttribute="top" id="OzJ-1w-uXG"/>
+                                    <constraint firstAttribute="trailing" secondItem="PCi-6U-6xq" secondAttribute="trailing" id="aAL-ue-Ro0"/>
+                                    <constraint firstAttribute="bottom" secondItem="PCi-6U-6xq" secondAttribute="bottom" id="hn2-M7-qHH"/>
+                                    <constraint firstItem="PCi-6U-6xq" firstAttribute="leading" secondItem="8qh-0O-tRc" secondAttribute="leading" id="uVV-75-iIg"/>
+                                </constraints>
+                            </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="b2l-9J-fFz">
+                                <rect key="frame" x="182" y="403.5" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="VTU-3P-xBd"/>
+                                    <constraint firstAttribute="height" constant="50" id="c4j-XB-V63"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xDO-Fc-9Qd"/>
                         <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="8qh-0O-tRc" firstAttribute="leading" secondItem="xDO-Fc-9Qd" secondAttribute="leading" id="0JF-Jt-MpA"/>
+                            <constraint firstItem="b2l-9J-fFz" firstAttribute="centerY" secondItem="xDO-Fc-9Qd" secondAttribute="centerY" id="1Ud-rR-eC4"/>
                             <constraint firstItem="Tfh-J5-5K6" firstAttribute="leading" secondItem="xDO-Fc-9Qd" secondAttribute="leading" id="2Fx-2w-CIw"/>
+                            <constraint firstItem="xDO-Fc-9Qd" firstAttribute="bottom" secondItem="8qh-0O-tRc" secondAttribute="bottom" constant="330" id="Aac-vf-Mku"/>
                             <constraint firstItem="nU1-fH-8jL" firstAttribute="centerY" secondItem="N5r-RN-2Lr" secondAttribute="centerY" id="Bq7-NY-Oq1"/>
+                            <constraint firstItem="8qh-0O-tRc" firstAttribute="trailing" secondItem="xDO-Fc-9Qd" secondAttribute="trailing" id="CH9-yf-Rpv"/>
                             <constraint firstItem="WRI-3K-SCA" firstAttribute="top" secondItem="Tfh-J5-5K6" secondAttribute="bottom" constant="5" id="Fzb-BQ-VEP"/>
                             <constraint firstItem="Tfh-J5-5K6" firstAttribute="top" secondItem="xDO-Fc-9Qd" secondAttribute="top" constant="10" id="Nc0-3X-esZ"/>
+                            <constraint firstItem="fLF-t9-q8U" firstAttribute="bottom" secondItem="xDO-Fc-9Qd" secondAttribute="bottom" id="OMb-dJ-MeC"/>
                             <constraint firstItem="Tfh-J5-5K6" firstAttribute="trailing" secondItem="xDO-Fc-9Qd" secondAttribute="trailing" id="P5y-dM-YWC"/>
                             <constraint firstItem="WRI-3K-SCA" firstAttribute="leading" secondItem="xDO-Fc-9Qd" secondAttribute="leading" id="XPf-3n-pUa"/>
                             <constraint firstAttribute="bottom" secondItem="WRI-3K-SCA" secondAttribute="bottom" constant="83" id="bDC-0b-kbT"/>
+                            <constraint firstItem="fLF-t9-q8U" firstAttribute="leading" secondItem="N5r-RN-2Lr" secondAttribute="leading" id="cap-Qs-uFs"/>
+                            <constraint firstItem="b2l-9J-fFz" firstAttribute="centerX" secondItem="xDO-Fc-9Qd" secondAttribute="centerX" id="dLD-sz-GdX"/>
+                            <constraint firstAttribute="trailing" secondItem="fLF-t9-q8U" secondAttribute="trailing" id="dQg-vz-V0k"/>
+                            <constraint firstItem="8qh-0O-tRc" firstAttribute="top" secondItem="xDO-Fc-9Qd" secondAttribute="top" constant="306" id="drS-7e-6Xc"/>
                             <constraint firstItem="nU1-fH-8jL" firstAttribute="centerX" secondItem="N5r-RN-2Lr" secondAttribute="centerX" id="jyV-TV-Rbh"/>
                             <constraint firstItem="WRI-3K-SCA" firstAttribute="trailing" secondItem="xDO-Fc-9Qd" secondAttribute="trailing" id="shH-bO-iBr"/>
+                            <constraint firstItem="fLF-t9-q8U" firstAttribute="top" secondItem="N5r-RN-2Lr" secondAttribute="top" constant="96" id="zp1-N9-o8V"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Wishist" image="wishListIcon" id="XxH-ox-td7"/>
                     <connections>
+                        <outlet property="activityLoadingPage" destination="b2l-9J-fFz" id="OJZ-Wf-2zp"/>
+                        <outlet property="lblErrorDesc" destination="obr-Pn-uJF" id="Qy1-wP-oE0"/>
+                        <outlet property="signupView" destination="fLF-t9-q8U" id="99i-T7-cS2"/>
                         <outlet property="tbleViewWishList" destination="R8j-ee-TAD" id="Vl4-Nx-tdw"/>
+                        <outlet property="viewReloadData" destination="8qh-0O-tRc" id="dTH-ty-ANw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8jj-bT-FwB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

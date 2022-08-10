@@ -12,25 +12,25 @@ extension TeacherProfileViewController: UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.collectionViewMehtods{
-            return TeacherMethodsSlides.count
+            return teacherMethodsSlides.count
         } else if collectionView == self.collectionViewAreas {
-            return TeacherAreasSlides.count
+            return teacherAreasSlides.count
         }
-        return TeachercategoriesSlides.count
+        return teacherCategoriesSlides.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == self.collectionViewMehtods{
             let cell1 = collectionView.dequeueReusableCell(withReuseIdentifier: TeacherProfileCollectionViewCell.identifier, for: indexPath) as! TeacherProfileCollectionViewCell
-            cell1.setupUIMehtods(TeacherMethodsSlides[indexPath.row])
+            cell1.setupUIMehtods(teacherMethodsSlides[indexPath.row])
             return cell1
         } else if collectionView == self.collectionViewAreas{
             let cell2 = collectionView.dequeueReusableCell(withReuseIdentifier: TeacherProfileCollectionViewCell.identifier, for: indexPath) as! TeacherProfileCollectionViewCell
-            cell2.setupUIAreas(TeacherAreasSlides[indexPath.row])
+            cell2.setupUIAreas(teacherAreasSlides[indexPath.row])
             return cell2
         } else{
             let cell3 = collectionView.dequeueReusableCell(withReuseIdentifier: TeacherProfileCollectionViewCell.identifier, for: indexPath) as! TeacherProfileCollectionViewCell
-            cell3.setupUICategories(TeachercategoriesSlides[indexPath.row])
+            cell3.setupUICategories(teacherCategoriesSlides[indexPath.row])
             return cell3
         }
         

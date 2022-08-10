@@ -19,7 +19,7 @@ struct HomeMostViewedModel{
     var image : String = ""
     var isFavourite: Bool = false
     var locations: Bool = false
-    var teachingMethod: String = ""
+    var teachingMethod: [MethodModel] = []
     var coveredArea: [AreaModel] = []
     var teacherCategory: [HomeCategoryModel] = []
     
@@ -41,13 +41,25 @@ struct HomeMostViewedModel{
         self.image = (apiData?["image"] as? String) ?? ""
         self.isFavourite = (apiData?["is_favourite"] as? Bool) ?? false
         self.locations = (apiData?["locations"] as? Bool) ?? false
-        self.teachingMethod = (apiData?["teaching_method"] as? String) ?? ""
-        //self.teacherCategory = (apiData?["categories"] as? [HomeCategoryModel]) ?? []
+        //self.teachingMethod = (apiData?["teaching_method"] as? [MethodModel]) ?? []
+        
+        
+        print("=========teachingMethod\n",(apiData?["teaching_method"] as? AnyObject) as? NSArray )
+        
+        if let teachMehtods = (apiData?["teaching_method"] as? AnyObject) as? NSArray{
+             //print("============", apiData?["coverd_area"])
+            for mehtod in teachMehtods{
+                self.teachingMethod.append(MethodModel(apiMethod: mehtod as? [String : Any]))
+            }
+        }
+        print("=========\n",teachingMethod)
+        
+        
         
         //print("=========coverdArea\n",(apiData?["coverd_area"] as? AnyObject) as? NSArray )
         
         if let coveredArea = (apiData?["coverd_area"] as? AnyObject) as? NSArray{
-            // print("============", apiData?["coverd_area"])
+             //print("============", apiData?["coverd_area"])
             for area in coveredArea{
                 self.coveredArea.append(AreaModel(apiData: area as? [String : Any]))
             }

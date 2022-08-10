@@ -25,9 +25,9 @@ class APIWishlist: NSObject {
                     
                     result.wishListArr = []
                     let apiWishList = json["data"]["data"].arrayObject
-                    print(apiWishList!)
+                    //print(apiWishList!)
                     for item in apiWishList ?? [] {
-                        let model = WishListModel.init(apiData: item as? [String : Any])
+                        let model = HomeMostViewedModel.init(apiData: item as? [String: Any])
                         result.wishListArr?.append(model)
                     }
                     
@@ -42,8 +42,8 @@ class APIWishlist: NSObject {
             }
     }
     
-    static func fetchingAddToWishList(favouriteId: Int, completion: @escaping (_ error :String?, _ response: LikeAndDisLikeResponse?) -> Void){
-        let url = URLs.updateProfile
+    static func fetchingAddToWishList(favouriteId: Int, completion: @escaping (_ error :String?, _ response: WishListResponse?) -> Void){
+        let url = URLs.addToWishlist
          let parameters = [
              "favourite_id": favouriteId
          ]
@@ -51,7 +51,7 @@ class APIWishlist: NSObject {
              .response { response in
                  if (response.response?.statusCode ?? 0) >= 200 && (response.response?.statusCode ?? 0) <= 299{
                      let json = JSON(response.data!)
-                     var result = LikeAndDisLikeResponse()
+                     var result = WishListResponse()
                      result.message = json["message"].string
                      completion(nil, result)
                  } else {

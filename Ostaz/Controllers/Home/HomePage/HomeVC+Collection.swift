@@ -53,8 +53,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             let item = homeMostViewedSlides[indexPath.row]
             let teacherVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TeacherProfileViewController") as! TeacherProfileViewController
             teacherVC.modalPresentationStyle = .fullScreen
-            self.present(teacherVC, animated: true)
             teacherVC.instructorId = item.id
+            self.present(teacherVC, animated: true)
 
         } else{
             let item = homecategoriesSlides[indexPath.row]

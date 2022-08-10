@@ -11,6 +11,9 @@ struct CourseModel{
  
     var categories: [HomeCategoryModel] = []
     var courseName: String = ""
+    var duration: String = ""
+    var date: String = ""
+    var price: String = ""
     
     init(){}
     

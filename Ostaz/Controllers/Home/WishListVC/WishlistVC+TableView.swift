@@ -21,7 +21,6 @@ extension WishListViewController: UITableViewDelegate,UITableViewDataSource{
         if let url = URL(string: wishListitem.image){
             cell.imgViewTeacher.kf.setImage(with: url)
             cell.imgViewTeacher.roundedImage()
-
         }else {
             cell.imgViewTeacher.image = UIImage.init(named:  "TeacherImage")
             cell.imgViewTeacher.roundedImage()
@@ -41,14 +40,13 @@ extension WishListViewController: UITableViewDelegate,UITableViewDataSource{
                 cell.imgViewDecription.image = UIImage.init(named:  "WishListPic2")
             }
         }
-        
-        
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let wishListitem = wishListItems[indexPath.row]
-        wishListPrefered.id = wishListitem.id
+        let wishListItem = wishListItems[indexPath.row]
+        let teacherVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TeacherProfileViewController") as! TeacherProfileViewController
+        teacherVC.modalPresentationStyle = .fullScreen
+        teacherVC.instructorId = wishListItem.id
+        self.present(teacherVC, animated: true)
     }
 }
-
-// model we must replace it with  InstructorModel we make and delete another model Don't need them

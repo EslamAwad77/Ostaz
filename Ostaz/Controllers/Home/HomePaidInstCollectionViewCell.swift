@@ -18,7 +18,7 @@ class HomePaidInstCollectionViewCell: UICollectionViewCell {
     
     static let identifier = String(describing: HomePaidInstCollectionViewCell.self)
     
-    func setupUI(_ slide: HomePaidInstructorsModel){
+    func setupUI(_ slide: HomeMostViewedModel){
         lblTeacherName.text = slide.name
         
         if (slide.teacherCategory.isEmpty && slide.teacherCategory.count == 0){
