@@ -80,14 +80,12 @@ class APIProfile: NSObject {
              }
      }
     
-    static func fetchingUpgradeUser(phone: String, area1: Int, area2: Int, category1: Int, category2: Int, email: String, whatsapp: String, facebook: String, completion: @escaping (_ error :String?, _ response: UpgradeResponse?) -> Void){
+    static func fetchingUpgradeUser(phone: String, area: [Int], category: [Int], email: String, whatsapp: String, facebook: String, completion: @escaping (_ error :String?, _ response: UpgradeResponse?) -> Void){
         let url = URLs.upgradeUserToInstructor
         let parameters: [String : Any] = [
              "phone": phone,
-             "areas[1]": area1,
-             "areas[2]": area2,
-             "subspecializations[1]": category1,
-             "subspecializations[2]": category2,
+             "area": area,
+             "subspecializations": category,
              "email": email,
              "whatsapp": whatsapp,
              "facebook": facebook

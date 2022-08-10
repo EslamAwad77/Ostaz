@@ -44,12 +44,13 @@ class LoginViewController: UIViewController {
             APIAuth.fetchingLogin(email: txtFieldLoginUserName.text!, password: txtFieldLoginPassword.text!,deviceToken: UserDefaults.standard.value(forKey: "fcmToken") as! String, deviceType: "ios") { error, response in
                 if error != nil {
                     print(error!)
-                    
+                    self.showAlert(message: error!)
                 } else {
                     print(response?.message ?? "")
                     print(response?.user?.id ?? 0)
                     print(response?.user?.token ?? "")
                     UserDefaults.standard.set(response?.user?.token, forKey: "token")
+                    UserDefaults.standard.set(response?.user?.email, forKey: "email")
                     self.goToHome()
                 }
             }

@@ -31,6 +31,7 @@ class WishListViewController: UIViewController {
     //-------------------lifecycle--------------------------
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Wishlist"
         self.setupUI()
     }
 }

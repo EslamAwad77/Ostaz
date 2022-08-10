@@ -21,6 +21,10 @@ extension LocationViewController {
         for item in areaValues {
             areas.append(item.name)
         }
+      //TODO: city id 
+//        APIArea.fetchingArea(city: <#T##[Int]#>) { error, response in
+//            <#code#>
+//        }
         
         let c1 = CityModel()
         c1.name = "city1"
@@ -33,6 +37,17 @@ extension LocationViewController {
         for item in cityValues{
             cities.append(item.name)
         }
+        
+        
+//        APICity.fetchingCity { error, response in
+//            if error != nil {
+//                print(error!)
+//            } else {
+//
+//                self.cityValues =  response?.cityValues ?? []
+//            }
+//        }
+        
         
         self.collViewCity.isHidden = true
         self.collViewArea.isHidden = true

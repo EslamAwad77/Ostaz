@@ -26,6 +26,7 @@ class APIAuth: NSObject{
                 }else {
                     let json = JSON(response.data!)
                     let msg = json["message"].string
+                    
                     completion(msg, nil)
                 }
             }

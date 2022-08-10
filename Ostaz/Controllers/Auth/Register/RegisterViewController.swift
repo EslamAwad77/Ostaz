@@ -51,6 +51,7 @@ class RegisterViewController: UIViewController {
             APIAuth.fetchingRegister(name: txtFieldRegisterUserName.text!, email: txtFieldEmail.text!, password: txtFieldRegisterPassword.text!) { error, response in
                 if error != nil {
                     print(error!)
+                    self.showAlert(message: error!)
                 } else {
                     print(response?.message ?? "")
                     self.goToLocationVC()
@@ -65,11 +66,6 @@ class RegisterViewController: UIViewController {
         self.setupUI()
     }
 }
-  
-
-
-
-
 //    func validatePhoneNumber(_ phone: String) -> String? {
 //        let set = CharacterSet(charactersIn: phone)
 //        if !CharacterSet.decimalDigits.isSuperset(of: set){

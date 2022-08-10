@@ -11,7 +11,7 @@ import SwiftyJSON
 
 class APICity: NSObject {
     static func fetchingCity(completion: @escaping (_ error :String?, _ response: CityResponse?) -> Void){
-        let url = URLs.logout
+        let url = URLs.city
         let token = UserDefaults.standard.value(forKey: "token") as? String
         let bearerToken =  token != nil ? "Bearer \(token!)" : ""    // ternary Operator
         AF.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: ["Authorization": bearerToken])

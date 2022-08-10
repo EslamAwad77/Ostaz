@@ -66,6 +66,7 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //title = "Home"
         self.setUpUI()
         //
         //        var homePaid1: HomePaidInstructorsModel = HomePaidInstructorsModel()

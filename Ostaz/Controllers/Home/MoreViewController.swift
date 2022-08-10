@@ -43,6 +43,7 @@ class MoreViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "More"
     }
     
     //-------------------functions------------------------

@@ -37,6 +37,7 @@ class CategoriesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Categories"
         self.setUpUI()
         txtFieldSearch.delegate = self
     }

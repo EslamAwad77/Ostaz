@@ -10,11 +10,10 @@ import Alamofire
 import SwiftyJSON
 
 class APIArea: NSObject {
-    static func fetchingArea(cityId1: Int, cityId2: Int, completion: @escaping (_ error :String?, _ response: AreaResponse?) -> Void){
+    static func fetchingArea(city: [Int], completion: @escaping (_ error :String?, _ response: AreaResponse?) -> Void){
         let url = URLs.register
         let parameters = [
-            "cities_id[0]": cityId1,
-            "cities_id[1]": cityId2
+            "cities_id" : city
         ]
         AF.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: nil)
             .response { response in

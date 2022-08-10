@@ -25,6 +25,7 @@ class PromotionForTeacherVC: UIViewController {
    
     //-------------------IBOutlet------------------------
 
+    @IBOutlet weak var txtFieldNumber: UITextField!
     @IBOutlet weak var imgViewUploadYourImage: UIImageView!
     @IBOutlet weak var imgViewUploadImage: UIImageView!
     @IBOutlet weak var txtFieldWhatsAppNumber: UITextField!
@@ -73,10 +74,10 @@ class PromotionForTeacherVC: UIViewController {
     }
     @IBAction func btnConfirmPromotion(_ sender: UIButton) {
         
-//        APIProfile.fetchingUpgradeUser(phone: <#T##String#>, area1: <#T##Int#>, area2: <#T##Int#>, category1: <#T##Int#>, category2: <#T##Int#>, email: <#T##String#>, whatsapp: txtFieldWhatsAppNumber.text!, facebook: txtFieldFaceAccount.text!) { error, response in
+//        APIProfile.fetchingUpgradeUser(phone: txtFieldNumber.text!, area: selectedAreas[0].id, category: selectedCategories[0]., email: UserDefaults.standard.value(forKey: "email") as! String, whatsapp: txtFieldWhatsAppNumber.text!, facebook: txtFieldFaceAccount.text!) { error, response in
 //            <#code#>
 //        }
-//
+
         self.dismiss(animated: true)
     }
     //-------------------lifecycle------------------------
