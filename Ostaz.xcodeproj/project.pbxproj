@@ -137,6 +137,7 @@
 		A8DA430C2888D9B000F1493E /* CategoriesVC+Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DA430B2888D9B000F1493E /* CategoriesVC+Collection.swift */; };
 		A8DC659A28577590008879B4 /* EditPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DC659928577590008879B4 /* EditPasswordViewController.swift */; };
 		A8E1F80128620A87004DFC21 /* TeacherPromotionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E1F80028620A87004DFC21 /* TeacherPromotionCollectionViewCell.swift */; };
+		A8F3087E28AA72F300F14A0D /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F3087D28AA72F300F14A0D /* UserDefaultsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -295,6 +296,7 @@
 		A8DA430B2888D9B000F1493E /* CategoriesVC+Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoriesVC+Collection.swift"; sourceTree = "<group>"; };
 		A8DC659928577590008879B4 /* EditPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPasswordViewController.swift; sourceTree = "<group>"; };
 		A8E1F80028620A87004DFC21 /* TeacherPromotionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherPromotionCollectionViewCell.swift; sourceTree = "<group>"; };
+		A8F3087D28AA72F300F14A0D /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		AF56F268C1243AC2F59B4D84 /* Pods-Ostaz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ostaz.debug.xcconfig"; path = "Target Support Files/Pods-Ostaz/Pods-Ostaz.debug.xcconfig"; sourceTree = "<group>"; };
 		DB66CA99EA88BE48D1F9CB93 /* Pods-Ostaz-OstazUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ostaz-OstazUITests.release.xcconfig"; path = "Target Support Files/Pods-Ostaz-OstazUITests/Pods-Ostaz-OstazUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -490,11 +492,11 @@
 				A89CD1502858B05F009D049D /* WishListItems.swift */,
 				A8672C872868856000ED514D /* TeachMethodModel.swift */,
 				A836114D288691FE009BDB38 /* CityModel.swift */,
-				A8672C892868908D00ED514D /* AreaModel.swift */,
 				A8042705286B01A3005C5EC1 /* TeacherCategoryModel.swift */,
 				A8DA43022888CD7C00F1493E /* CreateMethodModel.swift */,
 				A8DA43042888CFFC00F1493E /* UpgradeUserModel.swift */,
 				A8A8C770288D33A900178E2F /* HomeCategoryModel.swift */,
+				A8672C892868908D00ED514D /* AreaModel.swift */,
 				A8BB1375289FA7EF0093CC64 /* CourseModel.swift */,
 				A8C8C80B2871CB5000143872 /* Json Response */,
 			);
@@ -638,6 +640,7 @@
 				A85DFAE2285FB3C700CEF27B /* CategoriesCollectionViewCell.swift */,
 				A824B6A028900847002A2E84 /* SubCategory VC */,
 				A84BCBF4288410BD00F21FF1 /* SubCategoryCollectionViewCell.swift */,
+				A89CD1522858BACB009D049D /* SportsViewController.swift */,
 				A824B6A728903B52002A2E84 /* WishListVC */,
 				A89CD13E28587832009D049D /* MoreViewController.swift */,
 			);
@@ -659,7 +662,6 @@
 		A85DFAE6285FB40200CEF27B /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				A89CD1522858BACB009D049D /* SportsViewController.swift */,
 				A8BB1373289FA4400093CC64 /* CourseVC.swift */,
 				A8BB1377289FAD060093CC64 /* AttendanceVC.swift */,
 				A8BB1380289FBD010093CC64 /* StudentCourseVC.swift */,
@@ -716,6 +718,7 @@
 				A804270F286B349F005C5EC1 /* ExstensionsOfString.swift */,
 				A824B69E288FD619002A2E84 /* UIImageViewExstensions.swift */,
 				A833893428A3C9E2005C9D7D /* Exs+UIVC.swift */,
+				A8F3087D28AA72F300F14A0D /* UserDefaultsManager.swift */,
 			);
 			path = Exstensions;
 			sourceTree = "<group>";
@@ -1130,6 +1133,7 @@
 				A84BCBDA288401BE00F21FF1 /* SearchResponseModel.swift in Sources */,
 				A89CD14828589B52009D049D /* WishListViewController.swift in Sources */,
 				A84AF3C9289F66B10076E355 /* HomeFilterCollViewCell.swift in Sources */,
+				A8F3087E28AA72F300F14A0D /* UserDefaultsManager.swift in Sources */,
 				A8BB1371289F9F5E0093CC64 /* CourseViewCell.swift in Sources */,
 				A84AF3CC289F6D270076E355 /* HomeFilterVC+SetupUI.swift in Sources */,
 				A817355B284E7D170008CF8E /* RegisterViewController.swift in Sources */,

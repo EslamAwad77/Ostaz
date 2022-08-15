@@ -20,7 +20,7 @@ class HomeTabBarVC: UITabBarController {
         let categoryVC = CategoriesViewController()
         let wishListVC = WishListViewController()
         let moreVC = MoreViewController()
-        let accountVC = AcountViewController()
+        //let accountVC = AcountViewController()
         
         
         self.setViewControllers([homeVC, categoryVC, wishListVC, moreVC], animated: false)

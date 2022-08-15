@@ -14,8 +14,10 @@ extension SubCategoryVC {
         self.viewSearch.addborder(10)
         collectionViewSubCategory.delegate = self
         collectionViewSubCategory.dataSource = self
+        self.searchBar.delegate = self
         self.activityLoadingPage.startAnimating()
         self.setupTableRefresh()
+        self.filteredSubCategoriesSlides = self.subCategoriesSlides
         self.setUpAPI()
     }
     
@@ -53,11 +55,10 @@ extension SubCategoryVC {
                 self.scrollView.alpha = 1
                 self.lblErrorDescrip.alpha = 0
                 self.lblErrorDescrip.text = ""
-                
                 self.subCategoriesSlides = response?.subCatArr ?? []
+                self.filteredSubCategoriesSlides = response?.subCatArr ?? []
                 print(response!)
                 self.collectionViewSubCategory.reloadData()
-                
                 print(response?.message ?? "")
 
             }

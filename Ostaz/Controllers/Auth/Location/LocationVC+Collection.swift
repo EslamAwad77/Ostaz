@@ -23,6 +23,7 @@ extension LocationViewController: UICollectionViewDelegate, UICollectionViewData
                 guard let self  = self else {return }
                 self.selectedCity.removeAll { item in
                     if item.name == cell1.userCity?.name {
+                        //self.cityId = item.id
                         return true
                     }
                     return false
@@ -47,7 +48,6 @@ extension LocationViewController: UICollectionViewDelegate, UICollectionViewData
             }
             return cell2
         }
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

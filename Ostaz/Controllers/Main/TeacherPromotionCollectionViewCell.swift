@@ -66,7 +66,7 @@ class TeacherPromotionCollectionViewCell: UICollectionViewCell {
 //
 //    }
     
-    var teacherCategory: TeacherCategoryModel? {
+    var teacherCategory: CollectionViewCategorySlide? {
         didSet{
             lblInsertCategory.text = teacherCategory?.categoryName
         }

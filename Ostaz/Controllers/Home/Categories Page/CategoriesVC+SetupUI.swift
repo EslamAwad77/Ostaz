@@ -14,8 +14,10 @@ extension CategoriesViewController {
         self.viewSearch.addborder(10)
         collectionViewCategories.delegate = self
         collectionViewCategories.dataSource = self
+        self.searchBar.delegate = self
         self.activityLoadingPage.startAnimating()
         self.setupTableRefresh()
+        self.filteredCategoriesSlides = self.categoriesSlides
         self.setUpAPI()
         
     }
@@ -57,6 +59,7 @@ extension CategoriesViewController {
                 self.lblErrorDescription.alpha = 0
                 self.lblErrorDescription.text = ""
                 self.categoriesSlides = response?.catArr ?? []
+                self.filteredCategoriesSlides = response?.catArr ?? []
                 //self.filteredCategoriesSlides = (response?.catArr!.filter { CollResponse in
 //                CollResponse.categoryName.contains()
                 //})!

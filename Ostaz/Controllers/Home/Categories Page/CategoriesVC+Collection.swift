@@ -9,12 +9,12 @@ import UIKit
 
 extension CategoriesViewController: UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return categoriesSlides.count
+        return filteredCategoriesSlides.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoriesCollectionViewCell.identifier, for: indexPath) as! CategoriesCollectionViewCell
-        cell.setupUI(categoriesSlides[indexPath.row])
+        cell.setupUI(filteredCategoriesSlides[indexPath.row])
         return cell
     }
     

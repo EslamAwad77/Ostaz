@@ -13,15 +13,15 @@ extension WishListViewController {
     func setupUI() {
         tbleViewWishList.dataSource = self
         tbleViewWishList.delegate = self
+        self.loadingData()
         self.goToRegister()
         self.checkUser()
-        self.loadingData()
+       
      
         self.tbleViewWishList.register(UINib.init(nibName: "WishListCell", bundle: nil), forCellReuseIdentifier: "WishListCell")
         self.activityLoadingPage.startAnimating()
         self.setupTableRefresh()
         self.setUpAPI()
-        //tbleViewWishList.reloadData()
     }
     
     func setUpAPI(){

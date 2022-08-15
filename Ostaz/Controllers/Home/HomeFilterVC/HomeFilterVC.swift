@@ -11,11 +11,14 @@ import DropDown
 class HomeFilterVC: UIViewController {
     
     //-------------------Variables------------------------
+    var cities: [String] = []
+    var categories: [String] = []
+
     let categoryDropDown = DropDown()
     let cityDropDown = DropDown()
     let areaDropDown = DropDown()
-    var categoryValues: [TeacherCategoryModel] = []
-    var selectedCategory: [TeacherCategoryModel] = []
+    var categoryValues: [CollectionViewCategorySlide] = []
+    var selectedCategory: [CollectionViewCategorySlide] = []
     var cityValues: [CityModel] = []
     var selectedCity: [CityModel] = []
     var areaValues: [AreaModel] = []

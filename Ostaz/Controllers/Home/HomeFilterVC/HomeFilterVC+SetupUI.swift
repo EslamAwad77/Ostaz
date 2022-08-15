@@ -21,27 +21,32 @@ extension HomeFilterVC{
         for item in areaValues {
             areas.append(item.name)
         }
-        let c1 = CityModel()
-        c1.name = "city1"
-        let c2 = CityModel()
-        c2.name = "city12"
-        let c3 = CityModel()
-        c3.name = "city123"
-        cityValues = [c1, c2, c3]
-        var cities: [String] = []
-        for item in cityValues{
-            cities.append(item.name)
+        
+        APICity.fetchingCity { error, response in
+            if error != nil {
+                print(error!)
+            } else {
+                self.cityValues = response?.cityValues ?? []
+                for item in self.cityValues{
+                    self.cities.append(item.name)
+                }
+                self.cityDropDown.dataSource = self.cities
+                self.cityDropDown.reloadAllComponents()
+            }
         }
-        let cat1 = TeacherCategoryModel()
-        cat1.categoryName = "category1"
-        let cat2 = TeacherCategoryModel()
-        cat2.categoryName = "cat2"
-        let cat3 = TeacherCategoryModel()
-        cat3.categoryName = "cate3"
-        categoryValues = [cat1, cat2, cat3]
-        var categories: [String] = []
-        for item in categoryValues{
-            categories.append(item.categoryName)
+        
+        
+        APICategory.fetchingCategory { error, response in
+            if error != nil {
+                print(error!)
+            } else {
+                self.categoryValues = response?.catArr ?? []
+                for item in self.categoryValues{
+                    self.categories.append(item.categoryName)
+                }
+                self.categoryDropDown.dataSource = self.categories
+                self.categoryDropDown.reloadAllComponents()
+            }
         }
         
         self.collViewCategories.isHidden = true
@@ -51,7 +56,6 @@ extension HomeFilterVC{
         cityDropDown.anchorView = viewCity
         areaDropDown.anchorView = viewSelectArea
         categoryDropDown.dataSource = categories
-        cityDropDown.dataSource = cities
         areaDropDown.dataSource = areas
         categoryDropDown.bottomOffset = CGPoint(x: 0, y:(categoryDropDown.anchorView?.plainView.bounds.height)!)
         categoryDropDown.topOffset = CGPoint(x: 0, y:-(categoryDropDown.anchorView?.plainView.bounds.height)!)
@@ -62,35 +66,20 @@ extension HomeFilterVC{
         categoryDropDown.direction = .any
         cityDropDown.direction = .any
         areaDropDown.direction = .any
-        categoryDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
-            print("Selected item: \(item) at index: \(index)")
-            let categoryItem = selectedCategory.first { categoryModel in
-                if categoryModel.categoryName == item{
-                    return true
-                }
-                return false
-            }
-            if categoryItem == nil {
-                self.collViewCategories.isHidden = false
-                self.selectedCategory.append(self.categoryValues[index])
-                self.collViewCategories.reloadData()
-            }
-            
-        }
+
         cityDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
             print("Selected item: \(item) at index: \(index)")
             let cityItem = selectedCity.first { cityModel in
+                
                 if cityModel.name == item{
+                    
                     return true
                 }
                 return false
             }
-            if cityItem == nil {
                 self.collViewCitites.isHidden = false
                 self.selectedCity.append(self.cityValues[index])
                 self.collViewCitites.reloadData()
-            }
-            
         }
         areaDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
             print("Selected item: \(item) at index: \(index)")
@@ -106,6 +95,21 @@ extension HomeFilterVC{
                 self.collViewAreas.reloadData()
             }
         }
+        
+        categoryDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+            print("Selected item: \(item) at index: \(index)")
+            let catItem = selectedCategory.first { catModel in
+                
+                if catModel.categoryName == item{
+                    
+                    return true
+                }
+                return false
+            }
+                self.collViewCategories.isHidden = false
+                self.selectedCategory.append(self.categoryValues[index])
+                self.collViewCategories.reloadData()
+        }
         collViewCategories.delegate = self
         collViewCategories.dataSource = self
         collViewCitites.delegate = self
@@ -114,3 +118,23 @@ extension HomeFilterVC{
         collViewAreas.dataSource = self
     }
 }
+
+
+
+
+
+//        categoryDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+//            print("Selected item: \(item) at index: \(index)")
+//            let categoryItem = selectedCategory.first { categoryModel in
+//                if categoryModel.categoryName == item{
+//                    return true
+//                }
+//                return false
+//            }
+//            if categoryItem == nil {
+//                self.collViewCategories.isHidden = false
+//                self.selectedCategory.append(self.categoryValues[index])
+//                self.collViewCategories.reloadData()
+//            }
+//
+//        }

@@ -8,8 +8,17 @@
 import UIKit
 
 extension PromotionForTeacherVC {
-  
+    
     func setUpUI(){
+        
+        APIMethods.fetchingMehtodsList { error, response in
+            if error != nil {
+                print(error!)
+            } else {
+                self.teacherMethodItems = response?.arrOfList ?? []
+            }
+        }
+        
         let m1 = TeachMethodModel()
         m1.name = "test"
         let m2 = TeachMethodModel()
@@ -34,16 +43,29 @@ extension PromotionForTeacherVC {
             areas.append(item.name)
         }
         
-        let c1 = TeacherCategoryModel()
-        c1.categoryName = "category1"
-        let c2 = TeacherCategoryModel()
-        c2.categoryName = "cat2"
-        let c3 = TeacherCategoryModel()
-        c3.categoryName = "cate3"
-        TeachercategoryItems = [c1, c2, c3]
-        var categories: [String] = []
-        for item in TeachercategoryItems{
-            categories.append(item.categoryName)
+        //        var c1 = CollectionViewCategorySlide()
+        //        c1.categoryName = "category1"
+        //        var c2 = CollectionViewCategorySlide()
+        //        c2.categoryName = "cat2"
+        //        var c3 = CollectionViewCategorySlide()
+        //        c3.categoryName = "cate3"
+        //        TeachercategoryItems = [c1, c2, c3]
+        //        var categories: [String] = []
+        //        for item in TeachercategoryItems{
+        //            categories.append(item.categoryName)
+        //        }
+        
+        APICategory.fetchingCategory { error, response in
+            if error != nil {
+                print(error!)
+            } else {
+                self.categoryValues = response?.catArr ?? []
+                for item in self.categoryValues{
+                    self.categories.append(item.categoryName)
+                }
+                self.categoryDropDown.dataSource = self.categories
+                self.categoryDropDown.reloadAllComponents()
+            }
         }
         
         
@@ -73,20 +95,35 @@ extension PromotionForTeacherVC {
                 self.collectionViewAddingAreas.reloadData()
             }
         }
+        //        categoryDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+        //            print("Selected item: \(item) at index: \(index)")
+        //             let categoryItem = selectedCategories.first { categoryModel in
+        //                 if categoryModel.categoryName == item{
+        //                     return true
+        //                 }
+        //                 return false
+        //            }
+        //            if categoryItem == nil {
+        //                self.collectionViewAddingCategories.isHidden = false
+        //                self.selectedCategories.append(self.TeachercategoryItems[index])
+        //                self.collectionViewAddingCategories.reloadData()
+        //            }
+        //
+        //        }
+        
         categoryDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
             print("Selected item: \(item) at index: \(index)")
-             let categoryItem = selectedCategories.first { categoryModel in
-                 if categoryModel.categoryName == item{
-                     return true
-                 }
-                 return false
+            let catItem = selectedCategories.first { catModel in
+                
+                if catModel.categoryName == item{
+                    
+                    return true
+                }
+                return false
             }
-            if categoryItem == nil {
-                self.collectionViewAddingCategories.isHidden = false
-                self.selectedCategories.append(self.TeachercategoryItems[index])
-                self.collectionViewAddingCategories.reloadData()
-            }
-            
+            self.collectionViewAddingCategories.isHidden = false
+            self.selectedCategories.append(self.categoryValues[index])
+            self.collectionViewAddingCategories.reloadData()
         }
         
         collectionViewTeachMethods.delegate = self
@@ -95,7 +132,5 @@ extension PromotionForTeacherVC {
         collectionViewAddingAreas.dataSource = self
         collectionViewAddingCategories.delegate = self
         collectionViewAddingCategories.dataSource = self
-        //collectionViewHome.collectionViewLayout = UICollectionViewFlowLayout()
-   
     }
 }

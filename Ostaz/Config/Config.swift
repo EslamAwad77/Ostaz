@@ -6,7 +6,6 @@ import Foundation
 
 struct URLs {
     static let main = "https://inst.roqay.solutions/api/"
-    static let photoURL = "https://inst.roqay.solutions/"
     // Auth
     
     /// POST {email, password}

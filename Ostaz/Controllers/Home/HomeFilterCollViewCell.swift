@@ -13,7 +13,7 @@ class HomeFilterCollViewCell: UICollectionViewCell {
     var didDeleted: (() -> ())?
     static let identifier = String(describing: HomeFilterCollViewCell.self)
     
-    var userCategory: TeacherCategoryModel? {
+    var userCategory: CollectionViewCategorySlide? {
         didSet{
             lblSelectedCategory.text = userCategory?.categoryName
         }

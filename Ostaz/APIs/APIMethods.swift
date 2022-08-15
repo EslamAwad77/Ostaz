@@ -25,7 +25,7 @@ class APIMethods: NSObject {
                     result.arrOfList = []
                     let apiMehtod = json["data"].arrayObject
                     for item in apiMehtod ?? [] {
-                        let model = MethodModel.init(apiMethod: item as? [String: Any])
+                        let model = TeachMethodModel.init(apiData: item as? [String: Any])
                         result.arrOfList?.append(model)
                     }
                     completion(nil, result)

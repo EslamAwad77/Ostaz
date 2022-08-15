@@ -18,6 +18,9 @@ class TeacherProfileViewController: UIViewController {
     var teacherCategoriesSlides: [HomeCategoryModel] = []
     
     //-------------------IBOutlet------------------------
+    @IBOutlet weak var lblErrorDesc: UILabel!
+    @IBOutlet weak var viewReloading: UIView!
+    @IBOutlet weak var activityLoadingPage: UIActivityIndicatorView!
     @IBOutlet weak var btnAddToWishlist: UIButton!
     @IBOutlet weak var signUpView: SignupView!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -42,6 +45,11 @@ class TeacherProfileViewController: UIViewController {
         self.dismiss(animated: true)
     }
     
+    @IBAction func btnErrorReloading(_ sender: UIButton) {
+        self.loadingData()
+        self.activityLoadingPage.startAnimating()
+        self.APIUserProfile()
+    }
     @IBAction func btnAddToWishList(_ sender: Any) {
         if self.isActive {
             self.btnAddToWishlist.tintColor = UIColor.red
@@ -65,6 +73,9 @@ class TeacherProfileViewController: UIViewController {
         //TODO: if he will update APIUpdate here and replace wish list button to edit button
     }
     
+    
+    
+    
     //-------------------LifeCycle------------------------
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,7 +89,14 @@ class TeacherProfileViewController: UIViewController {
         APIProfile.fetchingShowProfile(istructorId: instructorId){ error, response in
             if error != nil {
                 print(error!)
+                self.scrollView.alpha = 0
+                self.viewReloading.alpha = 1
+                self.lblErrorDesc.alpha = 1
+                self.lblErrorDesc.text = error
             } else {
+                self.hideError()
+                self.lblErrorDesc.alpha = 0
+                self.lblErrorDesc.text = ""
                 self.SetupProfile((response!.instructorProfile)!)
                 self.teacherMethodsSlides = response?.instructorProfile?.teachingMethod ?? []
                 self.teacherAreasSlides = response?.instructorProfile?.coveredArea ?? []
@@ -86,14 +104,16 @@ class TeacherProfileViewController: UIViewController {
                 self.collectionViewMehtods.reloadData()
                 self.collectionViewAreas.reloadData()
                 self.collectionViewCategoryy.reloadData()
-                //                if self.teacherMethodsSlides.isEmpty && self.teacherAreasSlides.isEmpty && self.teacherCategoriesSlides.isEmpty {
-                //                        self.collectionViewMehtods.isHidden = true
-                //                        self.lblTeachingMethods.text = ""
-                //                        self.collectionViewAreas.isHidden = true
-                //                        self.lblCoveredArea.text = ""
-                //                        self.collectionViewCategoryy.isHidden = true
-                //                        self.lblCategories.text = ""
-                //                    }
+                /*
+                 if self.teacherMethodsSlides.isEmpty && self.teacherAreasSlides.isEmpty && self.teacherCategoriesSlides.isEmpty {
+                     self.collectionViewMehtods.isHidden = true
+                     self.lblTeachingMethods.text = ""
+                     self.collectionViewAreas.isHidden = true
+                     self.lblCoveredArea.text = ""
+                     self.collectionViewCategoryy.isHidden = true
+                     self.lblCategories.text = ""
+                 }
+                 */
                 print((response?.instructorProfile?.email)!)
                 print(response?.message ?? "")
             }

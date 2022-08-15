@@ -32,14 +32,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func btnLogin(_ sender: UIButton) {
-//        Messaging.messaging().token { token, error in
-//            if let error = error {
-//                print("Error fetching registration token: \(error)")
-//            } else if let token = token {
-//                print("registration token: \(token)")
-//                self.deviceToken  = "Remote FCM registration token: \(token)"
-//            }
-//        }
+
         if validation(){
             APIAuth.fetchingLogin(email: txtFieldLoginUserName.text!, password: txtFieldLoginPassword.text!,deviceToken: UserDefaults.standard.value(forKey: "fcmToken") as! String, deviceType: "ios") { error, response in
                 if error != nil {

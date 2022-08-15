@@ -13,8 +13,8 @@ class CategoriesViewController: UIViewController {
     
     //-------------------Variables------------------------
     
-    var categoriesSlides: [CollectionViewCategorySlide] = []
-    var filteredCategoriesSlides = [CollectionViewCategorySlide]() // take an area of memory
+    var categoriesSlides = [CollectionViewCategorySlide]()
+    var filteredCategoriesSlides = [CollectionViewCategorySlide]()
     
     //-------------------IBOutlet------------------------
     @IBOutlet weak var viewReloading: UIView!
@@ -23,7 +23,8 @@ class CategoriesViewController: UIViewController {
     @IBOutlet weak var collectionViewCategories: UICollectionView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var lblErrorDescription: UILabel!
-    @IBOutlet weak var txtFieldSearch: UITextField!
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     //-------------------Actions------------------------
     @IBAction func btnReloadingData(_ sender: UIButton) {
         self.loadingData()
@@ -39,31 +40,33 @@ class CategoriesViewController: UIViewController {
         super.viewDidLoad()
         title = "Categories"
         self.setUpUI()
-        txtFieldSearch.delegate = self
     }
-    
-//        func textField(
-//            _ textField: UITextField,
-//            shouldChangeCharactersIn range: NSRange,
-//            replacementString string: String
-//        ) -> Bool{}
-//
 }
 
-extension CategoriesViewController: UITextFieldDelegate {
-    func textField(_ textField: UITextField,
-                   shouldChangeCharactersIn range: NSRange,
-                   replacementString string: String) -> Bool {
-        print("text === ",textField.text!)
-        if (textField.text != ""){
-            self.setUpAPI()
-            if txtFieldSearch.text == categoriesSlides[0].categoryName {
-                
-            }
-            
-        }
-        return true
+extension CategoriesViewController: UISearchBarDelegate{
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.endEditing(true)
+        self.filteredCategoriesSlides = self.categoriesSlides
     }
-   
-    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print("\(searchText)")
+//        self.filteredCategoriesSlides = searchText.isEmpty ? categoriesSlides : categoriesSlides.filter({ model in
+//            return model.categoryName.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
+//        })
+        filteredCategoriesSlides = []
+        if searchText != "" {
+           // filteredCategoriesSlides.append(contentsOf: categoriesSlides.filter({$0.categoryName.lowercased().contains(searchText.lowercased())}))
+            for i in 0 ..< categoriesSlides.count{
+                let catObj = categoriesSlides[i]
+                if (catObj.categoryName.lowercased().contains(searchText.lowercased())){
+                    filteredCategoriesSlides.append(catObj)
+                }
+            }
+            self.collectionViewCategories.reloadData()
+        } else {
+            self.filteredCategoriesSlides = categoriesSlides
+            self.collectionViewCategories.reloadData()
+        }
+        print("filteredCategoriesSlides: \(filteredCategoriesSlides.count)")
+    }
 }

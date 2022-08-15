@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ListOfMehtodsResponse {
+struct ListOfMehtodsResponse{
     var message: String?
-    var arrOfList: [MethodModel]?
+    var arrOfList: [TeachMethodModel]?
 }

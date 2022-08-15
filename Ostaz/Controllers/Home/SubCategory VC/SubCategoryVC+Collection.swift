@@ -9,12 +9,12 @@ import UIKit
 
 extension SubCategoryVC: UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return subCategoriesSlides.count
+        return filteredSubCategoriesSlides.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SubCategoryCollectionViewCell.identifier, for: indexPath) as! SubCategoryCollectionViewCell
-        cell.setupUI(subCategoriesSlides[indexPath.row])
+        cell.setupUI(filteredSubCategoriesSlides[indexPath.row])
         return cell
     }
     

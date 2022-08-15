@@ -47,7 +47,7 @@ class RegisterViewController: UIViewController {
     
     @IBAction func btnRegisterCreateAccount(_ sender: UIButton) {
         
-        if validation() {
+        if validation(){
             APIAuth.fetchingRegister(name: txtFieldRegisterUserName.text!, email: txtFieldEmail.text!, password: txtFieldRegisterPassword.text!) { error, response in
                 if error != nil {
                     print(error!)
@@ -64,16 +64,8 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
+        //txtFieldRegisterPassword.text = UserDefaultsManager.shared.password
+
     }
 }
-//    func validatePhoneNumber(_ phone: String) -> String? {
-//        let set = CharacterSet(charactersIn: phone)
-//        if !CharacterSet.decimalDigits.isSuperset(of: set){
-//            return "Phone Number Must Contain only Digits"
-//        }
-//        if phone.count != 11 {
-//            return "Phone Number must contain 11 number"
-//        } else {
-//            return nil
-//        }
-//    }
+

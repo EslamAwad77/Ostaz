@@ -11,6 +11,8 @@ import DropDown
 class PromotionForTeacherVC: UIViewController {
     
     //-------------------Variables------------------------
+    
+    var categories: [String] = []
 
     let areaDropDown = DropDown()
     let categoryDropDown = DropDown()
@@ -20,8 +22,8 @@ class PromotionForTeacherVC: UIViewController {
     var TeacherAreaItems: [AreaModel] = []
     var selectedAreas: [AreaModel] = []
     
-    var TeachercategoryItems: [TeacherCategoryModel] = []
-    var selectedCategories: [TeacherCategoryModel] = []
+    var categoryValues: [CollectionViewCategorySlide] = []
+    var selectedCategories: [CollectionViewCategorySlide] = []
    
     //-------------------IBOutlet------------------------
 

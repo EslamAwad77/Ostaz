@@ -16,7 +16,9 @@ extension TeacherProfileViewController {
         collectionViewAreas.dataSource = self
         collectionViewCategoryy.delegate = self
         collectionViewCategoryy.dataSource = self
-        //collectionViewHome.collectionViewLayout = UICollectionViewFlowLayout()
+        self.loadingData()
+        self.activityLoadingPage.startAnimating()
+        self.setupTableRefresh()
 
 //        if teacherMethodsSlides.isEmpty && teacherAreasSlides.isEmpty && teacherCategoriesSlides.isEmpty {
 //            self.collectionViewMehtods.isHidden = true
@@ -45,5 +47,27 @@ extension TeacherProfileViewController {
             registerVC.modalPresentationStyle = .fullScreen
             self.present(registerVC, animated: true)
         }
+    }
+    
+    
+    func setupTableRefresh(){
+        //if refresh from top
+        self.scrollView.es.addPullToRefresh { [weak self] in
+            guard let self = self else { return }
+            self.APIUserProfile()
+            print("top")
+        }
+    }
+    
+    func loadingData() {
+        self.scrollView.alpha = 0
+        self.viewReloading.alpha = 0
+    }
+    
+    
+    func hideError() {
+        self.scrollView.alpha = 1
+        self.viewReloading.alpha = 0
+        self.activityLoadingPage.alpha = 0
     }
 }

@@ -11,12 +11,16 @@ import DropDown
 class LocationViewController: UIViewController{
     
     //-------------------Variables------------------------
+    var cityId: Int = 0
+    
     let cityDropDown = DropDown()
     let areaDropDown = DropDown()
-    
     var cityValues: [CityModel] = []
     var areaValues: [AreaModel] = []
-    
+   
+    var cities: [String] = []
+    var areas: [String] = []
+
     var selectedCity: [CityModel] = []
     var selectedArea: [AreaModel] = []
   

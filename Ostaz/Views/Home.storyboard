@@ -1499,7 +1499,6 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" name="BackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="PCi-6U-6xq" firstAttribute="top" secondItem="8qh-0O-tRc" secondAttribute="top" id="OzJ-1w-uXG"/>
                                     <constraint firstAttribute="trailing" secondItem="PCi-6U-6xq" secondAttribute="trailing" id="aAL-ue-Ro0"/>
@@ -1581,38 +1580,18 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FaO-Ap-d17" userLabel="search View">
                                                         <rect key="frame" x="0.0" y="0.0" width="382" height="56"/>
                                                         <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pCo-Ke-1xD">
-                                                                <rect key="frame" x="18" y="0.0" width="364" height="56"/>
-                                                                <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XMq-nI-WLJ" userLabel="search Mark">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="32" height="56"/>
-                                                                        <color key="tintColor" name="ButtonColor"/>
-                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                                        <state key="normal" title="   " image="searchMark"/>
-                                                                        <connections>
-                                                                            <action selector="btnSearchCategoryResult:" destination="YGD-9M-LEt" eventType="touchUpInside" id="7Sh-rH-WNc"/>
-                                                                        </connections>
-                                                                    </button>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JXQ-ll-QgD" userLabel="search">
-                                                                        <rect key="frame" x="32" y="0.0" width="332" height="56"/>
-                                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="search"/>
-                                                                        <userDefinedRuntimeAttributes>
-                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
-                                                                                <real key="value" value="10"/>
-                                                                            </userDefinedRuntimeAttribute>
-                                                                        </userDefinedRuntimeAttributes>
-                                                                    </textField>
-                                                                </subviews>
-                                                            </stackView>
+                                                            <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="0Ve-Sh-4VF">
+                                                                <rect key="frame" x="0.0" y="0.0" width="382" height="56"/>
+                                                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="search"/>
+                                                            </searchBar>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
-                                                            <constraint firstItem="pCo-Ke-1xD" firstAttribute="leading" secondItem="FaO-Ap-d17" secondAttribute="leading" constant="18" id="7G1-9P-lGS"/>
-                                                            <constraint firstAttribute="trailing" secondItem="pCo-Ke-1xD" secondAttribute="trailing" id="9P7-Bf-wJ9"/>
+                                                            <constraint firstItem="0Ve-Sh-4VF" firstAttribute="top" secondItem="FaO-Ap-d17" secondAttribute="top" id="0Vi-Cs-krU"/>
                                                             <constraint firstAttribute="height" constant="56" id="Cr5-Ae-qzu"/>
-                                                            <constraint firstItem="pCo-Ke-1xD" firstAttribute="top" secondItem="FaO-Ap-d17" secondAttribute="top" id="g8C-f4-Brb"/>
-                                                            <constraint firstAttribute="bottom" secondItem="pCo-Ke-1xD" secondAttribute="bottom" id="qjA-VA-fay"/>
+                                                            <constraint firstAttribute="trailing" secondItem="0Ve-Sh-4VF" secondAttribute="trailing" id="oup-n6-KgE"/>
+                                                            <constraint firstItem="0Ve-Sh-4VF" firstAttribute="leading" secondItem="FaO-Ap-d17" secondAttribute="leading" id="pAG-09-SIm"/>
+                                                            <constraint firstAttribute="bottom" secondItem="0Ve-Sh-4VF" secondAttribute="bottom" id="wX2-Ff-vWm"/>
                                                         </constraints>
                                                     </view>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5gW-ge-OMo" userLabel="Collection View Categories">
@@ -1746,7 +1725,6 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" name="BackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="FxM-Ne-cdw" secondAttribute="bottom" id="NeQ-c6-EEC"/>
                                     <constraint firstAttribute="width" constant="414" id="O2r-WH-rcc"/>
@@ -1786,7 +1764,7 @@
                         <outlet property="collectionViewCategories" destination="5gW-ge-OMo" id="nyC-Vk-BfW"/>
                         <outlet property="lblErrorDescription" destination="GF2-TR-fon" id="cgC-kA-i7G"/>
                         <outlet property="scrollView" destination="Sdd-8N-oRP" id="sce-cU-s7v"/>
-                        <outlet property="txtFieldSearch" destination="JXQ-ll-QgD" id="ICT-zU-A80"/>
+                        <outlet property="searchBar" destination="0Ve-Sh-4VF" id="yxZ-FX-rPu"/>
                         <outlet property="viewReloading" destination="uue-mG-f2Y" id="hwt-N3-adI"/>
                         <outlet property="viewSearch" destination="FaO-Ap-d17" id="3XJ-0j-woV"/>
                     </connections>
@@ -1840,38 +1818,18 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nMZ-Se-cAU" userLabel="search View">
                                                         <rect key="frame" x="0.0" y="0.0" width="382" height="56"/>
                                                         <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o5G-1t-fgb">
-                                                                <rect key="frame" x="18" y="0.0" width="364" height="56"/>
-                                                                <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpL-r5-uTN" userLabel="search Mark">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="32" height="56"/>
-                                                                        <color key="tintColor" name="ButtonColor"/>
-                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                                        <state key="normal" title="   " image="searchMark"/>
-                                                                        <connections>
-                                                                            <action selector="btnSearchCategoryResult:" destination="aYt-dW-w1E" eventType="touchUpInside" id="49u-Gj-hmr"/>
-                                                                        </connections>
-                                                                    </button>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ceB-DA-4Xp" userLabel="search">
-                                                                        <rect key="frame" x="32" y="0.0" width="332" height="56"/>
-                                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="search"/>
-                                                                        <userDefinedRuntimeAttributes>
-                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
-                                                                                <real key="value" value="10"/>
-                                                                            </userDefinedRuntimeAttribute>
-                                                                        </userDefinedRuntimeAttributes>
-                                                                    </textField>
-                                                                </subviews>
-                                                            </stackView>
+                                                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="5dq-nl-Lav">
+                                                                <rect key="frame" x="0.0" y="0.0" width="382" height="56"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </searchBar>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="trailing" secondItem="o5G-1t-fgb" secondAttribute="trailing" id="Eu2-yS-7ka"/>
-                                                            <constraint firstItem="o5G-1t-fgb" firstAttribute="top" secondItem="nMZ-Se-cAU" secondAttribute="top" id="Q6E-9g-LeW"/>
-                                                            <constraint firstItem="o5G-1t-fgb" firstAttribute="leading" secondItem="nMZ-Se-cAU" secondAttribute="leading" constant="18" id="bqB-AN-v1b"/>
+                                                            <constraint firstItem="5dq-nl-Lav" firstAttribute="leading" secondItem="nMZ-Se-cAU" secondAttribute="leading" id="Slh-47-2p3"/>
+                                                            <constraint firstItem="5dq-nl-Lav" firstAttribute="top" secondItem="nMZ-Se-cAU" secondAttribute="top" id="WZb-V5-trj"/>
+                                                            <constraint firstAttribute="bottom" secondItem="5dq-nl-Lav" secondAttribute="bottom" id="eBP-Rl-LIY"/>
                                                             <constraint firstAttribute="height" constant="56" id="hV6-AL-X46"/>
-                                                            <constraint firstAttribute="bottom" secondItem="o5G-1t-fgb" secondAttribute="bottom" id="iyv-1N-5vh"/>
+                                                            <constraint firstAttribute="trailing" secondItem="5dq-nl-Lav" secondAttribute="trailing" id="uvc-05-CWP"/>
                                                         </constraints>
                                                     </view>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="swv-zS-Plb" userLabel="Collection View Categories">
@@ -2044,6 +2002,7 @@
                         <outlet property="collectionViewSubCategory" destination="swv-zS-Plb" id="9ID-7B-l2y"/>
                         <outlet property="lblErrorDescrip" destination="PaW-Xx-5Ef" id="qGI-PK-c3f"/>
                         <outlet property="scrollView" destination="9kU-Hp-3c1" id="Gtq-kk-hgt"/>
+                        <outlet property="searchBar" destination="5dq-nl-Lav" id="YSO-th-MZd"/>
                         <outlet property="viewRealoding" destination="Gtv-Iy-Jsh" id="aYP-vV-f6n"/>
                         <outlet property="viewSearch" destination="nMZ-Se-cAU" id="YSC-EO-BbK"/>
                     </connections>

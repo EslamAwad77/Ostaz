@@ -9,6 +9,8 @@ import UIKit
 
 class ResetPasswordVC: UIViewController {
     
+    //var password = UserDefaultsManager.
+    
     var registerVC: RegisterViewController = RegisterViewController()
     
     @IBOutlet weak var txtFieldOtp: UITextField!

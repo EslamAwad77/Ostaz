@@ -11,7 +11,7 @@ import SwiftyJSON
 
 class APIArea: NSObject {
     static func fetchingArea(city: [Int], completion: @escaping (_ error :String?, _ response: AreaResponse?) -> Void){
-        let url = URLs.register
+        let url = URLs.register + "/\(city)"
         let parameters = [
             "cities_id" : city
         ]

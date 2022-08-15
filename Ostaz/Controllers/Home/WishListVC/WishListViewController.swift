@@ -12,7 +12,7 @@ import Kingfisher
 class WishListViewController: UIViewController {
    
     //-------------------variables--------------------------
-    var wishListPrefered: WishListModel = WishListModel()
+    var wishListPrefered: HomeMostViewedModel = HomeMostViewedModel()
     var wishListItems = [HomeMostViewedModel]()
     
     //-------------------outlet--------------------------

@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Alamofire
 
 //must not contain ui
 //must not import uikit
