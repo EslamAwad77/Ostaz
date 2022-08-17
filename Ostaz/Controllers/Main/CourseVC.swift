@@ -49,18 +49,18 @@ extension CourseVC: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = courses[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "CourseViewCell", for: indexPath) as! CourseViewCell
-        if (item.categories.isEmpty && item.categories.count == 0) {
-            cell.lblCategoryAndSubCategory.text = "no teacher job"
-            cell.imgViewCategory.image = UIImage.init(named: "WishListPic2")
-        } else {
-            cell.lblCategoryAndSubCategory.text = item.categories[0].categoryName
-            cell.imgViewCategory.kf.indicatorType = .activity
-            if let url = URL(string: item.categories[0].categoryImage){
-                cell.imgViewCategory.kf.setImage(with: url)
-            }else {
-                cell.imgViewCategory.image = UIImage.init(named: "WishListPic2")
-            }
-        }
+//        if (item.categories.isEmpty && item.categories.count == 0) {
+//            cell.lblCategoryAndSubCategory.text = "no teacher job"
+//            cell.imgViewCategory.image = UIImage.init(named: "WishListPic2")
+//        } else {
+//            cell.lblCategoryAndSubCategory.text = item.categories[0].categoryName
+//            cell.imgViewCategory.kf.indicatorType = .activity
+//            if let url = URL(string: item.categories[0].categoryImage){
+//                cell.imgViewCategory.kf.setImage(with: url)
+//            }else {
+//                cell.imgViewCategory.image = UIImage.init(named: "WishListPic2")
+//            }
+//        }
         cell.lblCourceName.text = item.courseName
         return cell
     }

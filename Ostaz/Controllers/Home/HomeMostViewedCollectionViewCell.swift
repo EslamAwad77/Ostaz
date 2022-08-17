@@ -23,7 +23,7 @@ class HomeMostViewedCollectionViewCell: UICollectionViewCell {
     
     //-------------------Functions------------------------
     
-    func setup(_ slide: HomeMostViewedModel){
+    func setup(_ slide: UserModel){
         
         lblTeacherName.text = slide.name
         if (slide.teacherCategory.isEmpty && slide.teacherCategory.count == 0) {

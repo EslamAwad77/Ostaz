@@ -84,4 +84,6 @@ struct URLs {
     
     ///GET()
     static let getCourses = main + "my-courses"
+    ///POST{course_ID}
+    static let courseSubscribe = main + "course-subscrib"
 }

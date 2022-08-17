@@ -12,6 +12,7 @@ class TeacherProfileViewController: UIViewController {
     
     //-------------------Variables------------------------
     var instructorId: Int = 0
+    var courseId: Int = 0
     var isActive: Bool = true
     var teacherMethodsSlides: [TeachMethodModel] = []
     var teacherAreasSlides: [AreaModel] = []
@@ -41,6 +42,10 @@ class TeacherProfileViewController: UIViewController {
     @IBOutlet weak var lblCources: UILabel!
     //-------------------Actions------------------------
     
+    @IBAction func btnSubscribeTapped(_ sender: UIButton) {
+        //TODO: calling api student Subscribe
+        
+    }
     @IBAction func btnReturnHome(_ sender: UIButton) {
         self.dismiss(animated: true)
     }
@@ -99,6 +104,7 @@ class TeacherProfileViewController: UIViewController {
                 self.lblErrorDesc.text = ""
                 self.SetupProfile((response!.instructorProfile)!)
                 self.teacherMethodsSlides = response?.instructorProfile?.teachingMethod ?? []
+                //self.teacherMethodsSlides = response?.instructorProfile?.teachingMethod ?? []
                 self.teacherAreasSlides = response?.instructorProfile?.coveredArea ?? []
                 self.teacherCategoriesSlides = response?.instructorProfile?.teacherCategory ?? []
                 self.collectionViewMehtods.reloadData()
@@ -120,12 +126,12 @@ class TeacherProfileViewController: UIViewController {
         }
     }
     
-    func SetupProfile(_ profileData: HomeMostViewedModel){
+    func SetupProfile(_ profileData: UserModel){
         
         lblEmail.text = profileData.email
         lblTeacherName.text = profileData.name
         lblDescriptionText.text = profileData.description
-        lblTeacherWhatsApp.text = profileData.whatsApp
+        lblTeacherWhatsApp.text = profileData.whatsapp
         lblTeacherFacebookAccount.text = profileData.facebook
         lblDescriptionJobName.text = profileData.type
         

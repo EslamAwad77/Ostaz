@@ -60,10 +60,10 @@
                                 <rect key="frame" x="0.0" y="79" width="414" height="783"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Liw-ZB-LYz" userLabel="view scroll">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1450"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1513"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="9zu-u4-8EP">
-                                                <rect key="frame" x="17" y="46" width="380" height="1368"/>
+                                                <rect key="frame" x="17" y="46" width="380" height="1431"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TeacherProfilePic" translatesAutoresizingMaskIntoConstraints="NO" id="xS0-si-xSq">
                                                         <rect key="frame" x="124" y="0.0" width="132" height="132"/>
@@ -576,9 +576,30 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="45x-JL-xOS">
+                                                        <rect key="frame" x="0.0" y="1381" width="380" height="50"/>
+                                                        <color key="backgroundColor" name="ButtonColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="MFO-QH-jgW"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Subscribe">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
+                                                                <real key="value" value="15"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="btnSubscribeTapped:" destination="TvF-JJ-scP" eventType="touchUpInside" id="naS-Ve-tmA"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="BEP-2p-rXL" secondAttribute="trailing" id="0Fe-sI-SdY"/>
+                                                    <constraint firstItem="45x-JL-xOS" firstAttribute="trailing" secondItem="BEP-2p-rXL" secondAttribute="trailing" id="2Na-4D-7af"/>
                                                     <constraint firstItem="VhH-i7-v5e" firstAttribute="leading" secondItem="9zu-u4-8EP" secondAttribute="leading" id="5Ga-yW-HSb"/>
                                                     <constraint firstAttribute="trailing" secondItem="7sG-wr-WCs" secondAttribute="trailing" id="7bF-V7-8pV"/>
                                                     <constraint firstAttribute="trailing" secondItem="IQZ-7q-c2A" secondAttribute="trailing" constant="17" id="8gd-Z1-ZSN"/>
@@ -589,6 +610,7 @@
                                                     <constraint firstAttribute="trailing" secondItem="y4e-Hd-SMq" secondAttribute="trailing" constant="17" id="Llr-YI-8w3"/>
                                                     <constraint firstAttribute="trailing" secondItem="Ydl-9o-Fmp" secondAttribute="trailing" constant="17" id="LvU-40-sUH"/>
                                                     <constraint firstAttribute="trailing" secondItem="yBJ-89-9pK" secondAttribute="trailing" id="NPY-E2-QdE"/>
+                                                    <constraint firstItem="45x-JL-xOS" firstAttribute="leading" secondItem="BEP-2p-rXL" secondAttribute="leading" id="Ngm-o9-aat"/>
                                                     <constraint firstAttribute="trailing" secondItem="4ct-3t-Je6" secondAttribute="trailing" id="OBq-JA-7xW"/>
                                                     <constraint firstAttribute="trailing" secondItem="ua3-zg-o9H" secondAttribute="trailing" constant="17" id="Pt1-rc-VpO"/>
                                                     <constraint firstAttribute="trailing" secondItem="Dni-sY-Fip" secondAttribute="trailing" id="SjM-db-NZj"/>
@@ -596,7 +618,9 @@
                                                     <constraint firstItem="esb-J7-nBh" firstAttribute="leading" secondItem="9zu-u4-8EP" secondAttribute="leading" constant="17" id="WZq-so-fZd"/>
                                                     <constraint firstItem="K7f-vD-MVk" firstAttribute="leading" secondItem="9zu-u4-8EP" secondAttribute="leading" constant="17" id="Xqu-xk-coT"/>
                                                     <constraint firstItem="BEP-2p-rXL" firstAttribute="leading" secondItem="9zu-u4-8EP" secondAttribute="leading" id="YgD-zM-620"/>
+                                                    <constraint firstAttribute="bottom" secondItem="45x-JL-xOS" secondAttribute="bottom" id="btD-AZ-9Xq"/>
                                                     <constraint firstAttribute="trailing" secondItem="VhH-i7-v5e" secondAttribute="trailing" id="dfF-LF-cps"/>
+                                                    <constraint firstItem="45x-JL-xOS" firstAttribute="top" secondItem="BEP-2p-rXL" secondAttribute="bottom" constant="13" id="ehT-If-uq6"/>
                                                     <constraint firstItem="ua3-zg-o9H" firstAttribute="leading" secondItem="9zu-u4-8EP" secondAttribute="leading" constant="17" id="fIh-sM-i3j"/>
                                                     <constraint firstItem="Dni-sY-Fip" firstAttribute="leading" secondItem="9zu-u4-8EP" secondAttribute="leading" id="kPS-Z6-xk0"/>
                                                     <constraint firstItem="Ydl-9o-Fmp" firstAttribute="leading" secondItem="9zu-u4-8EP" secondAttribute="leading" constant="17" id="nGU-Bj-Ru6"/>

@@ -9,5 +9,5 @@ import Foundation
 
 struct SearchResponse{
     var message: String?
-    var homeSearch: [HomeMostViewedModel]?
+    var homeSearch: [UserModel]?
 }

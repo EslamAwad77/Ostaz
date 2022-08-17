@@ -16,6 +16,9 @@ class MoreViewController: UIViewController {
     @IBOutlet weak var viewSpecialConditions: UIView!
     
     //-------------------Actions--------------------------
+    
+    @IBAction func btnGoToMyCourses(_ sender: UIButton) {
+    }
     @IBAction func GoToAccountVC(_ sender: UIButton) {
         self.goToAccount()
     }

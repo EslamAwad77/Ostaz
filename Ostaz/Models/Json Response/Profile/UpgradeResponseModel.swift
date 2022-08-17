@@ -9,5 +9,5 @@ import Foundation
 
 struct UpgradeResponse{
     var message: String?
-    var user: [HomeMostViewedModel]?
+    var user: [UserModel]?
 }

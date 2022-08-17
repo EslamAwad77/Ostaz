@@ -10,7 +10,7 @@ import UIKit
 class HomeSearchVC: UIViewController {
     
     //-------------------variables------------------------
-    var searchItems: [HomeMostViewedModel] = []
+    var searchItems: [UserModel] = []
     
     //-------------------IBOutlet------------------------
     @IBOutlet weak var signupView: SignupView!

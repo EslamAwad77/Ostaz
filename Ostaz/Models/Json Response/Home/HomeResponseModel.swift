@@ -10,6 +10,6 @@ import Foundation
 struct HomeResponse {
     var message: String?
     var homeCategory: [HomeCategoryModel]?
-    var homeMostViewed: [HomeMostViewedModel]?
-    var homePaidInstructor: [HomeMostViewedModel]?
+    var homeMostViewed: [UserModel]?
+    var homePaidInstructor: [UserModel]?
 }

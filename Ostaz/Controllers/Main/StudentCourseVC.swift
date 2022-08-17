@@ -34,18 +34,18 @@ extension StudentCourseVC: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = courses[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "StudentCoursesViewCell", for: indexPath) as! StudentCoursesViewCell
-        if (item.categories.isEmpty && item.categories.count == 0) {
-            cell.lblCategoryName.text = "no teacher job"
-            cell.imgViewCategory.image = UIImage.init(named: "WishListPic2")
-        } else {
-            cell.lblCategoryName.text = item.categories[0].categoryName
-            cell.imgViewCategory.kf.indicatorType = .activity
-            if let url = URL(string: item.categories[0].categoryImage){
-                cell.imgViewCategory.kf.setImage(with: url)
-            }else {
-                cell.imgViewCategory.image = UIImage.init(named: "WishListPic2")
-            }
-        }
+//        if (item.catName.isEmpty && item.count == 0) {
+//            cell.lblCategoryName.text = "no teacher job"
+//            cell.imgViewCategory.image = UIImage.init(named: "WishListPic2")
+//        } else {
+//            cell.lblCategoryName.text = item.categories[0].categoryName
+//            cell.imgViewCategory.kf.indicatorType = .activity
+//            if let url = URL(string: item.categories[0].categoryImage){
+//                cell.imgViewCategory.kf.setImage(with: url)
+//            }else {
+//                cell.imgViewCategory.image = UIImage.init(named: "WishListPic2")
+//            }
+//        }
         cell.lblCourseName.text = item.courseName
         cell.lblCourseDate.text = item.date
         cell.lblCourseDuration.text = item.duration

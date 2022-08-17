@@ -1180,13 +1180,61 @@
                                 <rect key="frame" x="0.0" y="132" width="414" height="681"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OGm-tW-TMI" userLabel="view Scroll">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="340"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="416"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="3eB-He-fL6">
-                                                <rect key="frame" x="17.5" y="5" width="379" height="288"/>
+                                                <rect key="frame" x="17.5" y="5" width="379" height="364"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fIk-Pp-K3q" userLabel="Account">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vna-UK-VCX" userLabel="My Courses">
                                                         <rect key="frame" x="0.0" y="0.0" width="379" height="60"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dtv-Iz-lVC">
+                                                                <rect key="frame" x="0.0" y="0.0" width="379" height="60"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="epl-xb-Qqu" userLabel="Account Button">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="347.5" height="60"/>
+                                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <state key="normal" title="     My Cources">
+                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
+                                                                                <real key="value" value="10"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="btnGoToMyCourses:" destination="N5H-UK-1eZ" eventType="touchUpInside" id="lGw-3C-cNY"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T88-Iu-WPB" userLabel="go Account Btn">
+                                                                        <rect key="frame" x="347.5" y="0.0" width="31.5" height="60"/>
+                                                                        <color key="tintColor" name="GoBtnColor"/>
+                                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                        <state key="normal" title="    " image="chevron.right" catalog="system"/>
+                                                                        <connections>
+                                                                            <action selector="btnGoToMyCourses:" destination="N5H-UK-1eZ" eventType="touchUpInside" id="rf0-NI-bRM"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="Dtv-Iz-lVC" secondAttribute="trailing" id="53t-bl-0pw"/>
+                                                            <constraint firstAttribute="bottom" secondItem="Dtv-Iz-lVC" secondAttribute="bottom" id="NF8-Tq-g4e"/>
+                                                            <constraint firstItem="Dtv-Iz-lVC" firstAttribute="top" secondItem="Vna-UK-VCX" secondAttribute="top" id="aY0-UH-1xJ"/>
+                                                            <constraint firstAttribute="height" constant="60" id="kCQ-Jt-vAJ"/>
+                                                            <constraint firstItem="Dtv-Iz-lVC" firstAttribute="leading" secondItem="Vna-UK-VCX" secondAttribute="leading" id="wro-43-Ctl"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
+                                                                <real key="value" value="15"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fIk-Pp-K3q" userLabel="Account">
+                                                        <rect key="frame" x="0.0" y="76" width="379" height="60"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fFK-oM-nfk">
                                                                 <rect key="frame" x="0.0" y="0.0" width="379" height="60"/>
@@ -1212,6 +1260,9 @@
                                                                         <color key="tintColor" name="GoBtnColor"/>
                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                         <state key="normal" title="    " image="chevron.right" catalog="system"/>
+                                                                        <connections>
+                                                                            <action selector="GoToAccountVC:" destination="N5H-UK-1eZ" eventType="touchUpInside" id="sFe-Ko-GD6"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>
@@ -1226,12 +1277,12 @@
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
-                                                                <real key="value" value="10"/>
+                                                                <real key="value" value="15"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X82-3V-G3i" userLabel="About Us">
-                                                        <rect key="frame" x="0.0" y="76" width="379" height="60"/>
+                                                        <rect key="frame" x="0.0" y="152" width="379" height="60"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tzo-73-O1U">
                                                                 <rect key="frame" x="0.0" y="0.0" width="379" height="60"/>
@@ -1257,6 +1308,9 @@
                                                                         <color key="tintColor" name="GoBtnColor"/>
                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                         <state key="normal" title="    " image="chevron.right" catalog="system"/>
+                                                                        <connections>
+                                                                            <action selector="GoToAboutUsVC:" destination="N5H-UK-1eZ" eventType="touchUpInside" id="cde-bp-JA4"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>
@@ -1271,12 +1325,12 @@
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
-                                                                <real key="value" value="10"/>
+                                                                <real key="value" value="15"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vbX-jl-yFN" userLabel="special conditions">
-                                                        <rect key="frame" x="0.0" y="152" width="379" height="60"/>
+                                                        <rect key="frame" x="0.0" y="228" width="379" height="60"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LF9-hy-QBR">
                                                                 <rect key="frame" x="0.0" y="0.0" width="379" height="60"/>
@@ -1302,6 +1356,9 @@
                                                                         <color key="tintColor" name="GoBtnColor"/>
                                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                         <state key="normal" title="    " image="chevron.right" catalog="system"/>
+                                                                        <connections>
+                                                                            <action selector="GoToSpecialCondtionsVC:" destination="N5H-UK-1eZ" eventType="touchUpInside" id="ehh-hy-CGu"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>
@@ -1316,12 +1373,12 @@
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
-                                                                <real key="value" value="10"/>
+                                                                <real key="value" value="15"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCe-fx-lxe">
-                                                        <rect key="frame" x="0.0" y="228" width="379" height="60"/>
+                                                        <rect key="frame" x="0.0" y="304" width="379" height="60"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="60" id="Tez-T9-IsN"/>
@@ -1333,7 +1390,7 @@
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
-                                                                <real key="value" value="10"/>
+                                                                <real key="value" value="15"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>

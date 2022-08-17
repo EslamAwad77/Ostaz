@@ -11,7 +11,7 @@ class SportsViewController: UIViewController {
     
     //-------------------variables------------------------
     var subCategory_id: Int = 0
-    var InstsOfSubCat = [HomeMostViewedModel]()
+    var InstsOfSubCat = [UserModel]()
     
     //-------------------IBOutlet------------------------
     @IBOutlet weak var tbleViewSports: UITableView!

@@ -12,9 +12,9 @@ import PullToRefresh
 class HomeViewController: UIViewController, UITextFieldDelegate {
     
     //-------------------Variables------------------------
-    var homePaidInstructorsSlides = [HomeMostViewedModel]()
+    var homePaidInstructorsSlides = [UserModel]()
     var homecategoriesSlides = [HomeCategoryModel]()
-    var homeMostViewedSlides = [HomeMostViewedModel]()
+    var homeMostViewedSlides = [UserModel]()
     lazy var homeFilterVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "HomeFilterVC")
     
     //-------------------IBOutlet------------------------

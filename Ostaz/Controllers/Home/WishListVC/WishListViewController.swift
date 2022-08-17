@@ -12,8 +12,8 @@ import Kingfisher
 class WishListViewController: UIViewController {
    
     //-------------------variables--------------------------
-    var wishListPrefered: HomeMostViewedModel = HomeMostViewedModel()
-    var wishListItems = [HomeMostViewedModel]()
+    var wishListPrefered: UserModel = UserModel()
+    var wishListItems = [UserModel]()
     
     //-------------------outlet--------------------------
     @IBOutlet weak var signupView: SignupView!

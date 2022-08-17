@@ -35,7 +35,7 @@ class APIHome: NSObject {
                     result.homeMostViewed = []
                     let apiMostViewed = json["data"]["most_viewd"].arrayObject
                     for item in apiMostViewed ?? [] {
-                        let model = HomeMostViewedModel.init(apiData: item as? [String : Any])
+                        let model = UserModel.init(apiData: item as? [String : Any])
                         result.homeMostViewed?.append(model)
                     }
                     
@@ -43,7 +43,7 @@ class APIHome: NSObject {
                     result.homePaidInstructor = []
                     let apiPaidInstructor = json["data"]["paid_instructors"].arrayObject
                     for item in apiPaidInstructor ?? [] {
-                        let model = HomeMostViewedModel.init(apiData: item as? [String : Any])
+                        let model = UserModel.init(apiData: item as? [String : Any])
                         result.homePaidInstructor?.append(model)
                     }
                     
@@ -81,7 +81,7 @@ class APIHome: NSObject {
                     result.homeSearch = []
                     let apiSearch = json["data"]["data"].arrayObject
                     for item in apiSearch ?? []{
-                        let model = HomeMostViewedModel(apiData: item as? [String: Any])
+                        let model = UserModel(apiData: item as? [String: Any])
                         result.homeSearch?.append(model)
                     }
                     

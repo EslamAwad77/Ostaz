@@ -22,7 +22,7 @@ class APIProfile: NSObject {
                     print(json)
                     var result = ProfileResponse()
                     result.message = json["message"].string
-                    result.profile = ProfileModel(apiData: json["data"].dictionaryObject)
+                    result.profile = UserModel(apiData: json["data"].dictionaryObject)
                     print((result.profile?.email)!)
                     completion(nil, result)
                 } else {
@@ -46,7 +46,7 @@ class APIProfile: NSObject {
                      let json = JSON(response.data!)
                      var result = UpdateResponse()
                      result.message = json["message"].string
-                     result.profile = ProfileModel(apiData: json["data"].dictionaryObject)
+                     result.profile = UserModel(apiData: json["data"].dictionaryObject)
                      print((result.profile?.email)!)
                      //result.userProfile =
                      completion(nil, result)
@@ -99,7 +99,7 @@ class APIProfile: NSObject {
                      result.user = []
                      let apiProfile = json["data"].arrayObject
                      for item in apiProfile ?? []{
-                         let model = HomeMostViewedModel.init(apiData: item as? [String: Any])
+                         let model = UserModel.init(apiData: item as? [String: Any])
                          result.user?.append(model)
                      }
                      completion(nil, result)
@@ -125,7 +125,7 @@ class APIProfile: NSObject {
                      let json = JSON(response.data!)
                      var result = ShowProfileResponse()
                      result.message = json["message"].string
-                     result.instructorProfile = HomeMostViewedModel(apiData: json["data"].dictionaryObject)
+                     result.instructorProfile = UserModel(apiData: json["data"].dictionaryObject)
                      print((result.instructorProfile?.name)!)
                      completion(nil, result)
                  } else {

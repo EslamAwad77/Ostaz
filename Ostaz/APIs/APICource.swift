@@ -14,7 +14,7 @@ class APICource: NSObject {
         let url = URLs.getCourses
         let token = UserDefaults.standard.value(forKey: "token") as? String
         let bearerToken =  token != nil ? "Bearer \(token!)" : ""    // ternary Operator
-        AF.request(url, method: .post, parameters: nil, encoding: URLEncoding.default, headers: ["Authorization": bearerToken, "Accept": "application/json"])
+        AF.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: ["Authorization": bearerToken, "Accept": "application/json"])
             .response { response in
                 if (response.response?.statusCode ?? 0) >= 200 && (response.response?.statusCode ?? 0) <= 299{
                     let json = JSON(response.data!)
@@ -24,7 +24,7 @@ class APICource: NSObject {
                     let apiCourse = json["data"].arrayObject
                     for item in apiCourse ?? []{
                         let model = CourseModel.init(apiData: item as? [String: Any])
-                        //result.courses?.append(model)
+                        result.courses?.append(model)
                     }
                     completion(nil, result)
                 } else {
@@ -34,4 +34,31 @@ class APICource: NSObject {
                 }
             }
     }
+    
+    
+    static func fetchingCourseSubscribe(completion: @escaping (_ error :String?, _ response: CourseSubscribeResponse?) -> Void){
+        let url = URLs.courseSubscribe
+        let token = UserDefaults.standard.value(forKey: "token") as? String
+        let bearerToken =  token != nil ? "Bearer \(token!)" : ""    // ternary Operator
+        AF.request(url, method: .post, parameters: nil, encoding: URLEncoding.default, headers: ["Authorization": bearerToken, "Accept": "application/json"])
+            .response { response in
+                if (response.response?.statusCode ?? 0) >= 200 && (response.response?.statusCode ?? 0) <= 299{
+                    let json = JSON(response.data!)
+                    var result = CourseSubscribeResponse()
+                    result.message = json["message"].string
+//                    result.locations = []
+//                    let apiLocation = json["data"].arrayObject
+//                    for item in apiLocation ?? []{
+//                        let model = CourseModel.init(apiData: item as? [String: Any])
+//                        result.locations?.append(model)
+//                    }
+                    completion(nil, result)
+                } else {
+                    let json = JSON(response.data!)
+                    let message = json["message"].string
+                    completion(message, nil)
+                }
+            }
+    }
+
 }

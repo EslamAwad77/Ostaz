@@ -31,8 +31,12 @@ struct CourseModel{
     }
 }
 
-
 struct CourseResponse{
     var message: String?
-    var courses: [CategoryModel]?
+    var courses: [CourseModel]?
+}
+
+
+struct CourseSubscribeResponse{
+    var message: String?
 }
