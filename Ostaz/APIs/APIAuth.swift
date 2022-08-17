@@ -26,7 +26,6 @@ class APIAuth: NSObject{
                 }else {
                     let json = JSON(response.data!)
                     let msg = json["message"].string
-                    
                     completion(msg, nil)
                 }
             }
@@ -122,7 +121,7 @@ class APIAuth: NSObject{
             }
     }
     
-    static func fetchingSetLocation(areaId: String, completion: @escaping (_ error :String?, _ response: SetLocationResponse?) -> Void){
+    static func fetchingSetLocation(areaId: Int, completion: @escaping (_ error :String?, _ response: LocationResponse?) -> Void){
         let url = URLs.setLocation
         let parameters = [
             "area_id": areaId
@@ -131,8 +130,14 @@ class APIAuth: NSObject{
             .response { response in
                 if (response.response?.statusCode ?? 0) >= 200 && (response.response?.statusCode ?? 0) <= 299{
                     let json = JSON(response.data!)
-                    var result = SetLocationResponse()
+                    var result = LocationResponse()
                     result.message = json["message"].string
+                    result.locations = []
+                    let apiLocation = json["data"].arrayObject
+                    for item in apiLocation ?? []{
+                        let model = LocationModel.init(apiData: item as? [String: Any])
+                        result.locations?.append(model)
+                    }
                     completion(nil, result)
                 } else {
                     let json = JSON(response.data!)
@@ -141,6 +146,31 @@ class APIAuth: NSObject{
                 }
             }
     }
+    
+    static func fetchingAllUSerLocation(completion: @escaping (_ error :String?, _ response: LocationResponse?) -> Void){
+        let url = URLs.getLocation
+       
+        AF.request(url, method: .post, parameters: nil, encoding: URLEncoding.default, headers: nil)
+            .response { response in
+                if (response.response?.statusCode ?? 0) >= 200 && (response.response?.statusCode ?? 0) <= 299{
+                    let json = JSON(response.data!)
+                    var result = LocationResponse()
+                    result.message = json["message"].string
+                    result.locations = []
+                    let apiLocation = json["data"].arrayObject
+                    for item in apiLocation ?? []{
+                        let model = LocationModel.init(apiData: item as? [String: Any])
+                        result.locations?.append(model)
+                    }
+                    completion(nil, result)
+                } else {
+                    let json = JSON(response.data!)
+                    let message = json["message"].string
+                    completion(message, nil)
+                }
+            }
+    }
+
 }
 
 

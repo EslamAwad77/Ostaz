@@ -13,8 +13,8 @@ class CategoriesViewController: UIViewController {
     
     //-------------------Variables------------------------
     
-    var categoriesSlides = [CollectionViewCategorySlide]()
-    var filteredCategoriesSlides = [CollectionViewCategorySlide]()
+    var categoriesSlides = [CategoryModel]()
+    var filteredCategoriesSlides = [CategoryModel]()
     
     //-------------------IBOutlet------------------------
     @IBOutlet weak var viewReloading: UIView!

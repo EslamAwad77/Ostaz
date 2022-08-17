@@ -20,6 +20,8 @@ struct URLs {
     static let reset = main + "reset-password"
     /// POST {area_id, city_id}
     static let setLocation = main + "set-location"
+    /// GET {}
+    static let getLocation = main + "all-user-location"
     
     // Profile
     
@@ -77,4 +79,9 @@ struct URLs {
     // Area
     ///POST{cityID}
     static let area = main + "area-list"
+    
+    // Course
+    
+    ///GET()
+    static let getCourses = main + "my-courses"
 }

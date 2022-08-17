@@ -8,14 +8,8 @@
 
 import UIKit
 
-//struct CollectionViewHomeMostViewedSlide {
-//    let teacherName: String
-//    let teacherJob: String
-//    let descriptionImage: String
-//    let teacherImage: String
-//}
 
-struct CollectionViewCategorySlide {
+struct CategoryModel {
    
     var categoryId: Int = 0
     var categoryImage: String = ""
@@ -30,20 +24,3 @@ struct CollectionViewCategorySlide {
     }
 }
 
-//struct CollectionViewMethodsSlide{
-//    let methodName: String
-//    let methodImage: UIImage
-//}
-//
-//
-//
-//struct CollectionViewAreasSlide{
-//    let areaName: String
-//    let areaImage: UIImage
-//}
-//
-//
-//struct CollectionViewTeahcerCategoriesSlide{
-//    let categoryName: String
-//    let categoryImage: UIImage
-//}

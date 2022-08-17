@@ -9,6 +9,6 @@ import Foundation
 
 struct CreateMethodResponse {
     var message: String?
-    var arrOfList: [MethodModel]?
+    var arrOfList: [TeachMethodModel]?
 
 }

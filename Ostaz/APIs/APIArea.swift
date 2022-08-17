@@ -10,12 +10,14 @@ import Alamofire
 import SwiftyJSON
 
 class APIArea: NSObject {
-    static func fetchingArea(city: [Int], completion: @escaping (_ error :String?, _ response: AreaResponse?) -> Void){
-        let url = URLs.register + "/\(city)"
-        let parameters = [
-            "cities_id" : city
-        ]
-        AF.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: nil)
+    static func fetchingArea(citiesId: [Int], completion: @escaping (_ error :String?, _ response: AreaResponse?) -> Void){
+        let url = URLs.register
+        var params: [String: Any] = [:]
+        let cityArr = ["cities_id"] as? [Int]
+        for index in 0..<(cityArr?.count ?? 0) - 1 {
+            params["cityId[\(index)]"] = cityArr?[index] ?? 0
+        }
+        AF.request(url, method: .post, parameters: params, encoding: URLEncoding.default, headers: nil)
             .response { response in
                 if (response.response?.statusCode ?? 0) >= 200 && (response.response?.statusCode ?? 0) <= 299{
                     let json = JSON(response.data!)

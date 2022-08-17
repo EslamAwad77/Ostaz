@@ -20,7 +20,7 @@ class CategoriesCollectionViewCell: UICollectionViewCell {
     
     //-------------------Functions------------------------
     
-    func setupUI(_ categoriesSlide: CollectionViewCategorySlide){
+    func setupUI(_ categoriesSlide: CategoryModel){
         
         imgViewCategory.kf.indicatorType = .activity
         

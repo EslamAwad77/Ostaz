@@ -11,10 +11,11 @@ import DropDown
 class LocationViewController: UIViewController{
     
     //-------------------Variables------------------------
-    var cityId: Int = 0
+    var areaId: Int = 0
     
     let cityDropDown = DropDown()
     let areaDropDown = DropDown()
+    
     var cityValues: [CityModel] = []
     var areaValues: [AreaModel] = []
    
@@ -44,12 +45,42 @@ class LocationViewController: UIViewController{
     }
     
     @IBAction func btnConfirmLocation(_ sender: UIButton) {
-        self.goToLoginVC()
+        APIAuth.fetchingSetLocation(areaId: areaId) { error, response in
+            if error != nil {
+                print(error!)
+                self.showAlert(message: error!)
+            } else {
+                print(response?.message ?? "")
+                self.goToLoginVC()
+                self.showAlert(message: response?.message ?? "")
+            }
+        }
     }
     
     //-------------------LifeCycle------------------------
     override func viewDidLoad(){
         super.viewDidLoad()
         self.setUpUI()
+        APIAuth.fetchingAllUSerLocation {error, response in
+            if error != nil {
+                print(error!)
+                self.showAlert(message: error!)
+            } else {
+                //self.selectedCity = response?.locations ?? []
+                self.collViewCity.reloadData()
+
+            }
+        }
+    }
+    
+    func getAllLocation(){
+        APIAuth.fetchingAllUSerLocation { error, response in
+            if error != nil {
+                print(error!)
+                self.showAlert(message: error!)
+            } else{
+                //self.sel
+            }
+        }
     }
 }

@@ -19,7 +19,7 @@ struct HomeMostViewedModel{
     var image : String = ""
     var isFavourite: Bool = false
     var locations: Bool = false
-    var teachingMethod: [MethodModel] = []
+    var teachingMethod: [TeachMethodModel] = []
     var coveredArea: [AreaModel] = []
     var teacherCategory: [HomeCategoryModel] = []
     
@@ -49,7 +49,7 @@ struct HomeMostViewedModel{
         if let teachMehtods = (apiData?["teaching_method"] as? AnyObject) as? NSArray{
              //print("============", apiData?["coverd_area"])
             for mehtod in teachMehtods{
-                self.teachingMethod.append(MethodModel(apiMethod: mehtod as? [String : Any]))
+                self.teachingMethod.append(TeachMethodModel(apiData: mehtod as? [String : Any]))
             }
         }
         print("=========\n",teachingMethod)

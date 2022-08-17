@@ -9,5 +9,5 @@ import Foundation
 
 struct CategoryResponse{
     var message: String?
-    var catArr: [CollectionViewCategorySlide]?
+    var catArr: [CategoryModel]?
 }

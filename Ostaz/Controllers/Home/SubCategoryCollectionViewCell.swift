@@ -19,7 +19,7 @@ class SubCategoryCollectionViewCell: UICollectionViewCell {
     
     //-------------------Functions------------------------
     
-    func setupUI(_ subCategoriesSlide: CollectionViewCategorySlide){
+    func setupUI(_ subCategoriesSlide: CategoryModel){
         
         imgViewSubCategory.kf.indicatorType = .activity
         

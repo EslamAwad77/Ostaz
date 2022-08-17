@@ -27,7 +27,7 @@ class APICategory: NSObject {
                     result.catArr = []
                     let apiCategories = json["data"].arrayObject
                     for item in apiCategories ?? [] {
-                        let model = CollectionViewCategorySlide.init(apiModel: item as? [String : Any])
+                        let model = CategoryModel.init(apiModel: item as? [String : Any])
                         result.catArr?.append(model)
                         //result.catArr[0].categoryName
                     }
@@ -64,7 +64,7 @@ class APICategory: NSObject {
                     result.subCatArr = []
                     let apiCategories = json["data"].arrayObject
                     for item in apiCategories ?? [] {
-                        let model = CollectionViewCategorySlide.init(apiModel: item as? [String : Any])
+                        let model = CategoryModel.init(apiModel: item as? [String : Any])
                         result.subCatArr?.append(model)
                     }
                     completion(nil, result)

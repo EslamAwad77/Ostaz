@@ -23,7 +23,7 @@ extension LocationViewController {
                 self.cityDropDown.reloadAllComponents()
             }
         }
-     
+        
         
         self.collViewCity.isHidden = true
         self.collViewArea.isHidden = true
@@ -46,24 +46,31 @@ extension LocationViewController {
                 }
                 return false
             }
-                self.collViewCity.isHidden = false
-                self.selectedCity.append(self.cityValues[index])
-                self.collViewCity.reloadData()
+            self.collViewCity.isHidden = false
+            self.selectedCity.append(self.cityValues[index])
+            
+            let citiesId = selectedCity.map{ model in
+                return model.id
+            }
+            print(citiesId)
+            //return
+            APIArea.fetchingArea(citiesId: citiesId) {error, response in
+                if error != nil {
+                    print(error!)
+                } else {
+                    self.areaValues = response?.areaValues ?? []
+                    for item in self.areaValues {
+                        self.areas.append(item.name)
+                    }
+                    self.areaDropDown.dataSource = self.areas
+                    self.areaDropDown.reloadAllComponents()
+                }
+            }
+            self.collViewCity.reloadData()
             
         }
-//        APIArea.fetchingArea(city: [selectedCity[0].id]) { [self] error, response in
-//            if error != nil {
-//                print(error!)
-//            } else {
-//                self.areaValues = response?.areaValues ?? []
-//                for item in self.areaValues {
-//                    self.areas.append(item.name)
-//                }
-//                self.areaDropDown.dataSource = self.areas
-//                self.areaDropDown.reloadAllComponents()
-//            }
-//        }
-
+        
+        
         
         areaDropDown.selectionAction = { [unowned self] (index: Int, item: String) in
             print("Selected item: \(item) at index: \(index)")
@@ -73,9 +80,12 @@ extension LocationViewController {
                 }
                 return false
             }
-                self.collViewArea.isHidden = false
-                self.selectedArea.append(self.areaValues[index])
-                self.collViewArea.reloadData()
+            self.collViewArea.isHidden = false
+            self.selectedArea.append(self.areaValues[index])
+            let areasId = selectedArea.map { model in
+                return model.id
+            }
+            self.collViewArea.reloadData()
         }
         collViewCity.delegate = self
         collViewCity.dataSource = self

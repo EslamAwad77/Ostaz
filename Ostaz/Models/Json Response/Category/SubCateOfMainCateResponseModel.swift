@@ -9,6 +9,6 @@ import Foundation
 
 struct SubCategoryResponse{
     var message: String?
-    var subCatArr: [CollectionViewCategorySlide]?
+    var subCatArr: [CategoryModel]?
 
 }

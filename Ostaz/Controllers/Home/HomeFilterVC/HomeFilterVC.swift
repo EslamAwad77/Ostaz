@@ -17,8 +17,8 @@ class HomeFilterVC: UIViewController {
     let categoryDropDown = DropDown()
     let cityDropDown = DropDown()
     let areaDropDown = DropDown()
-    var categoryValues: [CollectionViewCategorySlide] = []
-    var selectedCategory: [CollectionViewCategorySlide] = []
+    var categoryValues: [CategoryModel] = []
+    var selectedCategory: [CategoryModel] = []
     var cityValues: [CityModel] = []
     var selectedCity: [CityModel] = []
     var areaValues: [AreaModel] = []

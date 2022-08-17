@@ -13,7 +13,7 @@ class HomeFilterCollViewCell: UICollectionViewCell {
     var didDeleted: (() -> ())?
     static let identifier = String(describing: HomeFilterCollViewCell.self)
     
-    var userCategory: CollectionViewCategorySlide? {
+    var userCategory: CategoryModel? {
         didSet{
             lblSelectedCategory.text = userCategory?.categoryName
         }

@@ -13,7 +13,7 @@ class TeacherProfileViewController: UIViewController {
     //-------------------Variables------------------------
     var instructorId: Int = 0
     var isActive: Bool = true
-    var teacherMethodsSlides: [MethodModel] = []
+    var teacherMethodsSlides: [TeachMethodModel] = []
     var teacherAreasSlides: [AreaModel] = []
     var teacherCategoriesSlides: [HomeCategoryModel] = []
     
@@ -104,16 +104,16 @@ class TeacherProfileViewController: UIViewController {
                 self.collectionViewMehtods.reloadData()
                 self.collectionViewAreas.reloadData()
                 self.collectionViewCategoryy.reloadData()
-                /*
+                
                  if self.teacherMethodsSlides.isEmpty && self.teacherAreasSlides.isEmpty && self.teacherCategoriesSlides.isEmpty {
                      self.collectionViewMehtods.isHidden = true
-                     self.lblTeachingMethods.text = ""
+                     self.lblTeachingMethods.isHidden = true
                      self.collectionViewAreas.isHidden = true
-                     self.lblCoveredArea.text = ""
+                     self.lblCoveredArea.isHidden = true
                      self.collectionViewCategoryy.isHidden = true
-                     self.lblCategories.text = ""
+                     self.lblCategories.isHidden = true
                  }
-                 */
+                 
                 print((response?.instructorProfile?.email)!)
                 print(response?.message ?? "")
             }

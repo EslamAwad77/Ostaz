@@ -7,9 +7,11 @@
 import UIKit
 
 class AcountViewController: UIViewController {
-   
+    
     var email: String = ""
     var image: String = ""
+    
+    var getLocations = [LocationModel]()
     
     //var updateProfile: [ProfileModel] = []
     //-------------------IBOutlet------------------------
@@ -23,17 +25,11 @@ class AcountViewController: UIViewController {
     }
     
     @IBAction func btnGoToPasswordVC(_ sender: UIButton) {
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let editPasswordVC = storyBoard.instantiateViewController(withIdentifier: "EditPasswordViewController") as! EditPasswordViewController
-        editPasswordVC.modalPresentationStyle = .fullScreen
-        self.present(editPasswordVC, animated: true)
+        self.goToEditPass()
     }
     
     @IBAction func btnGoToLocationVC(_ sender: UIButton) {
-        let storyBoard = UIStoryboard(name: "Auth", bundle: nil)
-        let locationVC = storyBoard.instantiateViewController(withIdentifier: "LocationViewController") as! LocationViewController
-        locationVC.modalPresentationStyle = .fullScreen
-        self.present(locationVC, animated: true)
+        self.goToLocation()
     }
     
     @IBAction func btnPromotionForTeacherVC(_ sender: UIButton) {
@@ -54,17 +50,32 @@ class AcountViewController: UIViewController {
         }
     }
     
-    //-------------------LifeCycle------------------------
+    //-------------------LifeCycle of screen------------------------
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     
-
+    
     func goToPromotion(){
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let promotionForTeacherVC = storyBoard.instantiateViewController(withIdentifier: "PromotionForTeacherVC") as! PromotionForTeacherVC
         promotionForTeacherVC.modalPresentationStyle = .fullScreen
         self.present(promotionForTeacherVC, animated: true)
+    }
+    
+    
+    func goToLocation(){
+        let storyBoard = UIStoryboard(name: "Auth", bundle: nil)
+        let locationVC = storyBoard.instantiateViewController(withIdentifier: "LocationViewController") as! LocationViewController
+        locationVC.modalPresentationStyle = .fullScreen
+        self.present(locationVC, animated: true)
+    }
+    
+    func goToEditPass(){
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let editPasswordVC = storyBoard.instantiateViewController(withIdentifier: "EditPasswordViewController") as! EditPasswordViewController
+        editPasswordVC.modalPresentationStyle = .fullScreen
+        self.present(editPasswordVC, animated: true)
     }
 }

@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct MethodModel {
-    var name: String = ""
-    
-    init (){}
-    
-    init(apiMethod: [String: Any]?) {
-        self.name = apiMethod?["name"] as? String ?? ""
-    }
-}
+//struct MethodModel {
+//    var name: String = ""
+//    
+//    init (){}
+//    
+//    init(apiMethod: [String: Any]?) {
+//        self.name = apiMethod?["name"] as? String ?? ""
+//    }
+//}

@@ -27,7 +27,7 @@ class TeacherProfileCollectionViewCell: UICollectionViewCell {
 
     //-------------------Functions------------------------
 
-    func setupUIMehtods(_ methodsSlide: MethodModel){
+    func setupUIMehtods(_ methodsSlide: TeachMethodModel){
         lblTeachingMethod.text = methodsSlide.name
         imgViewRightMark.image = UIImage(named: "RightMark")
     }

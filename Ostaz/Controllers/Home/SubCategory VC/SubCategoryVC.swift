@@ -11,8 +11,8 @@ class SubCategoryVC: UIViewController {
     
     //-------------------Variables------------------------
     var category_id: Int = 0
-    var subCategoriesSlides: [CollectionViewCategorySlide] = []
-    var filteredSubCategoriesSlides = [CollectionViewCategorySlide]()
+    var subCategoriesSlides: [CategoryModel] = []
+    var filteredSubCategoriesSlides = [CategoryModel]()
     
     //-------------------IBOutlet------------------------
     @IBOutlet weak var activityLoadingPage: UIActivityIndicatorView!

@@ -22,8 +22,8 @@ class PromotionForTeacherVC: UIViewController {
     var TeacherAreaItems: [AreaModel] = []
     var selectedAreas: [AreaModel] = []
     
-    var categoryValues: [CollectionViewCategorySlide] = []
-    var selectedCategories: [CollectionViewCategorySlide] = []
+    var categoryValues: [CategoryModel] = []
+    var selectedCategories: [CategoryModel] = []
    
     //-------------------IBOutlet------------------------
 

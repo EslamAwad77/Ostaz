@@ -16,8 +16,6 @@ extension WishListViewController {
         self.loadingData()
         self.goToRegister()
         self.checkUser()
-       
-     
         self.tbleViewWishList.register(UINib.init(nibName: "WishListCell", bundle: nil), forCellReuseIdentifier: "WishListCell")
         self.activityLoadingPage.startAnimating()
         self.setupTableRefresh()

@@ -40,7 +40,12 @@ extension HomeViewController {
                 self.homecategoriesSlides = response?.homeCategory ?? [] 
                 self.homeMostViewedSlides = response?.homeMostViewed ?? []
                 self.homePaidInstructorsSlides = response?.homePaidInstructor ?? []
-                
+                if self.homeMostViewedSlides.isEmpty{
+                    self.collectionViewMostViewedInHome.isHidden = true
+                } else {
+                    self.collectionViewMostViewedInHome.isHidden = false
+
+                }
                 //print(response!)
                 
                 self.collectionViewPiadInstInHome.reloadData()

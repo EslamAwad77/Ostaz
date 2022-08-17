@@ -23,3 +23,8 @@ class AreaModel{
         self.name = (apiData?["name"] as? String) ?? ""
     }
 }
+
+struct AreaResponse{
+    var message: String?
+    var areaValues: [AreaModel]?
+}
