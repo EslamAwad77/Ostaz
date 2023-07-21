@@ -55,9 +55,9 @@ extension LocationViewController {
             print(citiesId)
             //return
             APIArea.fetchingArea(citiesId: citiesId) {error, response in
-                if error != nil {
+                if error != nil{
                     print(error!)
-                } else {
+                }else{
                     self.areaValues = response?.areaValues ?? []
                     for item in self.areaValues {
                         self.areas.append(item.name)
@@ -69,7 +69,6 @@ extension LocationViewController {
             self.collViewCity.reloadData()
             
         }
-        
         
         
         areaDropDown.selectionAction = { [unowned self] (index: Int, item: String) in

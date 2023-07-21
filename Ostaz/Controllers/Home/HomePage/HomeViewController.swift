@@ -66,7 +66,6 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
         self.setUpUI()
     }
     func gotToSearchResult(){
-        
         let storyBoard = UIStoryboard(name: "Home", bundle: nil)
         let homeSearchVC = storyBoard.instantiateViewController(withIdentifier: "HomeSearchVC") as! HomeSearchVC
         homeSearchVC.modalPresentationStyle = .fullScreen

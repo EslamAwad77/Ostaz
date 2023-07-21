@@ -15,7 +15,6 @@ extension WishListViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let wishListitem = wishListItems[indexPath.row]
         let cell = tbleViewWishList.dequeueReusableCell(withIdentifier: "WishListCell", for: indexPath) as! WishListCell
-
         cell.lblTeacherName.text = wishListitem.name
         cell.imgViewTeacher.kf.indicatorType = .activity
         if let url = URL(string: wishListitem.image){
@@ -33,7 +32,6 @@ extension WishListViewController: UITableViewDelegate,UITableViewDataSource{
         } else {
             cell.lblTeacherJob.text = wishListitem.teacherCategory[0].categoryName
             cell.imgViewDecription.kf.indicatorType = .activity
-            
             if let url = URL(string: wishListitem.teacherCategory[0].categoryImage){
                 cell.imgViewDecription.kf.setImage(with: url)
             }else {

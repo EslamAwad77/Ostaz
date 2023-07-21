@@ -30,8 +30,6 @@ class SignupView: UIView {
     @IBOutlet weak var lblDesc: UILabel!
     
     //-------------------Actions------------------------
-   
-    
     @IBAction func resgisterClicked(_ sender: Any) {
         didClickButton?()
     }

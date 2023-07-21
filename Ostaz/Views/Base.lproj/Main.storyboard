@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ByO-2A-AM5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ByO-2A-AM5">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -23,7 +24,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qs0-3o-Ub9">
-                                <rect key="frame" x="17" y="54" width="380" height="23"/>
+                                <rect key="frame" x="17" y="58" width="380" height="23"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYU-vM-oc8" userLabel="back button">
                                         <rect key="frame" x="0.0" y="0.0" width="26.5" height="23"/>
@@ -53,11 +54,11 @@
                                 </constraints>
                             </stackView>
                             <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EIO-ke-29S" customClass="SignupView" customModule="Ostaz" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="77" width="414" height="785"/>
+                                <rect key="frame" x="0.0" y="81" width="414" height="781"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bnx-C1-Y1n">
-                                <rect key="frame" x="0.0" y="79" width="414" height="783"/>
+                                <rect key="frame" x="0.0" y="83" width="414" height="779"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Liw-ZB-LYz" userLabel="view scroll">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1513"/>
@@ -648,19 +649,19 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="GzN-lh-auB"/>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kzm-qn-eyt" userLabel="reload View">
-                                <rect key="frame" x="0.0" y="380" width="414" height="136"/>
+                                <rect key="frame" x="0.0" y="384" width="414" height="132"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="CKA-yV-kTZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="136"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="132"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45r-lH-dWt">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="86"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="82"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" name="ButtonColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibB-qR-ooz">
-                                                <rect key="frame" x="0.0" y="106" width="414" height="30"/>
+                                                <rect key="frame" x="0.0" y="102" width="414" height="30"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Reloading">
                                                     <color key="titleColor" name="ButtonColor"/>
@@ -752,7 +753,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Kpg-H7-G4x">
-                                <rect key="frame" x="17" y="54" width="380" height="23"/>
+                                <rect key="frame" x="17" y="58" width="380" height="23"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9Z-Zi-Rlq" userLabel="back button">
                                         <rect key="frame" x="0.0" y="0.0" width="26.5" height="23"/>
@@ -778,7 +779,7 @@
                                 </constraints>
                             </stackView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NZa-va-SvV">
-                                <rect key="frame" x="0.0" y="77" width="414" height="819"/>
+                                <rect key="frame" x="0.0" y="81" width="414" height="815"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X8S-bo-yCz" userLabel="view scroll">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1495"/>
@@ -1513,7 +1514,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Q1L-Zx-du7">
-                                <rect key="frame" x="15" y="54" width="384" height="25"/>
+                                <rect key="frame" x="15" y="58" width="384" height="25"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q9B-JR-N3W" userLabel="Arrow button">
                                         <rect key="frame" x="0.0" y="0.0" width="40.5" height="25"/>
@@ -1543,7 +1544,7 @@
                                 </constraints>
                             </stackView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZCc-Kw-qXr">
-                                <rect key="frame" x="0.0" y="84" width="414" height="812"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PMY-t3-EHh" userLabel="view scroll">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="812"/>
@@ -1917,7 +1918,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleAspectFit" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="XRj-7v-HAF">
-                                <rect key="frame" x="15" y="54" width="384" height="23"/>
+                                <rect key="frame" x="15" y="58" width="384" height="23"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xxP-HG-014" userLabel="Back Button">
                                         <rect key="frame" x="0.0" y="0.0" width="26.5" height="23"/>
@@ -1944,7 +1945,7 @@
                                 </constraints>
                             </stackView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hif-zB-rOs">
-                                <rect key="frame" x="0.0" y="127" width="414" height="475"/>
+                                <rect key="frame" x="0.0" y="131" width="414" height="471"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dS8-Nf-3AY" userLabel="view Scroll">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="491"/>
@@ -2180,7 +2181,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0HE-s2-KpN">
-                                <rect key="frame" x="17" y="54" width="380" height="20"/>
+                                <rect key="frame" x="17" y="58" width="380" height="20"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TCR-32-mMp" userLabel="Back To Categories">
                                         <rect key="frame" x="0.0" y="0.0" width="26.5" height="20"/>
@@ -2205,7 +2206,7 @@
                                 </constraints>
                             </stackView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RWs-RA-sUQ">
-                                <rect key="frame" x="0.0" y="106" width="414" height="756"/>
+                                <rect key="frame" x="0.0" y="110" width="414" height="752"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VZG-Tv-jZL" userLabel="view scroll">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="790"/>
@@ -2222,7 +2223,7 @@
                                                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <prototypes>
                                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="OqR-as-HSg">
-                                                                <rect key="frame" x="0.0" y="44.5" width="414" height="44"/>
+                                                                <rect key="frame" x="0.0" y="50" width="414" height="44"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OqR-as-HSg" id="SuA-VX-qct">
                                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -2264,26 +2265,26 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="yUX-7v-HSk"/>
                             </scrollView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="opj-Vx-zt8">
-                                <rect key="frame" x="182" y="428" width="50" height="50"/>
+                                <rect key="frame" x="182" y="430" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="JhM-Ze-C0L"/>
                                     <constraint firstAttribute="width" constant="50" id="fKk-98-ssm"/>
                                 </constraints>
                             </activityIndicatorView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zk9-7y-wlp" userLabel="reload View">
-                                <rect key="frame" x="0.0" y="380" width="414" height="136"/>
+                                <rect key="frame" x="0.0" y="384" width="414" height="132"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="u04-my-7jd">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="136"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="132"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSZ-R0-zzN">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="86"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="82"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" name="ButtonColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIW-vF-1oc">
-                                                <rect key="frame" x="0.0" y="106" width="414" height="30"/>
+                                                <rect key="frame" x="0.0" y="102" width="414" height="30"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="Reloading">
                                                     <color key="titleColor" name="ButtonColor"/>
@@ -2350,7 +2351,7 @@
         <image name="addMark" width="17" height="17"/>
         <image name="btnBack" width="26.5" height="13"/>
         <image name="checkBoxMarknotselected" width="14" height="14"/>
-        <image name="chevron.right" catalog="system" width="96" height="128"/>
+        <image name="chevron.right" catalog="system" width="97" height="128"/>
         <image name="galleryMark" width="37.5" height="33.5"/>
         <image name="imgButtonDelete" width="18" height="18"/>
         <image name="locationMark" width="15" height="19"/>

@@ -29,8 +29,7 @@ class APIHome: NSObject {
                     for item in apiCategories ?? [] {
                         let model = HomeCategoryModel.init(apiModel: item as? [String : Any])
                         result.homeCategory?.append(model)
-                        //result.homeCategory?.sorted(by: { $0.categoryId > $1.categoryId})
-                    }                    
+                    }
                     
                     result.homeMostViewed = []
                     let apiMostViewed = json["data"]["most_viewd"].arrayObject
